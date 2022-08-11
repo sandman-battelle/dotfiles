@@ -16,3 +16,6 @@
 .viminfo
 src/
 .nvm/
+.config/wslu/
+.lesshst
+.azure/

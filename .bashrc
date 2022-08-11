@@ -145,3 +145,5 @@ fi
 # GitHub CLI stuff
 eval "$(gh completion -s bash)"
 export CUBE_PERSONAL_ACCESS_TOKEN=$(yq -r '."github.com".oauth_token' < ~/.config/gh/hosts.yml)
+# assuming `source /usr/share/bash-completion/completions/git`
+__git_complete dotgit __git_main
