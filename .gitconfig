@@ -1,0 +1,19 @@
+[gpg]
+	program = gpg
+[user]
+	email = sandmanm@battelle.org
+	name = Mike Sandman
+[commit]
+	gpgsign = true
+[core]
+	excludesfile = ~/.cvsignore
+[alias]
+	root = rev-parse --show-toplevel
+[push]
+	default = simple
+[submodule]
+	recurse = true
+[tag]
+	sort = -version:refname
+[init]
+	defaultBranch = main

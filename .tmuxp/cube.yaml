@@ -1,0 +1,17 @@
+session_name: 'cube'
+windows:
+- window_name: QB
+  start_directory: /home/sandman/src/q-b-mccubeface
+  panes:
+  - vim README.md
+  - blank
+- window_name: CLI
+  start_directory: /home/sandman/src/cube-cli
+  panes:
+  - vim README.md
+  - blank
+- window_name: program
+  start_directory: /home/sandman/src/cube-program
+  panes:
+  - vim README.md
+  - blank
