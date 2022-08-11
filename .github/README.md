@@ -1,3 +1,5 @@
+_NOTE: This README lives in `.github` as to not clutter `$HOME`_
+
 This `HOME` directory's dotfiles are manage in `git`.  Here's the gist of what's going on
 
 ```sh
