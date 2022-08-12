@@ -39,24 +39,9 @@ gh_repo_transfer ()
 	EOM
 }
 
-user-installed-pkgs () 
+user-installed-pkgs() 
 {
 	local release="$(lsb_release -rs)"
 	local manifest="https://cloud-images.ubuntu.com/releases/${release}/release/ubuntu-${release}-server-cloudimg-amd64-wsl.rootfs.manifest"
 	comm -13 <(curl -s $manifest | cut -f1 | sort -u) <(apt-mark showmanual | sort -u)
-}
-
-cd()
-{
-	builtin cd "$@" && echo "\"$OLDPWD\" \"$PWD\""
-}
-
-pushd()
-{
-	builtin pushd "$@" && echo "\"$OLDPWD\" \"$PWD\""
-}
-
-popd()
-{
-	builtin popd "$@" && echo "\"$OLDPWD\" \"$PWD\""
 }
