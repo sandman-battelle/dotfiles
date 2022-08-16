@@ -144,7 +144,6 @@ fi
 
 # GitHub CLI stuff
 eval "$(gh completion -s bash)"
-export CUBE_PERSONAL_ACCESS_TOKEN=$(yq -r '."github.com".oauth_token' < ~/.config/gh/hosts.yml)
 
 # dotgit uses git's completion so `__git_completion` must exist
 if ! declare -f __git_complete &>/dev/null; then
@@ -166,4 +165,3 @@ if ! declare -f __git_complete &>/dev/null; then
   fi
 fi
 __git_complete dotgit __git_main
-
