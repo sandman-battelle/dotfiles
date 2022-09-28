@@ -165,3 +165,6 @@ if ! declare -f __git_complete &>/dev/null; then
   fi
 fi
 __git_complete dotgit __git_main
+DEBEMAIL="sandmanm@battelle.org"
+DEBFULLNAME="Mike Sandman"
+export DEBEMAIL DEBFULLNAME

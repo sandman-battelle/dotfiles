@@ -17,3 +17,7 @@
 	sort = -version:refname
 [init]
 	defaultBranch = main
+[clean]
+	requireForce = false
+[pull]
+	ff = only

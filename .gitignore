@@ -19,3 +19,5 @@ src/
 .config/wslu/
 .lesshst
 .azure/
+snap/
+.wget-hsts
