@@ -21,3 +21,5 @@ src/
 .azure/
 snap/
 .wget-hsts
+.azcopy/
+.sqlite_history
