@@ -5,7 +5,8 @@ filetype plugin indent on
 set softtabstop=4 shiftwidth=4 expandtab
 autocmd FileType make set noexpandtab
 autocmd FileType sh set noexpandtab tabstop=4
-au BufRead,BufNewFile *.md setlocal textwidth=80
+autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+autocmd BufRead,BufNewFile sh set iskeyword+=-
 
 " markdown style tables
 "let g:table_mode_corner_corner="|"

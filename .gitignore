@@ -23,3 +23,4 @@ snap/
 .wget-hsts
 .azcopy/
 .sqlite_history
+.config/gh/hosts.yml
