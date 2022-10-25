@@ -1,0 +1,106 @@
+#1662745572
+cd /tmp/
+#1662745574
+ls
+#1662745589
+hist|grep clone
+#1662745605
+gh repo clone battellecube/cube-env
+#1662745609
+cd cube-env/
+#1662745610
+ls
+#1662745616
+debuild 
+#1662745663
+vi
+#1662745681
+git status
+#1662745696
+git status --ignored
+#1662745742
+ls
+#1662745750
+cd ..
+#1662745751
+ls
+#1662745761
+rm -r cube-env*
+#1662745766
+rm -rf cube-env*
+#1662745767
+ls
+#1662745973
+gh repo clone battellecube/cube-env
+#1662745976
+cd cube-env/
+#1662745979
+debuild 
+#1662745993
+ls
+#1662745998
+git status --ignored
+#1662746034
+git diff
+#1662746045
+cd ..
+#1662746046
+ls
+#1662746058
+cd ..
+#1662746060
+cd  -
+#1662746074
+sudo dpkg -i ./cube-env_0.1_amd64.deb 
+#1662746084
+cd -
+#1662750120
+cd ../subnet/
+#1662750122
+ls
+#1662750123
+git status
+#1662750144
+cat .cuberc 
+#1663598035
+cd ../cube-cli/
+#1663598037
+git fetch
+#1663598057
+git status
+#1663598061
+git pull
+#1663598294
+cd ../cube-program/
+#1663598331
+vi
+#1663598991
+cd -
+#1663598997
+git status
+#1663601623
+cd
+#1663601633
+vi .bash_functions
+#1663601646
+command -V hist
+#1663601657
+vi .bash_aliases 
+#1663601683
+cat ~/.bash_history{,_*} | sed '\$!N;s/\n/ /' | cut -c2- | sort -n | cut -c12- | uniq
+#1663601862
+set-local-env --help
+#1663639469
+cd
+#1663639475
+sudo apt update
+#1663639582
+apt show cube-env
+#1663639588
+apt show cube-env -a
+#1663639712
+sudo apt update
+#1663639961
+apt list --upgradable 
+#1663639983
+sudo apt upgrade 

@@ -1,0 +1,24 @@
+#1657905762
+cd src/cube-platform/
+#1657905804
+it checkout g;
+#1660598816
+cd src/
+#1660598824
+cd cube-env
+#1660598826
+git status
+#1660659243
+apt show shellcheck
+#1660662626
+ls
+#1660662669
+d src/
+#1660662669
+~.
+#1661872848
+hist
+#1661872912
+ls lib/
+#1661872942
+vi

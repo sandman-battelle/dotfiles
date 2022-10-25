@@ -1,0 +1,404 @@
+#1664288311
+echo $TTY
+#1664288369
+cat ~/.bashrc 
+#1664288376
+view ~/.bashrc 
+#1664288399
+tty 
+#1664288469
+echo "foo" | /dev/tty7
+#1664288477
+sudo echo "foo" | /dev/tty7
+#1664288494
+tty 
+#1664288501
+sudo echo "foo" | /dev/tty6
+#1664288519
+cat /dev/tty6
+#1664288531
+hist
+#1664288546
+hist|grep example
+#1664288554
+view /usr/share/doc/rsyslog/examples/rsyslog.d/console.conf
+#1664288566
+tty
+#1664288695
+cat /dev/pts/6
+#1664288708
+echo foo| /dev/pts/6
+#1664288730
+echo foo| tee /dev/pts/6
+#1664288740
+echo foo| tee /dev/tty6
+#1664290494
+tty
+#1664292536
+hist
+#1664292543
+logger --priority local7.info "`date`"
+#1664292565
+logger --help
+#1664292612
+logger foo
+#1664292631
+logger --priority local7.info foo
+#1664292658
+tail /var/log/cube.log 
+#1664292680
+logger --priority local7.info foo
+#1664292683
+tail /var/log/cube.log 
+#1664292714
+logger --priority local7.info foo2
+#1664292720
+tail /var/log/cube.log 
+#1664292824
+tty
+#1664293858
+VERISON=$(gh release list --repo battelle-cube/cube-cli |grep Latest | awk '{print $2}')
+#1664293865
+echo $VERISON 
+#1664384692
+id
+#1664385368
+man pam_mkhomedir 
+#1664469759
+make
+#1664469763
+ls
+#1664469771
+./bootstrap.sh 
+#1664469779
+make distclean
+#1664469783
+./bootstrap.sh 
+#1664469789
+cd build/
+#1664469791
+make
+#1664469831
+ls src/
+#1664469837
+ls ../src/
+#1664469873
+make
+#1664469882
+make install
+#1664469884
+git status
+#1664469892
+cdroot 
+#1664469893
+git status
+#1664469898
+git add .
+#1664469904
+dch -e
+#1664469981
+git add .
+#1664469983
+git status
+#1664469996
+git commit -m'see changelog'
+#1664470001
+git status
+#1664470005
+git log
+#1664470037
+git reset HEAD^
+#1664470039
+git status
+#1664470047
+git commit --amend 
+#1664470055
+git push
+#1664471036
+cd ../q-b-mccubeface/
+#1664471042
+la
+#1664471047
+cd -
+#1664471052
+cd ../test-cube-1/
+#1664471089
+cat /etc/profile.d/cube-env-hook.sh 
+#1664472504
+cd -
+#1664472508
+dch -e
+#1664472520
+git status
+#1664472527
+git add .
+#1664472537
+git commit --amend 
+#1664472543
+git log
+#1664472558
+git push
+#1664472562
+git push -f
+#1664472997
+git pull
+#1664473002
+git log
+#1664473128
+git push --tags
+#1664473143
+git push --tags -f
+#1664473172
+git tag
+#1664473177
+git tag |sort -V
+#1664473184
+git tag |sort -V|tail -n1
+#1664473388
+ls
+#1664473393
+git status
+#1664818606
+git fetch
+#1664818611
+git stauts
+#1664818612
+git status
+#1664818618
+git pull
+#1664818622
+git log
+#1664818628
+git status
+#1664818665
+ls
+#1664818668
+cat release.sh 
+#1664818711
+git log
+#1664818756
+git checkout -b release-0.1.4
+#1664818761
+./release.sh 
+#1664818783
+dch -r
+#1664818814
+git status
+#1664818824
+git add debian/changelog 
+#1664818846
+git commit -m'0.1.4 release'
+#1664818892
+git tag -s -m'0.1.4 release' v0.1.4
+#1664818894
+git log
+#1664818905
+git show v0.1.4
+#1664818915
+./release.sh 
+#1664818927
+git log
+#1664818935
+git status
+#1664818938
+git push --tags 
+#1664818945
+ls ..
+#1664818956
+rm ../cube-env_0.1.4*
+#1664818983
+gh release list
+#1664819037
+./release.sh 
+#1664819046
+vi release.sh 
+#1664819069
+./bootstrap.sh 
+#1664819084
+debuild
+#1664819102
+cat release.sh 
+#1664819140
+ls
+#1664819155
+cd deb_repo/
+#1664819158
+git fetch
+#1664819160
+cd ..
+#1664819176
+dpkg-scanpackages --multiversion . > Packages
+#1664819177
+gzip -k -f Packages
+#1664819177
+apt-ftparchive release . > Release
+#1664819177
+gpg -abs -o Release.gpg Release
+#1664819177
+gpg --clearsign -o InRelease Release
+#1664819185
+ls
+#1664819201
+cd deb_repo/
+#1664819202
+ls
+#1664819224
+cd ..
+#1664819225
+ls
+#1664819239
+ls ..
+#1664819249
+cd -
+#1664819284
+cp ../../cube-env_0.1.4_amd64.deb .
+#1664819322
+at release.sh 
+#1664819323
+~.
+#1664819336
+cat ../release.sh 
+#1664819344
+ls
+#1664819356
+git status
+#1664819362
+dpkg-scanpackages --multiversion . > Packages
+#1664819362
+gzip -k -f Packages
+#1664819362
+apt-ftparchive release . > Release
+#1664819362
+gpg -abs -o Release.gpg Release
+#1664819366
+gpg --clearsign -o InRelease Release
+#1664819369
+git status
+#1664819380
+git add .
+#1664819410
+hist|grep commit
+#1664819425
+git commit -m"$(head -n1 ../debian/changelog)"
+#1664819429
+git status
+#1664819435
+git push
+#1664819462
+ls
+#1664819470
+git log
+#1664819475
+cd ..
+#1664819476
+hist
+#1664819481
+git log
+#1664819497
+git status
+#1664819518
+git log
+#1664819527
+git diff
+#1664819530
+git status
+#1664819545
+ls
+#1664819563
+git status --ignored 
+#1664819584
+git ignore src/cube-env-cli.sh
+#1664819586
+git status
+#1664819613
+git diff origin/main 
+#1664819623
+git status
+#1664819626
+git log
+#1664819632
+git show
+#1664819663
+git reset --hard origin/main 
+#1664819665
+git log
+#1664819669
+ls
+#1664819674
+git clear
+#1664819683
+ls
+#1664819689
+git merge release-0.1.4 
+#1664819690
+ls
+#1664819706
+git checkout release-0.1.4 
+#1664819709
+git log
+#1664819718
+git show
+#1664819762
+git status
+#1664819771
+dch -r
+#1664819778
+git status
+#1664819806
+hist
+#1664819845
+git checkcout main
+#1664819849
+git checkout main
+#1664819857
+git status
+#1664819862
+git diff
+#1664819868
+git log
+#1664820587
+git tag -d v0.1.4 
+#1664820591
+git  status
+#1664820598
+git diff
+#1664820607
+git add .
+#1664820618
+git commit -m'0.1.4 release'
+#1664820630
+git tag -s -m'0.1.4 release' v0.1.4
+#1664820631
+git log
+#1664820659
+git push
+#1664820661
+git log
+#1664820682
+suda apt update
+#1664820688
+sudo apt update
+#1664820711
+apt show cube-env 
+#1664820858
+lsb_release -a
+#1664820922
+sudo apt dist-upgrade 
+#1664821097
+cube-env-cli.sh workload
+#1664821118
+cat /etc/apt/sources.list.d/
+#1664821125
+cat /etc/apt/sources.list.d/cube-env.list 
+#1664821201
+hist|grep sources
+#1664821223
+hist|grep keyrings
+#1664821256
+ls
+#1664821270
+ls debian/
+#1664821321
+hist|grep KEY.gpg
+#1664821349
+cat /usr/share/keyrings/cube-env-archive-keyring.gpg 

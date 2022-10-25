@@ -1,0 +1,102 @@
+#1659551321
+cd
+#1659551322
+la
+#1659551337
+ls .cache/
+#1659551349
+ls .config/
+#1659551353
+ls .config/gh
+#1659551363
+ls .local
+#1659551367
+ls .local/state/
+#1659551370
+ls .local/state/gh
+#1659551381
+view .local/state/gh/state.yml 
+#1659551412
+find . -name gh
+#1659551458
+hist
+#1659551474
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 1000
+#1659551485
+gh repo list battelle-cube --topic module --json name --jq '.[].name' --limit 1000
+#1659551495
+gh repo list battelle-cube --topic mod --json name --jq '.[].name' --limit 1000
+#1659551518
+gh repo list battelle-cube --topic modzz --json name --jq '.[].name' --limit 1000
+#1659551532
+grep -r modzz .
+#1659551876
+gh repo list battelle-cube --topic modzz --json name --jq '.[].name' --limit 1000
+#1659551917
+gh --help
+#1659551934
+gh auth
+#1659551946
+gh auth status
+#1659551960
+gh auth refresh
+#1659552013
+gh auth status
+#1659552039
+la
+#1659552370
+gh repo view battelle-cube/cube-test-1
+#1659552389
+gh repo view battelle-cube/test-cube-1
+#1659552417
+gh repo view battelle-cube/test-cube-1 --json
+#1659552446
+gh repo view battelle-cube/test-cube-1 --json labels
+#1659552467
+gh repo view battelle-cube/test-cube-1 --json repositoryTopics
+#1659552482
+gh repo list battelle-cube --topic modzz
+#1659552490
+gh repo list battelle-cube --topic modz
+#1659552556
+gh repo --remove-topic modzz
+#1659552567
+gh repo edit --remove-topic modzz
+#1659552580
+gh repo edit --remove-topic modzz battelle-cube/test-cube-1
+#1659552586
+gh repo list battelle-cube --topic modzz
+#1659552597
+watch gh repo list battelle-cube --topic modzz
+#1659552669
+watch gh repo list battelle-cube --topic cube
+#1659552682
+hist
+#1659552697
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 1000
+#1659552718
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 1000 | grep cube-terraform
+#1659552809
+eval "$(gh completion -s bash)"
+#1659552846
+gh search repos --help
+#1659552868
+gh search repos --topic
+#1659552882
+gh search repos --topic cube
+#1659553108
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 1000 
+#1659553114
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 1000 |wc -l
+#1659553129
+ls
+#1663861897
+cd ../cube-cli/
+#1663861904
+git status
+#1663861906
+git fetch
+#1663861919
+git log
+#1663868008
+vi

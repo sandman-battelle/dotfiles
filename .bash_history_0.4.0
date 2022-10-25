@@ -1,0 +1,8 @@
+#1664830892
+cd
+#1664830928
+cat > cube-maintainers.asc
+#1664830948
+gpg --import cube-maintainers.asc 
+#1664830962
+gpg --list-keys

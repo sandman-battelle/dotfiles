@@ -1,0 +1,1396 @@
+#1657718945
+ls
+#1657718979
+sudo add-apt-repository universe
+#1657718991
+sudo apt update
+#1657719016
+sudo apt install powerline
+#1660333041
+cat .bashrc 
+#1660336694
+git status
+#1660336719
+dotgit status
+#1660336728
+dotgit diff
+#1660336775
+dotgit status
+#1660336780
+dotgit add .
+#1660336808
+dotgit commit -m'move hook functions to cube-env, source git completions'
+#1660336964
+cd src/q-b-mccubeface/
+#1660336977
+cd
+#1660337000
+. src/cube-env/env-hook 
+#1660337005
+pwd
+#1660337012
+cd src/q-b-mccubeface/
+#1660337028
+cd ../subnet/
+#1660337142
+cd ../cube-env
+#1660337149
+cat env-hook 
+#1660337194
+user-installed-pkgs 
+#1660337665
+cd ../q-b-mccubeface/
+#1660337671
+cat .cuberc 
+#1660337755
+cat ../cube-env/env-hook 
+#1660337824
+ls
+#1660762556
+set-local-env 
+#1660762573
+az ad group member add --group cube-q-b-mccubeface-v1.0.1-users --member-id 33a3087d-012e-4ad5-9f47-c678a2368c78
+#1660763518
+ls
+#1660763536
+git checkout add-internet 
+#1660763548
+vi internet-access.tf 
+#1660763575
+git checkout v1.0.1
+#1660763578
+git status
+#1660763583
+git log
+#1660763598
+git stash
+#1660763601
+git checkout v1.0.1
+#1660763607
+git stash pop
+#1660763611
+git log
+#1660763627
+git status
+#1660763635
+log
+#1660763637
+ls
+#1660763657
+set-local-env 
+#1660763669
+hist
+#1660763691
+terraform apply -var=deployment_id=q-b-mccubeface-v1.0.1 -var=subscription_id=f59139ec-932c-4419-ac4f-b01a05ed5459 -var=platform_subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -var=tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_subscription_id=cab6c334-ae95-4a8d-8041-1127009a14bb -var=address_space=10.237.101.0/24 -var=environment=usgovernment -var=location=usgovvirginia -var=sha=$(git rev-parse HEAD) -var=platform_deployment_id=cube-platform-v0.5.0
+#1660763886
+ls
+#1660828238
+grep -r 10 .
+#1660828267
+vi
+#1660840361
+git status
+#1660840378
+git restore core.tf
+#1660840386
+git checkout main
+#1660840395
+git status
+#1660840400
+ls
+#1660840428
+git stash internet-access.tf
+#1660840470
+git stash
+#1660840486
+git status
+#1660840499
+mv internet-access.tf /tmp/
+#1660840502
+git status
+#1660840522
+git reset --hard origin/main 
+#1660840526
+git status
+#1660840531
+git checkout main
+#1660840534
+git log
+#1660840553
+git fetch
+#1660840592
+git pull
+#1660840602
+git checkout add-internet 
+#1660840606
+git rebase origin/main 
+#1660840612
+git checkout main 
+#1660840617
+git merge add-internet 
+#1660840619
+git log
+#1660840631
+git push
+#1660840847
+git status
+#1660840853
+ls
+#1660841619
+git status
+#1660841624
+git log
+#1660841896
+git checkout add-internet 
+#1660841910
+git checkout amin
+#1660841913
+git checkout main
+#1660843402
+gh repo list
+#1660843416
+gh repo list battelle-cube
+#1660843424
+gh repo list battellecube
+#1660843440
+cd
+#1660843448
+cat .bash_functions
+#1660843472
+hist|grep limit
+#1660843540
+gh repo list battellecube --limit 1000
+#1660843568
+cd src/
+#1660843569
+ls
+#1660843675
+gh repo list battellecube --limit 1000 | while read repo; do gh repo clone $repo; done
+#1660843688
+gh repo list battellecube --limit 1000 | while read repo; do echo gh repo clone $repo; done
+#1660843698
+gh repo list battellecube --limit 1000
+#1660843726
+hist|grep limit
+#1660843802
+gh repo list battellecube --json name --jq '.[].name' --limit 1000 | sort | while read repo; do echo gh repo clone $repo; done
+#1660843821
+gh repo list battellecube --json name --jq '.[].name' --limit 1000 | sort | while read repo; do gh repo clone $repo; done
+#1660843858
+gh repo list battellecube --json name --jq '.[].name'
+#1660843954
+gh repo list battellecube --json name --jq '.[].name' --limit 1000 | sort | while read repo; do echo gh repo clone battelle-cube/$repo; done
+#1660844144
+gh repo list battellecube --json name --jq '.[].name' --limit 1000 | sort | while read repo; do gh repo clone battelle-cube/$repo; done
+#1660844186
+ls
+#1660847980
+find . -type f -name CODEOWNERS
+#1660848001
+find . -type f -depth 1-name CODEOWNERS
+#1660848016
+find . -type f -depth 1 -name CODEOWNERS
+#1660848038
+find . -depth 1 -type f -name CODEOWNERS
+#1660848099
+find . -type f -name CODEOWNERS -maxdepth 1
+#1660848110
+hist |grep maxdepth
+#1660848175
+find . -maxdepth 1 -type f -name CODEOWNERS
+#1660848181
+find . -maxdepth 2 -type f -name CODEOWNERS
+#1660848220
+find . -maxdepth 2 -type f -name CODEOWNERS -exec rm {} \;
+#1660848226
+hist
+#1660848249
+echo *
+#1660848260
+ls -1 
+#1660848292
+ls -1 | while read r; do echo git status $r; done
+#1660848299
+ls -1 | while read r; do git status $r; done
+#1660848327
+ls -1 | while read r; do cd $r; git status; cd -; done
+#1660848394
+ls -1 | while read r; do cd $r; git restore .; cd -; done
+#1660848398
+ls -1 | while read r; do cd $r; git status; cd -; done
+#1660848424
+ls -1 | while read r; do cd $r; git fetch; cd -; done
+#1660848488
+ls -1 | while read r; do cd $r; git checkout main; git pull; cd -; done
+#1660848575
+ls -1 | while read r; do cd $r; echo -n "$r: "; git status; cd -; done
+#1660848590
+ls -1 | while read r; do cd $r; echo "$r:"; git status; cd -; done
+#1660848606
+ls -1 | while read r; do cd $r; echo "$r:"; git status -s; cd -; done
+#1660848628
+rm subnet/.cuberc 
+#1660848639
+rm cube-program/archiving 
+#1660848644
+rm cube-program/moving 
+#1660848650
+rm cube-program/repos 
+#1660848655
+ls -1 | while read r; do cd $r; echo "$r:"; git status -s; cd -; done
+#1660848670
+ls -1 | while read r; do cd $r; echo -n "$r:"; git status -s; cd -; done
+#1660848681
+cd cube-env
+#1660848683
+git status
+#1660848684
+ls
+#1660848708
+ls lib/
+#1660848712
+rm lib/
+#1660848716
+rm -r lib/
+#1660848718
+cd ..
+#1660848721
+ls -1 | while read r; do cd $r; echo -n "$r:"; git status -s; cd -; done
+#1660848755
+find . -maxdepth 2 -type f -name CODEOWNERS -exec rm {} \;
+#1660848758
+ls -1 | while read r; do cd $r; echo -n "$r:"; git status -s; cd -; done
+#1660848949
+ls -1 | while read r; do cd $r; git fetch; cd -; done
+#1660849010
+ls -1 | while read r; do cd $r; echo -n "$r:"; git add .; cd -; done
+#1660849017
+ls -1 | while read r; do cd $r; echo -n "$r:"; git status -s; cd -; done
+#1660849046
+ls -1 | while read r; do cd $r; echo -n "$r:"; git commit -m'remove CODEOWNERS'; cd -; done
+#1660849058
+ls -1 | while read r; do cd $r; echo -n "$r:"; git push; cd -; done
+#1660849100
+ls -1 | while read r; do cd $r; echo -n "$r:"; git status -s; cd -; done
+#1660849164
+ls -1 | while read r; do cd $r; echo "$r:"; git push; cd -; done | less
+#1660849483
+gh repo view battellecube/cube-platform
+#1660849504
+gh repo edit battellecube/cube-platform
+#1660849655
+# GitHub CLI api
+#1660849655
+# https://cli.github.com/manual/gh_api
+#1660849655
+gh api   -H "Accept: application/vnd.github+json"   /repos/OWNER/REPO/branches/BRANCH/protection
+#1660849678
+gh api   -H "Accept: application/vnd.github+json"   /repos/battellecube/cube-platform/branches/main/protection
+#1660849860
+gh api   -H "Accept: application/vnd.github+json"   /repos/battellecube/cube-platform/branches/main/protection|jq .required_signatures
+#1660849866
+gh api   -H "Accept: application/vnd.github+json"   /repos/battellecube/cube-platform/branches/main/protection|jq .required_signatures.enabled
+#1660849871
+gh api   -H "Accept: application/vnd.github+json"   /repos/battellecube/cube-platform/branches/main/protection|jq .required_signatures.enabled=false
+#1660850050
+gh api   -H "Accept: application/vnd.github+json"   /repos/battellecube/cube-platform/branches/main/protection|jq .required_signatures.enabled=false | gh api --method PUT --input - /repos/battellecube/cube-platform/branches/main/protection
+#1660850400
+ls -1 | while read r; do cd $r; echo -n "$r:"; git status -s; cd -; done
+#1661780350
+cat ~/.bash_functions
+#1661780362
+ls src/
+#1661780463
+view src/repo-labels.sh 
+#1661780557
+git status
+#1661780567
+view src/create-repo.sh 
+#1661780674
+ls
+#1661780697
+ls lib/
+#1661780775
+ls src/
+#1661780850
+git rm src/create-repo.sh src/repo-labels.sh 
+#1661780921
+git mv lib/github.in lib/cube-env.in
+#1661780944
+cat lib/common >> lib/cube-env.in 
+#1661780954
+git rm lib/common 
+#1661781001
+git status
+#1661781006
+ls
+#1661781009
+cd build/
+#1661781026
+make install
+#1661781067
+ls bin/
+#1661781074
+view bin/cube-env 
+#1661781090
+view libexec/cube-env 
+#1661781689
+cdroot 
+#1661781697
+git rm lib/cube-env.in 
+#1661781702
+git rm lib/cube-env.in  -f
+#1661781704
+git status
+#1661781726
+cat .gitignore 
+#1661781761
+git status
+#1661781784
+git add .
+#1661781786
+git status
+#1661781797
+rm -rf build/
+#1661781802
+ls
+#1661781854
+autoreconf --install 
+#1661781872
+mkdir build
+#1661781877
+cd build/
+#1661781906
+../configure --prefix=$PWD
+#1661781919
+make install
+#1661781930
+view bin/cube-env 
+#1661781947
+ls
+#1661781951
+ls libexec/
+#1661781977
+cdroot 
+#1661781979
+git status
+#1661781996
+git commit -m'remove obsolete scripts'
+#1661782000
+git log
+#1661782109
+autoreconf --install 
+#1661782115
+cd build/
+#1661782119
+make install
+#1661782134
+view bin/cube-env 
+#1661782163
+make clean
+#1661782171
+make install
+#1661782182
+view bin/cube-env 
+#1661782195
+bin/cube-env -v
+#1661782223
+make install
+#1661782225
+bin/cube-env -v
+#1661782228
+git status
+#1661782711
+git diff
+#1661782728
+git add .
+#1661782740
+cd ..
+#1661782743
+git status
+#1661782747
+git add .
+#1661782753
+ls
+#1661782755
+git log
+#1661782765
+git push
+#1661783067
+ls ~/.local/bin/
+#1661783296
+git status
+#1661783310
+git add .
+#1661783342
+git commit -m'touch up README'
+#1661783347
+cd build/
+#1661783350
+make dist
+#1661783357
+ls
+#1661783392
+cdroot 
+#1661783393
+git status
+#1661783398
+git push
+#1661787767
+ls
+#1661787988
+git status
+#1661790834
+ls
+#1661790836
+ls src/
+#1661790844
+ls lib/
+#1661790890
+git mv src/env-hook.sh lib/cube-env-hook.sh
+#1661790924
+git status
+#1661790936
+git restore --staged .
+#1661790938
+git status
+#1661790949
+git restore .
+#1661790951
+git status
+#1661790957
+rm lib/cube-env-hook.sh 
+#1661790959
+git status
+#1661790974
+ls lib/
+#1661791035
+ls src/
+#1661791131
+git mv src/cube-env-setup.sh 
+#1661791157
+git mv src/cube-env{-setup}.sh 
+#1661791170
+echo git mv src/cube-env{-setup}.sh 
+#1661791180
+echo git mv src/cube-env{,-setup}.sh 
+#1661791186
+git mv src/cube-env{,-setup}.sh 
+#1661791189
+git status
+#1661791191
+ls
+#1661791194
+ls src/
+#1661791209
+chmod -x src/env-hook.sh 
+#1661791252
+git mv src/{,cube-}env-hook.sh 
+#1661791254
+git status
+#1661791382
+git diff
+#1661791395
+git add .
+#1661791396
+git status
+#1661791408
+git log
+#1661791573
+git checkout main
+#1661791578
+git status
+#1661791606
+git commit -m'unify naming'
+#1661791610
+git push
+#1661791617
+git checkout main
+#1661791623
+git merge initial-setup --ff-only 
+#1661791631
+git log
+#1661791664
+git reset --hard origin/main 
+#1661791665
+git log
+#1661791680
+git merge --squash initial-setup 
+#1661791684
+git log
+#1661791695
+git status
+#1661791765
+git reset --hard origin/main 
+#1661791769
+git merge initial-setup --ff-only 
+#1661791773
+git push
+#1661792454
+git status
+#1661792456
+git branch
+#1661792466
+git branch -D initial-setup 
+#1661792499
+git checkout integrate-shellcheck 
+#1661792511
+git fetch
+#1661792516
+git rebase origin/main 
+#1661792524
+git status
+#1661792575
+git rebase --abort 
+#1661792580
+git status
+#1661792588
+git log
+#1661792603
+git reset --hard origin/integrate-shellcheck 
+#1661792605
+git status
+#1661792615
+git rebase origin/main 
+#1661792621
+git reset --hard origin/integrate-shellcheck 
+#1661792625
+git status
+#1661792668
+git restore .
+#1661792678
+git log
+#1661792697
+git status
+#1661792719
+git rebase --abort 
+#1661792724
+git rebase origin/main 
+#1661792760
+git add README.md 
+#1661792762
+git status
+#1661792769
+git rebase --continue 
+#1661792771
+git log
+#1661792865
+ls
+#1661792870
+git status
+#1661792877
+git add .
+#1661792904
+cd build/
+#1661792914
+make distclean
+#1661792922
+ls
+#1661792937
+make clean
+#1661792941
+ls
+#1661792947
+cd ..
+#1661792951
+rm -r build/
+#1661792951
+ls
+#1661792959
+git status --ignored
+#1661792979
+git clean --help
+#1661793010
+git clear --help
+#1661793031
+git clear
+#1661793046
+git log
+#1661793048
+ls
+#1661793099
+cat >> bootstrap
+#1661793144
+chmod +x bootstrap 
+#1661793360
+git status
+#1661793363
+ls
+#1661793368
+git add .
+#1661793371
+./bootstrap 
+#1661793377
+ls
+#1661793400
+cd build/
+#1661793402
+make
+#1661793412
+make install
+#1661793418
+ls
+#1661793421
+ls -R
+#1661793431
+make dist
+#1661793433
+ls
+#1661793454
+tar -tf cube-env-0.1.tar.gz 
+#1661793531
+make distall
+#1661793537
+make dist-all
+#1661793541
+ls
+#1661793575
+make distcheck 
+#1661793606
+bin/cube-env-setup --help
+#1661793673
+bin/cube-env-setup --help 2>/dev/null
+#1661793680
+bin/cube-env-setup --help 1>/dev/null
+#1661793783
+man autoreconf 
+#1661793809
+ls
+#1661793822
+cdroot 
+#1661793823
+ls
+#1661793876
+autoreconf --install --force 
+#1661793884
+autoreconf --install --force --verbose 
+#1661794045
+cd build/
+#1661794050
+make distcheck 
+#1661794232
+cd cube-env-0.1/_build/sub/src/
+#1661794233
+ls
+#1661794349
+cd ../../..
+#1661794358
+cd _inst/bin/
+#1661794359
+ls
+#1661794366
+./cube-env-setup --help
+#1661794451
+ls
+#1661794485
+cd ../../_build/
+#1661794502
+vi sub/src/Makefile
+#1661794542
+cdroot 
+#1661794544
+cd build/
+#1661794548
+make distcheck 
+#1661794584
+cd /home/sandman/src/cube-env/build/cube-env-0.1/_build
+#1661794586
+ls
+#1661794597
+vi sub/src/Makefile 
+#1661794624
+make installcheck-dist_binSCRIPTS
+#1661794635
+make installcheck-dist_bin
+#1661794639
+make installcheck-dist
+#1661794653
+vi sub/src/Makefile 
+#1661794955
+make check
+#1661794958
+cd ..
+#1661794959
+ls
+#1661794969
+cd ..
+#1661794970
+ls
+#1661794974
+make check
+#1661794982
+make distcheck 
+#1661795249
+cd cube-env-0.1/_build/sub/src/
+#1661795273
+ls
+#1661795309
+vi sub/src/Makefile 
+#1661795314
+vi Makefile 
+#1661795422
+cd ../../
+#1661795426
+cd ../..
+#1661795427
+ls
+#1661795440
+bin
+#1661795441
+ls
+#1661795443
+cd bin/
+#1661795444
+ls
+#1661795455
+cat >test
+#1661795466
+vi test 
+#1661795767
+chmod +x
+#1661795774
+mv test testit
+#1661795782
+vim testit 
+#1661795835
+./test
+#1661795845
+ls
+#1661795853
+chmod +x testit 
+#1661795855
+./testit 
+#1661795865
+set -x
+#1661795870
+./testit 
+#1661795885
+set +x
+#1661795890
+vi testit 
+#1661795907
+ls
+#1661795912
+cat help.err 
+#1661795917
+cat help.out 
+#1661795925
+vi testit 
+#1661797932
+cd ..
+#1661797937
+make install
+#1661797942
+make distcheck 
+#1661797953
+make clean
+#1661797956
+make distcheck 
+#1661798016
+make distclean
+#1661798018
+make distcheck 
+#1661798024
+make dist
+#1661798028
+make
+#1661798031
+cd ..
+#1661798032
+ls
+#1661798038
+git status
+#1661798051
+rm build/ -r
+#1661798054
+rm build/ -rf
+#1661798060
+sudo rm build/ -rf
+#1661798080
+./bootstrap 
+#1661798086
+cd build/
+#1661798093
+../configure --prefix=$PWD
+#1661798098
+make install
+#1661798104
+make dist
+#1661798107
+ls
+#1661798111
+make distcheck 
+#1661798122
+ls
+#1661798133
+bin/cube-env-setup --help
+#1661798146
+bin/cube-env-setup --help 2>/dev/null
+#1661798239
+make
+#1661798245
+make install
+#1661798260
+bin/cube-env-setup --help 2>/dev/null
+#1661798269
+bin/cube-env-setup --help 1>/dev/null
+#1661798274
+make distcheck 
+#1661798284
+make dist
+#1661798291
+make distcheck 
+#1661798309
+ls
+#1661798316
+rm -r cube-env-0.1
+#1661798324
+rm -r cube-env-0.1* -f
+#1661798329
+sudo rm -r cube-env-0.1* -f
+#1661798336
+make distcheck 
+#1661798363
+bin/cube-env-setup --help 1>/dev/null
+#1661798375
+bin/cube-env-setup --help 2>/dev/null
+#1661798414
+bin/cube-env-setup --version 2>/dev/null
+#1661798421
+bin/cube-env-setup --version 1>/dev/null
+#1661798442
+cd ..
+#1661798443
+ls
+#1661798447
+git diff
+#1661798463
+git status
+#1661798476
+git add .
+#1661798481
+git clear
+#1661798487
+ls
+#1661798495
+git status
+#1661798501
+./bootstrap 
+#1661798508
+cd build/
+#1661798515
+../configure --prefix=$PWD
+#1661798520
+make
+#1661798523
+make install
+#1661798529
+make distcheck 
+#1661798642
+bin/cube-env-setup --help
+#1661798674
+bin/cube-env-setup --help >stdout 2>stderr </dev/null
+#1661798676
+ls
+#1661798696
+test -n "`cat stdout`"
+#1661798701
+echo $?
+#1661798713
+test -z "`cat stderr`"
+#1661798715
+echo $?
+#1661798732
+bin/cube-env-setup --help >stdout 2>stderr </dev/null
+#1661798735
+echo $?
+#1661798804
+make distcheck 
+#1661798814
+make
+#1661798821
+make install
+#1661798826
+make distcheck 
+#1661798839
+bin/cube-env-setup --help >stdout 2>stderr </dev/null
+#1661798842
+echo $?
+#1661798856
+make clean
+#1661798860
+ls
+#1661798862
+ls bin/
+#1661798875
+make uninstall
+#1661798877
+ls bin/
+#1661798883
+make distcheck 
+#1661798890
+make
+#1661798893
+make install
+#1661798900
+bin/cube-env-setup --help >stdout 2>stderr </dev/null
+#1661798906
+echo $?
+#1661799167
+make install
+#1661799170
+bin/cube-env-setup --help >stdout 2>stderr </dev/null
+#1661799172
+echo $?
+#1661799177
+make distcheck 
+#1661799188
+cd ..
+#1661799197
+rm -rf build/
+#1661799204
+sudo rm -rf build/
+#1661799209
+./bootstrap 
+#1661799214
+cd build/
+#1661799218
+../configure --prefix=$PWD
+#1661799222
+make install
+#1661799226
+make distcheck 
+#1661799244
+bin/cube-env-setup --help >stdout 2>stderr </dev/null
+#1661799247
+echo $?
+#1661799255
+test -z "`cat stderr`"
+#1661799259
+echo $?
+#1661799273
+cat stderr 
+#1661799290
+git diff
+#1661799337
+make distcheck 
+#1661799351
+rm std*
+#1661799355
+bin/cube-env-setup --help >stdout 2>stderr </dev/null
+#1661799359
+test -z "`cat stderr`"
+#1661799361
+echo $?
+#1661799366
+cat stderr 
+#1661799386
+cd ..
+#1661799391
+sudo rm -rf build/
+#1661799393
+./bootstrap 
+#1661799400
+cd build/
+#1661799402
+../configure --prefix=$PWD
+#1661799409
+make distcheck 
+#1661799417
+ls
+#1661799421
+bin/cube-env-setup --help >stdout 2>stderr </dev/null
+#1661799424
+echo $?
+#1661799434
+test -z "`cat stderr`"
+#1661799438
+echo $?
+#1661799442
+cat stderr 
+#1661799455
+make install
+#1661799462
+make distcheck 
+#1661799479
+ls
+#1661799483
+rm std*
+#1661799490
+bin/cube-env-setup --help >stdout 2>stderr </dev/null
+#1661799498
+cat std*
+#1661799508
+bin/cube-env-setup --help >stdout 2>stderr </dev/null
+#1661799511
+echo $?
+#1661799515
+test -z "`cat stderr`"
+#1661799517
+echo $?
+#1661799529
+test -n "`cat stdout`"
+#1661799531
+echo $?
+#1661799552
+make distcheck 
+#1661799685
+cube-env-0.1/_inst/bin/cube-env-setup --help >stdout 2>stderr </dev/null
+#1661799688
+echo $?
+#1661799720
+bin/cube-env-setup --help >stdout 2>stderr </dev/null;echo $?; 
+#1661799726
+test -n "`cat stdout`"
+#1661799770
+bin/cube-env-setup --help >stdout 2>stderr </dev/null;echo $?; test -n "`cat stdout`"; echo $?; test -z "`cat stderr`"; echo $?
+#1661799799
+echo $bad
+#1661799818
+make clean
+#1661799823
+make distclean
+#1661799824
+ls
+#1661799834
+cd ..
+#1661799837
+sudo rm -rf build/
+#1661799839
+ls
+#1661799848
+git status --ignored
+#1661799861
+git clear
+#1661799864
+git status --ignored
+#1661799873
+ls
+#1661799881
+git status
+#1661799896
+git log
+#1661799915
+git status
+#1661799925
+git reset origin/integrate-shellcheck 
+#1661799928
+git status
+#1661799940
+git rebase origin/main 
+#1661799955
+git diff
+#1661799969
+git add README.md 
+#1661799971
+git status
+#1661800008
+git reset --help origin/integrate-shellcheck 
+#1661800022
+git reset --help origin/integrate-shellcheck git reset --hard origin/integrate-shellcheck 
+#1661800051
+git reset --hard origin/integrate-shellcheck 
+#1661800054
+git log
+#1661800069
+git rebase origin/main 
+#1661800073
+git status
+#1661800129
+ls -R
+#1661800135
+git add .
+#1661800137
+git diff
+#1661800139
+ls
+#1661800154
+git diff origin/integrate-shellcheck 
+#1661800184
+git status
+#1661800192
+git reset origin/main
+#1661800194
+git status
+#1661800205
+git log
+#1661800209
+git dif
+#1661800212
+git diff
+#1661800222
+ls
+#1661800226
+l src/
+#1661800239
+cat README.md 
+#1661800245
+git status
+#1661800255
+git restore README.md
+#1661800258
+cat README.md 
+#1661808959
+git status
+#1661808982
+hist
+#1661809025
+git status
+#1661809060
+git push -f
+#1661809065
+git status
+#1661810500
+cat > bootstrap.sh
+#1661810564
+ls
+#1661810574
+hist
+#1661810629
+cat > bootstrap.sh 
+#1661810702
+vi bootstrap.sh 
+#1661810719
+chmod +x
+#1661810723
+chmod +x bootstrap.sh 
+#1661810726
+./bootstrap.sh 
+#1661810733
+cd build/
+#1661810737
+make distcheck 
+#1661810815
+hist
+#1661810829
+bin/cube-env-setup --help >stdout 2>stderr </dev/null;echo $?; test -n "`cat stdout`"; echo $?; test -z "`cat stderr`"; echo $?
+#1661810999
+git status
+#1661811000
+cd ..
+#1661811002
+git status
+#1661811006
+git diff
+#1661811011
+git add .
+#1661811030
+git commit -m'add bootstrap and distcheck note'
+#1661811032
+git push
+#1661812928
+cd build/
+#1661812936
+make distcheck 
+#1661812940
+make
+#1661812956
+make install
+#1661812964
+view bin/cube-env-setup 
+#1661812977
+bin/cube-env-setup 
+#1661813009
+bin/cube-env-setup --help
+#1661813024
+cat ~/.bashrc 
+#1661813041
+vi ~/.bashrc 
+#1661813051
+bin/cube-env-setup --help
+#1661813066
+$(/home/sandman/src/cube-env/build/bin/bin/cube-env-setup)
+#1661813088
+bin/cube-env-setup --help
+#1661813159
+make install
+#1661813164
+bin/cube-env-setup --help
+#1661813219
+make install
+#1661813221
+bin/cube-env-setup --help
+#1661813261
+make install
+#1661813263
+bin/cube-env-setup --help
+#1661813274
+$(/home/sandman/src/cube-env/build/bin/cube-env-setup)
+#1661813309
+bin/cube-env-setup --help
+#1661813312
+make install
+#1661813315
+bin/cube-env-setup --help
+#1661813324
+$(/home/sandman/src/cube-env/build/bin/cube-env-setup)
+#1661813327
+cd ..
+#1661813332
+cd -
+#1661813342
+grep -qF 'cube-env-setup' $HOME/.bashrc || /home/sandman/src/cube-env/build/bin/cube-env-setup >> $HOME/.bashrc
+#1661813348
+vi ~/.bashrc 
+#1661813362
+. ~/.bashrc 
+#1661813412
+cdroot 
+#1661813413
+git status
+#1661813416
+git diff
+#1661813425
+git add .
+#1661813462
+git commit -m'externalize script names'
+#1661813465
+git push
+#1661815480
+getopt -a -n weather --options $SHORT --longoptions $LONG -- -a
+#1661815493
+getopt -a -n weather --options $SHORT --longoptions $LONG -- -n
+#1661815552
+getopt -a -n weather --options -c --longoptions city -- -c CMH
+#1661815563
+getopt -a -n weather --options -c --longoptions city -- --city CMH
+#1661815579
+getopt -a -n weather --options -c --longoptions city -- foo --city CMH bar
+#1661815597
+getopt -a -n weather --options -c --longoptions city -- foo --city=CMH bar
+#1661815646
+getopt -a -n weather --options -c --longoptions city -- foo --city Columbus bar
+#1661816229
+typeset --help
+#1661816248
+help declare
+#1661818739
+ls src/
+#1664996193
+gengetoptions embed cli.sh 
+#1664996713
+gengetoptions embed cli.sh > cli
+#1664996720
+chmod +x cli
+#1664996723
+ll
+#1664996731
+ls
+#1664996739
+gengetoptions embed cli.sh > cli
+#1664996741
+ls
+#1664996745
+./cli 
+#1664996748
+./cli -h
+#1664996896
+gengetoptions embed cli.sh > cli
+#1664996898
+cli
+#1664996907
+./cli 
+#1664996910
+./cli -h
+#1664996914
+./cli foo
+#1664996994
+gengetoptions embed cli.sh > cli
+#1664996995
+./cli foo
+#1664997030
+./cli foo bar
+#1664997430
+gengetoptions embed cli.sh > cli
+#1664997435
+./cli foo bar
+#1664997444
+./cli foo -h
+#1664997453
+./cli -h foo
+#1664997461
+./cli
+#1664997465
+./cli -t
+#1664997469
+./cli bar
+#1664997503
+./cli foo x
+#1664998798
+touch cli-foo.sh
+#1664998961
+gengetoptions embed cli.sh > cli
+#1664998972
+gengetoptions embed foo.sh > foo
+#1664998978
+chmod +x foo
+#1664998985
+./cli -h
+#1664998990
+./cli foo -h
+#1664999000
+./foo -h
+#1664999026
+cp foo.sh bar.sh
+#1664999113
+gengetoptions embed bar.sh > bar
+#1664999119
+chmod +x bar
+#1664999120
+ls
+#1664999125
+cli -h
+#1664999129
+./cli -h
+#1664999399
+ls
+#1664999453
+./cli -h
+#1664999484
+./cli foo -h
+#1664999490
+./cli foo bar -h
+#1664999498
+./cli foo bar baz
+#1664999506
+./cli foo bar baz -h
+#1664999514
+ls
+#1664999529
+./foo -h
+#1664999537
+./bar -h
+#1664999542
+ls
+#1664999797
+./bar -h
+#1664999887
+./cli -h
+#1664999912
+./foo -h
+#1665000282
+hist
+#1665000287
+history 
+#1665000311
+gengetoptions embed cli.sh
+#1665000335
+view cli
+#1665000454
+ls
+#1665000460
+ls *.sh
+#1665000516
+.cli -h
+#1665000521
+./cli -h
+#1666205332
+head NEWS 
+#1666205339
+dch -e
+#1666205463
+git log --oneline 
+#1666206137
+head NEWS 
+#1666207190
+head -n1 debian/changelog 

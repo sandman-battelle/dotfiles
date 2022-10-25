@@ -1,0 +1,258 @@
+#1657905797
+cd src/cube-platform/
+#1657905806
+git checkout ga-check 
+#1657905809
+git log
+#1657905845
+git diff origin/main 
+#1657905859
+git status
+#1657905862
+git log
+#1657905871
+git rebase origin/main 
+#1657905875
+git log
+#1657905882
+git status
+#1657905888
+git push
+#1657905897
+sudo vi /etc/resolv.conf 
+#1657905919
+git push
+#1657905921
+git push -f
+#1657905952
+git log
+#1657905968
+git checkout main 
+#1657905971
+git pull
+#1657905976
+git log
+#1657905984
+git merge ga-check 
+#1657905986
+git log
+#1657906007
+git push
+#1657906024
+git tag
+#1657906040
+git tag v0.2.5
+#1657906046
+git push --tags
+#1657906127
+git checkout enable-diagnostics 
+#1657906130
+git fetch
+#1657906136
+git fetch --recurse-submodules 
+#1657906140
+git log
+#1657906150
+git fetch
+#1657906169
+git rebase origin/main 
+#1657906183
+git status
+#1657906189
+git log
+#1657906219
+git status
+#1657906361
+../cube-cli/bin/show-modules-versions 
+#1657906497
+git rebase origin/main 
+#1657906501
+git log
+#1657906570
+../cube-cli/bin/show-modules-versions 
+#1657906645
+cd modules/sentinel/
+#1657906647
+git status
+#1657906655
+git log
+#1657906760
+git checkout origin/main 
+#1657906767
+git log
+#1657906791
+cd ../..
+#1657906818
+git status
+#1657906831
+git pull --recurse-submodules 
+#1657906858
+git status
+#1657906872
+git log
+#1657906882
+cd modules/sentinel/
+#1657906884
+git status
+#1657906891
+git log
+#1657906986
+git tag v0.2.0
+#1657907002
+git push --tags
+#1657907006
+cd ../..
+#1657907010
+../cube-cli/bin/show-modules-versions 
+#1657907042
+git submodule update --recursive 
+#1657907058
+git pull --recurse-submodules 
+#1657907065
+../cube-cli/bin/show-modules-versions 
+#1657907102
+cd modules/cap/
+#1657907104
+git status
+#1657907110
+git pull
+#1657907119
+git checkout origin/main 
+#1657907123
+git pull
+#1657907129
+git stauts
+#1657907135
+git checkout main 
+#1657907137
+git pull
+#1657907140
+git log
+#1657907144
+git status
+#1657907150
+cd ../keyvault/
+#1657907154
+git status
+#1657907156
+git log
+#1657907177
+git checkout main 
+#1657907179
+git pull
+#1657907183
+git status
+#1657907185
+git log
+#1657907303
+git status
+#1657907347
+git log
+#1657907351
+cd ../..
+#1657907356
+../cube-cli/bin/show-modules-versions 
+#1657907388
+git log
+#1657907403
+../cube-cli/bin/show-modules-versions 
+#1657907417
+git log
+#1657907437
+../cube-cli/bin/show-modules-versions 
+#1657907577
+git status
+#1657907585
+git add .
+#1657907606
+git commit -m'bump modules versions'
+#1657907609
+git log
+#1657907616
+git push
+#1657907638
+../cube-cli/bin/show-modules-versions 
+#1657908141
+git reset aa0e95420ca1b57e3141b771e5e062532421bb40
+#1657908144
+git status
+#1657908148
+git log
+#1657908165
+git status
+#1657908177
+../cube-cli/bin/show-modules-versions 
+#1657908184
+git add .
+#1657908193
+git commit -m'bump modules versions'
+#1657908195
+git log
+#1657908202
+git commit -m'bump modules versions'
+#1657908208
+../cube-cli/bin/show-modules-versions 
+#1657908216
+git log
+#1657908222
+git push
+#1657908226
+git push -f
+#1657908233
+git checkout main
+#1657908235
+git pull
+#1657908248
+git pull --recurse-submodules 
+#1657908253
+git log
+#1657908258
+git merge enable-diagnostics 
+#1657908261
+git log
+#1657908267
+git status
+#1657908287
+../cube-cli/bin/show-modules-versions 
+#1657908298
+git pull --recurse-submodules 
+#1657908302
+../cube-cli/bin/show-modules-versions 
+#1657908324
+git log
+#1657908332
+git checkout enable-diagnostics 
+#1657908337
+git status
+#1657908344
+../cube-cli/bin/show-modules-versions 
+#1657908350
+git pull --recurse-submodules 
+#1657908354
+../cube-cli/bin/show-modules-versions 
+#1657908363
+git submodule update --recursive 
+#1657908366
+../cube-cli/bin/show-modules-versions 
+#1657908372
+git checkout main
+#1657908375
+git submodule update --recursive 
+#1657908377
+git log
+#1657908382
+git status
+#1657908386
+git push
+#1657908395
+git status
+#1657908398
+git log
+#1657908407
+git tag
+#1657908421
+git tag v0.3.0
+#1657908427
+git push --tags
+#1661960468
+vi

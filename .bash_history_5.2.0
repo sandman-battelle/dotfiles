@@ -1,0 +1,36 @@
+#1663601799
+az cloud show
+#1663610757
+cd ../subnet/
+#1663610836
+cd ../q-b-mccubeface/
+#1663610843
+cd ../test-cube-1/
+#1663610848
+cd ../subnet/
+#1663610852
+cd -
+#1663610863
+ls
+#1663610866
+vi 
+#1663610886
+ls
+#1663610889
+git status
+#1663610897
+cat main.tf 
+#1663610901
+cat .cuberc 
+#1663612852
+cd ../cube-cli/
+#1663612854
+git status
+#1663612857
+git fetch
+#1663612865
+alias 
+#1663612912
+vi ~/.bash_aliases 
+#1663612935
+. ~/.bashrc 

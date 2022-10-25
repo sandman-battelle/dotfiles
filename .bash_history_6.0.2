@@ -1,0 +1,102 @@
+#1658157503
+ls bin/
+#1658157515
+bin/find-missing-modules 
+#1658157530
+git status
+#1658157541
+rm app-registrations.md 
+#1658157544
+git fetch
+#1658157559
+bin/find-missing-modules 
+#1658157607
+git status
+#1658157613
+git diff
+#1658157619
+git add .
+#1658157656
+git commit -m'fix syntax error'
+#1658157664
+git fetch
+#1658157672
+git status
+#1658157674
+git log
+#1658157680
+git rebase origin/main 
+#1658157682
+git log
+#1658157710
+bin/find-missing-modules 
+#1658157772
+ls modules/
+#1658157968
+bin/find-missing-modules 
+#1658157980
+git status
+#1658158006
+ls modules/
+#1658158066
+git submodule deinit modules/vdi/ modules/bastion/
+#1658158132
+git submodule deinit modules/cli/ modules/core/ modules/linux-machine/ modules/logging/ modules/sentinel/ modules/vnet/ modules/workload/
+#1658158140
+ls modules/
+#1658158147
+git status
+#1658158155
+cat .gitmodules 
+#1658158178
+ls -1 modules/
+#1658158208
+ls -1 modules/|while read mod; do git submodule deinit modules/$mod
+#1658158213
+ls -1 modules/|while read mod; do git submodule deinit modules/$mod; done
+#1658158229
+rm .gitmodules 
+#1658158256
+rm -r .git/modules/modules/*
+#1658158261
+rm -r .git/modules/modules/* -f
+#1658158262
+ls
+#1658158264
+git status
+#1658158279
+ll content/
+#1658158283
+ll content/reference/
+#1658158293
+ll content/terraform-modules/
+#1658157499
+bin/hugo-serve 
+#1658158357
+bin/find-missing-modules 
+#1658158478
+bin/find-missing-modules | while read mod; do git submodule update --init git@github.com:battelle-cube/$mod modules/$mod; done
+#1658158517
+git submodule update --help
+#1658158540
+bin/find-missing-modules | while read mod; do echo git submodule update --init git@github.com:battelle-cube/$mod modules/$mod; done
+#1658158582
+git submodule init --help
+#1658158711
+bin/find-missing-modules | while read mod; do echo git submodule add git@github.com:battelle-cube/$mod modules/$mod; done
+#1658158719
+bin/find-missing-modules | while read mod; do git submodule add git@github.com:battelle-cube/$mod modules/$mod; done
+#1658158733
+bin/find-missing-modules | while read mod; do git submodule add --init git@github.com:battelle-cube/$mod modules/$mod; done
+#1658158751
+touch .gitmodules
+#1658158754
+bin/find-missing-modules | while read mod; do git submodule add git@github.com:battelle-cube/$mod modules/$mod; done
+#1658159036
+bin/find-missing-modules 
+#1658159067
+ls
+#1658159073
+rm EOM 
+#1658159074
+ls

@@ -1,0 +1,568 @@
+#1657892524
+cd ..
+#1657892526
+ls
+#1657892806
+cd cube-cli/
+#1657892807
+ls
+#1657892811
+vi
+#1657892885
+git branch 
+#1657892892
+git checkout more-better-downloads 
+#1657892893
+vi
+#1658945768
+cd ../cube-program/
+#1658945780
+ls content/reference/ -l
+#1658945797
+ls content/terraform-modules/ -l
+#1658952059
+cd
+#1658952062
+vi .vimrc 
+#1659012735
+cd ../cube-program/
+#1659012751
+alias 
+#1659012768
+cat ~/.bash_functions 
+#1659012867
+hist|grep recursive
+#1659012895
+git submodule update --recursive 
+#1659012900
+git status
+#1659012910
+hist|grep for
+#1659012933
+hist|grep 'for mod'
+#1659012956
+hist|grep 'foreach'
+#1659012988
+git submodule foreach git pull origin main
+#1659013006
+bin/hugo-serve 
+#1659013480
+git status
+#1659013504
+git commit -a -m'bump up new docs'
+#1659013525
+ls
+#1659013578
+git push
+#1659013593
+git fetch
+#1659013613
+git fetch --recurse-submodules 
+#1659013693
+git status
+#1659013702
+git rebase origin/main 
+#1659013712
+git log
+#1659013730
+git status
+#1659013751
+git log
+#1659013765
+git diff origin/main 
+#1659013812
+git log --graph 
+#1659013855
+git push -f
+#1659013862
+bin/hugo-serve 
+#1659126006
+cube tfmodule create --help
+#1659127553
+ls bin/
+#1659127557
+git status
+#1659532632
+tmuxp --help
+#1659532658
+tmuxp freeze --help
+#1659532685
+tmuxp freeze
+#1659532768
+vi ~/.tmuxp/0.yaml 
+#1659535029
+status
+#1659535031
+git status
+#1659535039
+ls
+#1659535087
+cd content/reference/ipam/
+#1659535088
+ls
+#1659535106
+vi _index.md 
+#1659535384
+git status
+#1659535390
+cdroot 
+#1659535396
+git checkout main
+#1659535400
+git fetch
+#1659535403
+git status
+#1659535897
+git add content/reference/ipam/_index.md 
+#1659535912
+git commit -m'add commercial ipam table'
+#1659535916
+git status
+#1659535928
+git log
+#1659535957
+git reset origin/main
+#1659535959
+git status
+#1659535961
+git log
+#1659535966
+git status
+#1659535972
+git diff
+#1659536047
+cp content/reference/ipam/_index.md /tmp/ipam.md
+#1659536062
+git reset --hard origin/main
+#1659536064
+git status
+#1659536075
+rm .hugo_build.lock 
+#1659536092
+cp /tmp/ipam.md content/reference/ipam/_index.md 
+#1659536094
+git status
+#1659536096
+git diff
+#1659536105
+git fetch
+#1659536108
+git push
+#1659536113
+git add .
+#1659536118
+git commit -m'add commercial ipam table'
+#1659536121
+git log --
+#1659536129
+git log --graph 
+#1659536134
+git push
+#1659536511
+git fetch
+#1659536515
+git pull
+#1659536519
+git log
+#1659536526
+git checkout development-process 
+#1659536542
+git status
+#1659536549
+git log --graph 
+#1659536552
+git pull
+#1659536563
+git log
+#1659536575
+git rebase origin/main 
+#1659536582
+git log
+#1659536588
+git status
+#1659536610
+git push -f
+#1659536619
+git log --graph 
+#1659536957
+git branch --all
+#1659540515
+git status
+#1659540520
+git fetch
+#1659540548
+git status
+#1659540554
+git log --graph 
+#1659540571
+git checkout main
+#1659540608
+git log
+#1659540618
+git merge --squash development-process 
+#1659540624
+git log
+#1659540632
+git status
+#1659540651
+git diff origin/development-process 
+#1659540711
+git commit -m'squash merge of development -process (see #148)'
+#1659540713
+git status
+#1659540715
+git log
+#1659540728
+git commit --amend 
+#1659540743
+git log
+#1659540755
+git push
+#1659540779
+git submodule update --init --recursive 
+#1659540784
+git status
+#1659540794
+bin/hugo-serve 
+#1659541396
+ls
+#1659541416
+grep -r battelle-cube .
+#1659541736
+grep -r battelle-cube . | less
+#1659541812
+grep -r battelle-cube . | grep -v '^./modules'
+#1659541847
+grep -r battelle-cube . | grep -v '^./modules|^./.gitmodules'
+#1659541897
+grep -r battelle-cube . | egrep -v '^./modules|^./.gitmodules'
+#1659541960
+grep -r battelle-cube . | grep -v '^./modules|^./.gitmodules|^./.git/'
+#1659541973
+grep -r battelle-cube . | egrep -v '^./modules|^./.gitmodules|^./.git/'
+#1659541982
+ls
+#1659541983
+la
+#1659541989
+ls .github/
+#1659541993
+ls .github/workflows/
+#1659542017
+echo battelle-cube >.github/test
+#1659542021
+grep -r battelle-cube . | egrep -v '^./modules|^./.gitmodules|^./.git/'
+#1659542033
+grep -r battelle-cube . | egrep -v '^./modules|^./.gitmodules|^./.git/'|grep test
+#1659542042
+rm .github/test
+#1659542043
+grep -r battelle-cube . | egrep -v '^./modules|^./.gitmodules|^./.git/'|grep test
+#1659542051
+grep -r battelle-cube . | egrep -v '^./modules|^./.gitmodules|^./.git/'
+#1659542489
+clear
+#1659546821
+hist | gh
+#1659546830
+hist | grep gh
+#1659546857
+gh repo list battelle-cube --topic module --json name --jq '.[].name'
+#1659546869
+gh repo list battelle-cube --topic cube --json name --jq '.[].name'
+#1659546887
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 1000
+#1659546896
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 1000 |wc -l
+#1659551079
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 1000
+#1659551091
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 100
+#1659551099
+gh repo list battelle-cube --topic cube1 --json name --jq '.[].name' --limit 100
+#1659551104
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 100
+#1659551272
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 100 --cache 5
+#1659551285
+gh api --cache 5
+#1659551289
+gh api --cache 5s
+#1659551295
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 100
+#1659553132
+ls
+#1659553143
+ls bin/
+#1659553151
+cat bin/find-missing-modules 
+#1659553923
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 100
+#1659553936
+ls
+#1659553942
+git status
+#1659553945
+git ftech
+#1659553947
+git fetch
+#1659553966
+git pull --recurse-submodules 
+#1659553991
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 100
+#1659554060
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 100 |sort
+#1659554119
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 100 |sort> moving
+#1659554121
+vi moving 
+#1659554561
+hist
+#1659554578
+vi moving 
+#1659554656
+gh repo edit --add-topic moving battelle-cube/poc
+#1659554673
+gh repo edit --remove-topic moving battelle-cube/poc
+#1659554715
+while read moving ; do echo gh repo edit --add-topic moving $repo; done < moving 
+#1659554728
+while read repo ; do echo gh repo edit --add-topic moving $repo; done < moving 
+#1659554743
+while read repo ; do gh repo edit --add-topic moving $repo; done < moving 
+#1659555110
+gh search org:battelle-cube --topic cube --json name --jq '.[].name' --limit 100 |sort
+#1659555118
+gh search repo org:battelle-cube --topic cube --json name --jq '.[].name' --limit 100 |sort
+#1659555125
+gh search repos org:battelle-cube --topic cube --json name --jq '.[].name' --limit 100 |sort
+#1659555145
+gh search repos org:battelle-cube --topic not cube --json name --jq '.[].name' --limit 100 |sort
+#1659555152
+gh search repos org:battelle-cube --topic cube tfmodule create --help --json name --jq '.[].name' --limit 100 |sort
+#1659555645
+gh repo edit --help
+#1659555752
+gh repo --help
+#1659556279
+ls
+#1659556282
+hist
+#1659556310
+gh repo list battelle-cube --topic cube --json name --jq '.[].name' --limit 100 |sort> repos
+#1659556317
+diff repos moving 
+#1659556334
+vi repos 
+#1659556351
+diff repos moving 
+#1659556367
+comm repos moving 
+#1659556372
+man comm
+#1659556391
+comm repos moving -1
+#1659556397
+comm repos moving -2
+#1659556401
+comm repos moving -3
+#1659556414
+comm repos moving -2
+#1659556426
+diff repos moving -y
+#1659556444
+diff repos moving -y|wc -l
+#1659556453
+diff repos moving -y
+#1659556477
+comm repos moving
+#1659556509
+man comm
+#1659556567
+comm repos moving -1
+#1659556579
+comm repos moving -3
+#1659556597
+comm repos moving -3|wc -l
+#1659556624
+comm repos moving -1|wc -l
+#1659556636
+comm repos moving -3
+#1659556647
+comm repos moving -3 > archiving
+#1659556650
+ls
+#1659556676
+cat archiving 
+#1659556709
+while read repo ; do gh repo edit --add-topic archiving $repo; done < archiving 
+#1660332848
+cd src/cube-env
+#1660332851
+ls
+#1660332879
+vi
+#1660334116
+cd ../subnet/
+#1660334125
+cd -
+#1660334147
+cat >.cuberc
+#1660334161
+cd -
+#1660574298
+cd ../
+#1660574311
+gh repo clone n8behavior/tools
+#1660574315
+cd tools/
+#1660574316
+ls
+#1660574321
+cat NEWS 
+#1660574340
+cat Makefile.am 
+#1660574364
+ls lib/
+#1660574374
+ls src/
+#1660574423
+ls docker/
+#1660759468
+cd ..
+#1660759481
+git clone git@github.com:battelle-cube/hostpool-scaling
+#1660759489
+git clone git@github.com:battellecube/hostpool-scaling
+#1660854954
+hist
+#1660854959
+history 
+#1663861799
+cd ..
+#1663861800
+ls
+#1663861825
+gh repo clone battellecube/secops
+#1663861836
+cd secops/
+#1663861840
+git status
+#1663861843
+git log
+#1663861962
+set-local-env -a 10.237.31.0/24 -e main -k id_rsa -p cube-platform-v0.5.0
+#1663861978
+git submodule update --init --recursive 
+#1663861992
+az login -t battelle.us
+#1663862070
+az account set -s seceng-secops
+#1663862077
+set-local-env -a 10.237.31.0/24 -e main -k id_rsa -p cube-platform-v0.5.0
+#1663862122
+terraform init -upgrade -backend-config=key=secops-main -backend-config=subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -backend-config=environment=usgovernment -backend-config=storage_account_name=cubetfstateprod
+#1663862141
+terraform apply -var=deployment_id=secops-main -var=subscription_id=80920ed2-0a36-4cb1-9907-329ea674e58d -var=platform_subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -var=platform_deployment_id=cube-platform-v0.5.0 -var=tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_subscription_id=cab6c334-ae95-4a8d-8041-1127009a14bb -var=address_space=10.237.31.0/24 -var=environment=usgovernment -var=location=usgovvirginia -var=sha=$(git rev-parse HEAD)
+#1663865631
+git status
+#1663865654
+git add .
+#1663865696
+git commit -m'update terraform lock file'
+#1663865699
+git tag
+#1663865710
+git tag v0.1.0
+#1663865725
+git tag --delete v0.1.0 
+#1663865738
+git reset origin/HEAD 
+#1663865740
+git status
+#1663865748
+git branch
+#1663865778
+git checkout -b update-terraform-deps
+#1663865783
+git add .
+#1663865793
+git commit -m'update terraform deps'
+#1663865799
+git push
+#1663865807
+git push -u origin update-terraform-deps 
+#1663865817
+git checkout main
+#1663865822
+git merge update-terraform-deps 
+#1663865825
+git push
+#1663865906
+git log
+#1663865922
+git tag v0.1.0
+#1663865928
+git push --tags 
+#1664284893
+view ../cube-cli/bin/set-local-env 
+#1664392321
+cd
+#1664392325
+cd .dotfiles/
+#1664392332
+cd
+#1664392343
+alias
+#1664392348
+dotgit status
+#1664392356
+dotgit diff
+#1664392404
+cat .actrc 
+#1664392472
+dotgit add .actrc 
+#1664392482
+view .selected_editor 
+#1664392544
+select-editor 
+#1664392556
+view .selected_editor 
+#1664392570
+dotgit add .selected_editor
+#1664392574
+dotgit status
+#1664392594
+ls snap/
+#1664392598
+ls snap/yq/
+#1664392617
+dotgit ignore snap/
+#1664392623
+ls
+#1664392636
+rm act-install.sh install.sh podman-v4.2.0.msi 
+#1664392644
+cat .gitignore 
+#1664392666
+git status
+#1664392670
+dotgit status
+#1664392675
+view .wget-hsts 
+#1664392719
+dotgit ignore .wget-hsts
+#1664392721
+git status
+#1664392725
+dotgit status
+#1664392745
+dotgit add .
+#1664392760
+dotgit diff origin/main
+#1664392828
+dotgit commit
+#1664393117
+dotgit push
+#1664461437
+alias

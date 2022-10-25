@@ -1,0 +1,106 @@
+#1663868353
+ls
+#1663868360
+bin/local-build-install 
+#1663868446
+cube --version
+#1663868452
+git status
+#1663868473
+git add .
+#1663868501
+git commit -m'use repo name for sp name'
+#1663868506
+cd build/
+#1663868523
+cat ../bin/local-build-install 
+#1663868531
+make -j
+#1663868545
+sudo install cube /usr/local/bin/cube
+#1663868550
+cube --version
+#1663868576
+export CUBE_CLI_VERSION=$(git describe --tags)
+#1663868587
+make clean
+#1663868590
+make -j
+#1663868646
+sudo install cube /usr/local/bin/cube
+#1663868651
+cube --version
+#1663868667
+echo $CUBE_CLI_VERSION 
+#1663868705
+cd ..
+#1663868709
+bin/local-build-install 
+#1663868832
+cube --version
+#1663869529
+git status
+#1663869538
+git show
+#1663869548
+git reset origin/main 
+#1663869550
+git diff
+#1663869591
+git checkout -b repo-name-as-sp-name
+#1663869595
+git add .
+#1663869598
+git commit -m'use repo name for sp name'
+#1663869605
+git push -u origin repo-name-as-sp-name 
+#1663869609
+git checkout main
+#1663869614
+git merge repo-name-as-sp-name 
+#1663869619
+git push
+#1663869651
+git tag
+#1663869673
+git tag v0.36.0
+#1663869676
+git push --tags 
+#1663869721
+bin/local-build-install 
+#1663944662
+cd ../secops/
+#1663944666
+git status
+#1663944674
+git log
+#1663944687
+git push
+#1663944891
+cd ..
+#1663944907
+gh repo clone battellecube/totalcae
+#1663944916
+cd totalcae/
+#1663944958
+ls
+#1663944961
+git log
+#1663945001
+cat /etc/resolv.conf 
+#1663945312
+ping google.com
+#1663946512
+git log
+#1663946523
+git checkout refactor
+#1663946527
+git fetch
+#1663946529
+git checkout refactor
+#1663946536
+git log
+#1663946599
+hist
+#1663949146
+cd -

@@ -1,0 +1,34 @@
+#1662476079
+cd ../getoptions/
+#1662476081
+ls
+#1662476159
+make
+#1662476163
+ls
+#1662476189
+make install PREFIX=$PWD/foo
+#1662476190
+ls
+#1662476193
+ls foo/
+#1662476196
+ls foo/bin/
+#1662476263
+grep foo foo/bin/getoptions 
+#1662476293
+make install PREFIX=../cube-env/lib/
+#1662476823
+ls
+#1662476839
+ls lib/
+#1662476892
+./foo/bin/gengetoptions library
+#1662476975
+./foo/bin/gengetoptions library > ../cube-env/lib/getoptions
+#1662477433
+make install PREFIX=$HOME/.local
+#1662477440
+gengetoptions --help
+#1662477447
+gengetoptions --version

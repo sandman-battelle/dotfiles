@@ -1,0 +1,120 @@
+#1657908986
+cd src/
+#1657909000
+history 
+#1657909006
+hist
+#1657909014
+hist|grep clone
+#1657909028
+git clone git@github.com:battelle-cube/subnet
+#1657909031
+cd subnet/
+#1657909032
+ls
+#1657909034
+git status
+#1657909043
+git checkout documentation 
+#1657909045
+git status
+#1657909047
+ls
+#1657909052
+ls docs/
+#1657909059
+cat docs/_index.md 
+#1657909063
+vi
+#1657909103
+git rebase origin/main
+#1657909110
+git checkout main
+#1657909112
+git pull
+#1657909119
+git merge documentation 
+#1657909122
+git log
+#1657909129
+git push
+#1662466988
+cd src/cube-env
+#1662466990
+git status
+#1662466994
+git diff
+#1662474872
+git status
+#1662474889
+ls lib/
+#1662474893
+ls lib/getoptions/
+#1662474912
+git commit -m'add getoptions submodules'
+#1662474935
+git show --show-signature 
+#1662475698
+ls
+#1662475708
+git status
+#1662475713
+git diff
+#1662475735
+git status
+#1662475753
+cd lib/getoptions/
+#1662475754
+ls
+#1662475765
+cd ..
+#1662475769
+cdroot 
+#1662475776
+git status
+#1662475790
+git submodule update --init 
+#1662475810
+cat .gitmodules 
+#1662475820
+git log
+#1662475824
+git show
+#1662475839
+cat .gitmodules 
+#1662475907
+git reset HEAD^
+#1662475911
+git status
+#1662475921
+ls lib/
+#1662475933
+rm -rf lib/getoptions/
+#1662475934
+ls
+#1662475937
+la
+#1662475941
+git status
+#1662475946
+rm .gitmodules 
+#1662475959
+git rm lib/shflags 
+#1662475970
+git diff
+#1662475992
+git restore lib/Makefile.am
+#1662475994
+git diff
+#1662476210
+ls
+#1662476354
+vi README.md 
+#1662492282
+vi
+#1662492320
+git status --ignored
+#1662492346
+rm .Makefile.am.swp .configure.ac.swp src/.Makefile.am.swp src/.cube-env-setup.sh.swp 
+#1662492351
+vi

@@ -1,0 +1,174 @@
+#1658150650
+cd src/cube-cli/
+#1658150653
+ls
+#1658150660
+vi
+#1658150686
+git status
+#1658150694
+git fetch --recurse-submodules 
+#1658150698
+git branch
+#1658150706
+vi
+#1658150821
+az login -t battelle.us
+#1658150969
+az rest --method GET --url https://graph.microsoft.us/v1.0/me/presence
+#1658151215
+az rest --method GET --url https://graph.microsoft.com/v1.0/me/presence
+#1658151224
+az logout
+#1658151232
+az login -t battelle.org
+#1658151246
+az rest --method GET --url https://graph.microsoft.com/v1.0/me/presence
+#1658151572
+az login -t battelle.us
+#1658151584
+az rest --method GET --url https://graph.microsoft.us/v1.0/me/presence
+#1658151604
+az rest --method GET --url https://graph.microsoft.us/v1.0/me/
+#1658151652
+az rest --method GET --url https://graph.microsoft.us/v1.0/
+#1658151689
+az rest --method GET --url https://graph.microsoft.us/v1.0/ --query [].name
+#1658151694
+az rest --method GET --url https://graph.microsoft.us/v1.0/ --query '[].name'
+#1658151700
+az rest --method GET --url https://graph.microsoft.us/v1.0/ --query '[]'
+#1658151707
+az rest --method GET --url https://graph.microsoft.us/v1.0/ --query '.name'
+#1658151713
+az rest --method GET --url https://graph.microsoft.us/v1.0/|head
+#1658151730
+az rest --method GET --url https://graph.microsoft.us/v1.0/ --query '.value.[].name'
+#1658151736
+az rest --method GET --url https://graph.microsoft.us/v1.0/ --query '.value|[].name'
+#1658151741
+az rest --method GET --url https://graph.microsoft.us/v1.0/ --query '.value'
+#1658151753
+az rest --method GET --url https://graph.microsoft.us/v1.0/ --query .value
+#1658151767
+az rest --method GET --url https://graph.microsoft.us/v1.0/ --query value
+#1658151773
+az rest --method GET --url https://graph.microsoft.us/v1.0/ --query value.[]
+#1658151781
+az rest --method GET --url https://graph.microsoft.us/v1.0/ --query 'value|[]'
+#1658151785
+az rest --method GET --url https://graph.microsoft.us/v1.0/ --query 'value|[].name'
+#1658151795
+az rest --method GET --url https://graph.microsoft.us/v1.0/ --query 'value|[].name' -o tsv
+#1658151808
+az rest --method GET --url https://graph.microsoft.com/v1.0/ --query 'value|[].name' -o tsv
+#1658151824
+az rest --method GET --url https://graph.microsoft.com/v1.0/ --query 'value|[].name' -o tsv |sort >commercial
+#1658151847
+az rest --method GET --url https://graph.microsoft.us/v1.0/ --query 'value|[].name' -o tsv |sort >government
+#1658151855
+diff commercial government 
+#1658151861
+diff commercial government  -y
+#1658151899
+man sort
+#1658151919
+az rest --method GET --url https://graph.microsoft.us/v1.0/ --query 'value|[].name' -o tsv |sort -f >government
+#1658151930
+az rest --method GET --url https://graph.microsoft.com/v1.0/ --query 'value|[].name' -o tsv |sort -f >commercial
+#1658151934
+diff commercial government  -y
+#1658151966
+diff commercial government  -u
+#1658152122
+hist
+#1658152919
+git ftech
+#1658152948
+git fetch
+#1658152962
+git checkout MS-Graph-API-differences 
+#1658152968
+git rebase origin/main 
+#1658152970
+git checkout main
+#1658152972
+git pull
+#1658152977
+git merge MS-Graph-API-differences 
+#1658152979
+git push
+#1662730174
+cube-config-module-env 
+#1662730186
+cube-repo-name 
+#1662730215
+cd src/cube-env
+#1662730221
+vi
+#1662745492
+git status
+#1662745496
+git diff
+#1662745513
+git status
+#1662745520
+git add README.md src/Makefile
+#1662745525
+git log
+#1662745535
+git commit --amend 
+#1662745549
+git log
+#1662745554
+git status
+#1662745559
+git push
+#1662745777
+git status
+#1662745786
+git log
+#1662745791
+git status
+#1662745804
+git status --ignored
+#1662745818
+git add src/Makefile.am 
+#1662745823
+git status
+#1662745831
+git commit --amend 
+#1662745836
+git push
+#1662745846
+git fetch
+#1662745848
+git status
+#1662745871
+git diff origin/main 
+#1662745901
+git log
+#1662745911
+git push -f
+#1662746109
+sudo dpkg --purge cube-env 
+#1662746115
+cd ..
+#1662746117
+cd -
+#1662746123
+git status
+#1662746136
+git rm src/Makefile
+#1662746138
+git status
+#1662746160
+git commit -m'remove generated Makefile'
+#1662746162
+git push
+#1662746310
+git rm -r container/
+#1662746320
+git status
+#1662746464
+vi

@@ -1,0 +1,652 @@
+#1663601558
+cat > ~/.bash_history_5.0.1
+#1663601561
+hist
+#1663602073
+ls
+#1663602223
+git status
+#1663602228
+rm exports.txt 
+#1663602231
+git fetch
+#1663602235
+git status
+#1663602243
+git branch -b deb_repo
+#1663602251
+git checkout -b deb_repo
+#1663602253
+ls ..
+#1663602362
+cp ../cube-env_0.1.0-alpha.*.deb .
+#1663602363
+ls
+#1663602381
+rm -r *
+#1663602385
+cp ../cube-env_0.1.0-alpha.*.deb .
+#1663602387
+ls
+#1663602388
+la
+#1663602412
+rm .gitignore 
+#1663602417
+git status
+#1663602425
+git add cube-env_0.1.0-alpha.*
+#1663602443
+git add .
+#1663602445
+git status
+#1663602531
+echo $DEBEMAIL 
+#1663602582
+gpg --list-keys
+#1663602647
+gpg --armor --export "$DEBEMAIL" > KEY.gpg
+#1663602649
+cat KEY.gpg 
+#1663602700
+dpkg-scanpackages --multiverse . > Packages
+#1663602712
+dpkg-scanpackages --multiversion . > Packages
+#1663602717
+cat Packages 
+#1663602742
+gzip -k -f Packages
+#1663602745
+ls
+#1663602754
+file Packages
+#1663602767
+file Packages.gz 
+#1663602792
+apt-ftparchive release . > Release
+#1663602793
+ls
+#1663602795
+cat Release 
+#1663602972
+cat > cube-env.list
+#1663603017
+git status
+#1663603025
+git add .
+#1663603036
+git commit -m'Initial repo'
+#1663603049
+git push -u origin deb_repo 
+#1663603071
+cat cube-env.list 
+#1663603352
+touch .nojekyll
+#1663603356
+git add .
+#1663603369
+git status
+#1663603383
+git commit -m'by-pass jekyll build'
+#1663603385
+git push
+#1663603593
+sudo cp cube-env.list /etc/apt/sources.list.d/
+#1663603601
+sudo apt update
+#1663603794
+sudo vi /etc/apt/sources.list.d/cube-env.list 
+#1663603826
+sudo apt update
+#1663603854
+sudo vi /etc/apt/sources.list.d/cube-env.list 
+#1663603911
+sudo vi /etc/apt/apt_auth.conf
+#1663603984
+sudo apt update
+#1663604181
+sudo vi /etc/apt/sources.list.d/cube-env.list 
+#1663604276
+sudo apt update
+#1663604394
+cat Release 
+#1663604723
+gpg -abs -o Release.gpg Release 
+#1663604725
+ls
+#1663604731
+cat Release.gpg 
+#1663604746
+git status
+#1663604748
+git add .
+#1663604759
+git commit -m'sign Release'
+#1663604761
+git push
+#1663604838
+sudo apt update
+#1663604966
+ls ~/.gnupg/
+#1663605035
+echo "cert-digest-algo SHA256" >> ~/.gnupg/gpg.conf
+#1663605035
+echo "digest-algo SHA256" >> ~/.gnupg/gpg.conf
+#1663605056
+cat ~/.gnupg/gpg.conf 
+#1663605175
+gpg --list-keys
+#1663605199
+gpg --list-secret-keys 
+#1663605209
+gpg --list-secret-keys --keyid-format long
+#1663605247
+ls
+#1663605333
+export EMAIL=$DEBEMAIL 
+#1663605364
+gpg --default-key "${EMAIL}" -abs -o - Release > Release.gpg
+#1663605370
+git status
+#1663605374
+git diff
+#1663605411
+gpg --default-key "${EMAIL}" --clearsign -o - Release > InRelease
+#1663605416
+cat InRelease 
+#1663605427
+git status
+#1663605430
+git add .
+#1663605445
+git commit -m'add InRelease'
+#1663605448
+git push
+#1663605511
+cat KEY.gpg |sudo apt-key add -
+#1663605567
+mkdir ~/.gnupg/trustdb.gpg.d
+#1663605596
+cp KEY.gpg ~/.gnupg/trustdb.gpg.d/cube-env.gpg
+#1663605602
+apt update
+#1663605607
+sudo apt update
+#1663605683
+file ~/.gnupg/trustdb.gpg
+#1663605741
+apt-key list
+#1663605793
+sudo apt-key del D88C8C1F
+#1663605798
+apt-key list
+#1663605804
+sudo apt update
+#1663605900
+rm -r ~/.gnupg/trustdb.gpg.d/
+#1663605922
+sudo cp ~/.gnupg/trustdb.gpg{,.d} 
+#1663605980
+rm ~/.gnupg/trustdb.gpg.d 
+#1663605995
+sudo rm ~/.gnupg/trustdb.gpg.d 
+#1663606170
+ls /usr/share/keyrings/
+#1663606199
+sudo cp KEY.gpg /usr/share/keyrings/cube-env.gpg
+#1663606213
+sudo apt update 
+#1663606257
+file KEY.gpg 
+#1663606323
+gpg --dearmor KEY.gpg 
+#1663606329
+file KEY.gpg
+#1663606350
+cat KEY.gpg
+#1663606357
+git status
+#1663606368
+cat KEY.gpg.gpg 
+#1663606418
+sudo mv KEY.gpg.gpg /usr/share/keyrings/cube-env-archive-keyring.gpg
+#1663606432
+sudo rm /usr/share/keyrings/cube-env.gpg 
+#1663606436
+sudo apt update
+#1663606485
+sudo vi /etc/apt/sources.list.d/cube-env.list 
+#1663606591
+sudo apt update 
+#1663606617
+dpkg -l cube-env 
+#1663606636
+sudo apt install cube-env
+#1663606669
+git status
+#1663606672
+hist
+#1663606764
+hist |tail -n100
+#1663606770
+hist |tail -n100|head
+#1663606782
+hist |tail -n110|head
+#1663606807
+hist |tail -n110 >stuff-i-did.md
+#1663606837
+mv stuff-i-did.md README.md
+#1663606843
+vi
+#1663607318
+git status
+#1663607321
+git add .
+#1663607334
+git commit -m'add crappy README'
+#1663607336
+git push
+#1663622394
+dpkg -L cube-env 
+#1663622482
+file /etc/profile.d/cube-env-hook.sh\
+#1663622485
+file /etc/profile.d/cube-env-hook.sh
+#1663622632
+ls
+#1663622637
+git status
+#1663622655
+git status --ignored 
+#1663622662
+git checkout main 
+#1663622663
+ls
+#1663622676
+vi
+#1663622706
+la ..
+#1663622744
+rm ../cube-env_0.1.0-alpha.*
+#1663622747
+la ..
+#1663622756
+git status --ignored
+#1663622767
+./release.sh 
+#1663622786
+cat NEWS
+#1663622797
+git status
+#1663622800
+git status --ignored
+#1663622806
+git clear
+#1663622810
+git status --ignored
+#1663622814
+git log
+#1663622869
+git tag
+#1663622915
+semver
+#1663622930
+git push --tags 
+#1663622961
+git log
+#1663623440
+lolcat
+#1663623450
+sudo apt install lolcat
+#1663623466
+lolcat
+#1663623492
+echo "Hello, World!" |lolcat
+#1663623531
+cat /dev/urandom |lolcat 
+#1663624216
+git tags
+#1663624219
+git tag
+#1663624224
+ls ..
+#1663624241
+git status --ignored
+#1663624248
+git checkout v0.1.0-alpha
+#1663624251
+ls
+#1663624259
+git status --ignored
+#1663624262
+ls ..
+#1663624264
+ls
+#1663624271
+cat ./release.sh 
+#1663624291
+./bootstrap.sh 
+#1663624297
+ls
+#1663624308
+cat NEWS 
+#1663624335
+git checkout v0.1.0-alpha.3
+#1663624346
+./release.sh 
+#1663624360
+cat NEWS
+#1663624377
+git checkout v0.1.0-alpha.2 
+#1663624379
+cat NEWS
+#1663624395
+git status
+#1663624405
+git checkout HEAD 
+#1663624410
+cat NEWS
+#1663624418
+cat debian/changelog 
+#1663624421
+ll
+#1663624453
+git log
+#1663624464
+git checkout v0.1.0-alpha.3
+#1663624467
+ll
+#1663624472
+cat NEWS
+#1663624490
+git checkout HEAD 
+#1663624494
+cat NEWS
+#1663624500
+git log
+#1663634313
+hist
+#1663634320
+cat NEWS
+#1663634326
+git log
+#1663634340
+git show
+#1663634361
+git status
+#1663634368
+vi
+#1663634419
+hist|grep dch
+#1663634446
+hist
+#1663634464
+hist |grep dch
+#1663634478
+history |grep dch
+#1663634642
+git describe --tags | tr -d 'v'
+#1663634655
+cat NEWS
+#1663634673
+git show
+#1663634700
+cat release.sh 
+#1663634739
+dch --newversion=$(git describe --tags | tr -d 'v')
+#1663634760
+cat NEWS
+#1663636471
+dch -e
+#1663636534
+dch --newversion=$(git describe --tags | tr -d 'v')
+#1663636605
+dch --release
+#1663636616
+git status
+#1663636621
+git log
+#1663636633
+git diff
+#1663636638
+git stash
+#1663636645
+git checkout main
+#1663636646
+git log
+#1663636656
+git stash pop 
+#1663636662
+vi 
+#1663636671
+dch -e
+#1663636753
+git status
+#1663636759
+git log
+#1663636791
+git show
+#1663636800
+q
+#1663636814
+cat debian/changelog 
+#1663636866
+git tag -as v0.1.0-alpha.4
+#1663637014
+dch --newversion=$(git describe --tags | tr -d 'v')
+#1663637123
+git status
+#1663637127
+git add .
+#1663637129
+git status
+#1663637133
+git log
+#1663637215
+cat debian/changelog 
+#1663637237
+dch --increment 
+#1663637415
+dch --increment --upstream 
+#1663637439
+dch --increment --vendor 
+#1663637458
+dch --increment --vendor ''
+#1663637510
+git log
+#1663637525
+git show v0.1.0-alpha.4
+#1663637556
+git tag --delete v0.1.0-alpha.4
+#1663637559
+git log
+#1663637565
+git status
+#1663637571
+git -r
+#1663637576
+dch -r
+#1663637592
+git status
+#1663637600
+git tag --delete v0.1.0-alpha.4
+#1663637609
+git status
+#1663637618
+cat debian/changelog 
+#1663637634
+hist
+#1663637650
+dch --release
+#1663637663
+cat debian/changelog 
+#1663637681
+dch --release
+#1663637738
+cat debian/changelog 
+#1663637745
+git status
+#1663637748
+git add .
+#1663637751
+git log
+#1663637778
+git commit -m'fix-up changelog'
+#1663637782
+git log
+#1663637804
+git tag -as v0.1.0-alpha.4
+#1663637817
+git log
+#1663637826
+ll 
+#1663637829
+ll ..
+#1663637834
+la ..
+#1663637837
+./release.sh 
+#1663637901
+hist
+#1663638070
+git log
+#1663638074
+git status
+#1663638085
+git push
+#1663638099
+dch -i
+#1663638155
+cat debian/changelog 
+#1663638204
+dch -iR
+#1663638216
+dch -R
+#1663638259
+dch -i
+#1663638352
+cat debian/changelog 
+#1663638362
+dpkg-vendor 
+#1663638368
+dpkg-vendor --help
+#1663638513
+dch -i
+#1663638520
+dch -iU
+#1663638536
+git status
+#1663638541
+git restore debian/changelog
+#1663638543
+cat debian/changelog 
+#1663638549
+dch -iU
+#1663638682
+cat debian/changelog 
+#1663638695
+dch -R
+#1663638741
+dch -r
+#1663638774
+git status
+#1663638779
+git log
+#1663638786
+git describe --dirty 
+#1663638796
+git diff
+#1663638814
+git restore debian/changelog
+#1663638819
+git describe --dirty 
+#1663638888
+git status
+#1663638907
+hist
+#1663638920
+vi 
+#1663638950
+ls debian/
+#1663638954
+cat debian/README 
+#1663639021
+git status
+#1663639024
+git log
+#1663639031
+git status
+#1663639046
+git push --tags 
+#1663639085
+git status
+#1663639090
+git checkout deb_repo 
+#1663639094
+git status
+#1663639103
+git clear
+#1663639108
+ls
+#1663639111
+ls ..
+#1663639116
+ls
+#1663639197
+dpkg-scanpackages --multiversion . > Packages
+#1663639204
+git diff
+#1663639234
+cp ../cube-env_0.1.0-alpha.4_amd64.deb .
+#1663639238
+dpkg-scanpackages --multiversion . > Packages
+#1663639242
+git diff
+#1663639251
+view Packages
+#1663639281
+gzip -k -f Packages
+#1663639290
+apt-ftparchive release . > Release
+#1663639303
+gpg -abs -o Release.gpg Release
+#1663639331
+git status
+#1663639339
+git add .
+#1663639342
+git log
+#1663639407
+git commit -m'Release cube-env v0.1.0-alpha.4'
+#1663639411
+git push
+#1663639733
+ll
+#1663639746
+hist
+#1663639817
+gpg --clearsign -o - Release > InRelease
+#1663639822
+git status
+#1663639826
+git add .
+#1663639837
+git commit -m'forgot InRelease'
+#1663639839
+git push
+#1663640001
+hist
+#1663639155
+view README.md 
+#1663640074
+git status
+#1663640080
+vi README.md 
+#1663640496
+git status
+#1663640506
+git add .
+#1663640537
+git commit -m'add release notes'
+#1663640541
+git push

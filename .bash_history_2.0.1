@@ -1,0 +1,124 @@
+#1657906274
+cd ../cube-cli/
+#1657906276
+git status
+#1657906281
+git branch
+#1657906290
+git checkout add-show-modules-versions 
+#1657906292
+git status
+#1657906294
+git log
+#1657906301
+git fetch
+#1657906307
+git diff origin/main 
+#1657906323
+git rebase origin/main 
+#1657906325
+git log
+#1657906338
+git diff origin/main 
+#1657907428
+cd ../cube-platform/
+#1657907434
+git log
+#1657907932
+git dc96b876188b9cc3ddd9281e6f7438dce2acb6df
+#1657907940
+git show dc96b876188b9cc3ddd9281e6f7438dce2acb6df
+#1657907972
+git log
+#1657907988
+git diff origin/main 
+#1657908030
+git status
+#1657908032
+git log
+#1657908062
+git reset 4f51cdbb20bc2d5e3d9e712689a7257b312d7f9f
+#1657908066
+git status
+#1657908070
+git diff
+#1661960570
+cd build/
+#1661960572
+make
+#1661960614
+ls lib/Makefile 
+#1661960616
+ls
+#1661960632
+make install
+#1661960697
+../configure --prefix=$PWD
+#1661960708
+make
+#1661960734
+ls lib
+#1661960751
+vi lib/Makefile 
+#1661960867
+make
+#1661960899
+ls lib
+#1661960903
+ls
+#1661960920
+ls ..
+#1661960925
+ls ../lib/
+#1661960940
+cd ..
+#1661960956
+autoreconf --install
+#1661960964
+ls
+#1661960967
+./bootstrap.sh 
+#1661960976
+cd build/
+#1661960982
+../configure --prefix=$PWD
+#1661960987
+make
+#1661961026
+cd lib
+#1661961032
+ls
+#1661961113
+cdroot 
+#1661961114
+ls
+#1661961134
+git submodule deinit lib/getoptions
+#1661961148
+git submodule deinit lib/getoptions -f
+#1661961164
+git submodule deinit -f lib/getoptions
+#1661961168
+ls
+#1661961170
+git status
+#1661961176
+cat .gitmodules 
+#1661961188
+truncate --help
+#1661961226
+truncate .gitmodules 
+#1661961254
+rm .gitmodules 
+#1661961255
+ls
+#1661961263
+rm -rf .git/modules/lib/
+#1661961265
+git status
+#1661961280
+touch .gitmodules
+#1661961282
+git status
+#1661961287
+git diff

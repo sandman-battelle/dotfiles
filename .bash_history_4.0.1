@@ -1,0 +1,462 @@
+#1657564718
+echo "in foo win"
+#1660663412
+hist
+#1660663422
+hist|grep return
+#1660663580
+ls
+#1660663587
+./env-hook
+#1660663599
+. env-hook 
+#1660663617
+chmod +x env-hook 
+#1660663620
+./env-hook 
+#1660663678
+./env-hook 2>/dev/null
+#1660663690
+chmod -x env-hook 
+#1660663715
+sh -c env-hook
+#1660663720
+sh -c ./env-hook
+#1660663732
+cat env-hook |sh
+#1660663972
+sh -c ./env-hook
+#1660663977
+cat env-hook |sh
+#1660664006
+. env-hook 
+#1660664052
+cat env-hook |sh
+#1660664232
+. env-hook 
+#1660664407
+chmod +x env-hook 
+#1660664415
+./env-hook 
+#1660664443
+sh -c ./env-hook
+#1660664454
+. ./env-hook
+#1660664467
+cat env-hook |sh
+#1660664902
+. ./env-hook
+#1660664907
+sh -c ./env-hook
+#1660664912
+./env-hook 
+#1660664954
+hist
+#1660665073
+unset CUBE_PERSONAL_ACCESS_TOKEN 
+#1660665088
+./env-hook 
+#1660665097
+sh -c ./env-hook
+#1660665101
+cat env-hook |sh
+#1660665111
+. env-hook 
+#1660665246
+echo $CUBE_PERSONAL_ACCESS_TOKEN 
+#1660665250
+./env-hook 
+#1660665256
+hist
+#1660665484
+bash env-hook 
+#1660665514
+sh -c env-hook
+#1660665519
+sh -c ./env-hook
+#1660665539
+bash --init-file env-hook 
+#1660667732
+git status
+#1660667756
+hist|reconf
+#1660667765
+hist|grep reconf
+#1660667782
+ls
+#1660667784
+ls -R
+#1660667807
+git log
+#1660667823
+git commit --
+#1660667855
+git commit -m'WIP: autotools build'
+#1660667864
+autoreconf --install
+#1660667873
+git status
+#1660667906
+git reset --hard HEAD 
+#1660667909
+git status
+#1660667934
+git status --untracked-files 
+#1660667937
+git status --untracked-files -q
+#1660667941
+git status --untracked-files -s
+#1660667954
+git status --untracked-files -s|cut -f1
+#1660667972
+git status --untracked-files -s|cut -d -f1
+#1660667984
+man cut
+#1660668004
+git status --untracked-files -s|cut -d' ' -f1
+#1660668007
+git status --untracked-files -s|cut -d' ' -f2
+#1660668027
+git status --untracked-files -s|cut -d' ' -f2 |xarg rm -r
+#1660668033
+git status --untracked-files -s|cut -d' ' -f2 |xargs rm -r
+#1660668036
+git status
+#1660668044
+autoreconf 
+#1660668052
+ls
+#1660668064
+mkdir build
+#1660668067
+cd build/
+#1660668072
+../configure 
+#1660668077
+cd -
+#1660668085
+autoreconf --install
+#1660668089
+cd -
+#1660668124
+hist|grep prefix
+#1660668140
+../configure --prefix=$PWD
+#1660668146
+make
+#1660668152
+ls
+#1660668166
+ls -R
+#1660668173
+cd ..
+#1660668175
+git status
+#1660668215
+git status --untracked-files -s|cut -d' ' -f2 |xargs rm -r
+#1660668218
+git status
+#1660668231
+autoreconf 
+#1660668255
+autoreconf --install
+#1660668262
+git add install-sh missing 
+#1660668266
+git status --untracked-files -s|cut -d' ' -f2 |xargs rm -r
+#1660668267
+git status
+#1660668279
+vi install-sh 
+#1660668392
+ls
+#1660668417
+autoreconf 
+#1660668422
+git status
+#1660668682
+rm aclocal.m4 -r autom4te.cache/
+#1660668684
+ls
+#1660668692
+mkdir build
+#1660668695
+cd build/
+#1660668695
+ls
+#1660668702
+rm -rf *
+#1660668703
+ls
+#1660668704
+la
+#1660668716
+../configure --prefix=$PWD
+#1660668726
+ls
+#1660668728
+make
+#1660668751
+ls
+#1660668756
+ls ..
+#1660668849
+cd ..
+#1660668850
+ls
+#1660668854
+rm -r build/
+#1660668858
+git status
+#1660668868
+git restore --staged install-sh missing
+#1660668874
+git status --untracked-files -s|cut -d' ' -f2 |xargs rm -r
+#1660668878
+ls
+#1660668898
+mkdir bin
+#1660668953
+cat > bin/just-so-fresh-and-clean
+#1660668968
+ls bin/
+#1660668972
+rm -r bin/
+#1660668973
+ls
+#1660668985
+git status
+#1660669002
+git status --untracked-files -s|cut -d' ' -f2 |xargs rm -r
+#1660669012
+git satus
+#1660669013
+git status
+#1660669016
+git log
+#1660669023
+git status
+#1660669028
+git push
+#1660669046
+git status
+#1660669051
+git log
+#1660669063
+git reset origin/main 
+#1660669065
+git status
+#1660669072
+ls -R
+#1660669081
+git add .
+#1660669115
+git checkout -b initial-setup
+#1660669119
+git status
+#1660669125
+git commit -m'WIP: autotools build'
+#1660669132
+git push -u origin initial-setup 
+#1660669149
+cat README.md 
+#1660672776
+gh pr --help
+#1660678316
+git status
+#1660678628
+cat env-hook 
+#1662666091
+cd build/
+#1662666102
+hist
+#1662666113
+hist |make
+#1662666121
+hist |grep make
+#1662666130
+make install && . libexec/cube-env-hook
+#1662666145
+cd ..
+#1662666148
+./bootstrap.sh 
+#1662666154
+cd -
+#1662666157
+make install && . libexec/cube-env-hook
+#1662666168
+cd ../../subnet/
+#1662666175
+cd -
+#1662666183
+vi libexec/cube-env-hook 
+#1662666225
+cd -
+#1662666231
+cd ../test-cube-1/
+#1662666238
+repo-name 
+#1662666271
+printenv |grep $(repo-name |cube-sanitize-variable-name )
+#1662666431
+make install && . libexec/cube-env-hook
+#1662666435
+cd -
+#1662666445
+cd ../cube-env/build/
+#1662666447
+make install && . libexec/cube-env-hook
+#1662666454
+cd ../../test-cube-1/
+#1662666472
+cube-config-workload-env 
+#1662666481
+printenv 
+#1662666502
+printenv |grep $(cube-repo-name | cube-sanitize-variable-name )
+#1662666520
+git statu
+#1662666524
+git status
+#1662666528
+git diff
+#1662666535
+cd -
+#1662666539
+cdroot 
+#1662666542
+git diff
+#1662666586
+git status
+#1662666605
+git add src/cube-env-hook.sh 
+#1662666608
+git status
+#1662666614
+git branch 
+#1662666635
+git branch -D new-arg-parsing 
+#1662666665
+git checkout -b more-better-func-names
+#1662666677
+git commit -m'improve func names'
+#1662666686
+git push -u origin more-better-func-names 
+#1662666690
+git checkout main
+#1662666696
+git status
+#1662666704
+git merge more-better-func-names 
+#1662666712
+git push
+#1662728364
+ls /etc/profile.d/
+#1662728406
+ls /etc/profile.d/ -l
+#1662728443
+view /etc/profile.d/distrod-user-wsl-envs.sh 
+#1662728630
+git rm src/cube-env-setup.sh 
+#1662728635
+git rm src/cube-env-setup.sh -f
+#1662728638
+git status
+#1662728810
+cd build/
+#1662728813
+make install
+#1662728820
+ls bin/
+#1662728828
+cd ..
+#1662728832
+rm -rf build/
+#1662728834
+./bootstrap.sh 
+#1662728841
+cd  build/
+#1662728856
+../configure --prefix=$PWD
+#1662728860
+make install
+#1662728863
+ls bin/
+#1662728869
+ls libexec/
+#1662728876
+make uninstall
+#1662728879
+ls libexec/
+#1662728881
+ls bin/
+#1662728886
+ls src/
+#1662728892
+make clean
+#1662728894
+ls src/
+#1662728898
+ls
+#1662728902
+ls container/
+#1662728910
+ls -R
+#1662729251
+make
+#1662729253
+ls
+#1662729257
+make install
+#1662729263
+ls -R
+#1662729268
+make uninstall
+#1662729270
+ls -R
+#1662729281
+make clean
+#1662729283
+ls -R
+#1662729292
+make distclean
+#1662729301
+ls -R
+#1662729335
+cdroot 
+#1662729338
+git status
+#1662729342
+git diff
+#1662729352
+git add .
+#1662729353
+ls
+#1662729354
+git status
+#1662729371
+git commit -m'remove obsolete setup script'
+#1662729632
+ls
+#1662729639
+ls src/
+#1662729695
+vi ~/.bashrc 
+#1662729707
+ls
+#1662729719
+ls build/libexec/
+#1662729722
+cd build/
+#1662729731
+../configure --prefix=$PWD
+#1662729735
+make install
+#1662729776
+sudo cp libexec/cube-env-hook /etc/profile.d/
+#1662729789
+ll /etc/profile.d/
+#1662729822
+sudo chmod -x /etc/profile.d/cube-env-hook 
+#1662729824
+ll /etc/profile.d/

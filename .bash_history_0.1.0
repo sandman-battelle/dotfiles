@@ -1,0 +1,1054 @@
+#1657717909
+cd
+#1657717916
+vi .vimrc 
+#1657815609
+az ad app list --query "[].id" -o tsv | while read id; do echo -n "| $id | "; az ad app show --id $id --query "displayName" -o tsv 2>/dev/null |tr -d '\n'; echo -n " | "; az ad app owner list --id $id --query "[0].mail" -o tsv 2>/dev/null|tr -d '\n'; echo " |"; done > app-registrations.md
+#1657815620
+az login -t battelle.us
+#1657815656
+cd
+#1657815659
+az ad app list --query "[].id" -o tsv | while read id; do echo -n "| $id | "; az ad app show --id $id --query "displayName" -o tsv 2>/dev/null |tr -d '\n'; echo -n " | "; az ad app owner list --id $id --query "[0].mail" -o tsv 2>/dev/null|tr -d '\n'; echo " |"; done > app-registrations.md
+#1658778702
+cd ../cube-cli/
+#1658778716
+git status
+#1658778719
+ls
+#1658778726
+cat commercial 
+#1658778733
+rm commercial government 
+#1658778735
+git log
+#1658789609
+cd ../cube-cli/
+#1658789610
+git status
+#1658789632
+git checkout -b sandman
+#1658789636
+git diff
+#1658789644
+git diff --color-words 
+#1658789649
+git diff --color-words=. 
+#1658789659
+git status
+#1658789661
+git add .
+#1658789684
+git commit -m'touch up ad group member add command'
+#1658789691
+git push -u origin sandman 
+#1658789704
+git fetch
+#1658789709
+git rebase origin/main 
+#1658942169
+cd ../cube-cli/
+#1658942171
+git status
+#1658942180
+git fetch
+#1658942187
+git rebase origin/main 
+#1658942192
+git checkout main
+#1658942197
+git merge sandman 
+#1658942208
+git log
+#1658942212
+git log --graph 
+#1658942220
+git push
+#1658942264
+git tag v0.34.4
+#1658942268
+git push --tags
+#1658942278
+cube --version
+#1658944380
+git status
+#1658944382
+git branch
+#1658944410
+git branch --merged
+#1658944418
+git branch --no-merged
+#1658944445
+git branch -D MS-Graph-API-differences 
+#1658944465
+git diff add-show-modules-versions 
+#1658944519
+git branch --merged
+#1658944550
+git branch -D add-show-modules-versions more-better-downloads 
+#1658944558
+git branch
+#1658944567
+git diff add-docs 
+#1658944624
+git status
+#1658944630
+git checkout add-docs 
+#1658944639
+git fetch
+#1658944643
+git status
+#1658944653
+git rebase origin/main 
+#1658944660
+git status
+#1658944687
+file docs/cli.md 
+#1658944693
+vi docs/cli.md 
+#1658944755
+git status
+#1658944762
+git diff origin/main 
+#1658944769
+git log
+#1658944785
+git status
+#1658944809
+grep '<<<' docs/cli.md 
+#1658944815
+git add docs/cli.md 
+#1658944817
+git status
+#1658944826
+git rebase --continue 
+#1658944840
+git status
+#1658944856
+git rebase --continue 
+#1658944875
+qit rebase --abort
+#1658944882
+git rebase --abort 
+#1658944884
+git status
+#1658944895
+git diff origin/main 
+#1658944999
+vi
+#1658945202
+git status
+#1658945204
+cd main
+#1658945212
+git branch -D add-docs 
+#1658945228
+git checkout main
+#1658945231
+git branch -D add-docs 
+#1658945233
+ls
+#1658945297
+git branch
+#1658945305
+git checkout development-process 
+#1658945307
+git status
+#1658945319
+git diff origin/main 
+#1658945328
+git rebase origin/main 
+#1658945330
+git log
+#1658945343
+git status
+#1658945348
+git push
+#1658945409
+git diff origin/main 
+#1658945568
+diff README.md docs/cli.md 
+#1658945578
+diff README.md docs/cli.md -u
+#1658945585
+diff README.md docs/cli.md -u|less
+#1658945628
+vi
+#1658945809
+ls docs/
+#1658945814
+rm -r docs/
+#1658945816
+git status
+#1658945822
+git add .
+#1658945839
+git commit -m'use README as the docs'
+#1658945843
+git status
+#1658945846
+git push
+#1659012641
+git ftech
+#1659012651
+git fetch
+#1659012666
+git branch
+#1659012683
+git rebase origin/main 
+#1659012686
+git log
+#1659012694
+git checkout main
+#1659012700
+git merge development-process 
+#1659012706
+git log --graph 
+#1659012709
+git push
+#1659126817
+grep -irn battelle.us include/
+#1659127042
+vi
+#1659542441
+clear
+#1660056144
+cd  ../
+#1660056159
+gh clone battellecube ramp
+#1660056167
+gh repo clone battellecube ramp
+#1660056176
+gh repo clone battellecube/ramp
+#1660056190
+gh auth login
+#1660056242
+cat ~/.ssh/id_rsa.pub 
+#1660056300
+gh repo clone battellecube/ramp
+#1660056307
+cd ramp/
+#1660056310
+git log
+#1660056321
+set-local-env 
+#1660056346
+git submodule update --init --recursive 
+#1660056351
+set-local-env 
+#1660056370
+command -V set-local-env 
+#1660056414
+git describe --tags
+#1660056446
+git branch --show-current
+#1660056464
+git describe --tags 2>/dev/null || git branch --show-current
+#1660056480
+set-local-env 
+#1660056562
+az account subscription list --query '[?displayName=='\''ramp'\''].subscriptionId' -o tsv
+#1660056586
+az login -t battelle.us
+#1660056597
+set-local-env 
+#1660056621
+az account set -s 687c38d4-04c5-447e-a3b1-00603b6ba1dc
+#1660056623
+set-local-env 
+#1660057070
+git log 
+#1660057153
+set-local-env 
+#1660063918
+cd ..
+#1660063925
+hist
+#1660064048
+cube-cli/build/cube repo create --help
+#1660064278
+cube-cli/build/cube repo create -n cube-env -m tools
+#1660064286
+hist|grep CUBE
+#1660064317
+cat ~/.bashrc 
+#1660064335
+CUBE_PERSONAL_ACCESS_TOKEN=$(yq -r '."github.com".oauth_token' < ~/.config/gh/hosts.yml)
+#1660064339
+cube-cli/build/cube repo create -n cube-env -m tools
+#1660064358
+export CUBE_PERSONAL_ACCESS_TOKEN=$(yq -r '."github.com".oauth_token' < ~/.config/gh/hosts.yml)
+#1660064364
+vi ~/.bashrc 
+#1660064377
+cube-cli/build/cube repo create -n cube-env -m tools
+#1660064479
+cube-cli/build/cube repo create -o battellecube -n cube-env -m tools
+#1660065571
+hist
+#1660065630
+cube-cli/build/cube --version
+#1660065730
+git status
+#1660066579
+cd cube-program/
+#1660066580
+git fetch
+#1660066602
+git checkout gaunt-battelle-patch-1 
+#1660066608
+git diff origin/main 
+#1660066619
+bin/hugo-serve 
+#1660066649
+git checkout main
+#1660066659
+git merge --ff-only gaunt-battelle-patch-1 
+#1660066674
+git push
+#1660071576
+git status
+#1660332813
+cd
+#1660757322
+cd ../cube-cli/
+#1660757325
+git fetch
+#1660757331
+git checkout main
+#1660757333
+git pull
+#1660757337
+git log
+#1660758789
+cd ../q-b-mccubeface/
+#1660758790
+git status
+#1660758794
+git fetch
+#1660758803
+git status
+#1660758820
+git branch
+#1660759024
+rm tenants/TDR7DJ169.amer2gsdr.halo.sipcom.cloud.tf 
+#1660759050
+git add .
+#1660759056
+git status
+#1660759062
+commit -m'WIP'
+#1660759067
+git commit -m'WIP'
+#1660759077
+git checkout main
+#1660759082
+git pull
+#1660759099
+git config 
+#1660759102
+git config -l
+#1660759115
+git log
+#1660759131
+set-local-env 
+#1660759186
+az account set -s f59139ec-932c-4419-ac4f-b01a05ed5459
+#1660759188
+set-local-env 
+#1660759209
+git submodule update --init --recursive
+#1660759318
+vi .gitmodules 
+#1660759353
+rm -r modules/*
+#1660759358
+git submodule update --init --recursive
+#1660759399
+find . -name .gitmodules
+#1660759405
+cat .gitmodules 
+#1660759419
+ls modules/
+#1660759432
+rm -r modules/*
+#1660759451
+git submodule update --init --recursive
+#1660759588
+git pull
+#1660759655
+vi .gitmodules 
+#1660759696
+cd ..
+#1660759704
+rm -rf q-b-mccubeface/
+#1660759728
+gh repo clone battellecube/q-b-mccubeface
+#1660759731
+cd q-b-mccubeface/
+#1660759733
+git submodule update --init --recursive
+#1660759856
+git status
+#1660759865
+cd ..
+#1660759868
+rm -rf q-b-mccubeface/
+#1660759872
+gh repo clone battellecube/q-b-mccubeface
+#1660759874
+cd -
+#1660759880
+cat .gitmodules 
+#1660759942
+vi .gitmodules 
+#1660759954
+git submodule update --init --recursive
+#1660759962
+git status
+#1660759968
+git satus
+#1660759971
+git status
+#1660759992
+git checkout -b module-weirdness
+#1660759995
+git add .
+#1660760036
+git commit -m'break matts heart'
+#1660760038
+git push
+#1660760055
+git push -u origin module-weirdness 
+#1660760092
+git checkout main
+#1660760098
+git merge module-weirdness 
+#1660760100
+git log
+#1660760136
+git push
+#1660760152
+git tag v1.0.1
+#1660760157
+git push --tags 
+#1660760167
+set-local-env 
+#1660760186
+git log
+#1660760206
+git checkout v1.0.1
+#1660760210
+set-local-env 
+#1660760347
+az account show
+#1660760378
+terraform init -upgrade -backend-config=key=q-b-mccubeface-v1.0.1 -backend-config=subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -backend-config=environment=usgovernment -backend-config=storage_account_name=cubetfstateprod
+#1660760396
+set-local-env 
+#1660760475
+terraform apply -var=deployment_id=q-b-mccubeface-v1.0.1 -var=subscription_id=f59139ec-932c-4419-ac4f-b01a05ed5459 -var=platform_subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -var=tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_subscription_id=cab6c334-ae95-4a8d-8041-1127009a14bb -var=address_space=10.237.101.0/24 -var=environment=usgovernment -var=location=usgovvirginia -var=sha=$(git rev-parse HEAD)
+#1660760514
+terraform apply -var=deployment_id=q-b-mccubeface-v1.0.1 -var=subscription_id=f59139ec-932c-4419-ac4f-b01a05ed5459 -var=platform_subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -var=tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_subscription_id=cab6c334-ae95-4a8d-8041-1127009a14bb -var=address_space=10.237.101.0/24 -var=environment=usgovernment -var=location=usgovvirginia -var=sha=$(git rev-parse HEAD) -var=platform_deployment_id=cube-platform-v0.5.0
+#1660828516
+set-local-env 
+#1660828538
+az login -t battelle.us
+#1660828552
+set-local-env 
+#1660828562
+set-local-env v1.0.1
+#1660828669
+terraform apply -var=deployment_id=q-b-mccubeface-v1.0.1 -var=subscription_id=f59139ec-932c-4419-ac4f-b01a05ed5459 -var=platform_subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -var=tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_subscription_id=cab6c334-ae95-4a8d-8041-1127009a14bb -var=address_space=10.237.101.0/24 -var=environment=usgovernment -var=location=usgovvirginia -var=sha=$(git rev-parse HEAD) -var=platform_deployment_id=cube-platform-v0.5.0
+#1660828852
+ls
+#1660828904
+../cube-cli/bin/start_hostpool_vms q-b-mccubeface-v1.0.1
+#1660828930
+view ../cube-cli/bin/start_hostpool_vms
+#1660829025
+terraform apply -var=deployment_id=q-b-mccubeface-v1.0.1 -var=subscription_id=f59139ec-932c-4419-ac4f-b01a05ed5459 -var=platform_subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -var=tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_subscription_id=cab6c334-ae95-4a8d-8041-1127009a14bb -var=address_space=10.237.101.0/24 -var=environment=usgovernment -var=location=usgovvirginia -var=sha=$(git rev-parse HEAD) -var=platform_deployment_id=cube-platform-v0.5.0
+#1660834015
+terraform destroy -var=deployment_id=q-b-mccubeface-v1.0.1 -var=subscription_id=f59139ec-932c-4419-ac4f-b01a05ed5459 -var=platform_subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -var=tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_subscription_id=cab6c334-ae95-4a8d-8041-1127009a14bb -var=address_space=10.237.101.0/24 -var=environment=usgovernment -var=location=usgovvirginia -var=sha=$(git rev-parse HEAD) -var=platform_deployment_id=cube-platform-v0.5.0
+#1660834922
+git status
+#1660834961
+cd modules/
+#1660834964
+cd core/
+#1660834969
+git status
+#1660834977
+cd ../..
+#1660834981
+git diff
+#1660837559
+cd
+#1660837590
+cat >Invoke-ConditionalAccessDocumentation.ps1
+#1660839694
+view ConditionalAccessDocumentation.csv 
+#1661217700
+cd
+#1661217701
+ls
+#1661217702
+la
+#1661217754
+view .bash_functions
+#1661217821
+cd src/cube-cli/
+#1661217823
+git status
+#1661217827
+git branch
+#1661217841
+git checkout 230-env-name-error 
+#1661217844
+git status
+#1661217846
+ls
+#1661217852
+ls bin/
+#1661217884
+git checkout main 
+#1661217888
+git fetch
+#1661217890
+cd
+#1661217893
+ls
+#1661217896
+cat .bashrc 
+#1661217920
+head .bashrc 
+#1661218006
+grep -r BASH_SOURCE .
+#1661218025
+ls
+#1661350474
+cd
+#1661350496
+ls .vim/pack/plugins/start/instant-markdown/
+#1661350513
+cat .vimrc 
+#1661350527
+la
+#1661350534
+ls .vim
+#1661351205
+hist | grep nvm
+#1661351638
+podman ps
+#1661779523
+vi
+#1661779595
+cd ../cube-env
+#1661779598
+ls
+#1661779620
+ls src/
+#1661779630
+ls lib/
+#1661779634
+git branch
+#1661779651
+git checkout main
+#1661779653
+ls
+#1661779654
+ls src/
+#1661779691
+git checkout in
+#1661779695
+git checkout initial-setup 
+#1661779696
+ls
+#1661779701
+ls src/
+#1661779706
+git log
+#1661780293
+vi
+#1661782047
+vi 
+#1661782865
+vi
+#1663784260
+cd
+#1663784267
+sudo apt update
+#1663784288
+apt list --upgradable 
+#1663784310
+sudo apt update
+#1663784321
+apt show cube-env
+#1663784326
+apt show cube-env -a
+#1663784870
+sudo apt update
+#1663784877
+apt show cube-env -a
+#1663784887
+git show cube-env
+#1663784897
+apt show cube-env 
+#1663785226
+sudo apt install cube-env
+#1663868876
+../secops/
+#1663868883
+cd ../secops/
+#1663868893
+hist
+#1663868946
+set-local-env -a 10.237.131.0/24 -e not-main -k id_rsa -p cube-platform-v0.5.0
+#1663868983
+cube env create --tenant 215220de-12d7-408e-b764-7e998342ac42 --subscription-id 80920ed2-0a36-4cb1-9907-329ea674e58d not-main
+#1663869192
+cube env create --help
+#1663869221
+cube env create --tenant 215220de-12d7-408e-b764-7e998342ac42 --subscription-id 80920ed2-0a36-4cb1-9907-329ea674e58d -n secops not-main
+#1664219384
+cd ../totalcae/
+#1664219385
+git fetch
+#1664219395
+git checkout refactor 
+#1664219397
+git pull
+#1664219420
+git submodule update --init --recur
+#1664219422
+git submodule update --init --recursive 
+#1664219435
+git pull
+#1664219446
+git log
+#1664219511
+set-local-env -a 10.237.33.0/24 -e refactor -k id_rsa -p cube-platform-v0.5.0
+#1664219551
+az login -t battelle.us
+#1664219602
+az account set -s totalcae 
+#1664219607
+az account show
+#1664219616
+set-local-env -a 10.237.33.0/24 -e refactor -k id_rsa -p cube-platform-v0.5.0
+#1664219631
+terraform init -upgrade -backend-config=key=totalcae-refactor -backend-config=subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -backend-config=environment=usgovernment -backend-config=storage_account_name=cubetfstateprod
+#1664219663
+terraform apply -var=deployment_id=totalcae-refactor -var=subscription_id=57c0661a-7f54-45b5-b190-8501c1c7a039 -var=platform_subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -var=platform_deployment_id=cube-platform-v0.5.0 -var=tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_subscription_id=cab6c334-ae95-4a8d-8041-1127009a14bb -var=address_space=10.237.33.0/24 -var=environment=usgovernment -var=location=usgovvirginia -var=sha=$(git rev-parse HEAD)
+#1664219710
+az logout
+#1664219716
+az login -t battelle.us
+#1664219732
+terraform apply -var=deployment_id=totalcae-refactor -var=subscription_id=57c0661a-7f54-45b5-b190-8501c1c7a039 -var=platform_subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -var=platform_deployment_id=cube-platform-v0.5.0 -var=tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_subscription_id=cab6c334-ae95-4a8d-8041-1127009a14bb -var=address_space=10.237.33.0/24 -var=environment=usgovernment -var=location=usgovvirginia -var=sha=$(git rev-parse HEAD)
+#1664220043
+set-local-env -a 10.237.33.0/24 -e refactor -k id_rsa -p cube-platform-v0.5.0
+#1664220097
+az account show
+#1664220158
+az account set -s totalcae 
+#1664220166
+set-local-env -a 10.237.33.0/24 -e refactor -k id_rsa -p cube-platform-v0.5.0
+#1664220185
+az ad group member add --group cube-totalcae-refactor-users --member-id 33a3087d-012e-4ad5-9f47-c678a2368c78
+#1664995572
+ls
+#1664995578
+cd
+#1664995580
+ls
+#1664995589
+cat cube-maintainers.asc 
+#1664995599
+rm cube-maintainers.asc 
+#1664995622
+vi cli.sh
+#1664998936
+ls
+#1664998947
+mv cli-foo.sh foo.sh
+#1664999027
+vi
+#1665456737
+cd ..
+#1665456739
+ls
+#1665456770
+git clone https://github.com/ko1nksm/getoptions.git
+#1665456770
+cd getoptions
+#1665456770
+make
+#1665456785
+ls
+#1665456793
+make
+#1665456796
+ls
+#1665456810
+make clean
+#1665456819
+make
+#1665456829
+sudo make install
+#1665456850
+hash -d gengetoptions
+#1665456860
+hash
+#1665456871
+gengetoptions --help
+#1665456884
+command -V gengetoptions
+#1665456903
+hash -d /home/sandman/.local/bin/gengetoptions
+#1665456905
+command -V gengetoptions
+#1665456917
+hash -d gengetoptions
+#1665456919
+command -V gengetoptions
+#1665456967
+make install PREFIX=$HOME/local
+#1665456981
+make install PREFIX=$HOME/.local
+#1665456986
+make uninstall PREFIX=$HOME/.local
+#1665456993
+make uninstall PREFIX=$HOME/local
+#1665457006
+ls ~
+#1665457011
+ls ~/local/
+#1665457014
+ls ~/local/bin/
+#1665457022
+rm -r ~/local/
+#1665457030
+command -V gengetoptions
+#1665457299
+make uninstall PREFIX=$HOME/.local
+#1665457309
+ls
+#1665457311
+ls src/
+#1665457319
+make clean
+#1665457320
+ls src/
+#1665457325
+make
+#1665457349
+cp bin/*getoptions ../cube-env/bin/
+#1665457362
+make uninstall PREFIX=$HOME/.local
+#1665457373
+make uninstall PREFIX=$HOME/local
+#1665457391
+make uninstall
+#1665457395
+sudo make uninstall
+#1665457407
+hash -d gengetoptions
+#1665460738
+cd ../getoptions/
+#1665460742
+ls
+#1665460748
+sudo make install
+#1665460760
+gengetoptions --help
+#1665495463
+cd
+#1665495468
+sudo apt update
+#1665495493
+apt show cube-env 
+#1665495513
+sudo apt dist-upgrade 
+#1665495548
+command -V cube
+#1666106784
+cd ../cube-program/
+#1666106807
+git status
+#1666106813
+git fetch
+#1666106831
+git checkout main
+#1666106835
+git pull
+#1666107003
+git status
+#1666107030
+git tag
+#1666111226
+ping google.com
+#1666111237
+git pull
+#1666204675
+cd ../cube-env
+#1666204677
+ls
+#1666204681
+git fetch
+#1666204695
+git status
+#1666204701
+git diff
+#1666204726
+git restore .
+#1666204732
+git checkout main
+#1666204734
+git pull
+#1666204738
+git status
+#1666204757
+git log
+#1666204765
+git checkout sandman 
+#1666204769
+git rebase main
+#1666204771
+git log
+#1666204780
+. src/functions.in 
+#1666204788
+cube-env-download 
+#1666204801
+cube-env-download cubetfstateprod
+#1666204817
+az login -t battelle.us
+#1666204857
+cube-env-download cubetfstateprod
+#1666204865
+cat environments.rec 
+#1666205025
+git status
+#1666205035
+git clear
+#1666205053
+dch -e
+#1666205072
+git log
+#1666205083
+git log --shortstat 
+#1666205089
+git log -s
+#1666205124
+git log --oneline 
+#1666205155
+dch -i
+#1666205224
+man dch
+#1666205308
+vi ~/.bashrc 
+#1666205422
+. ~/.bashrc 
+#1666205427
+dch -i
+#1666205565
+dch -e
+#1666206086
+git status
+#1666206108
+git add .
+#1666206149
+git commit -m'cube-env (0.4.0) UNRELEASED; urgency=medium'
+#1666206167
+git status --ignored
+#1666206171
+./release 
+#1666206210
+git tag -s v0.4.0
+#1666206237
+./release 
+#1666206264
+ll ..
+#1666206268
+l ..
+#1666206274
+cd deb_repo/
+#1666206276
+git status
+#1666206296
+cat Packages
+#1666206302
+ll
+#1666206314
+git status
+#1666206323
+git diff
+#1666206355
+git clear
+#1666206366
+git status
+#1666206367
+ls
+#1666206377
+git log
+#1666206392
+cdroot 
+#1666206394
+cd ..
+#1666206395
+ls
+#1666206412
+git tag -d v0.4.0 
+#1666206420
+dch -r
+#1666206472
+head NEWS 
+#1666206494
+git tag -s v0.4.0
+#1666206508
+git status
+#1666206513
+git tag -d v0.4.0 
+#1666206518
+git add .
+#1666206524
+git commit --amend 
+#1666206544
+git tag -s v0.4.0
+#1666206553
+git status
+#1666206556
+head NEWS 
+#1666206561
+./release 
+#1666206594
+ls ..
+#1666206600
+cd deb_repo/
+#1666206602
+ls
+#1666206606
+git status
+#1666206611
+git add .
+#1666206622
+git commit -m'cube-env (0.4.0) jammy; urgency=medium'
+#1666206628
+git push
+#1666206639
+cd ..
+#1666206644
+git push
+#1666206660
+git status
+#1666206669
+git push -u origin sandman 
+#1666206677
+git push --tags 
+#1666206686
+git push --tags -f
+#1666206711
+git checkout main
+#1666206714
+git merge sandman 
+#1666206717
+git log
+#1666206720
+git push
+#1666206752
+sudo apt update
+#1666206793
+apt show cube-env
+#1666206804
+sudo apt install cube-env
+#1666206819
+cube --version
+#1666206830
+git status
+#1666206832
+ls
+#1666206837
+git clear
+#1666206842
+./bootstrap 
+#1666206848
+cd build/
+#1666206853
+make uninstall
+#1666206857
+cube --version
+#1666206867
+hash -d cube
+#1666206869
+cube --version
+#1666206884
+cube.sh --version
+#1666206898
+/usr/libexec/cube.sh --version
+#1666206946
+hist
+#1666207002
+cd ..
+#1666207003
+ls
+#1666207012
+vi
+#1666207551
+git status
+#1666207559
+git push
+#1666207565
+git add .
+#1666207578
+git commit -m'add WIP release docs'
+#1666207580
+git push
+#1666625735
+cd ../q-b-mccubeface/
+#1666625739
+git fetch
+#1666625753
+git  checkout wsl 
+#1666625759
+git log
+#1666625762
+ls
+#1666625774
+ls modules/core/
+#1666625789
+rm core.tf 
+#1666625803
+ln -s modules/core/core.template core.tf
+#1666625805
+ll
+#1666625879
+vi core.tf 
+#1666625907
+git status
+#1666633691
+cd ..
+#1666633692
+ls
+#1666633698
+cd
+#1666633702
+dotgit status
+#1666633714
+dotgit diff
+#1666633778
+cat .config/gh/hosts.yml 
+#1666633891
+dotgit ignore .config/gh/hosts.yml
+#1666633898
+dotgit status
+#1666633913
+rm cube-src.tar.gz 
+#1666633919
+dotgit status
+#1666633923
+dotgit add .
+#1666633951
+dotgit commit -m'use CUBE Maintainers for DEB packages'
+#1666633980
+dotgit push

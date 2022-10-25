@@ -1,0 +1,150 @@
+#1657564444
+history 
+#1657564456
+ls
+#1657564457
+echo
+#1657564459
+history 
+#1657564473
+cat .bash_history
+#1657564487
+cat .bash_history_0.0.1
+#1657564502
+cat .bash_history_0.0.2
+#1657564524
+la
+#1657564566
+cat .bash_history* |sort -k2
+#1657564587
+cat .bash_history* 
+#1657564725
+history 
+#1657564734
+la
+#1657564755
+cat .bash_history_4.0.1 
+#1657564773
+tmux-window-id 
+#1657564782
+tmux-session-id s
+#1657564785
+tmux-session-id
+#1657564794
+tmux ls
+#1657909174
+cd src/cube-cli/
+#1657909192
+git checkout main
+#1657909195
+git pull
+#1657909199
+git log
+#1657909241
+git show c7a875b565c5c3de00a463f2f21011d11beece3f
+#1657909266
+git log
+#1657909332
+git status
+#1657909336
+rm cube-linux-86_64 
+#1657909343
+git reset 1f0cdb736edf2b610dade3a066e85df9320efec7
+#1657909346
+git diff
+#1657909439
+git status
+#1657909477
+git reset origin/main 
+#1657909480
+git log
+#1657909510
+git merge more-better-downloads 
+#1657909543
+git checkout amin
+#1657909546
+git checkout main
+#1657909554
+git reset origin/main 
+#1657909556
+git status
+#1657909566
+git reset origin/main --hard
+#1657909571
+git status
+#1657909573
+git log
+#1657909604
+git reset 1f0cdb736edf2b610dade3a066e85df9320efec7
+#1657909622
+git reset 22fd2b62e9fc29a8021b7d11eb06959dbf57038e
+#1657909624
+git status
+#1657909632
+git push -f
+#1657909685
+git log
+#1657909693
+git checkout more-better-downloads 
+#1657909702
+git rebase origin/main 
+#1657909704
+git log
+#1657909718
+git push
+#1657909723
+git status
+#1657909727
+git push -f
+#1657909734
+git checkout main
+#1657909740
+git merge more-better-downloads 
+#1657909742
+git log
+#1657909751
+git push 
+#1657909778
+git status
+#1657909786
+git merge add-show-modules-versions 
+#1657909795
+git status
+#1657909797
+git log
+#1657909821
+git reset origin/main
+#1657909823
+git status
+#1657909833
+git reset origin/main --hard
+#1657909835
+git status
+#1657909841
+rm bin/show-modules-versions 
+#1657909857
+git checkout add-show-modules-versions 
+#1657909860
+git log
+#1657909869
+git rebase origin/main 
+#1657909871
+git log
+#1657909879
+git status
+#1657909882
+git push -f
+#1657909893
+git checkout main
+#1657909898
+git merge add-show-modules-versions 
+#1657909901
+git lgo
+#1657909903
+git log
+#1657909907
+git push
+#1662665799
+vi
+#1662729863
+git status

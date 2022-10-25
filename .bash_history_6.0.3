@@ -1,0 +1,516 @@
+#1658159079
+ls
+#1658159099
+bin/find-missing-modules 
+#1658159121
+ls
+#1658159123
+ls modules/
+#1658159154
+bin/find-missing-modules |     while read mod; do         git submodule add git@github.com:battelle-cube/$mod modules/$mod;     done
+#1658159228
+bin/find-missing-modules 
+#1658159379
+bin/find-missing-modules 2>/dev/null
+#1658159384
+ls
+#1658159391
+ls modules/
+#1658159401
+cat .gitmodules 
+#1658159421
+ls od
+#1658159423
+ls modules/
+#1658159444
+rm -rf modules/arena-sideload/
+#1658159449
+bin/find-missing-modules 
+#1658159461
+bin/find-missing-modules |     while read mod; do         git submodule add git@github.com:battelle-cube/$mod modules/$mod;     done
+#1658159514
+git submodule update
+#1658159522
+ls modules/arena-sideload/
+#1658159532
+bin/find-missing-modules 
+#1658159612
+ls
+#1658159617
+ls /tmp/
+#1658159631
+rm /tmp/file*
+#1658159633
+bin/find-missing-modules 
+#1658159636
+ls /tmp/
+#1658159645
+diff /tmp/file*
+#1658159702
+ls
+#1658159705
+ls modules/
+#1658159727
+cat .gitmodules 
+#1658159752
+grep logging .gitmodules 
+#1658159758
+ls
+#1658159761
+ls modules/
+#1658159769
+git status
+#1658159855
+rm -rf modules/*
+#1658159858
+git status
+#1658159870
+git submodule update
+#1658159874
+git status
+#1658159899
+git add .
+#1658159901
+git status
+#1658159960
+ls modules/
+#1658159992
+ls content/reference/
+#1658160004
+cd content/reference/
+#1658160005
+ls
+#1658160008
+ll
+#1658160092
+ln -s cli ../../modules/cube-cli/docs
+#1658160097
+cd -
+#1658160147
+git submodule add git@github.com:battelle-cube/cube-cli modules/cube-cli
+#1658160161
+sudo vi /etc/resolv.conf 
+#1658160181
+git submodule add git@github.com:battelle-cube/cube-cli modules/cube-cli
+#1658160185
+cd -
+#1658160190
+git submodule add git@github.com:battelle-cube/cube-cli modules/cube-cli
+#1658160196
+ll
+#1658160207
+ln -s cli ../../modules/cube-cli/docs
+#1658160209
+ll
+#1658160219
+rm cli 
+#1658160225
+ln -s cli ../../modules/cube-cli/docs
+#1658160231
+ls
+#1658160244
+ln -s ../../modules/cube-cli/docs cli
+#1658160246
+ll
+#1658160255
+cd ..
+#1658160262
+cd terraform-modules/
+#1658160264
+ll
+#1658160380
+for mod in echo $(cdroot)/modules; do echo $mod; done
+#1658160387
+for mod in echo $(cdroot)/modules/*; do echo $mod; done
+#1658160402
+for mod in $(echo $(cdroot)/modules/*); do echo $mod; done
+#1658160420
+for mod in ls -1 $(cdroot)/modules; do echo $mod; done
+#1658160440
+for mod in $(ls $(cdroot)/modules); do echo $mod; done
+#1658160452
+echo $(cdroot)
+#1658160473
+for mod in $(ls ../modules); do echo $mod; done
+#1658160487
+for mod in $(ls ../../modules); do echo $mod; done
+#1658160505
+ll
+#1658160530
+rm azure-cap bastion core inventory linux-machine logging sentinel vdi vnet workload 
+#1658160531
+ll
+#1658160572
+for mod in $(ls ../modules); do ln -s ../../$mod $mod/docs; done
+#1658160582
+for mod in $(ls ../../modules); do ln -s ../../$mod $mod/docs; done
+#1658160595
+for mod in $(ls ../../modules); do echo ln -s ../../$mod $mod/docs; done
+#1658160619
+for mod in $(ls ../../modules); do echo ln -s ../../$mod/docs $mod; done
+#1658160621
+ls
+#1658160634
+for mod in $(ls ../../modules); do ln -s ../../$mod/docs $mod; done
+#1658160635
+ls
+#1658160645
+ll
+#1658160653
+l cube-cli 
+#1658160672
+ls ../../modules/cube-cli/docs/
+#1658160682
+git status
+#1658160693
+cd ../..
+#1658160694
+git status
+#1658160721
+ls modules/
+#1658160724
+ls modules/*
+#1658160734
+ls modules/* -l
+#1658160744
+ll modules/cube-cli/
+#1658160760
+cd content/reference/cli
+#1658160761
+ls
+#1658160768
+ll
+#1658160774
+rm cli
+#1658160776
+ll
+#1658160795
+cd ..
+#1658160797
+ll
+#1658160803
+ll cli
+#1658160817
+ls cli
+#1658160831
+cd ../terraform-modules/
+#1658160832
+ll
+#1658160848
+rm cube-cli 
+#1658160875
+ls terraform-cube-bastion 
+#1658160911
+ls ../../modules/terraform-cube-
+#1658160934
+*|xargs echo
+#1658160939
+ls
+#1658160952
+rm arena-sideload cube-* terraform-cube-*
+#1658160952
+ls
+#1658160958
+rm environment-init storage-account subnet 
+#1658160959
+ls
+#1658160968
+hist
+#1658161013
+for mod in $(ls ../../modules); do echo ln -s ../../modules/$mod/docs $mod; done
+#1658161031
+ls ../../modules/terraform-cube-bastion/docs
+#1658161041
+for mod in $(ls ../../modules); do ln -s ../../modules/$mod/docs $mod; done
+#1658161042
+ls
+#1658161056
+ls ../../modules/arena-sideload/
+#1658161085
+mod=foo echo $mod
+#1658161163
+cd ../../modules/
+#1658161239
+mkdir {arena-sideload,cube-firewall,cube-machine-windows,cube-network,cube-o365-group,cube-security,cube-vdi,environment-init,storage-account,terraform-cube-add-cmk-to-existing-storage,terraform-cube-avd,terraform-cube-defenders,terraform-cube-random,}/docs
+#1658161252
+echo {arena-sideload,cube-firewall,cube-machine-windows,cube-network,cube-o365-group,cube-security,cube-vdi,environment-init,storage-account,terraform-cube-add-cmk-to-existing-storage,terraform-cube-avd,terraform-cube-defenders,terraform-cube-random,}/docs
+#1658161318
+echo {arena-sideload,cube-firewall,cube-machine-windows,cube-network,cube-o365-group,cube-security,cube-vdi,environment-init,storage-account,terraform-cube-add-cmk-to-existing-storage,terraform-cube-avd,terraform-cube-defenders,terraform-cube-random}/docs
+#1658161328
+ls */docs
+#1658161445
+echo '{{< hint error >}}FIXME!!!{{< /hint >}}' > cube-firewall/docs/_index.md
+#1658161660
+grep -irn hint content
+#1658161668
+grep -irn hint ../content/
+#1658166850
+cat ../content/workflows/deployment/_index.md
+#1658166856
+head ../content/workflows/deployment/_index.md
+#1658167082
+cat > cube-firewall/docs/_index.md
+#1658167404
+ls
+#1658170667
+cdroot 
+#1658170672
+ls
+#1658170675
+ls archetypes/
+#1658170682
+cat archetypes/default.md 
+#1658170748
+hugo new --help
+#1658170756
+bin/hugo new --help
+#1658170824
+ls themes/hugo-geekdoc/archetypes/
+#1658170835
+catthemes/hugo-geekdoc/archetypes/docs.md 
+#1658170904
+cat themes/hugo-geekdoc/archetypes/docs.md 
+#1658170926
+ll content/terraform-modules/
+#1658170961
+ll content/terraform-modules/*/docs
+#1658170978
+ll modules/*/docs
+#1658170986
+ls modules/*/docs
+#1658171012
+bin/hugo --version
+#1658171018
+bin/hugo version
+#1658171142
+hugo
+#1658171155
+snap info hugo
+#1658171177
+snap find hugo
+#1658171188
+ping google.com
+#1658171305
+tar xf /mnt/c/Users/sandman/Downloads/hugo_extended_0.101.0_Linux-64bit.tar.gz 
+#1658171307
+ls
+#1658171309
+git status
+#1658171334
+git diff README.md
+#1658171343
+git status
+#1658171356
+git restore README.md
+#1658171371
+ls bin/
+#1658171380
+rm LICENSE 
+#1658171383
+mv hugo bin/
+#1658171390
+bin/hugo version
+#1658171420
+git status
+#1658171457
+ls modules/*/docs
+#1658171579
+hugo new -kind docs content/terraform-modules/cube-firewall/_index.md 
+#1658171587
+bin/hugo new -kind docs content/terraform-modules/cube-firewall/_index.md 
+#1658171619
+ls themes/
+#1658171625
+ls themes/hugo-geekdoc/archetypes/
+#1658171647
+cp themes/hugo-geekdoc/archetypes/docs.md archetypes/
+#1658171651
+bin/hugo new -kind docs content/terraform-modules/cube-firewall/_index.md 
+#1658171690
+bin/hugo new -kind docs.md content/terraform-modules/cube-firewall/_index.md 
+#1658171753
+ls content/
+#1658171764
+cat content/docs.md 
+#1658171770
+rm content/docs.md 
+#1658171795
+bin/hugo new --help
+#1658172022
+git status
+#1658172042
+git-ignore .hugo_build.lock 
+#1658172058
+rm archetypes/docs.md 
+#1658172091
+cd modules/
+#1658172092
+ls
+#1658172102
+ls */docs
+#1658172152
+ls cube-cli/
+#1658172156
+ls cube-cli/docs/
+#1658172177
+ls ../content/terraform-modules/cube-cli
+#1658172182
+ls ../content/terraform-modules/
+#1658172229
+ls ../content/reference/
+#1658172237
+ls ../content/reference/modules/
+#1658172246
+rm -r ../content/reference/modules/
+#1658172265
+hist
+#1658172280
+ls */docs
+#1658172342
+cd cube-machine-windows/;cp README.md docs/index.md; cd -
+#1658172494
+mv cube-machine-windows/docs/index.md cube-machine-windows/docs/windows-machine.md
+#1658172615
+cd ../content/
+#1658172616
+ls
+#1658172619
+cd terraform-modules/
+#1658172620
+ls
+#1658172626
+ll
+#1658172645
+rm cube-machine-windows
+#1658172679
+ln -s ../../modules/cube-machine-windows/README.md cube-machine-windows.md
+#1658172712
+ls
+#1658172764
+rm arena-sideload/ cube-* terraform-cube-* storage-account subnet
+#1658172766
+ls
+#1658172773
+rm arena-sideload environment-init
+#1658172775
+ls
+#1658172812
+cdroot 
+#1658172829
+ls -1 modules/
+#1658172848
+ls -1 modules/ | while read m; do echo $m; done
+#1658172929
+ls -1 modules/ | while read m; do echo ln -s $m/README.md content/terraform-modules/m$; done
+#1658172941
+ls -1 modules/ | while read m; do echo ln -s $m/README.md content/terraform-modules/$m; done
+#1658172949
+ln -s arena-sideload/README.md content/terraform-modules/arena-sideload
+#1658172963
+ll content/terraform-modules/
+#1658173014
+ln -s ../../modules/arena-sideload/README.md content/terraform-modules/arena-sideload
+#1658173023
+rm content/terraform-modules/arena-sideload 
+#1658173024
+ln -s ../../modules/arena-sideload/README.md content/terraform-modules/arena-sideload
+#1658173036
+ll content/terraform-modules/
+#1658173056
+rm content/terraform-modules/arena-sideload 
+#1658173062
+ln -s ../../modules/arena-sideload/README.md content/terraform-modules/arena-sideload.md
+#1658173071
+rm content/terraform-modules/arena-sideload 
+#1658173075
+rm content/terraform-modules/arena-sideload.md 
+#1658173140
+ls -1 modules/ | while read m; do echo ln -s ../../modules/$m/README.md content/terraform-modules/${m}.md; done
+#1658173149
+ln -s ../../modules/arena-sideload/README.md content/terraform-modules/arena-sideload.md
+#1658173157
+rm content/terraform-modules/arena-sideload.md 
+#1658173188
+ls -1 modules/ | while read m; do ln -s ../../modules/$m/README.md content/terraform-modules/${m}.md; done
+#1658173196
+git status
+#1658173226
+git add .
+#1658173228
+git status
+#1658173254
+cd content/reference/
+#1658173255
+ls
+#1658173256
+ll
+#1658173267
+rm cli
+#1658173281
+ln -s ../../modules/cube-cli/README.md cli.md
+#1658173303
+git status
+#1658173312
+git add .
+#1658173313
+git status
+#1658173347
+cdroot 
+#1658173351
+git status
+#1658173386
+git commit -m'link module docs to README.md'
+#1658173395
+git status
+#1658173399
+cd modules/cube-firewall/
+#1658173401
+git status
+#1658173414
+git checkout main
+#1658173417
+git fetch
+#1658173419
+ls
+#1658173421
+git status
+#1658173424
+rm docs/
+#1658173429
+rm -r docs/
+#1658173434
+cd ../cube-machine-windows/
+#1658173441
+git checkout main
+#1658173448
+rm -r docs/
+#1658173451
+cd ..
+#1658173454
+cdroot 
+#1658173456
+git sattus
+#1658173458
+git status
+#1658173487
+find modules/ -type d -name docs
+#1658173598
+git status
+#1658173602
+git push
+#1658173677
+find modules/ -type d -name docs
+#1658173689
+find modules/ -type d -name docs -exec ls {} \;
+#1658173706
+find modules/ -type d -name docs -exec echo {}; ls {} \;
+#1658173727
+find modules/ -type d -name docs -exec echo {}\; ls {} \;
+#1658173756
+find modules/ -type d -name docs -exec echo cat {} \;
+#1658173761
+find modules/ -type d -name docs -exec cat {} \;
+#1658173770
+find modules/ -type d -name docs -exec cat {}/* \;
+#1658173796
+find modules/ -type d -name docs -exec cat {}/_index.md \;

@@ -1,0 +1,764 @@
+#1662476595
+git status
+#1662476599
+git diff
+#1662477000
+diff lib/getoptions lib/bin/getoptions 
+#1662477295
+pad -h
+#1662477337
+ls
+#1662477345
+ls lib/
+#1662477358
+rm -rf lib/
+#1662477844
+git status
+#1662477846
+git diff
+#1662477949
+git diff --color-words 
+#1662478117
+git status
+#1662478132
+git add README.md 
+#1662478141
+git rm lib 
+#1662478145
+git rm lib -r
+#1662478149
+ls
+#1662478155
+git status
+#1662490547
+cd build/
+#1662490548
+make
+#1662490621
+configure --prefix=$PWD
+#1662490629
+cd ..
+#1662490630
+ls
+#1662490632
+rm build/
+#1662490641
+autoreconf --install
+#1662490646
+ls
+#1662490649
+./bootstrap.sh 
+#1662490717
+cd build/
+#1662490722
+autoreconf --install
+#1662490747
+../configure --prefix=$PWD
+#1662490752
+make
+#1662490768
+make install
+#1662490797
+. ./libexec/cube-env-hook 
+#1662490803
+cube -h
+#1662490834
+ls
+#1662490839
+ls src/
+#1662490869
+gengetoptions  embed --overwrite src/cube-env-hook 
+#1662490879
+view src/cube-env-hook 
+#1662490919
+make install
+#1662490924
+. ./libexec/cube-env-hook 
+#1662490928
+usage
+#1662490932
+cube
+#1662490941
+cube -p foo
+#1662490954
+cube -p foo -f -o bar
+#1662490969
+cube -p foo -f -o bar baz
+#1662490990
+cube -p foo -f --option=bar baz
+#1662490999
+cube -p foo -f -obar baz
+#1662491033
+cube -p foo -f -obar -f
+#1662492424
+hist
+#1662492491
+cd ..
+#1662492495
+rm -rf build/
+#1662492499
+sudo rm -rf build/
+#1662492514
+ls
+#1662492525
+git status
+#1662492539
+git add .
+#1662492547
+git commit -m'WIP'
+#1662492549
+git status
+#1662492565
+git status --ignored
+#1662492591
+git-clean
+#1662492603
+git clean
+#1662492636
+git clean -f
+#1662492640
+git status --ignored
+#1662492647
+git clear
+#1662492654
+git status --ignored
+#1662492656
+ls
+#1662492660
+./bootstrap.sh 
+#1662492665
+ls
+#1662492669
+cd build/
+#1662492670
+ls
+#1662492675
+../configure --prefix=$PWD
+#1662492679
+make
+#1662492690
+ls
+#1662492700
+vi src/cube-env-hook 
+#1662492718
+make install
+#1662492740
+./libexec/cube-env-hook 
+#1662492748
+. ./libexec/cube-env-hook 
+#1662492750
+cube
+#1662492756
+cube -f
+#1662492760
+cube -fff
+#1662492765
+cube -f -f -f
+#1662492779
+cube -f0
+#1662492810
+cd build/
+#1662492813
+vi
+#1662492840
+vi src/cube-env-hook 
+#1662492987
+hist
+#1662492998
+. ./libexec/cube-env-hook 
+#1662493006
+cube
+#1662493009
+cube -f
+#1662493013
+cube -f0
+#1662493048
+hist
+#1662493058
+vi src/cube-env-hook 
+#1662493083
+git status
+#1662493095
+cd build/
+#1662493112
+vi libexec/cube-env-hook 
+#1662493145
+. libexec/cube-env-hook 
+#1662493148
+cube
+#1662493150
+cube -f
+#1662493153
+cube -f0
+#1662493728
+cdroot 
+#1662493743
+grep -r cube-env-setup .
+#1662494722
+echo $USER
+#1662494820
+docker run ubuntu 'sh -c echo $USER'
+#1662494852
+docker run ubuntu 'echo $USER'
+#1662494871
+docker run -it --rm ubuntu 'echo $USER'
+#1662494893
+docker run -it --rm ubuntu bash
+#1662494933
+docker run --rm ubuntu bash
+#1662494957
+docker run --rm ubuntu bash id
+#1662559772
+cat > testtest
+#1662559799
+chmod +x testtest 
+#1662559804
+. testtest 
+#1662559810
+echo $?
+#1662559997
+az login -t battelle.us
+#1662560146
+az login --use-device-code
+#1662648046
+cd build/
+#1662648050
+make install
+#1662648065
+libexec/cube-env-hook 
+#1662648093
+make install
+#1662648095
+libexec/cube-env-hook 
+#1662648115
+. libexec/cube-env-hook 
+#1662648117
+foo
+#1662648138
+echo $FOO
+#1662648390
+make install
+#1662648394
+. libexec/cube-env-hook 
+#1662648408
+cd ../../q-b-mccubeface/
+#1662648419
+cd ..
+#1662648438
+find . -type f '.cuberc'
+#1662648451
+find . -type f -name '.cuberc'
+#1662648466
+cd test-cube-1/
+#1662648480
+cat .cuberc
+#1662648490
+vi .cuberc
+#1662648548
+cd ../test-cube-1/
+#1662648561
+cat .cuberc
+#1662648582
+set -x
+#1662648589
+cd ../test-cube-1/
+#1662648603
+set +x
+#1662648627
+cd ../cube-env/build/
+#1662648636
+make install
+#1662648649
+bin/cube-env-setup 
+#1662648783
+cat ~/.bashrc 
+#1662648797
+. libexec/cube-env-hook 
+#1662648802
+cd -
+#1662648850
+make install
+#1662648854
+. libexec/cube-env-hook 
+#1662648856
+cd -
+#1662648895
+cat .cuberc
+#1662649006
+vi .cuberc
+#1662649096
+cd -
+#1662649100
+make install
+#1662649103
+. libexec/cube-env-hook 
+#1662649106
+cd -
+#1662649137
+vi .cuberc
+#1662649143
+la
+#1662649153
+rm .cuberc.swp 
+#1662649156
+vi .cuberc 
+#1662649208
+cd -
+#1662649231
+vi .cuberc 
+#1662649283
+cd -
+#1662649320
+vi .cuberc 
+#1662649406
+cd -
+#1662649441
+export test-cube_core=0.0.0
+#1662649461
+export test-cube_core='0.0.0'
+#1662649467
+export test_cube_core=0.0.0
+#1662649480
+vi .cuberc 
+#1662649798
+cd -
+#1662649809
+git status
+#1662649820
+cat .cuberc 
+#1662649832
+cd -
+#1662650245
+make install
+#1662650250
+. libexec/cube-env-hook 
+#1662650254
+cd -
+#1662650329
+make install
+#1662650330
+. libexec/cube-env-hook 
+#1662650333
+cd -
+#1662650358
+pushd ../../test-cube-1/
+#1662650474
+cd -
+#1662650477
+make install
+#1662650480
+. libexec/cube-env-hook 
+#1662650492
+pushd ../../test-cube-1/
+#1662650497
+cd -
+#1662650548
+make install
+#1662650550
+. libexec/cube-env-hook 
+#1662650557
+popd ../../test-cube-1/
+#1662650586
+popd
+#1662650609
+cd ../../test-cube-1/
+#1662650627
+pushd ../cube-env/build/
+#1662650630
+popd
+#1662650644
+git status
+#1662650650
+cd -
+#1662650656
+cdroot 
+#1662650657
+git status
+#1662650661
+git diff
+#1662650809
+env
+#1662650822
+env |grep test
+#1662650903
+cd ../subnet/
+#1662650940
+env |grep 'test|subnet'
+#1662650946
+env |egrep 'test|subnet'
+#1662655405
+cd ../cube-env
+#1662655409
+make install
+#1662655414
+cd build/
+#1662655416
+make install
+#1662655421
+. libexec/cube-env-hook 
+#1662655434
+cd ../../test-cube-1/
+#1662655463
+cd -
+#1662655465
+make install
+#1662655466
+. libexec/cube-env-hook 
+#1662655469
+cd ../../test-cube-1/
+#1662655638
+cd -
+#1662655641
+git status
+#1662655684
+bin/cube-env-setup -h
+#1662655744
+make install
+#1662656096
+view bin/cube-env-setup 
+#1662656222
+make install
+#1662656240
+make
+#1662656245
+ls
+#1662656279
+make install
+#1662656306
+make
+#1662656335
+../configure --prefix=$PWD
+#1662656340
+make
+#1662656353
+make clean
+#1662656355
+ls
+#1662656357
+ls bin/
+#1662656371
+make uninstall
+#1662656379
+make install
+#1662656460
+cd src/
+#1662656461
+ls
+#1662656467
+cd ..
+#1662656469
+make
+#1662656473
+ls
+#1662656479
+cd src/
+#1662656480
+ls
+#1662656517
+cdroot 
+#1662656524
+cat bootstrap.sh 
+#1662656534
+rm -rf build/
+#1662656539
+./bootstrap.sh 
+#1662656545
+cd build/
+#1662656546
+ls
+#1662656552
+make install
+#1662656579
+cd ..
+#1662656581
+git status
+#1662656593
+view src/cube-env-setup.sh 
+#1662656614
+cd -
+#1662656617
+cd src/
+#1662656618
+ls
+#1662656634
+cd ..
+#1662656636
+make
+#1662656696
+cd src; gengetoptions  embed --overwrite "cube-env-setup"
+#1662656706
+ls
+#1662656719
+gengetoptions  embed --overwrite "cube-env-setup"
+#1662656863
+view /home/sandman/.local/bin/gengetoptions
+#1662656949
+hist
+#1662656957
+hist|grep embed
+#1662657142
+cd ..
+#1662657144
+make
+#1662657166
+make install
+#1662657172
+view bin/cube-env-setup 
+#1662657188
+bin/cube-env-setup -h
+#1662657192
+bin/cube-env-setup -p
+#1662657196
+bin/cube-env-setup -p0
+#1662657202
+bin/cube-env-setup -p0 -o0
+#1662657205
+bin/cube-env-setup -p0 -o 
+#1662657208
+bin/cube-env-setup -p0 -o 0
+#1662657223
+bin/cube-env-setup -p0 --option=foo
+#1662657231
+bin/cube-env-setup -p0 -ofoo
+#1662657250
+bin/cube-env-setup -p 0
+#1662657255
+bin/cube-env-setup -p 0 0
+#1662657841
+make install
+#1662657851
+bin/cube-env-setup -h
+#1662657883
+make clean
+#1662657884
+make
+#1662657888
+make install
+#1662657891
+bin/cube-env-setup -h
+#1662657899
+vi bin/cube-env-setup 
+#1662657947
+make install
+#1662657951
+bin/cube-env-setup -h
+#1662657974
+vi bin/cube-env-setup 
+#1662657988
+bin/cube-env-setup -h
+#1662657994
+make install
+#1662657997
+bin/cube-env-setup -h
+#1662658003
+vi bin/cube-env-setup 
+#1662658062
+bin/cube-env-setup -h
+#1662658279
+make install
+#1662658283
+bin/cube-env-setup -h
+#1662658291
+bin/cube-env-setup --version
+#1662658337
+make install
+#1662658345
+make clean
+#1662658347
+make
+#1662658354
+make install
+#1662658357
+bin/cube-env-setup --version
+#1662658377
+ls
+#1662658380
+ls src/
+#1662658393
+rm src/cube-env-setup 
+#1662658399
+make install
+#1662658406
+bin/cube-env-setup --version
+#1662658412
+vi bin/cube-env-setup 
+#1662658436
+ls src/
+#1662658447
+make uninstall
+#1662658449
+make clean
+#1662658453
+../configure --prefix=$PWD
+#1662658461
+ls src/
+#1662658499
+make clean
+#1662658506
+ls src/
+#1662658514
+make install
+#1662658544
+view src/cube-env-setup 
+#1662658639
+cd ..
+#1662658644
+rm -rf build/
+#1662658646
+./bootstrap.sh 
+#1662658659
+cd build/
+#1662658660
+ls
+#1662658665
+ls src/
+#1662658686
+../configure prefix=$PWD
+#1662658691
+make
+#1662658793
+vi src/cube-env-setup 
+#1662658849
+make install
+#1662658856
+bin/cube-env-setup -h
+#1662658866
+bin/cube-env-setup --version
+#1662658918
+make install
+#1662658922
+bin/cube-env-setup --version
+#1662659873
+vi bin/cube-env-setup 
+#1662663018
+cdroot 
+#1662663020
+git status
+#1662663029
+rm testtest 
+#1662663124
+git diff
+#1662663499
+cd build/
+#1662663505
+make install
+#1662663509
+cd -
+#1662663529
+cd ../../subnet/
+#1662663538
+cd -
+#1662663555
+cat ~/.bashrc 
+#1662663581
+make clean uninstall
+#1662663588
+make install
+#1662663600
+vi libexec/cube-env-hook 
+#1662663656
+make clean
+#1662663670
+make uninstall
+#1662663681
+ls bin/
+#1662663684
+ls libexec/
+#1662663693
+cd -
+#1662663704
+make install
+#1662663729
+cd -
+#1662663793
+make install
+#1662663799
+cd -
+#1662663821
+make clean uninstall
+#1662663827
+make install
+#1662663839
+. libexec/cube-env-hook 
+#1662663844
+cd -
+#1662663877
+cat ../../test-cube-1/.cuberc 
+#1662663893
+vi ../../subnet/.cuberc 
+#1662664323
+gh repo 
+#1662664394
+basename `git rev-parse --show-toplevel`
+#1662664486
+make install
+#1662664490
+. libexec/cube-env-hook 
+#1662664492
+cd -
+#1662664526
+repo-name
+#1662664590
+cd -
+#1662664602
+make install && . libexec/cube-env-hook 
+#1662664605
+cd -
+#1662664619
+make install && . libexec/cube-env-hook 
+#1662664621
+cd -
+#1662664634
+cat .cuberc 
+#1662664660
+cd -
+#1662664662
+make install && . libexec/cube-env-hook 
+#1662664664
+cd -
+#1662664677
+cd ../test-cube-1/
+#1662664686
+cd ../cube-env
+#1662664688
+git status
+#1662664691
+git diff
+#1662664755
+git status
+#1662664760
+git log
+#1662664790
+git add .
+#1662664816
+git status
+#1662664834
+git commit --amend 
+#1662664883
+git push
+#1662664906
+git push -u origin new-arg-parsing 
+#1662665177
+git checkout main
+#1662665179
+git status
+#1662665181
+git log
+#1662665198
+git checkout new-arg-parsing 
+#1662665205
+git rebase origin/main 
+#1662665208
+git log
+#1662665216
+git checkout main
+#1662665227
+git merge new-arg-parsing 
+#1662665351
+git push
+#1662665438
+cd ../subnet/
+#1662665446
+cd ../test-cube-1/
+#1662665449
+cat .cuberc 

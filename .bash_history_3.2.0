@@ -1,0 +1,10 @@
+#1662467151
+cd
+#1662467158
+vi .tmux.conf 
+#1662665489
+printenv 
+#1662665495
+printenv |grep cube
+#1662665505
+printenv |grep core

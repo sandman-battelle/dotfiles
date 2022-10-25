@@ -1,0 +1,94 @@
+#1663612609
+cd ../q-b-mccubeface/
+#1663612611
+git status
+#1663612620
+git checkout main
+#1663612633
+git status
+#1663612637
+git clear
+#1663612641
+git status
+#1663612645
+git fetch
+#1663612650
+git pull
+#1663612680
+git configg pull.ff only
+#1663612694
+git config --global pull.ff only
+#1663612697
+git pull
+#1663612710
+cd modules/vpn
+#1663612712
+git status
+#1663612724
+git log
+#1663612738
+cd ../../
+#1663612742
+cd ..
+#1663612746
+rm -rf q-b-mccubeface/
+#1663612761
+gh repo clone battellecube/q-b-mccubeface
+#1663612765
+ls
+#1663612769
+cd q-b-mccubeface/
+#1663612779
+git submodule update --init --recursive 
+#1663612795
+ls
+#1663612820
+set-local-env
+#1663612828
+set-local-env --help
+#1663612959
+. ~/.bashrc 
+#1663612961
+set-local-env --help
+#1663612975
+set-local-env -h
+#1663613259
+set-local-env -e sandman -a '10.237.14.0/24' -p 'cube-platform-v0.5.0'
+#1663613398
+git branch
+#1663613414
+git branch -D sandman
+#1663613421
+git fetch
+#1663613675
+hist
+#1663613692
+set-local-env -e sandman -a '10.237.14.0/24' -p 'cube-platform-v0.5.0'
+#1663613718
+cube env create --tenant 215220de-12d7-408e-b764-7e998342ac42 --subscription-id f59139ec-932c-4419-ac4f-b01a05ed5459 sandman
+#1663613945
+cube-log 
+#1663613968
+az login --battelle.us --use-device-code 
+#1663613978
+az login -t battelle.us --use-device-code 
+#1663614005
+cube env create --tenant 215220de-12d7-408e-b764-7e998342ac42 --subscription-id f59139ec-932c-4419-ac4f-b01a05ed5459 sandman
+#1663619543
+az account management-group list
+#1663619686
+az account management-group entities list
+#1663619710
+az account management-group entities list |grep cube
+#1663619739
+az account management-group --help 
+#1663619779
+az account management-group show --name GroupName --expand --recurse
+#1663622268
+cd
+#1663622271
+sudo apt update
+#1663622284
+sudo apt dist-upgrade 
+#1663622519
+sudo apt remove cube-env 

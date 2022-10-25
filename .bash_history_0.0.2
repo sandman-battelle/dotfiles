@@ -1,0 +1,616 @@
+#1657551778
+foo
+#1657895300
+ls
+#1657895304
+rm cube-linux-86_64 
+#1657895306
+ll
+#1657895311
+ls
+#1657895323
+view app-registrations.md 
+#1657895443
+rm app-registrations.md 
+#1657895456
+src/cube-cli/bin/cube-cli-download 
+#1657895470
+sudo install cube-linux-86_64 /usr/local/bin/cube
+#1657895475
+ls
+#1657895481
+rm cube-linux-86_64 
+#1657895488
+cube --version
+#1658866442
+history 
+#1658866445
+hist
+#1658866489
+az vm create -n sandman -g q-b-mccubeface-sandman --image UbuntuLTS --public-ip-address "" --subnet q-b-mccubeface-sandman
+#1658866545
+az vm create -n sandman -g q-b-mccubeface-sandman --image UbuntuLTS --public-ip-address "" --subnet q-b-mccubeface-sandman --vnet-name q-b-mccubeface-sandman
+#1658892039
+az vm delete -n sandman -g q-b-mccubeface-sandman
+#1658892419
+ssh 10.237.14.5
+#1658892486
+ls ~/.ssh/
+#1658892662
+az vm open-port --port 80 --resource-group q-b-mccubeface-sandman -n sandman 
+#1658892769
+curl http://10.237.14.5
+#1658894366
+set-local-env 
+#1658894370
+set-local-env sandman
+#1658894390
+terraform apply -var=deployment_id=q-b-mccubeface-sandman -var=subscription_id=f59139ec-932c-4419-ac4f-b01a05ed5459 -var=platform_subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -var=tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_subscription_id=cab6c334-ae95-4a8d-8041-1127009a14bb -var=address_space=10.237.14.0/24 -var=sha=$(git rev-parse HEAD)
+#1658894570
+terraform destroy -var=deployment_id=q-b-mccubeface-sandman -var=subscription_id=f59139ec-932c-4419-ac4f-b01a05ed5459 -var=platform_subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -var=tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_subscription_id=cab6c334-ae95-4a8d-8041-1127009a14bb -var=address_space=10.237.14.0/24 -var=sha=$(git rev-parse HEAD)
+#1658941144
+set-local-env sandman
+#1658941158
+az login -t battelle.us
+#1658941168
+set-local-env sandman
+#1661220366
+cd ../../subnet/
+#1661222324
+cd ..
+#1661223057
+cd subnet/
+#1663701545
+netstat
+#1663782757
+git status
+#1663849998
+logger "foo"
+#1663850017
+tail /var/log/syslog
+#1663850025
+logger INFO "foo"
+#1663850027
+tail /var/log/syslog
+#1663850037
+logger --help
+#1663850108
+man logger
+#1663850356
+logger -p local0.info "This is a test"
+#1663850360
+tail /var/log/syslog
+#1663850391
+logger -p local0.warning "This is a test"
+#1663850393
+tail /var/log/syslog
+#1663866849
+cd ../test-cube-1/
+#1663866876
+echo $CUBE_REPO_NAME_VAR 
+#1663866892
+cat .cuberc 
+#1664282237
+git tag | sort -V
+#1664282241
+git tag
+#1664282250
+cd ../cube-cli/
+#1664282251
+git tag
+#1664282256
+git tag | sort -V
+#1664282293
+git tag | sort -V | tail -n1
+#1664283212
+cd ../cube-env
+#1664283213
+ls
+#1664283233
+cat ~/.bashrc 
+#1664283262
+make
+#1664283270
+ls
+#1664283279
+ls src/
+#1664283295
+make && . ./src/cube-env-hook.sh 
+#1664283323
+cube-cli-gen-workload-config 
+#1664283359
+git status
+#1664283363
+git diff
+#1664283478
+git branch
+#1664283508
+git branch --no-merged 
+#1664283537
+git branch -D integrate-shellcheck more-better-func-names 
+#1664283545
+git log
+#1664283559
+git status
+#1664283562
+git add .
+#1664283597
+git commit
+#1664283767
+dch --edit 
+#1664283781
+dch -iU
+#1664283872
+git status
+#1664283882
+git log
+#1664283890
+git add .
+#1664283895
+git commit --amend 
+#1664283916
+cat NEWS 
+#1664284602
+ls
+#1664285108
+./release.sh 
+#1664285178
+echo $?
+#1664285184
+git status
+#1664285334
+./release.sh 
+#1664285407
+echo $?
+#1664285439
+./release.sh 
+#1664285444
+echo $?
+#1664285446
+./release.sh 
+#1664285450
+echo $?
+#1664285454
+git status
+#1664285474
+dch -e
+#1664285525
+git satus
+#1664285527
+git status
+#1664285533
+git add .
+#1664285541
+git commit --amend 
+#1664285548
+git log
+#1664287300
+view /etc/rsyslog.conf 
+#1664287348
+view /etc/rsyslog.d/50-default.conf 
+#1664287390
+cat /etc/rsyslog.d/50-default.conf 
+#1664287534
+sudo vi /etc/rsyslog.d/90-cube-env.conf
+#1664287624
+logger --help
+#1664287679
+logger --priority cube.info "This is a lame log entry"
+#1664287698
+sudo systemctl restart rsyslog.service 
+#1664287700
+logger --priority cube.info "This is a lame log entry"
+#1664287960
+rsyslogd --help
+#1664287987
+apt show rsyslog
+#1664288010
+dpkg -L rsyslog 
+#1664288040
+dpkg -L rsyslog |less
+#1664288123
+view /usr/share/doc/rsyslog/examples/rsyslog.d/console.conf 
+#1664288182
+sudo vi /etc/rsyslog.d/90-cube-env.conf
+#1664288235
+logger --priority local7.info "This is a lame log entry"
+#1664288246
+cat /var/log/cube.log
+#1664288250
+sudo systemctl restart rsyslog.service 
+#1664288253
+cat /var/log/cube.log
+#1664288255
+logger --priority local7.info "This is a lame log entry"
+#1664288260
+cat /var/log/cube.log
+#1664288271
+sudo vi /etc/rsyslog.d/90-cube-env.conf
+#1664288585
+sudo systemctl restart rsyslog.service 
+#1664288601
+logger --priority local7.info "This is a lame log entry"
+#1664288755
+sudo vi /etc/rsyslog.d/90-cube-env.conf
+#1664288764
+sudo systemctl restart rsyslog.service 
+#1664288767
+logger --priority local7.info "This is a lame log entry"
+#1664289145
+cat /etc/rsyslog.d/90-cube-env.conf 
+#1664289231
+sed 's,local7\t/dev/pts/6,local7\t/dev/pts/7,'
+#1664289247
+sed 's,local7\t/dev/pts/6,local7\t/dev/pts/7,' /etc/rsyslog.d/90-cube-env.conf 
+#1664289298
+sed 's,local7[.* ]+/dev/pts/6,local7\t/dev/pts/7,' /etc/rsyslog.d/90-cube-env.conf 
+#1664289308
+sed 's,local7[.* ]\+/dev/pts/6,local7\t/dev/pts/7,' /etc/rsyslog.d/90-cube-env.conf 
+#1664289320
+sed 's,local7.*[ ]\+/dev/pts/6,local7\t/dev/pts/7,' /etc/rsyslog.d/90-cube-env.conf 
+#1664289339
+sed 's,local7\.\*[ ]\+/dev/pts/6,local7\t/dev/pts/7,' /etc/rsyslog.d/90-cube-env.conf 
+#1664289353
+sed 's,local7\.\* +/dev/pts/6,local7\t/dev/pts/7,' /etc/rsyslog.d/90-cube-env.conf 
+#1664289366
+sed 's,local7.+/dev/pts/6,local7\t/dev/pts/7,' /etc/rsyslog.d/90-cube-env.conf 
+#1664289384
+sed 's,/dev/pts/6,/dev/pts/7,' /etc/rsyslog.d/90-cube-env.conf 
+#1664289401
+sed 's,local7\.\+/dev/pts/6,/dev/pts/7,' /etc/rsyslog.d/90-cube-env.conf 
+#1664289407
+sed 's,local7.\+/dev/pts/6,/dev/pts/7,' /etc/rsyslog.d/90-cube-env.conf 
+#1664289451
+sed 's,(local7.\+)/dev/pts/6,\1/dev/pts/7,' /etc/rsyslog.d/90-cube-env.conf 
+#1664289531
+sed 's,\(local7.\+\)/dev/pts/6,\1/dev/pts/7,' /etc/rsyslog.d/90-cube-env.conf 
+#1664289662
+make && . ./src/cube-env-hook.sh 
+#1664289684
+cube-cli-log-here 
+#1664289712
+cat /etc/rsyslog.d/90-cube-env.conf 
+#1664290094
+make && . ./src/cube-env-hook.sh 
+#1664290100
+cube-cli-log-here 
+#1664290342
+make && . ./src/cube-env-hook.sh 
+#1664290344
+cube-cli-log-here 
+#1664290358
+sed "s,\(local7.\+/dev/pts/.\+\),\1/dev/pts/4," /etc/rsyslog.d/90-cube-env.conf
+#1664290443
+cube-cli-log-here 
+#1664290445
+make && . ./src/cube-env-hook.sh 
+#1664290447
+cube-cli-log-here 
+#1664290456
+sed "s,\(local7.\+/dev/pts/\).\+,\14," /etc/rsyslog.d/90-cube-env.conf
+#1664290482
+logger --priority local7.info "This is a lame log entry"
+#1664290506
+cat /etc/rsyslog.d/90-cube-env.conf 
+#1664290518
+logger --priority local7.info "This is a lame log entry"
+#1664290525
+logger --priority local7.info "This is a lame log"
+#1664290532
+logger --priority local7.info "This is a lame log "
+#1664290598
+make && . ./src/cube-env-hook.sh 
+#1664290603
+logger --priority local7.info "This is a lame log "
+#1664290607
+logger --priority local7.info "This is a lame log"
+#1664290617
+git status
+#1664290620
+git diff
+#1664290629
+git add .
+#1664290637
+dch -e
+#1664290725
+cp /etc/rsyslog.d/90-cube-env.conf src/
+#1664290903
+sudo vi /etc/rsyslog.d/90-cube-env.conf [A
+#1664290922
+sudo systemctl restart rsyslog.service 
+#1664290930
+logger --priority local7.info "This is a lame log"
+#1664292512
+logger --priority local7.info "`data`"
+#1664292520
+logger --priority local7.info "`date`"
+#1664292807
+sudo systemctl restart rsyslog.service 
+#1664292812
+logger --priority local7.info "`date`"
+#1664464912
+ls
+#1664464916
+cd build/
+#1664464919
+make install
+#1664464929
+make distclean
+#1664464953
+cd ..
+#1664464954
+ls
+#1664464974
+rm -rf build/
+#1664464977
+./bootstrap.sh 
+#1664464984
+git status
+#1664465004
+make distclean
+#1664465013
+rm -rf build/
+#1664465022
+./bootstrap.sh 
+#1664465028
+cd build/
+#1664465030
+make 
+#1664465056
+make
+#1664465066
+make -d 
+#1664465086
+cd ..
+#1664465087
+ls
+#1664465090
+ls ..
+#1664465103
+rm -r ../cube-env_0.1.3*
+#1664465108
+ls
+#1664465112
+cat release.sh 
+#1664465121
+ls
+#1664465158
+debuild
+#1664465187
+git diff
+#1664465208
+cd /tmp/
+#1664465220
+gh repo clone battellecube/cube-env
+#1664465225
+gh auth login
+#1664465266
+gh repo clone battellecube/cube-env
+#1664465269
+cd cube-env/
+#1664465273
+./bootstrap.sh 
+#1664465282
+debuild
+#1664465295
+ls ..
+#1664465497
+hist|grep apt install
+#1664465507
+hist|grep 'apt install'
+#1664465568
+dpkg -l autotools-dev 
+#1664468265
+cat ~/.bashrc 
+#1664468300
+command -V yq
+#1664468320
+hist|grep yq
+#1664468359
+pip uninstall yq
+#1664468449
+snap list
+#1664468484
+sudo systemctl status snap
+#1664468519
+sudo systemctl status snapd.socket 
+#1664468667
+grep -r yq .
+#1664469639
+cd -
+#1664932496
+make && . ./src/cube-env-hook.sh 
+#1664932540
+. ~/.local/bin/cube-env-cli.sh 
+#1664932551
+cube-cli-log-here
+#1664932576
+logger --priority local7.info "This is a lame log entry"
+#1664932604
+cat /etc/rsyslog.d/90-cube-env.conf 
+#1664932631
+sudo sed "s,\(local7.\+/dev/pts/\).\+,\13," /etc/rsyslog.d/90-cube-env.conf
+#1664932658
+sudo sed -i "s,\(local7.\+/dev/pts/\).\+,\13," /etc/rsyslog.d/90-cube-env.conf
+#1664932662
+cat /etc/rsyslog.d/90-cube-env.conf 
+#1664932679
+logger --priority local7.info "This is a lame log entry"
+#1664932708
+sudo systemctl restart rsyslog.service 
+#1664932710
+logger --priority local7.info "This is a lame log entry"
+#1664933262
+git diff --color-words=.
+#1664933276
+git diff HEAD --color-words=.
+#1664933493
+cat /etc/rsyslog.d/90-cube-env.conf 
+#1664994677
+set
+#1664994781
+set|less
+#1664933506
+tail -f /var/log/cube.log 
+#1665060301
+tty
+#1665421060
+logger --priority local7.info "This is a lame log entry"
+#1665421222
+vi ~/.bashrc 
+#1665421260
+. ~/.bashrc 
+#1665421286
+vi ~/.bashrc 
+#1665421322
+. ~/.bashrc 
+#1665421335
+vi ~/.bashrc 
+#1665421398
+view /usr/share/powerline/bindings/bash/powerline.sh
+#1665421760
+view /usr/share/powerline/config_files/config.json 
+#1665421888
+cd ..
+#1665421890
+git status
+#1665421900
+git log
+#1665421908
+hist
+#1665421947
+history 
+#1665421969
+hist
+#1665424128
+az storage azcopy blob download -c environments --account-name cubetfstateprod "envirenment.rec" -d environment.rec
+#1665424140
+az storage azcopy blob download -c environments --account-name cubetfstateprod -s "envirenment.rec" -d environment.rec
+#1665424155
+az storage azcopy blob download -c environments -s "envirenment.rec" -d environment.rec
+#1665424177
+az storage azcopy blob download -c environments --account-name cubetfstateprod -s "envirenment.rec" -d environment.rec
+#1665424189
+az login --scope https://management.core.usgovcloudapi.net//.default
+#1665424201
+az storage azcopy blob download -c environments --account-name cubetfstateprod -s "envirenment.rec" -d environment.rec
+#1665424969
+hist|grep recsel
+#1665424976
+history|grep recsel
+#1665429354
+tty
+#1665429365
+cube log
+#1665429376
+sudo sed -i "s,\(local7.\+/dev/pts/\).\+,\13," /etc/rsyslog.d/90-cube-env.conf
+#1665429389
+sudo systemctl restart rsyslog.service 
+#1665430130
+git status
+#1665430136
+git diff
+#1665430142
+git log
+#1665430151
+git fetch
+#1665430154
+git push
+#1665430157
+git status
+#1665430174
+git diff origin/HEAD 
+#1665430192
+git diff environment-store 
+#1665430213
+git commit -m'touch up parser def'
+#1665430215
+git push
+#1665430563
+git ftech
+#1665430569
+git fetch
+#1665430571
+git push
+#1665430600
+git log
+#1665430631
+git ftech
+#1665430633
+git fetch
+#1665430636
+git status
+#1665430641
+git push
+#1665430644
+git pull
+#1665455651
+apt show cube-env
+#1665455668
+git checkout origin/main
+#1665455674
+git checkout amin
+#1665455678
+git checkout main
+#1665455680
+git log
+#1665461298
+vi /usr/local/bin/gengetoptions 
+#1665461366
+sudo vi /usr/local/bin/gengetoptions 
+#1666097658
+. src/functions.in 
+#1666097739
+cube-env-download 
+#1666097775
+cube-env-download cubetfstateprod
+#1666097787
+az login -t battelle.us
+#1666097819
+cube-env-download cubetfstateprod
+#1666097837
+az account set -s cube-platform
+#1666097839
+cube-env-download cubetfstateprod
+#1666097864
+ls
+#1666097976
+recsel -t environment -e id=ba6ed13e-4a65-11ed-a525-51c6bc2e34c3
+#1666097983
+recsel -t environment -e 'id=ba6ed13e-4a65-11ed-a525-51c6bc2e34c3'
+#1666097988
+recsel -t environment -e 'id = ba6ed13e-4a65-11ed-a525-51c6bc2e34c3'
+#1666098200
+recsel -t environment -e 'id = "ba6ed13e-4a65-11ed-a525-51c6bc2e34c3"'
+#1666098218
+recsel -t environment -e "id = 'ba6ed13e-4a65-11ed-a525-51c6bc2e34c3'"
+#1666098226
+recsel -t environment -e 'id = "ba6ed13e-4a65-11ed-a525-51c6bc2e34c3"' environments.rec 
+#1666098253
+recset -t environment -e 'id = "ba6ed13e-4a65-11ed-a525-51c6bc2e34c3"'  -f name -v sandman environments.rec 
+#1666098297
+recset -t environment -e 'id = "ba6ed13e-4a65-11ed-a525-51c6bc2e34c3"'  -f name -S sandman environments.rec 
+#1666098306
+TMPDIR=. recset -t environment -e 'id = "ba6ed13e-4a65-11ed-a525-51c6bc2e34c3"'  -f name -S sandman environments.rec 
+#1666098335
+TMPDIR=. recset -t environment -e 'id = "ba6ed13e-4a65-11ed-a525-51c6bc2e34c2"'  -f name -S sandman environments.rec 
+#1666098356
+TMPDIR=. recset -t environment -e 'id = "ba6ed13e-4a65-11ed-a525-51c6bc2e34c2"'  -f name -S valerio environments.rec 
+#1666098376
+TMPDIR=. recset -t environment -e 'id = "ba6ed13e-4a65-11ed-a525-51c6bc2e34c3"'  -f name2 -s sandman environments.rec 
+#1666098401
+TMPDIR=. recset -t environment -e 'id = "ba6ed13e-4a65-11ed-a525-51c6bc2e34c3"'  -f name2 -S sandman environments.rec 
+#1666098439
+TMPDIR=. recset -t environment -e 'id = "ba6ed13e-4a65-11ed-a525-51c6bc2e34c3"'  -f description boo environments.rec 
+#1666098450
+TMPDIR=. recset -t environment -e 'id = "ba6ed13e-4a65-11ed-a525-51c6bc2e34c3"'  -f description -s boo environments.rec 
+#1666098462
+TMPDIR=. recset -t environment -e 'id = "ba6ed13e-4a65-11ed-a525-51c6bc2e34c3"'  -f description -S boo environments.rec 
+#1666100460
+git branch
+#1666100466
+git branch -D environment-store 
+#1666100472
+git fetch
+#1666100476
+git branch

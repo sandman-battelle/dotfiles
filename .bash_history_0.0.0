@@ -1,0 +1,1592 @@
+#1657564888
+history 
+#1657564964
+la
+#1657564993
+cat .bash_history_*
+#1657565078
+cat .bash_history_* | sed '$!N;s/\n/ /'
+#1657565103
+cat .bash_history_* | sed '$!N;s/\n/ /' | tr -d #
+#1657565108
+cat .bash_history_* | sed '$!N;s/\n/ /' | tr -d '#'
+#1657565184
+cat .bash_history_* | sed '$!N;s/\n/'
+#1657565195
+cat .bash_history_* | sed '$!N;s/\n/ /' | cut -c1
+#1657565206
+cat .bash_history_* | sed '$!N;s/\n/ /' | cut -c1-
+#1657565216
+cat .bash_history_* | sed '$!N;s/\n/ /' | cut -c 1-
+#1657565219
+cat .bash_history_* | sed '$!N;s/\n/ /' | cut -c 2-
+#1657565222
+cat .bash_history_* | sed '$!N;s/\n/ /' | cut -c2-
+#1657565235
+cat .bash_history_* | sed '$!N;s/\n/ /' | cut -c2- | sort -n
+#1657565257
+vi .bashrc 
+#1657565442
+history 
+#1657565470
+echo $(tmux-pane)
+#1657565486
+echo 0.0.0
+#1657565867
+hist
+#1657565873
+tmux
+#1657565878
+hist
+#1657565903
+echo 'first pane'
+#1657565913
+hist
+#1657567932
+bin/hugo-serve 
+#1657719239
+ls
+#1657804152
+bin/hugo-serve 
+#1657893525
+cd src/cube-program/
+#1657893527
+vi
+#1657893544
+cd ../cube-cli/
+#1657893546
+vi
+#1657905247
+cd src/cube-cli/
+#1657905685
+cd ../cube-platform/
+#1657905688
+git fetch
+#1657905697
+git fetch --recurse-submodules 
+#1658778833
+ls
+#1658778846
+la ~
+#1658779306
+history 
+#1658779327
+hist
+#1658779335
+history 
+#1658779351
+hist
+#1658779391
+hist |uniq 
+#1658779400
+hist
+#1658779409
+hist |uniq 
+#1658779474
+hist
+#1658779480
+hist |uniq 
+#1658779508
+history 
+#1658779549
+cat ~/.bash_history_*
+#1658779580
+cat ~/.bash_history
+#1658779608
+tail -n2 ~/.bash_history_*
+#1658780000
+cube env create --help
+#1658780012
+cube env create sandman
+#1658780038
+../cube-cli/bin/set-local-env 
+#1658780058
+git status
+#1658780063
+rm cube-linux-86_64 
+#1658780067
+git status
+#1658780074
+git checkout sandman
+#1658780082
+git checkout -b sandman
+#1658780090
+../cube-cli/bin/set-local-env sandman
+#1658780133
+cube env create --tenant 215220de-12d7-408e-b764-7e998342ac42 --subscription-id f59139ec-932c-4419-ac4f-b01a05ed5459 sandman
+#1658780294
+cube-log 
+#1658784983
+history 
+#1658784993
+hist
+#1658785192
+history 
+#1658785395
+hist
+#1658785409
+hist|grep export
+#1658785575
+../cube-cli/bin/set-local-env sandman
+#1658785594
+terraform init -upgrade -backend-config=key=q-b-mccubeface-sandman -backend-config=subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -backend-config=environment=usgovernment -backend-config=storage_account_name=cubetfstateprod
+#1658785695
+git submodule update
+#1658785700
+ls modules/
+#1658785704
+ls modules/ -R
+#1658785725
+git config 
+#1658785728
+git config -l
+#1658785921
+../cube-cli/bin/set-local-env sandman
+#1658785937
+terraform init -upgrade -backend-config=key=q-b-mccubeface-sandman -backend-config=subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -backend-config=environment=usgovernment -backend-config=storage_account_name=cubetfstateprod
+#1658786031
+terraform apply -var=deployment_id=q-b-mccubeface-sandman -var=subscription_id=f59139ec-932c-4419-ac4f-b01a05ed5459 -var=platform_subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -var=tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_subscription_id=cab6c334-ae95-4a8d-8041-1127009a14bb -var=address_space=10.237.14.0/24 -var=sha=$(git rev-parse HEAD)
+#1658788232
+terraform init -upgrade -backend-config=key=q-b-mccubeface-sandman -backend-config=subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -backend-config=environment=usgovernment -backend-config=storage_account_name=cubetfstateprod
+#1658788239
+terraform apply -var=deployment_id=q-b-mccubeface-sandman -var=subscription_id=f59139ec-932c-4419-ac4f-b01a05ed5459 -var=platform_subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -var=tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_subscription_id=cab6c334-ae95-4a8d-8041-1127009a14bb -var=address_space=10.237.14.0/24 -var=sha=$(git rev-parse HEAD)
+#1658789200
+../cube-cli/bin/set-local-env sandman
+#1658789228
+az ad group member add --group avd_users_q-b-mccubeface-sandman --member-id
+#1658789253
+vi ../cube-cli/bin/set-local-env 
+#1658789285
+echo az ad group member add --group avd_users_$DEPLOYMENT_ID --member-id $(az ad signed-in-user show --query objectId -o tsv 2>/dev/null)
+#1658789300
+az ad signed-in-user show --query objectId
+#1658789322
+az ad signed-in-user show
+#1658789368
+az ad group member add --group avd_users_q-b-mccubeface-sandman --member-id 33a3087d-012e-4ad5-9f47-c678a2368c78
+#1658789472
+az ad group member add --group cube-q-b-mccubeface-sandman-users --member-id 33a3087d-012e-4ad5-9f47-c678a2368c78
+#1658789500
+vi ../cube-cli/bin/set-local-env 
+#1658789577
+../cube-cli/bin/set-local-env sandman
+#1658789585
+az ad group member add --group cube-q-b-mccubeface-sandman-users --member-id 33a3087d-012e-4ad5-9f47-c678a2368c78
+#1658790234
+terraform destroy -var=deployment_id=q-b-mccubeface-sandman -var=subscription_id=f59139ec-932c-4419-ac4f-b01a05ed5459 -var=platform_subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -var=tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_tenant_id=215220de-12d7-408e-b764-7e998342ac42 -var=security_subscription_id=cab6c334-ae95-4a8d-8041-1127009a14bb -var=address_space=10.237.14.0/24 -var=sha=$(git rev-parse HEAD)
+#1658838143
+ls
+#1658838217
+git submodule add git@github.com:battelle-cube/terraform-cube-linux-machine modules/linux-machine
+#1658839812
+history 
+#1658839930
+cat ~/.bash_history_$(tmux-pane)
+#1658839944
+hist
+#1658840020
+history 
+#1658840024
+hist
+#1658840070
+ls ~/.local/
+#1658840075
+ls ~/.local/bin
+#1658840091
+mkdir ~/.local/bin
+#1658840099
+vi ~/.bashrc 
+#1658840132
+vi ~/.bash_aliases 
+#1658840147
+set-local-env 
+#1658840156
+set-local-env sandman
+#1658840173
+az login -t battelle.us
+#1658840220
+set-local-env 
+#1658840236
+vi 
+#1658840262
+cd src/q-b-mccubeface/
+#1658840273
+vi ~/.bash_aliases 
+#1658840758
+. ~/.bash_aliases 
+#1658840770
+vi ~/.bash_aliases 
+#1658840873
+. ~/.bash_aliases 
+#1658840874
+hist
+#1658840940
+mv ~/.bash_history ~/._bash_history
+#1658840942
+hist
+#1658840963
+set-local-env 
+#1658841003
+terraform init -upgrade -backend-config=key=q-b-mccubeface-sandman -backend-config=subscription_id=f3f3926c-bfc9-4986-b7d2-7bd45fae777a -backend-config=environment=usgovernment -backend-config=storage_account_name=cubetfstateprod
+#1658841027
+vi
+#1658856376
+cd src/q-b-mccubeface/
+#1658856377
+vi
+#1658894140
+git diff
+#1658894145
+ls
+#1658894166
+vi modules/core/nsg-rules.tf 
+#1658894253
+rm modules/core/nsg-rules.tf 
+#1658894257
+git status
+#1658894277
+mv linux-machine.tf linux-machine.tf-disabled 
+#1658894311
+git restore modules/core/nsg-rules.tf
+#1658894316
+cd modules/core/
+#1658894318
+git status
+#1658894321
+git restore .
+#1658894325
+git status
+#1658894329
+cd ../..
+#1658894331
+git status
+#1659542224
+ls
+#1659542400
+vi
+#1659702810
+cd src/cube-program/
+#1659702810
+ls
+#1659702827
+cd
+#1659702831
+hist
+#1659702858
+eval $(gh completion)
+#1659702870
+gh completion
+#1659702879
+eval $(gh completion -s bash)
+#1659702890
+gh completion -s bash
+#1659702909
+gh completion --help
+#1659702920
+eval "$(gh completion -s bash)"
+#1659702947
+cat >> .bashrc 
+#1659702959
+cat .bashrc 
+#1659703020
+gh repo list --topic archiving
+#1659703029
+gh auth status
+#1659703062
+hist
+#1659703087
+gh repo list battelle-cube --topic archiving
+#1659703138
+gh repo list --help
+#1659703185
+gh repo list battelle-cube --topic archiving --no-archived --limit 1000
+#1659703242
+hist
+#1659703271
+gh repo list battelle-cube --topic archiving --json name --jq '.[].name' --limit 100 |sort
+#1659703286
+gh repo list battelle-cube --topic archiving --no-archived --json name --jq '.[].name' --limit 100 |sort
+#1659703310
+gh repo list --help
+#1659703379
+gh repo list battelle-cube --topic archiving --no-archived --json name --jq '.[].name' --limit 100 | sort | cat
+#1659703382
+hist
+#1659703399
+gh repo edit --help
+#1659703410
+gh repo archive --help
+#1659703466
+gh repo list battelle-cube --topic archiving --no-archived --json name --jq '.[].name' --limit 100 | sort | xargs gh repo archive -y
+#1659703568
+gh repo list battelle-cube --topic archiving --no-archived --json name --jq '.[].name' --limit 100 | sort | while read repo; do echo gh repo archive -y $repo; done
+#1659703581
+gh repo list battelle-cube --topic archiving --no-archived --json name --jq '.[].name' --limit 100 | sort | while read repo; do gh repo archive -y $repo; done
+#1659703609
+gh repo list battelle-cube --topic archiving --no-archived --json name --jq '.[].name' --limit 100 | sort | while read repo; do gh repo archive -y battelle-cube/$repo; done
+#1659703889
+gh repo --help
+#1659704264
+curl   -X POST   -H "Accept: application/vnd.github+json" \ 
+#1659704341
+curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: token <TOKEN>" https://api.github.com/repos/OWNER/REPO/transfer -d '{"new_owner":"github","team_ids":[12,345]}'
+#1659704376
+gh auth --help
+#1659704391
+la ~
+#1659704404
+la ~/.local/
+#1659704407
+la ~/.local/state/
+#1659704410
+la ~/.local/state/gh/
+#1659704417
+view ~/.local/state/gh/state.yml 
+#1659704437
+view ~/.config/gh/hosts.yml 
+#1659704496
+jq < ~/.config/gh/hosts.yml 
+#1659704543
+yq
+#1659704561
+nvm --help
+#1659704570
+pip install yq
+#1659704576
+yq
+#1659704582
+yq < ~/.config/gh/hosts.yml 
+#1659704634
+yq ".github.com".oauth_token < ~/.config/gh/hosts.yml 
+#1659704650
+yq .github\.com.oauth_token < ~/.config/gh/hosts.yml 
+#1659704785
+yq ."github.com".oauth_token < ~/.config/gh/hosts.yml 
+#1659704798
+yq ."github.com" < ~/.config/gh/hosts.yml 
+#1659704806
+yq '."github.com"' < ~/.config/gh/hosts.yml 
+#1659704815
+yq '.github.com' < ~/.config/gh/hosts.yml 
+#1659704822
+yq '."github.com".auth_token' < ~/.config/gh/hosts.yml 
+#1659704828
+yq '."github.com".oauth_token' < ~/.config/gh/hosts.yml 
+#1659704861
+vi .bashrc 
+#1659704920
+. .bashrc 
+#1659704922
+\
+#1659704927
+. .bashrc
+#1659704934
+echo $CUBE_PERSONAL_ACCESS_TOKEN 
+#1659704956
+yq '."github.com".oauth_token' < ~/.config/gh/hosts.yml 
+#1659704964
+yq -r '."github.com".oauth_token' < ~/.config/gh/hosts.yml 
+#1659704969
+vi .bashrc 
+#1659704988
+. .bashrc
+#1659704992
+echo $CUBE_PERSONAL_ACCESS_TOKEN 
+#1659704997
+hist
+#1659705042
+curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: token $CUBE_PERSONAL_ACCESS_TOKEN" https://api.github.com/repos/OWNER/REPO/transfer -d '{"new_owner":"github","team_ids":[12,345]}'
+#1659705228
+gh api
+#1659705233
+gh api --help
+#1659705273
+gh api orgs/battelle-cube/teams
+#1659705310
+gh api orgs/battelle-cube/teams|jq [name,id]
+#1659705323
+gh api orgs/battelle-cube/teams|jq [].[name,id]
+#1659705333
+gh api orgs/battelle-cube/teams|jq [].name
+#1659705352
+gh api orgs/battelle-cube/teams|jq [name]
+#1659705358
+gh api orgs/battelle-cube/teams|jq .
+#1659705363
+gh api orgs/battelle-cube/teams|jq .[]
+#1659705369
+gh api orgs/battelle-cube/teams|jq .[name]
+#1659705373
+gh api orgs/battelle-cube/teams|jq .[].name
+#1659705384
+gh api orgs/battelle-cube/teams|jq .[].[name]
+#1659705402
+gh api orgs/battelle-cube/teams|jq .[].{name}
+#1659705408
+gh api orgs/battelle-cube/teams|jq .[].{name=name}
+#1659705411
+gh api orgs/battelle-cube/teams|jq .[].{name:name}
+#1659705418
+gh api orgs/battelle-cube/teams
+#1659705488
+curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: token $CUBE_PERSONAL_ACCESS_TOKEN" https://api.github.com/repos/battellecube/albert-test/transfer -d '{"new_owner":"battelle-cube","team_ids":[5690399]}'
+#1659705547
+gh api repos/battelle-cube/
+#1659705584
+gh api repos/battelle-cube/repo
+#1659705605
+gh api repos/battelle-cube/repo/tranfer
+#1659705791
+hist
+#1659705939
+curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: token $CUBE_PERSONAL_ACCESS_TOKEN" https://api.github.com/repos/battellecube/albert-test/transfer -d '{"new_owner":"battelle-cube","team_ids":["5690399"]}'
+#1659705951
+curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: token $CUBE_PERSONAL_ACCESS_TOKEN" https://api.github.com/repos/battellecube/albert-test/transfer -d '{"new_owner":"battelle-cube","team_ids":[5690399]}'
+#1659706042
+curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: token $CUBE_PERSONAL_ACCESS_TOKEN" https://api.github.com/repos/battellecube/albert-test/transfer -d '{"new_owner":"battelle-cube"}'
+#1659706070
+gh repos list battellecube
+#1659706075
+gh repo list battellecube
+#1659706209
+hist
+#1659706229
+gh api orgs/battellecube/teams
+#1659706271
+curl -X POST -H "Accept: application/vnd.github+json" -H "Authorization: token $CUBE_PERSONAL_ACCESS_TOKEN" https://api.github.com/repos/battelle-cube/arena-sideload/transfer -d '{"new_owner":"battellecube","team_ids":[6417413]}'
+#1659706499
+hist
+#1659706628
+gh api repos/battelle-cube/arena/transfer -f '{"new_owner":"battellecube","team_ids":[6417413]}'
+#1659707062
+echo '{"new_owner":"battellecube","team_ids":[6417413]}' | gh api repos/battelle-cube/arena/transfer --input
+#1659707067
+echo '{"new_owner":"battellecube","team_ids":[6417413]}' | gh api repos/battelle-cube/arena/transfer --input -
+#1659707261
+hist
+#1659707428
+gh repo list battelle-cube --topic moving --no-archived --json name --jq '.[].name' --limit 100 | sort | while read repo; do echo '{"new_owner":"battellecube","team_ids":[6417413]}' | gh api repos/battelle-cube/$repo/transfer --input - ; done
+#1659707469
+gh repo list battelle-cube --topic moving --no-archived --json name --jq '.[].name' --limit 100 | sort | while read repo; do echo '{"new_owner":"battellecube","team_ids":[6417413]}' \| gh api repos/battelle-cube/$repo/transfer --input - ; done
+#1659707561
+gh repo list battelle-cube --topic moving --no-archived --json name --jq '.[].name' --limit 100 | sort | while read repo; do (echo '{"new_owner":"battellecube","team_ids":[6417413]}' | gh api repos/battelle-cube/$repo/transfer --input - ) ; done
+#1659709369
+echo '{"new_owner":"battellecube","team_ids":[6417413]}' | gh api repos/battelle-cube/cube-api/transfer --input -
+#1659709415
+echo '{"new_owner":"battellecube","team_ids":[6417413]}' | gh api repos/battelle-cube/terraform-cube-keyvault/transfer --input -
+#1659726471
+hist
+#1659726510
+vi .bash_functions 
+#1659728189
+. .bash_functions 
+#1659728204
+vi .bash_functions 
+#1659728249
+. .bash_functions 
+#1659728263
+vi .bash_functions 
+#1659728379
+. .bash_functions 
+#1659728388
+gh_repo_transfer 
+#1659728407
+vi .bash_functions 
+#1659728419
+. .bash_functions 
+#1659728421
+gh_repo_transfer 
+#1659728433
+gh_repo_transfer foo bar baz
+#1659728445
+set -x
+#1659728447
+gh_repo_transfer foo bar baz
+#1659728623
+gh_repo_transfer battelle-cube battellecube test-cube-1
+#1659728643
+set +x
+#1659728650
+vi .bash_functions 
+#1659730084
+vi .bashrc 
+#1659730091
+vi .vimrc 
+#1659730164
+vi .bash_functions 
+#1659730233
+vi .vimrc 
+#1659730578
+vi .bash_functions 
+#1659730609
+vi .vimrc 
+#1659730648
+vi .bash_functions 
+#1659730778
+. .bash_functions 
+#1659730790
+gh_repo_transfer battelle-cube battellecube bg-cube-1
+#1659730805
+vi .bash_functions 
+#1659730957
+. .bash_functions 
+#1659730962
+gh_repo_transfer battelle-cube battellecube bg-cube-1
+#1659733461
+cat .bash_functions 
+#1660048977
+hist
+#1660049071
+cd () { builtin cd && echo "Changed to $PWD from $OLDPWD" }
+#1660049084
+cd
+#1660049094
+cd () { builtin cd && echo "Changed to $PWD from $OLDPWD"; }
+#1660049109
+cd
+#1660049117
+cd  /tmp
+#1660049147
+echo $OLDPWD 
+#1660049187
+cd () { builtin cd "$@" && echo "Changed to $PWD from $OLDPWD" }
+#1660049194
+cd () { builtin cd "$@" && echo "Changed to $PWD from $OLDPWD"; }
+#1660049213
+cd  /tmp
+#1660049668
+cd -
+#1660050152
+cat src/cube-cli/bin/set-local-env 
+#1660055961
+cd src/cube-cli/
+#1660055963
+ls
+#1660056384
+vi
+#1660056689
+git fetch
+#1660056698
+git diff origin/main 
+#1660056783
+git log
+#1660056800
+git branch
+#1660056825
+git log origin/main 
+#1660057005
+git pull
+#1660057171
+vi
+#1660057866
+git diff
+#1660057872
+git branch
+#1660059003
+git checkout -b 230-env-name-error
+#1660059009
+git rebase origin/main 
+#1660059013
+git status
+#1660059045
+git commit -Am'fix ENV_NAME bug'
+#1660059072
+git commit -am'fix ENV_NAME bug'
+#1660059075
+git status
+#1660059079
+git log
+#1660059083
+git status
+#1660059090
+git rebase origin/main 
+#1660059093
+git push
+#1660059098
+git push -u origin 230-env-name-error 
+#1660059107
+git checkout main
+#1660059388
+git checkout cube-owner-maintain 
+#1660059397
+bin/local-build-install 
+#1660060075
+time bin/local-build-install 
+#1660063742
+cube --version
+#1660063746
+ls
+#1660063767
+build/cube --version
+#1660063774
+git log
+#1660063788
+build/cube --version repo create --help
+#1660063796
+build/cube repo create --help
+#1660063851
+git status
+#1660065736
+git branch
+#1660065746
+git rebase origin/main 
+#1660065748
+git fetch
+#1660065752
+git checkout amin
+#1660065755
+git checkout main
+#1660065788
+hist|grep merge
+#1660065821
+git merge cube-owner-maintain 
+#1660065827
+git log --graph 
+#1660065849
+git tag
+#1660065877
+git tag v0.35.0
+#1660065886
+git push
+#1660065893
+git push --tags 
+#1660065921
+git branch -D cube-owner-maintain 
+#1660065922
+git status
+#1660065927
+git branch
+#1660065933
+git branch -D development-process 
+#1660065944
+git branch -D sandman 
+#1660065958
+git checkout 230-env-name-error 
+#1660065964
+git fetch
+#1660065970
+git rebase origin/main 
+#1660065973
+git log
+#1660065990
+git push
+#1660065997
+git push -f
+#1660066015
+git log
+#1660066045
+git merge origin/main  --ff-only 
+#1660066471
+git branch
+#1660066477
+git checkout main
+#1660066486
+git merge --ff-only 230-env-name-error 
+#1660066489
+git push
+#1660071585
+ls
+#1660071587
+git status
+#1660071593
+git branch
+#1660071601
+git log
+#1660071637
+git tag v0.35.1
+#1660071642
+git push --tags 
+#1660071673
+tmux -d
+#1660071683
+tmux detach
+#1660071769
+ls
+#1660071775
+cd src/
+#1660071790
+gh repo clone battelle/cube-env
+#1660071799
+gh repo clone battellecube/cube-env
+#1660071849
+shellcheck
+#1660071858
+sudo apt install shellcheck 
+#1660072014
+cd cube-cli/
+#1660072015
+ls
+#1660072017
+cd bin/
+#1660072017
+ls
+#1660072026
+shellcheck cube-cli-download 
+#1660072093
+shellcheck cube-cli-download --format=diff
+#1660072283
+la ~
+#1660072300
+la ~/.config/
+#1660072317
+tmux detach
+#1660072362
+clear
+#1660148535
+vi .bash_functions 
+#1660331676
+pkg-config --variable=completionsdir bash-completion
+#1660331925
+vi ~/.bashrc 
+#1660332211
+sudo apt install pkg-config
+#1660332248
+git standup --help
+#1660332266
+git standup 
+#1660332275
+git log
+#1660332303
+hist
+#1660332326
+hist|grep git
+#1660332346
+hist|grep '^git'
+#1660332381
+ls
+#1660332643
+git status
+#1660332646
+cd ..
+#1660332647
+ls
+#1660332666
+cd q-b-mccubeface/
+#1660332733
+vi
+#1660334064
+la
+#1660334074
+cat > .cuberc
+#1660336048
+cd src/cube-env
+#1660336154
+vi
+#1660757374
+set-local-env 
+#1660757384
+ls bin/
+#1660757389
+bin/set-local-env 
+#1660757399
+az login -t battelle.us
+#1660757451
+bin/set-local-env 
+#1660757492
+az cloud set -n AzureUSGovernment 
+#1660757499
+bin/set-local-env 
+#1660757524
+view bin/set-local-env 
+#1661209703
+vi
+#1661277679
+git status
+#1661279807
+hist
+#1661279833
+vi README.md 
+#1661279864
+git status
+#1661279871
+git add README.md 
+#1661279890
+git commit -m'WIP'
+#1661279901
+git push -u origin integrate-shellcheck 
+#1661533290
+cd
+#1661533294
+curl https://raw.githubusercontent.com/nektos/act/master/install.sh | sudo bash
+#1661533336
+ping goole.com
+#1661533355
+cat > act-install.sh
+#1661533365
+chmod +x
+#1661533370
+chmod +x act-install.sh 
+#1661533377
+./act-install.sh 
+#1661533384
+ls
+#1661533390
+ls bin/
+#1661533399
+mv bin/act .local/bin/
+#1661533403
+act --help
+#1661533407
+rm -r bin/
+#1661533434
+ls src/*/.github
+#1661533450
+cd src/cube-cli/
+#1661533455
+act -l
+#1661533550
+act
+#1661534546
+hist|grep sytemctl
+#1661534552
+hist|grep jour
+#1661535977
+hist|grep grep
+#1661535991
+cd 
+#1661536008
+ls src/*/.github
+#1661778596
+cd src
+#1661778597
+ls
+#1661778700
+cd test-cube-1/
+#1661778702
+git status
+#1661778778
+ls
+#1661778784
+git branch
+#1661778795
+git checkout initial-setup 
+#1661778798
+ls
+#1661778807
+ls tenants/
+#1661778810
+cat tenants/battelle.mail.onmicrosoft.us.tf 
+#1661778852
+git checkout main
+#1661778853
+git log
+#1661778861
+ls
+#1661778882
+vi
+#1663682538
+set-local-env -h
+#1663682610
+hist |grep set-local
+#1663682635
+set-local-env -e sandman -a '10.237.14.0/24' -p 'cube-platform-v0.5.0'
+#1663682657
+az login -t battelle.us --use-device-code 
+#1663682761
+az account show
+#1663682769
+set-local-env -e sandman -a '10.237.14.0/24' -p 'cube-platform-v0.5.0'
+#1663685170
+ls
+#1663779272
+vi
+#1664469693
+git status
+#1664469700
+git diff
+#1664469718
+ls
+#1664469726
+vi
+#1664829464
+git sctatus
+#1664829465
+git status
+#1664829475
+cd deb_repo/
+#1664829476
+ls
+#1664829642
+vi
+#1664831200
+cd ..
+#1664831201
+vi
+#1664890795
+hist
+#1664890819
+hist |grep gpg
+#1664890862
+ls
+#1664890868
+ls deb_repo/
+#1664893703
+git status
+#1664893710
+git branch
+#1664893724
+git branch -d release-0.1.4 resign-0.1.4 
+#1664894236
+cube-env-cli.sh -h
+#1664894242
+cube-env-cli.sh workload -h
+#1664894248
+cube-env-cli.sh -h workload -h
+#1664894259
+cube-env-cli.sh -g workload -h
+#1664894348
+cube-env-cli.sh -g workload -a
+#1664894361
+cube-env-cli.sh -g workload 
+#1664894545
+git status
+#1664894550
+git status --ignored
+#1664903429
+git status
+#1664903434
+git diff
+#1664903449
+echo $PATH 
+#1664903497
+ls ~/.local/
+#1664903504
+ls
+#1664903545
+./configure --prefix=~/.local
+#1664903555
+./configure --prefix=$HOME/.local
+#1664903561
+make
+#1664903569
+ls
+#1664903579
+ls src/
+#1664903587
+make install
+#1664903603
+command -V cube-env-cli.sh 
+#1664903616
+which -a cube-env-cli.sh 
+#1664903640
+hash -h
+#1664903662
+hash -d /usr/bin/cube-env-cli.sh 
+#1664903665
+which -a cube-env-cli.sh 
+#1664903667
+command -V cube-env-cli.sh 
+#1664903692
+cube-env-cli.sh 
+#1664903697
+cube-env-cli.sh -g
+#1664903706
+cube-env-cli.sh -g workload
+#1664904062
+git diff
+#1664904075
+git status
+#1664904080
+git log
+#1664904092
+git diff
+#1664904151
+git diff origin/main 
+#1664904320
+git status
+#1664904323
+git log
+#1664904356
+head debian/changelog 
+#1664904364
+git add .
+#1664904365
+git status
+#1664904390
+git commit
+#1664904412
+git status
+#1664904415
+git push
+#1664904435
+git status
+#1664904523
+git log
+#1664904541
+git reset 606f353dcacd94181e307a3698bc13a98df41a98
+#1664904543
+git status
+#1664904544
+git log
+#1664904583
+git push -f
+#1664904605
+git status
+#1664904612
+git branch
+#1664905034
+git checkout -b setup-subcommands
+#1664905038
+git status
+#1664905050
+git add .
+#1664905054
+head debian/changelog 
+#1664905074
+git commit
+#1664905097
+git status
+#1664905106
+git push -u origin setup-subcommands 
+#1664908195
+ls
+#1664908216
+cube --help --all
+#1664908224
+cube --help-all
+#1664908300
+cube --help
+#1664915587
+recsel
+#1664915601
+apt show recutils
+#1664915621
+sudo apt install recutils 
+#1664915744
+recfmt -h
+#1664915748
+recfmt --help
+#1664915773
+recset --help
+#1664915796
+recinf --help
+#1664915808
+recins --help
+#1664915879
+recins -f foo -v bar baz
+#1664915885
+touch baz
+#1664915887
+recins -f foo -v bar baz
+#1664915906
+recins -f foo -v bar
+#1664915961
+ls
+#1664915976
+touch environments.rec
+#1664915979
+vi environments.rec 
+#1664916232
+recinf environments.rec 
+#1664916278
+recins -f id -v metallic-sandman
+#1664916289
+recins -f id -v metallic-sandman environments.rec 
+#1664917428
+ls
+#1664917453
+vi environments.rec 
+#1664917537
+recins -f Name -v "Mr Foo" -f Email -v foo@bar.baz environments.rec 
+#1664917617
+mount
+#1664917638
+mount|grep tmp
+#1664917666
+recins --version
+#1664917698
+TMPDIR=. recins -f Name -v "Mr Foo" -f Email -v foo@bar.baz environments.rec 
+#1664917704
+view environments.rec 
+#1664917731
+TMPDIR=. recins -t environment -f Name -v "Mr Foo" -f Email -v foo@bar.baz environments.rec 
+#1664917734
+view environments.rec 
+#1664917754
+TMPDIR=. recins -t environment -f Name -v "Mr Foo" -f Email -v foo@bar.baz environments1.rec 
+#1664917765
+touch environments1.rec
+#1664917767
+TMPDIR=. recins -t environment -f Name -v "Mr Foo" -f Email -v foo@bar.baz environments1.rec 
+#1664917773
+vi environments1.rec 
+#1664918135
+apt show recutils 
+#1664918154
+apt show librec1
+#1664919145
+az storage container list
+#1664919164
+az login -t battelle.us
+#1664919260
+az storage container list --account-name cubetfstateprod
+#1664919327
+az storage blob --help
+#1664919394
+az storage container list --connection-string 'DefaultEndpointsProtocol=https;AccountName=cubetfstateprod;AccountKey=DCWIBVtK/gI7kUjsB2FKYSrPUcpT56UnpqCSfHLIelNJmol81fE55jELclDB63bQ36kdWh6WIOZQORktZnVa7g==;EndpointSuffix=core.usgovcloudapi.net'
+#1664919624
+dig cubetfstateprod.blob.core.windows.net
+#1664919734
+az storage container list --connection-string 'DefaultEndpointsProtocol=https;AccountName=cubetfstateprod;AccountKey=DCWIBVtK/gI7kUjsB2FKYSrPUcpT56UnpqCSfHLIelNJmol81fE55jELclDB63bQ36kdWh6WIOZQORktZnVa7g==;EndpointSuffix=core.usgovcloudapi.net'
+#1664919861
+az storage container create --name cubeenvstateprod --connection-string 'DefaultEndpointsProtocol=https;AccountName=cubetfstateprod;AccountKey=DCWIBVtK/gI7kUjsB2FKYSrPUcpT56UnpqCSfHLIelNJmol81fE55jELclDB63bQ36kdWh6WIOZQORktZnVa7g==;EndpointSuffix=core.usgovcloudapi.net'
+#1664919934
+az storage container create --name environment.rec --connection-string 'DefaultEndpointsProtocol=https;AccountName=cubetfstateprod;AccountKey=DCWIBVtK/gI7kUjsB2FKYSrPUcpT56UnpqCSfHLIelNJmol81fE55jELclDB63bQ36kdWh6WIOZQORktZnVa7g==;EndpointSuffix=core.usgovcloudapi.net'
+#1664920023
+az storage container create --name environments --connection-string 'DefaultEndpointsProtocol=https;AccountName=cubetfstateprod;AccountKey=DCWIBVtK/gI7kUjsB2FKYSrPUcpT56UnpqCSfHLIelNJmol81fE55jELclDB63bQ36kdWh6WIOZQORktZnVa7g==;EndpointSuffix=core.usgovcloudapi.net'
+#1664920085
+ls
+#1664920094
+cat environments.rec 
+#1664920543
+az storage --container environments --source environments.rec --connection-string 'DefaultEndpointsProtocol=https;AccountName=cubetfstateprod;AccountKey=DCWIBVtK/gI7kUjsB2FKYSrPUcpT56UnpqCSfHLIelNJmol81fE55jELclDB63bQ36kdWh6WIOZQORktZnVa7g==;EndpointSuffix=core.usgovcloudapi.net'
+#1664920602
+az storage azcopy blob upload --container environments --source environments.rec --connection-string 'DefaultEndpointsProtocol=https;AccountName=cubetfstateprod;AccountKey=DCWIBVtK/gI7kUjsB2FKYSrPUcpT56UnpqCSfHLIelNJmol81fE55jELclDB63bQ36kdWh6WIOZQORktZnVa7g==;EndpointSuffix=core.usgovcloudapi.net'
+#1664920657
+hist
+#1664920878
+az storage azcopy blob download --container environments --source environments.rec --connection-string 'DefaultEndpointsProtocol=https;AccountName=cubetfstateprod;AccountKey=DCWIBVtK/gI7kUjsB2FKYSrPUcpT56UnpqCSfHLIelNJmol81fE55jELclDB63bQ36kdWh6WIOZQORktZnVa7g==;EndpointSuffix=core.usgovcloudapi.net'
+#1664920915
+az storage azcopy blob download --container environments --destination environments.rec --connection-string 'DefaultEndpointsProtocol=https;AccountName=cubetfstateprod;AccountKey=DCWIBVtK/gI7kUjsB2FKYSrPUcpT56UnpqCSfHLIelNJmol81fE55jELclDB63bQ36kdWh6WIOZQORktZnVa7g==;EndpointSuffix=core.usgovcloudapi.net'
+#1664920960
+az storage azcopy blob download --container environments --source environments.rec --destination environments.rec --connection-string 'DefaultEndpointsProtocol=https;AccountName=cubetfstateprod;AccountKey=DCWIBVtK/gI7kUjsB2FKYSrPUcpT56UnpqCSfHLIelNJmol81fE55jELclDB63bQ36kdWh6WIOZQORktZnVa7g==;EndpointSuffix=core.usgovcloudapi.net'
+#1664921011
+az storage azcopy blob upload --container environments --source environments.rec --destination environments.rec --connection-string 'DefaultEndpointsProtocol=https;AccountName=cubetfstateprod;AccountKey=DCWIBVtK/gI7kUjsB2FKYSrPUcpT56UnpqCSfHLIelNJmol81fE55jELclDB63bQ36kdWh6WIOZQORktZnVa7g==;EndpointSuffix=core.usgovcloudapi.net'
+#1664921018
+hist
+#1664921091
+git status
+#1664921162
+rm baz environments*
+#1664921164
+git status
+#1664921169
+git diff origin/main 
+#1664921175
+git log
+#1664921203
+git checkout main
+#1664921210
+git status
+#1664921217
+git stash
+#1664921220
+git checkout main
+#1664921224
+git fetch
+#1664921227
+git pull
+#1664921230
+git status
+#1664921247
+git checkout -b environment-store
+#1664921253
+git stash pop
+#1664921257
+git status
+#1664921260
+git diff
+#1664921273
+git status
+#1664921276
+git add .
+#1664921301
+git commit -m'create/upload/download funcs for env store'
+#1664921313
+git push -u origin environment-store 
+#1664921739
+hist|grep recins
+#1664922423
+help readrec
+#1664922531
+find /usr/lib -name readrec.so
+#1664922549
+enable -f readrec.so readrec
+#1664922565
+enable -f /usr/lib/recutils/bash-builtins/readrec.so readrec
+#1664922635
+cd build/
+#1664922643
+make install
+#1664922654
+make distclean
+#1664922662
+cd ..
+#1664922667
+make install
+#1664922692
+az storage azcopy blob download --container environments --source environments.rec --destination environments.rec --connection-string 'DefaultEndpointsProtocol=https;AccountName=cubetfstateprod;AccountK    ey=DCWIBVtK/gI7kUjsB2FKYSrPUcpT56UnpqCSfHLIelNJmol81fE55jELclDB63bQ36kdWh6WIOZQORktZnVa7g==;EndpointSuffix=core.usgovcloudapi.net'
+#1664922718
+az storage azcopy blob download --container environments --source environments.rec --destination environments.rec --connection-string 'DefaultEndpointsProtocol=https;AccountName=cubetfstateprod;AccountKey=DCWIBVtK/gI7kUjsB2FKYSrPUcpT56UnpqCSfHLIelNJmol81fE55jELclDB63bQ36kdWh6WIOZQORktZnVa7g==;EndpointSuffix=core.usgovcloudapi.net'
+#1664922742
+while readrec < environments.rec ; do echo $Email; done
+#1664925842
+make install
+#1664925871
+. ~/.local/bin/cube-env-cli.sh 
+#1665080423
+cd src/cube-env
+#1665080452
+find . -name '.*.swp'
+#1665080456
+find . -name '.*.swo'
+#1665080461
+vi
+#1665189535
+view src/Makefile.am 
+#1665189711
+vi
+#1665455748
+git status
+#1665455759
+git checkout environment-store 
+#1665455761
+git log
+#1665455771
+dch -e
+#1665455784
+dch -i
+#1665455793
+dch -iU
+#1665456295
+vi
+#1665494415
+dch -r
+#1665494441
+git status
+#1665494448
+cat NEWS 
+#1665494455
+ll
+#1665494465
+head NEWS 
+#1665494472
+head NEWS -n25
+#1665494492
+git status
+#1665494495
+git add .
+#1665494514
+git commit -m'cube-env (0.2.0) jammy; urgency=medium'
+#1665494976
+vi
+#1665663882
+vi src/*
+#1665663906
+vi -p src/*
+#1665664433
+vi
+#1665665454
+vi -p src/cube*.in
+#1665665964
+grep -r '(getoption' src/cube*.in
+#1665665973
+grep -r '/getoption' src/cube*.in
+#1665666330
+vi
+#1665685798
+git checkout main 
+#1665685799
+git log
+#1665685895
+git checkout environment-store 
+#1665685898
+git status
+#1665685909
+git rebase getoptions-changes-for-packaging 
+#1665685913
+git status
+#1665685938
+vi
+#1666036534
+echo src/*.in
+#1666036544
+echo src/cube*.in
+#1666036558
+vi -p src/cube*.in
+#1666038389
+vi
+#1666038943
+dotgit status
+#1666038948
+cd
+#1666038950
+dotgit status
+#1666038977
+dotgit diff
+#1666039022
+l .config/gh/
+#1666039024
+l .config/gh/hosts.yml 
+#1666039030
+cat .config/gh/hosts.yml 
+#1666039036
+cat .config/gh/config.yml 
+#1666039211
+dotgit filter-branch --help
+#1666039316
+git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch .config/gh/hosts.yml" HEAD
+#1666039492
+git status
+#1666039496
+dotgit status
+#1666039524
+l .azcopy/
+#1666039540
+git ignore .azcopy/ .sqlite_history
+#1666039544
+dotgit ignore .azcopy/ .sqlite_history
+#1666039566
+rm bar* bas* cli*
+#1666039571
+ls
+#1666039691
+rm foo*
+#1666039698
+dotgit status
+#1666039708
+dotgit add .
+#1666039730
+cat .gitconfig 
+#1666039750
+dotgit diff
+#1666039762
+dotgit status
+#1666039786
+dotgit diff HEAD
+#1666039824
+dotgit commit -m'minor git housekeeping'
+#1666039854
+dotgit filter-branch --index-filter "git rm -rf --cached --ignore-unmatch .config/gh/hosts.yml" HEAD
+#1666039873
+git status
+#1666039880
+dotgit status
+#1666039898
+dotgit diff origin/main
+#1666039919
+dotgit status
+#1666039923
+dotgit push -f
+#1666040260
+vi .vimrc 
+#1666040797
+ls
+#1666040800
+cd -
+#1666040803
+vi
+#1666199760
+git status
+#1666199793
+git submodule add git@github.com:battellecube/cube-env modules/cube-env
+#1666199809
+bin/find-missing-modules 
+#1666199879
+vi
+#1666286008
+ls
+#1666286010
+la
+#1666286023
+rm cube-env_0.*
+#1666286024
+ls
+#1666286051
+ls -1
+#1666286091
+ls -1| while read repo; do cd $repo; git fetch; cd -; done
+#1666286288
+df --help
+#1666286311
+du --help
+#1666286321
+df --all
+#1666286352
+du --summarize -h
+#1666286360
+cd ..
+#1666286362
+ls
+#1666286385
+tar -cf src.tar src/
+#1666286396
+ll
+#1666286400
+ll -h
+#1666286420
+gzip -9 src.tar 
+#1666286438
+pigz -r src.tar 
+#1666286468
+ll
+#1666286474
+ll -h
+#1666290117
+cd src/cube-env
+#1666290119
+git status
+#1666290130
+cd -
+#1666290132
+hist
+#1666290170
+cd src/; ls -1| while read repo; do cd $repo; git pull; cd -; done
+#1666290307
+cd src/; ls -1| while read repo; do cd $repo; pwd; git pull; cd -; done
+#1666291466
+cd totalcae/
+#1666291468
+git status
+#1666291471
+git pull
+#1666291496
+git log
+#1666291506
+git checkout main
+#1666291530
+cd src/; ls -1| while read repo; do cd $repo; pwd; git checkout main; git pull; cd -; done
+#1666291542
+cd ..
+#1666291544
+cd src/; ls -1| while read repo; do cd $repo; pwd; git checkout main; git pull; cd -; done
+#1666291608
+cd greenhornet/
+#1666291612
+git status
+#1666291633
+git reset origin/main 
+#1666291640
+git status
+#1666291654
+git clear
+#1666291659
+git status
+#1666291707
+cd src/; ls -1| while read repo; do cd $repo; pwd; git checkout main; git reset origin/main; git clear -y; cd -; done
+#1666291712
+cd ..
+#1666291715
+cd -
+#1666291717
+git clear
+#1666291721
+git clear -y
+#1666291731
+git clear --help
+#1666291796
+echo '-y' | git clear
+#1666291835
+cd ~/src/; ls -1| while read repo; do cd $repo; pwd; git checkout main; git reset origin/main; echo '-y'|git clear; cd -; done
+#1666291862
+hist |grep read
+#1666291887
+cd ~/src/; ls -1| while read repo; do cd $repo; pwd; git status; cd -; done
+#1666291945
+cd ~/src/; ls -1| while read repo; do cd $repo; pwd; git checkout main; git reset origin/main; cd -; done
+#1666291967
+ls
+#1666292009
+cd tools/
+#1666292012
+git status
+#1666292015
+ls
+#1666292029
+git remote -v
+#1666292055
+git checkout -b main
+#1666292076
+git push -u origin main
+#1666292094
+ls
+#1666292106
+cd ..
+#1666292110
+rm -rf tools/
+#1666292111
+ls
+#1666292122
+cd ~/src/; ls -1| while read repo; do cd $repo; pwd; git checkout main; git reset origin/main; cd -; done
+#1666292156
+cd ~/src/; ls -1| while read repo; do cd $repo; pwd; echo '-y' | git clear; cd -; done
+#1666292168
+cd ~/src/; ls -1| while read repo; do cd $repo; pwd; git checkout main; git reset origin/main; cd -; done
+#1666292196
+cd totalcae/
+#1666292204
+echo -y | git clear
+#1666292206
+ls
+#1666292208
+git status
+#1666292257
+cd ~/src/; ls -1| while read repo; do cd $repo; pwd; echo y | git clear; cd -; done
+#1666292271
+cd ~/src/; ls -1| while read repo; do cd $repo; pwd; git status; cd -; done
+#1666292317
+tar -cf ~/src.tar ~/src/
+#1666292324
+ls
+#1666292326
+ls ..
+#1666292332
+cd
+#1666292343
+rm src.tar src.tar.gz 
+#1666292347
+tar -cf ~/src.tar ~/src/
+#1666292349
+ls
+#1666292355
+ll
+#1666292358
+ll -h
+#1666292403
+pigz -9 src.tar 
+#1666292422
+ll -h
+#1666292430
+ls src
+#1666292434
+ls src/*
+#1666292448
+ls src/* -R
+#1666292475
+ll -h
+#1666292509
+mv src.tar.gz cube-src.tar.gz
+#1666293534
+ls /etc/cron.daily/
+#1666293558
+view /etc/cron.daily/etckeeper 
+#1666293625
+cd src/cube-program/bin/
+#1666293626
+ls
+#1666293632
+cat find-missing-modules 
+#1666293681
+gh repo list battellecube         --limit 1000         --topic module         --json name --jq '.[].name' |         sort
+#1666293695
+gh repo list battellecube         --limit 1000         --topic cube         --json name --jq '.[].name' |         sort
+#1666293742
+gh repo list battellecube --limit 1000 --topic cube --json name --jq '.[].name' | sort
+#1666293803
+echo "gh repo list battellecube --limit 1000 --topic cube --json name --jq '.[].name' | sort" > cube-repo-back.in
+#1666293837
+mv cube-repo-back.in ../../cube-env/src/
+#1666293838
+cd
+#1666293850
+cd src/cube-env
+#1666293853
+vi
+#1666293883
+mv src/cube-repo-back.in src/cube-repo-backup.in 
+#1666293896
+touch src/cube-repo.in
+#1666293897
+vi
+#1666633999
+git status
