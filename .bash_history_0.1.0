@@ -1052,3 +1052,27 @@ dotgit add .
 dotgit commit -m'use CUBE Maintainers for DEB packages'
 #1666633980
 dotgit push
+#1666731928
+dotgit checkout -f
+#1666731933
+dotgit status
+#1666732009
+dotgit diff
+#1666732060
+cat .bash_history_0.1.0
+#1666732076
+dotgit status
+#1666732092
+cat token.diff 
+#1666732122
+hist
+#1666732145
+ls
+#1666732229
+vi .github/README.md 
+#1666732345
+dotgit status
+#1666732355
+dot git fetch
+#1666732360
+dotgit fetch
