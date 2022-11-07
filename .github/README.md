@@ -2,7 +2,10 @@ _NOTE: This README lives in `.github` as to not clutter `$HOME`_
 
 This repo keeps all my dotfiles.  Here's the gist of what's going on
 
-To make a new dotfiles repo locally
+## Make a new dotfiles repo
+
+_NOTE skip this if you already have a dotfiles repo_
+
 ```sh
 git init --bare ~/.dotfiles
 alias dotgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -18,7 +21,9 @@ dotgit remote add git@github.com:<your_username>/dotfiles
 dotgit push -u origin main
 ```
 
-On another system, use `clone` inplace of `init` to bring your existing dotfiles
+## Get Your Dotfile On another system
+
+use `clone` inplace of `init` to bring your existing dotfiles
 down.
 
 _NOTE: The `-f` will smash local files that exist in you dotfiles repo_
