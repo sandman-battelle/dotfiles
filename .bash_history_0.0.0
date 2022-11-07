@@ -1590,3 +1590,25 @@ touch src/cube-repo.in
 vi
 #1666633999
 git status
+#1667857186
+ls
+#1667857187
+ll
+#1667857221
+mv local/bin/bootstrap-cube-env ./local/bin/bootstrap-cube-env 
+#1667857283
+ll
+#1667857293
+rm -r local/
+#1667857294
+ls
+#1667857295
+la
+#1667857345
+ls
+#1667857351
+file bootstrap-cube-env 
+#1667857363
+cat
+#1667857367
+cat bootstrap-cube-env 

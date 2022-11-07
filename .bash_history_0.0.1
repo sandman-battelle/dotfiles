@@ -8568,3 +8568,139 @@ head -n-1 bootstrap
 mktemp
 #1666384015
 ls /tmp/
+#1667857942
+ls
+#1667857948
+ll
+#1667857957
+chmod +x bootstrap-cube-env 
+#1667857961
+ll
+#1667857966
+ls
+#1667857968
+./bootstrap-cube-env 
+#1667858126
+type signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg
+#1667858176
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg
+#1667858187
+curl -vfsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg
+#1667858212
+curl -vfsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg |less
+#1667858287
+curl -vfsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg |dd
+#1667858313
+file /usr/share/keyrings/githubcli-archive-keyring.gpg
+#1667858329
+sudo add-apt-repository "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main"
+#1667858449
+./bootstrap-cube-env 
+#1667858848
+sudo rm /usr/share/keyrings/terraformcli-archive-keyring.gpg 
+#1667858854
+./bootstrap-cube-env 
+#1667858886
+sudo rm /etc/apt/sources.list.d/terraform-cli.list 
+#1667858889
+./bootstrap-cube-env 
+#1667858937
+1;0c
+#1667859061
+./bootstrap-cube-env 
+#1667859207
+sudo rm /etc/apt/sources.list.d/terraform-cli.list 
+#1667859209
+./bootstrap-cube-env 
+#1667859501
+curl -fsSL https://github.com/battellecube/cube-env/blob/deb_repo/KEY.gpg
+#1667859526
+gh --help
+#1667859536
+gh repo --help
+#1667859543
+gh repo view 
+#1667859549
+gh repo view --help
+#1667859641
+gh auth --help
+#1667859665
+gh auth token
+#1667859694
+gh auth logout
+#1667859699
+gh auth token
+#1667859706
+gh auth login
+#1667859848
+curl -H 'Authorization: token INSERTACCESSTOKENHERE'   -H 'Accept: application/vnd.github.v3.raw'   -O   -L https://api.github.com/repos/owner/repo/contents/path
+#1667859877
+curl -H "Authorization: token $(gh auth token)"   -H 'Accept: application/vnd.github.v3.raw'   -L https://api.github.com/repos/owner/repo/contents/path
+#1667859885
+curl -H "Authorization: token $(gh auth token)"   -H 'Accept: application/vnd.github.v3.raw'   -L https://api.github.com/repos/owner/repo/contents
+#1667859895
+curl -H "Authorization: token $(gh auth token)"   -H 'Accept: application/vnd.github.v3.raw'   -L https://api.github.com/repos/owner/repo/contents/README.md
+#1667860001
+gh api   -H 'Accept: application/vnd.github+json' /repos/owner/repo/contents/README.md
+#1667860093
+gh api   -H 'Accept: application/vnd.github+json' /repos/battellecube/cube-env/contents/README.md
+#1667860163
+gh api   -H 'Accept: application/vnd.github.HEAD.raw' /repos/battellecube/cube-env/contents/README.md
+#1667860180
+gh api   -H 'Accept: application/vnd.github.deb_reepo.raw' /repos/battellecube/cube-env/contents/README.md
+#1667860195
+gh api   -H 'Accept: application/vnd.github.deb_repo.raw' /repos/battellecube/cube-env/contents/README.md
+#1667860269
+gh api   -H 'Accept: application/vnd.github.4437072.raw' /repos/battellecube/cube-env/contents/README.md
+#1667860286
+gh api   -H 'Accept: application/vnd.github.4437072.raw' /repos/battellecube/cube-env/contents/KEY.gpg
+#1667860395
+gh api   -H 'Accept: application/vnd.github.4437072.raw' /repos/battellecube/cube-env/contents/deb_repo/KEY.gpg
+#1667860430
+gh api   -H 'Accept: application/vnd.github.4437072.raw' /repos/battellecube/cube-env/contents/
+#1667860624
+gh api   -H 'Accept: application/vnd.github.raw+json' /repos/battellecube/cube-env/contents/README.md
+#1667860646
+gh api   -H 'Accept: application/vnd.github.raw' /repos/battellecube/cube-env/contents/README.md
+#1667860726
+gh api   -H 'Accept: application/vnd.github.raw' /repos/battellecube/cube-env/main/README.md
+#1667860733
+gh api   -H 'Accept: application/vnd.github.raw' /repos/battellecube/cube-env/main/contents/README.md
+#1667861393
+gh api   -H 'Accept: application/vnd.github.raw' /repos/battelle/contents/README.md
+#1667861400
+gh api   -H 'Accept: application/vnd.github.raw' /repos/battellecube/cube-env/contents/README.md
+#1667861433
+gh api   -H 'Accept: application/vnd.github+json' /repos/battellecube/cube-env/contents/README.md
+#1667861532
+gh api   -H 'Accept: application/vnd.github+json' /repos/battellecube/cube-env/contents/README.md?ref=deb_repo
+#1667861548
+gh api   -H 'Accept: application/vnd.github.raw' /repos/battellecube/cube-env/contents/README.md?ref=deb_repo
+#1667861564
+gh api   -H 'Accept: application/vnd.github.raw' /repos/battellecube/cube-env/contents/KEY.gpg?ref=deb_repo
+#1667861932
+./bootstrap-cube-env 
+#1667862009
+sudo rm /usr/share/keyrings/cubeenvcli-archive-keyring.gpg 
+#1667862027
+sudo rm /etc/apt/sources.list.d/cube-env.list 
+#1667862030
+./bootstrap-cube-env 
+#1667862057
+git status
+#1667862061
+dotgit status
+#1667862069
+file path 
+#1667862073
+rm path 
+#1667862082
+dotgit diff
+#1667862114
+dotgit status
+#1667862130
+ls .local/bin/
+#1667862149
+mv bootstrap-cube-env .local/bin/
+#1667862159
+bootstrap-cube-env 
