@@ -6,7 +6,7 @@
 .yarnrc
 .npm/
 .python_history
-.local/
+.local/state
 .cache/
 .java/
 .landscape/

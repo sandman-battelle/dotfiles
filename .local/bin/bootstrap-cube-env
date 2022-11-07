@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+set -e
+
+setup-local-env()
+{
+	mkdir -p ~/.local/bin
+}
+
+install-azure-cli() 
+{
+	type -p curl >/dev/null || sudo apt install curl -y
+	curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+	az cloud set --name AzureUSGovernment
+}
+
+install-terraform-cli()
+{
+	type -p curl >/dev/null || sudo apt install curl -y
+	wget -O- https://apt.releases.hashicorp.com/gpg | gpg --dearmor | sudo dd of=/usr/share/keyrings/hashicorp-archive-keyring.gpg
+	sudo chmod go+r /usr/share/keyrings/hashicorp-archive-keyring.gpg
+	echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/terraform-cli.list > /dev/null
+	sudo apt-get update && sudo apt-get install terraform -y
+}
+
+install-yq()
+{
+	type -p add-apt-repository >/dev/null || sudo apt install software-properties-common -y
+	sudo add-apt-repository ppa:rmescandon/yq
+	sudo apt update
+	sudo apt install yq -y
+}
+
+install-git-lfs()
+{
+	sudo apt update && sudo apt-get install git-lfs -y
+	git lfs install
+}
+
+install-github-cli()
+{
+	type -p curl >/dev/null || sudo apt install curl -y
+	curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+	sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
+	echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+	sudo apt update && sudo apt install gh -y
+}
+
+install-cube-cli()
+{
+	type -p gh >/dev/null || sudo apt install gh -y
+	gh api -H 'Accept: application/vnd.github.raw' /repos/battellecube/cube-env/contents/KEY.gpg?ref=deb_repo | gpg --dearmor | sudo dd of=/usr/share/keyrings/cubeenvcli-archive-keyring.gpg
+	sudo chmod go+r /usr/share/keyrings/cubeenvcli-archive-keyring.gpg
+	echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/cubeenvcli-archive-keyring.gpg] https://battellecube.github.io/cube-env ./" | sudo tee /etc/apt/sources.list.d/cube-env.list > /dev/null
+	    sudo apt update && sudo apt install cube-env -y
+}
+
+setup-local-env
+install-git-lfs
+install-github-cli
+install-terraform-cli
+install-azure-cli
+install-cube-cli
