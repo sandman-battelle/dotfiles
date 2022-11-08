@@ -1644,3 +1644,9 @@ dotgit status
 vi .local/bin/bootstrap-cube-env 
 #1667922334
 vi
+#1667922438
+cd src/cube-env/
+#1667922439
+vi
+#1667922708
+cd
