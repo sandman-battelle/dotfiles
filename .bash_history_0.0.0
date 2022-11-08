@@ -1620,3 +1620,27 @@ apt show powerline
 vi .local/bin/bootstrap-cube-env 
 #1667918142
 vi
+#1667921783
+gh repo clone battellecube/cube-env
+#1667921787
+cd cube-env/
+#1667921788
+ls
+#1667921790
+vi
+#1667921848
+dotgit status
+#1667921870
+cd
+#1667921872
+dotgit status
+#1667921882
+mkdir src
+#1667921889
+mv cube-env/ src/
+#1667921891
+dotgit status
+#1667921953
+vi .local/bin/bootstrap-cube-env 
+#1667922334
+vi

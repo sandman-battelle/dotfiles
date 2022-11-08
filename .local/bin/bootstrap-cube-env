@@ -66,12 +66,25 @@ install-nvm()
 	nvm install-latest-npm
 }
 
+install-vim-plugins()
+{
+	mkdir -p ~/.vim/pack/auto/start && cd $_
+
+	git clone https://github.com/tpope/vim-sensible
+	git clone https://github.com/ctrlpvim/ctrlp.vim
+	git clone https://github.com/dhruvasagar/vim-table-mode
+	git clone https://github.com/suan/vim-instant-markdown
+	npm -g i instant-markdown-d
+	sudo apt install -y wslu
+}
+
 install-common-packages
 install-git-lfs
 install-github-cli
 install-terraform-cli
 install-azure-cli
 install-nvm
+install-vim-plugins
 install-cube-cli
 
 echo -e "You'll wants these fonts\nhttps://github.com/powerline/fonts"

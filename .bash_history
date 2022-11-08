@@ -1867,3 +1867,29 @@ tmux
 vi
 #1667919839
 vi .local/bin/bootstrap-cube-env 
+#1667921226
+la
+#1667921322
+ls /mnt/c/Users/SandmanMike\(US\)/
+#1667921332
+ls /mnt/c/Users/SandmanMike\(US\)/OneDrive\ -\ Battelle/
+#1667921343
+tar -xf /mnt/c/Users/SandmanMike\(US\)/OneDrive\ -\ Battelle/secrets.tar 
+#1667921346
+la
+#1667921505
+git clone --bare git@github.com:<your_username>/dotfiles ~/.dotfiles
+#1667921505
+alias dotgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+#1667921505
+dotgit checkout -f
+#1667921537
+git clone --bare git@github.com:sandman-battelle/dotfiles ~/.dotfiles
+#1667921540
+alias dotgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+#1667921542
+dotgit checkout -f
+#1667921561
+. .bashrc 
+#1667921584
+.local/bin/bootstrap-cube-env 
