@@ -1802,3 +1802,68 @@ rm secrets.tar
 dotgit status
 #1666707402
 hist
+strip --help
+ls /mnt/c/Users/SandmanMike\(US\)/
+ls /mnt/c/Users/SandmanMike\(US\)/OneDrive\ -\ Battelle/
+tar -xf /mnt/c/Users/SandmanMike\(US\)/OneDrive\ -\ Battelle/secrets.tar 
+la
+gpg --list-key
+git
+git clone --bare git@github.com:<your_username>/dotfiles ~/.dotfiles
+alias dotgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+dotgit checkout -f
+git clone --bare git@github.com:sandman-battelle/dotfiles ~/.dotfiles
+alias dotgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+dotgit checkout -f
+dotgit status
+ls
+la
+ls .local/bin
+la
+mkdir ./local/bin -p
+vi ./local/bin/bootstrap-cube-env
+tmux
+ls
+ls local/
+ls local/bin/
+mv local/bin/bootstrap-cube-env ./local/bin/
+ls
+la
+ll ./local/bin/bootstrap-cube-env 
+ll local/bin/bootstrap-cube-env 
+vi ./local/bin/bootstrap-cube-env 
+tmux
+#1667916660
+ls
+#1667916665
+sudo apt update
+#1667916715
+cd src
+#1667916717
+ls
+#1667916728
+la
+#1667916748
+hist
+#1667917495
+vi .local/bin/bootstrap-cube-env 
+#1667917521
+tmux
+#1667918830
+vi
+#1667918848
+ls /.vim
+#1667918857
+ls .vim
+#1667918860
+la
+#1667918878
+vi .local/bin/bootstrap-cube-env 
+#1667918910
+bootstrap-cube-env 
+#1667918959
+tmux
+#1667919813
+vi
+#1667919839
+vi .local/bin/bootstrap-cube-env 

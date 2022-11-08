@@ -1612,3 +1612,11 @@ file bootstrap-cube-env
 cat
 #1667857367
 cat bootstrap-cube-env 
+#1667917536
+sudo apt update
+#1667917555
+apt show powerline
+#1667917580
+vi .local/bin/bootstrap-cube-env 
+#1667918142
+vi

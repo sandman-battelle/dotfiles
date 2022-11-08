@@ -2,9 +2,11 @@
 
 set -e
 
-setup-local-env()
+install-common-packages()
 {
-	mkdir -p ~/.local/bin
+	sudo apt update
+	sudo apt dist-upgrade -y
+	sudo apt install -y powerline vim-nox build-essential gnupg curl tmux git silversearcher-ag etckeeper
 }
 
 install-azure-cli() 
@@ -55,9 +57,21 @@ install-cube-cli()
 	    sudo apt update && sudo apt install cube-env -y
 }
 
-setup-local-env
+install-nvm()
+{
+	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+	nvm install --lts
+	nvm install-latest-npm
+}
+
+install-common-packages
 install-git-lfs
 install-github-cli
 install-terraform-cli
 install-azure-cli
+install-nvm
 install-cube-cli
+
+echo -e "You'll wants these fonts\nhttps://github.com/powerline/fonts"
