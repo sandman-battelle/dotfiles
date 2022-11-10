@@ -143,7 +143,7 @@ if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
 fi
 
 # GitHub CLI stuff
-eval "$(gh completion -s bash)"
+type gh && eval "$(gh completion -s bash)"
 
 # dotgit uses git's completion so `__git_completion` must exist
 if ! declare -f __git_complete &>/dev/null; then

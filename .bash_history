@@ -1893,3 +1893,19 @@ dotgit checkout -f
 . .bashrc 
 #1667921584
 .local/bin/bootstrap-cube-env 
+#1668102217
+cd ~
+#1668102217
+git clone --bare git@github.com:sandman-battelle/dotfiles ~/.dotfiles
+#1668102217
+alias dotgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+#1668102217
+dotgit checkout -f
+#1668102217
+. .bashrc
+#1668102217
+bootstrap-cube-env
+#1668102247
+vi .bashrc 
+#1668102276
+dotgit status
