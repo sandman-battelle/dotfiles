@@ -32,6 +32,5 @@ cd ~
 git clone --bare git@github.com:sandman-battelle/dotfiles ~/.dotfiles
 alias dotgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotgit checkout -f
-. .profile
-bootstrap-cube-env
+.local/bin/bootstrap-cube-env
 ```
