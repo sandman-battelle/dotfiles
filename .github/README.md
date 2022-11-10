@@ -29,7 +29,7 @@ down.
 _NOTE: The `-f` will smash local files that exist in you dotfiles repo_
 
 ```
-git clone --bare git@github.com:<your_username>/dotfiles ~/.dotfiles
+git clone --bare git@github.com:sandman-battelle/dotfiles ~/.dotfiles
 alias dotgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotgit checkout -f
 ```
