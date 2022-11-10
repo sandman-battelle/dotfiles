@@ -21,16 +21,16 @@ dotgit remote add git@github.com:<your_username>/dotfiles
 dotgit push -u origin main
 ```
 
-## Get Your Dotfile On another system
+## Get Your Dotfiles On another system
 
-use `clone` inplace of `init` to bring your existing dotfiles
-down.
+Download and extract your `secrets.tar` into your `HOME` directory, then delete the tarball
 
 _NOTE: The `-f` will smash local files that exist in you dotfiles repo_
 
 ```
+cd ~
 git clone --bare git@github.com:sandman-battelle/dotfiles ~/.dotfiles
 alias dotgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dotgit checkout -f
+.local/bin/bootstrap-cube-env
 ```
-

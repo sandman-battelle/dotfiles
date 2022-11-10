@@ -1690,3 +1690,45 @@ dotgit diff
 dotgit pull
 #1668107017
 dotgit add .; dotgit pull
+#1668107674
+dotgit checkout -f
+#1668107680
+dotgit status
+#1668107689
+dotgit log
+#1668107696
+dotgit fetch
+#1668107714
+dotgit reset HEAD
+#1668107722
+dotgit log
+#1668107727
+dotgit status
+#1668107756
+dotgit fetch
+#1668107761
+dotgit pull
+#1668107772
+dotgit config 
+#1668107778
+dotgit config -l
+#1668107929
+dotgit config config pull.rebase false
+#1668107938
+dotgit config pull.rebase false
+#1668107943
+dotgit pull
+#1668107960
+dotgit pull --no-rebase
+#1668107973
+dotgit status
+#1668107988
+ls
+#1668107998
+vi .bash_history
+#1668108051
+dotgit status
+#1668108055
+dotgit add .
+#1668108063
+dotgit status
