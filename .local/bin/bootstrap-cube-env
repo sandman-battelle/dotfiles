@@ -54,7 +54,10 @@ install-cube-cli()
 	gh api -H 'Accept: application/vnd.github.raw' /repos/battellecube/cube-env/contents/KEY.gpg?ref=deb_repo | gpg --dearmor | sudo dd of=/usr/share/keyrings/cubeenvcli-archive-keyring.gpg
 	sudo chmod go+r /usr/share/keyrings/cubeenvcli-archive-keyring.gpg
 	echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/cubeenvcli-archive-keyring.gpg] https://battellecube.github.io/cube-env ./" | sudo tee /etc/apt/sources.list.d/cube-env.list > /dev/null
-	    sudo apt update && sudo apt install cube-env -y
+	echo "deb-src [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/cubeenvcli-archive-keyring.gpg] https://battellecube.github.io/cube-env ./" | sudo tee -a /etc/apt/sources.list.d/cube-env.list > /dev/null
+	sudo apt update
+	sudo apt install -y cube-env
+	sudo apt build-dep -y cube-env
 }
 
 install-nvm()
@@ -69,11 +72,11 @@ install-nvm()
 install-vim-plugins()
 {
 	mkdir -p ~/.vim/pack/auto/start && cd $_
-
-	git clone https://github.com/tpope/vim-sensible
-	git clone https://github.com/ctrlpvim/ctrlp.vim
-	git clone https://github.com/dhruvasagar/vim-table-mode
-	git clone https://github.com/suan/vim-instant-markdown
+	local plugins=(tpope/vim-sensible ctrlpvim/ctrlp.vim dhruvasagar/vim-table-mode suan/vim-instant-markdown)
+	for p in ${plugins[*]}
+	do 
+		git clone  https://github.com/$p ${p/\//_} || git -C ${p/\//_} pull
+	done
 	npm -g i instant-markdown-d
 	sudo apt install -y wslu
 }

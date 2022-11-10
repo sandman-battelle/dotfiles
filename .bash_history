@@ -1893,3 +1893,80 @@ dotgit checkout -f
 . .bashrc 
 #1667921584
 .local/bin/bootstrap-cube-env 
+ls
+cp "C:\Users\SandmanMike(US)\OneDrive - Battelle\secrets.tar" .
+cp /mnt/c/Users/SandmanMike\(US\)/OneDrive\ -\ Battelle/secrets.tar .
+ls
+tar -xf secrets.tar 
+la
+git clone --bare git@github.com:sandman-battelle/dotfiles ~/.dotfiles
+alias dotgit='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+dotgit checkout -f
+dotgit status
+rm secrets.tar 
+#1668091292
+bootstrap-cube-env 
+#1668092836
+la
+#1668093323
+mkdir
+#1668093326
+mkdir src
+#1668093327
+ls
+#1668093341
+gh repo list --limit 1000
+#1668093349
+gh repo list battellecube --limit 1000
+#1668093648
+gh repo list battellecube --limit 1000|awk '{print $1}'
+#1668093671
+gh --help
+#1668093694
+gh repo --help
+#1668093717
+gh repo list --help
+#1668093752
+gh repo list battellecube --limit 1000 --json
+#1668093759
+gh repo list --help
+#1668093774
+gh repo list 
+#1668093794
+gh repo list -q
+#1668093808
+gh repo list battellecube --limit 1000|awk '{print $1}'
+#1668093856
+gh repo list battellecube --limit 1000|awk '{print $1}' | xarg gh repo clone
+#1668093867
+gh repo list battellecube --limit 1000|awk '{print $1}' | xargs gh repo clone
+#1668093909
+gh repo list battellecube --limit 1000|awk '{print $1}' | while read repo; do echo gh repo clone $repo; done
+#1668093916
+cd ls
+#1668093919
+ls
+#1668093922
+cd src/
+#1668093923
+ls
+#1668093930
+gh repo list battellecube --limit 1000|awk '{print $1}' | while read repo; do gh repo clone $repo; done
+#1668094016
+ls
+#1668094028
+cd cube-env/
+#1668094031
+git branch
+#1668094038
+git checkout improve-debugging 
+#1668094046
+git diff origin/main 
+#1668094533
+./bootstrap 
+#1668094566
+cd
+#1668094576
+vi .local/bin/bootstrap-cube-env 
+#1668094694
+bootstrap-cube-env 

@@ -1650,3 +1650,43 @@ cd src/cube-env/
 vi
 #1667922708
 cd
+#1668094764
+vi .local/bin/bootstrap-cube-env 
+#1668096522
+vi
+#1668096537
+vi .local/bin/bootstrap-cube-env 
+#1668096554
+dotgit status
+#1668096563
+dotgit diff
+#1668096645
+dotgit add .
+#1668100837
+locale
+#1668106385
+dotgit log
+#1668106392
+dotgit fetch
+#1668106404
+dotgit status
+#1668106412
+dotgit log
+#1668106486
+dotgit fetch
+#1668106497
+dotgit status
+#1668106633
+dotgit log
+#1668106899
+dotgit status
+#1668106907
+dotgit add .
+#1668106929
+dotgit diff origin/main
+#1668106954
+dotgit diff 
+#1668106974
+dotgit pull
+#1668107017
+dotgit add .; dotgit pull

@@ -8813,3 +8813,85 @@ bootstrap-cube-env
 add-apt-repository --help
 #1667922841
 yq e '."github.com".oauth_token' ~/.config/gh/hosts.yml
+#1668094857
+git pull .vim/pack/auto/start/vim-sensible/
+#1668094864
+git pull --help
+#1668094981
+git --git-dir=~/.vim/pack/auto/start/vim-sensible/ pull
+#1668094996
+git --git-dir=~/.vim/pack/auto/start/vim-sensible pull
+#1668095037
+git -C ~/.vim/pack/auto/start/vim-sensible pull
+#1668095165
+plugins=(tpope/vim-sensible ctrlpvim/ctrlp.vim dhruvasagar/vim-table-mode vim-instant-markdown)
+#1668095172
+echo $plugins 
+#1668095185
+echo ${plugins[1]} 
+#1668095190
+echo ${plugins[0]} 
+#1668095243
+for p in ${plugins[*]}; do echo $p; done
+#1668095428
+for p in ${plugins[*]/\/_}; do echo ${p; done
+#1668095460
+for p in ${plugins[*]}; do echo ${p/\/_}; done
+#1668095480
+plugins=(tpope/vim-sensible ctrlpvim/ctrlp.vim dhruvasagar/vim-table-mode suan/vim-instant-markdown)
+#1668095483
+for p in ${plugins[*]}; do echo ${p/\/_}; done
+#1668095504
+for p in ${plugins[*]}; do echo ${p//_}; done
+#1668095593
+for p in ${plugins[*]}; do echo ${p//\/_}; done
+#1668095598
+for p in ${plugins[*]}; do echo ${p/\/_}; done
+#1668095615
+for p in ${plugins[*]}; do echo ${p/\//_}; done
+#1668095624
+for p in ${plugins[*]}; do echo ${p/\/\/_}; done
+#1668095631
+for p in ${plugins[*]}; do echo ${p/\/}; done
+#1668095643
+for p in ${plugins[*]}; do echo ${p/\/\_}; done
+#1668095649
+for p in ${plugins[*]}; do echo ${p/\/x}; done
+#1668095654
+for p in ${plugins[*]}; do echo ${p/\/}; done
+#1668095739
+for p in ${plugins[*]}; do echo ${p/\/\_}; done
+#1668095756
+p=tpope/vim-sensible
+#1668095761
+echo $p
+#1668095774
+echo ${p/t/x}
+#1668095783
+echo ${p/\//x}
+#1668095822
+for p in ${plugins[*]}; do echo ${p/\//x}; done
+#1668095831
+for p in ${plugins[*]}; do echo ${p/\//_}; done
+#1668095999
+bootstrap-cube-env 
+#1668096137
+mkdir -p ~/.vim/pack/auto/start && cd $_
+#1668096237
+git clone  https://github.com/tpope/vim-sensible tpope_vim-sensible || git -C tpope_vim-sensible pull
+#1668096247
+ls
+#1668096266
+rm -rf tpope_vim-sensible/ vim-sensible/
+#1668096268
+git clone  https://github.com/tpope/vim-sensible tpope_vim-sensible || git -C tpope_vim-sensible pull
+#1668096307
+ls
+#1668096314
+rm -rf *
+#1668096315
+ls
+#1668096324
+cd
+#1668096330
+bootstrap-cube-env 
