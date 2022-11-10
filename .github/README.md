@@ -23,8 +23,7 @@ dotgit push -u origin main
 
 ## Get Your Dotfiles On another system
 
-use `clone` inplace of `init` to bring your existing dotfiles
-down.
+Download and extract your `secrets.tar` into your `HOME` directory, then delete the tarball
 
 _NOTE: The `-f` will smash local files that exist in you dotfiles repo_
 
