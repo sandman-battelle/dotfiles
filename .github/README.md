@@ -21,7 +21,7 @@ dotgit remote add git@github.com:<your_username>/dotfiles
 dotgit push -u origin main
 ```
 
-## Get Your Dotfile On another system
+## Get Your Dotfiles On another system
 
 use `clone` inplace of `init` to bring your existing dotfiles
 down.
