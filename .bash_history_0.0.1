@@ -8895,3 +8895,405 @@ ls
 cd
 #1668096330
 bootstrap-cube-env 
+#1668179796
+git log main
+#1668179862
+git log origin/improve-debugging 
+#1668180031
+git show origin/improve-debugging 
+#1668180240
+dch -i
+#1668180281
+git status
+#1668180284
+git add .
+#1668180317
+dch -e
+#1668180334
+git add .
+#1668180349
+git log
+#1668180378
+git commit -m'start 0.7.0 unreleased'
+#1668180380
+git push
+#1668180388
+git checkout main
+#1668180390
+git fetch
+#1668180393
+git pull
+#1668180399
+git merge improve-debugging 
+#1668180401
+git log
+#1668180405
+git push
+#1668437196
+./bootstrap 
+#1668437201
+cd build/
+#1668437203
+make install
+#1668437208
+ls
+#1668437213
+cd ..
+#1668437218
+make distclean
+#1668437220
+cd build/
+#1668437233
+cd ..
+#1668437235
+./bootstrap 
+#1668437241
+cd build/
+#1668437243
+make install
+#1668437250
+cube env --help
+#1668437267
+ls
+#1668437293
+command -V cube
+#1668437310
+echo $PATH 
+#1668437345
+ln -s ~/.local/libexec/cube.sh ~/.local/bin/cube
+#1668437348
+command -V cube
+#1668437359
+cube --help
+#1668437364
+hash -d cube
+#1668437366
+cube --help
+#1668437370
+command -V cube
+#1668437376
+cube --help
+#1668437381
+cube env --help
+#1668437392
+git status
+#1668437435
+git checkout implement-workload-command
+#1668437440
+git checkout -b implement-workload-command
+#1668437446
+git push 
+#1668437461
+git push -u origin implement-workload-command 
+#1668437468
+git status
+#1668437471
+git add .
+#1668437480
+cd ..
+#1668437481
+git status
+#1668437491
+git add .
+#1668437540
+dch -e
+#1668437578
+git add .
+#1668437580
+git status
+#1668437597
+git commit -m'move env actions into env command'
+#1668437601
+git push
+#1668438482
+head NEWS 
+#1668450161
+git status
+#1668450202
+git checkout main
+#1668450203
+git fetch
+#1668450221
+git checkout main
+#1668450231
+git merge implement-workload-command 
+#1668450236
+git log
+#1668450243
+git diff HEAD 
+#1668450249
+git diff origin/HEAD 
+#1668450260
+git push
+#1668450373
+git checkout heredoc-bug-fix 
+#1668450378
+git status
+#1668450383
+git diff origin/main
+#1668450392
+git rebase main 
+#1668450432
+dch -e 
+#1668450448
+git status
+#1668450463
+git add debian/changelog 
+#1668450468
+git status
+#1668450475
+git log
+#1668450496
+git status
+#1668450510
+git rebase --continue 
+#1668450559
+git log
+#1668450587
+git status
+#1668450596
+git checkout main
+#1668450599
+git fetch
+#1668450623
+git diff origin/heredoc-bug-fix 
+#1668450677
+git status
+#1668450683
+git checkout heredoc-bug-fix 
+#1668450692
+git diff origin/main 
+#1668450700
+git push -f
+#1668450707
+git checkout main
+#1668450728
+git merge heredoc-bug-fix 
+#1668450730
+git push
+#1668452295
+git status
+#1668452415
+ls
+#1668452501
+git checkout -b cube-workload-create
+#1668452508
+git push -u origin cube-workload-create 
+#1668452590
+git status
+#1668452592
+git dif
+#1668452595
+git diff
+#1668452677
+git push
+#1668452719
+git status
+#1668452724
+git add .
+#1668452734
+git commit -m'add create stub'
+#1668452738
+git push
+#1668453024
+git log
+#1668454098
+ls
+#1668454111
+git log
+#1668454200
+touch src/cube-workload-create.in
+#1668454566
+cd build/
+#1668454568
+make install
+#1668454576
+cube worload create --help
+#1668454583
+cube workload create --help
+#1668454605
+make install
+#1668454608
+cube workload create --help
+#1668454743
+cd ..
+#1668454745
+cd src/
+#1668454750
+ls cube-workload*
+#1668454786
+mv cube-workload-apply.in cube-env-apply.in
+#1668454814
+view cube-workload-destroy.in 
+#1668454834
+git diff
+#1668454854
+ls
+#1668454866
+cat cube-workload-create.in 
+#1668454877
+cat cube-workload-destroy.in.in 
+#1668454882
+cat cube-workload-destroy.in
+#1668454939
+mv cube-workload-destroy.in cube-platform-destroy.in
+#1668455026
+git diff
+#1668455040
+ls
+#1668455044
+git diff
+#1668455052
+ls cube-workload*
+#1668455073
+mv cube-workload-grant.in cube-env-grant.in
+#1668455084
+mv cube-workload-ungrant.in cube-env-ungrant.in
+#1668455097
+mv cube-workload-init.in cube-env-init.in
+#1668455099
+ls
+#1668455101
+git status
+#1668455106
+git add .
+#1668455108
+ls
+#1668455111
+git status
+#1668455160
+grep -r platform .
+#1668455189
+ls
+#1668455215
+cat cube-env-delete.in 
+#1668455232
+cat cube-platform-destroy.in 
+#1668455379
+git status
+#1668455382
+git diff
+#1668455396
+git add .
+#1668455399
+git diff HEAD 
+#1668455411
+cd ../build/
+#1668455413
+make install
+#1668455483
+ls ../src/
+#1668455529
+cd ..
+#1668455534
+cd src/
+#1668455549
+mv cube-platform-destroy.in cube-env-destroy.in
+#1668455552
+git dif
+#1668455554
+git diff
+#1668455558
+git status
+#1668455562
+git add .
+#1668455565
+git status
+#1668455611
+git add .
+#1668455613
+git status
+#1668455638
+git diff origin/main 
+#1668455709
+git status
+#1668455711
+git add .
+#1668455713
+git status
+#1668455720
+cd -
+#1668455722
+cd build/
+#1668455725
+make install
+#1668455734
+cube env --help
+#1668455774
+make install
+#1668455775
+cube env --help
+#1668455801
+cube env destroy --help
+#1668455810
+cd ..
+#1668455812
+cd src/
+#1668455820
+grep -r workload .
+#1668456150
+az login -t battelle.us
+#1668456176
+az login -t battelledev.onmicrosoft.us
+#1668456232
+az account subscription list --query "[?displayName=='cube-platform'].subscriptionId"
+#1668456271
+az login -t battelle.us
+#1668456285
+az account subscription list --query "[?displayName=='cube-platform'].subscriptionId"
+#1668456948
+git status
+#1668456967
+git diff
+#1668456976
+git add .
+#1668456977
+git log
+#1668457023
+git commit -m'separate env and workload code a bit more'
+#1668457026
+git push
+#1668457029
+git status
+#1668457122
+git dif
+#1668457124
+git diff
+#1668457129
+git add .
+#1668457144
+git commit -m'white space clean-up'
+#1668457329
+ag cube-env-az-account-set-platform
+#1668457380
+ag cube-env-az-account-set-workload
+#1668457396
+ag workload
+#1668457418
+ag cube-env-deployment-id
+#1668457487
+ag cube-env-sp-id
+#1668457787
+ag cube-env-app-clientid
+#1668529564
+tty
+#1668529681
+a
+#1668529682
+b
+#1668529683
+c
+#1668529703
+hist
+#1668529712
+history 
+#1668529838
+foo
+#1668529857
+tail .bash_history
+#1668529866
+view .bashrc 
+#1668530330
+tail -qn30 ~/.bash_history{,_*} | sed '$!N;s/\n/ /' | cut -c2- | sort -n | cut -c12-
+#1668530336
+history 

@@ -1970,3 +1970,129 @@ cd
 vi .local/bin/bootstrap-cube-env 
 #1668094694
 bootstrap-cube-env 
+#1668094747
+tmux
+#1668179337
+cd src/
+#1668179337
+ls
+#1668179359
+rm cube-env_0.6.*
+#1668179367
+cd cube-env/
+#1668179368
+git status
+#1668179378
+git fetch
+#1668179382
+git status
+#1668179396
+git diff origin/main 
+#1668179474
+git status
+#1668179480
+git log
+#1668179488
+git push
+#1668179493
+git checkout main
+#1668179498
+git pull
+#1668179504
+git merge run-as-sp 
+#1668179506
+git push
+#1668179583
+git checkout improve-debugging 
+#1668179587
+git status
+#1668179591
+git log
+#1668179610
+git rebase main 
+#1668179613
+git status
+#1668179621
+git log 
+#1668179655
+git reset origin/improve-debugging 
+#1668179657
+git status
+#1668179659
+git log
+#1668179669
+git status
+#1668179674
+git diff
+#1668179702
+git reset --hard origin/improve-debugging 
+#1668179704
+git status
+#1668179705
+git log
+#1668179718
+git merge main 
+#1668179727
+git status
+#1668179733
+git log
+#1668179760
+git reset --hard origin/improve-debugging 
+#1668179762
+git log
+#1668179773
+git log main 
+#1668179787
+tmux
+#1668434852
+cd src/q-b-mccubeface/
+#1668434853
+git status
+#1668434856
+git fetch
+#1668434863
+vi
+#1668434887
+ls
+#1668434894
+vi scaling.tf 
+#1668435532
+cd ..
+#1668435533
+ls
+#1668435539
+cube workload --help
+#1668435644
+cd cube-cli/
+#1668435646
+ls
+#1668437104
+cd ../cube-env/
+#1668437105
+ls
+#1668437110
+tmux
+#1668524375
+az account tenant list
+#1668524398
+az login -t battelle.us
+#1668524463
+az account tenant list
+#1668524480
+az account tenant show
+#1668524496
+az account tenant --help
+#1668524511
+az account --help
+#1668529491
+echo $TTY
+#1668529521
+tty 
+#1668529528
+tty
+#1668529544
+tmux
+#1668529618
+ll -h .bash_history
+#1668529624
+ll -h .bash_history*

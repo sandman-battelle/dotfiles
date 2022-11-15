@@ -1732,3 +1732,303 @@ dotgit status
 dotgit add .
 #1668108063
 dotgit status
+#1668108081
+dotgit add .; dotgit commit -m'mo stuff'; dotgit pull
+#1668108087
+dotgit log
+#1668108093
+gitdot fetch
+#1668108100
+dotgit ftech
+#1668108104
+dotgit fetch
+#1668108109
+dotgit pull
+#1668108151
+dotgit log
+#1668108163
+dotgit push
+#1668108169
+dotgit push -u origin main
+#1668109350
+dotgit log
+#1668110679
+cd src/cube-env/
+#1668110680
+git status
+#1668110683
+git fetch
+#1668110833
+vi
+#1668110906
+git checkout run-as-sp 
+#1668110910
+git pull
+#1668110912
+vi
+#1668111016
+git status
+#1668111022
+git log
+#1668111038
+dch -r
+#1668111046
+git status
+#1668111050
+git add .
+#1668111075
+head -n1 debian/changelog 
+#1668111105
+git commit -m'release cube-env (0.6.0) jammy; urgency=medium'
+#1668111121
+git tag -s v0.6.0
+#1668111146
+git log
+#1668111159
+ls
+#1668111166
+./release 
+#1668111182
+cd deb_repo/
+#1668111184
+git status
+#1668111187
+ls
+#1668111211
+cd ..
+#1668111221
+git worktree -d deb_repo/
+#1668111232
+git worktree remove deb_repo/
+#1668111236
+git worktree remove deb_repo/ -f
+#1668111239
+ls
+#1668111244
+./release 
+#1668111258
+cd deb_repo/
+#1668111259
+ls
+#1668111267
+git log
+#1668111275
+cd ..
+#1668111280
+vi release 
+#1668111315
+./release 
+#1668111326
+ls
+#1668111330
+ls deb_repo/
+#1668111341
+git fetch
+#1668111343
+git branch
+#1668111360
+cd deb_repo/
+#1668111361
+git status
+#1668111363
+ls
+#1668111371
+git checkout deb_repo 
+#1668111373
+ls
+#1668111385
+git reset --hard origin/deb_repo 
+#1668111388
+ls
+#1668111412
+cd
+#1668111414
+cd -
+#1668111415
+cd ..
+#1668111418
+vi release 
+#1668111555
+./release 
+#1668111575
+vi release 
+#1668111590
+./release 
+#1668111623
+cd deb_repo/
+#1668111624
+ls
+#1668111628
+git diff
+#1668111647
+ls
+#1668111651
+cd ..
+#1668111653
+git status
+#1668111655
+git add .
+#1668111666
+dch -i
+#1668111703
+dch -r
+#1668111709
+git status
+#1668111715
+git add .
+#1668111722
+head -n1 debian/changelog 
+#1668111738
+git commit -m'release cube-env (0.6.1) jammy; urgency=medium'
+#1668111743
+git tag -s
+#1668111794
+sudo update-alternatives --config editor
+#1668111813
+git tag -s v0.6.1
+#1668111838
+git log
+#1668111854
+cd deb_repo/
+#1668111856
+git status
+#1668111858
+git add .
+#1668111865
+head -n1 debian/changelog 
+#1668111872
+head -n1 ../debian/changelog 
+#1668111880
+git add .
+#1668111888
+git commit -m'cube-env (0.6.1) jammy; urgency=medium'
+#1668111890
+git push
+#1668111901
+git push -u origin deb_repo 
+#1668111905
+cd ..
+#1668111908
+./release 
+#1668111921
+cd deb_repo/
+#1668111921
+ls
+#1668111925
+git status
+#1668111934
+git add .
+#1668111944
+git commit -m'cube-env (0.6.1) jammy; urgency=medium'
+#1668111952
+git push -u origin deb_repo 
+#1668112015
+sudo apt update
+#1668112023
+sudo apt dist-upgrade 
+#1668179790
+git log
+#1668179838
+git rebase main
+#1668179840
+git log
+#1668179892
+git status
+#1668179933
+git log
+#1668180020
+git status
+#1668180025
+git show
+#1668180065
+git status
+#1668180071
+git push -f
+#1668180084
+git log
+#1668180101
+vi
+#1668529547
+tty
+#1668529691
+d
+#1668529692
+e
+#1668529693
+f
+#1668529696
+hist
+#1668529716
+history 
+#1668529721
+hist
+#1668529737
+history 
+#1668529751
+hist
+#1668529760
+alias 
+#1668529813
+x
+#1668529827
+tail -f .bash_history
+#1668529887
+alias 
+#1668529895
+view .bash_functions 
+#1668529982
+cat ~/.bash_history{,_*}
+#1668529989
+echo cat ~/.bash_history{,_*}
+#1668529999
+echo tail ~/.bash_history{,_*}
+#1668530004
+tail ~/.bash_history{,_*}
+#1668530013
+tail --help
+#1668530027
+tail -q ~/.bash_history{,_*}
+#1668530037
+tail -qn1 ~/.bash_history{,_*}
+#1668530049
+tail -qn2 ~/.bash_history{,_*}
+#1668530067
+alias 
+#1668530080
+tail -qn2 ~/.bash_history{,_*} | sed '\''$!N;s/\n/ /'\''
+#1668530134
+tail -qn2 ~/.bash_history{,_*} | sed '$!N;s/\n/ /'
+#1668530149
+view .bash_aliases 
+#1668530190
+tail -qn2 ~/.bash_history{,_*} | sed '$!N;s/\n/ /' | cut -c2-
+#1668530202
+alias 
+#1668530225
+tail -qn2 ~/.bash_history{,_*} | sed '$!N;s/\n/ /' | cut -c2- | sort -n
+#1668530262
+tail -qn2 ~/.bash_history{,_*} | sed '$!N;s/\n/ /' | cut -c2- | sort -n | cut -c12-
+#1668530300
+tail -qn30 ~/.bash_history{,_*} | sed '$!N;s/\n/ /' | cut -c2- | sort -n | cut -c12-
+#1668530344
+history 
+#1668530360
+tail -qn100 ~/.bash_history{,_*} | sed '$!N;s/\n/ /' | cut -c2- | sort -n | cut -c12-
+#1668530383
+cat ~/.bash_history{,_*} | sed '$!N;s/\n/ /' | cut -c2- | sort -n | cut -c12-
+#1668530395
+tail -qn1000 ~/.bash_history{,_*} | sed '$!N;s/\n/ /' | cut -c2- | sort -n | cut -c12-
+#1668530403
+tail -qn10000 ~/.bash_history{,_*} | sed '$!N;s/\n/ /' | cut -c2- | sort -n | cut -c12-
+#1668530414
+tail -qn5000 ~/.bash_history{,_*} | sed '$!N;s/\n/ /' | cut -c2- | sort -n | cut -c12-
+#1668530457
+tail -qn1000 ~/.bash_history{,_*} | sed '$!N;s/\n/ /' | cut -c2- | sort -n | cut -c12-
+#1668530470
+vi .bash_aliases 
+#1668530493
+dotgitt status
+#1668530499
+dotgit status
+#1668530570
+git add .
