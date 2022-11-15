@@ -14,6 +14,7 @@ install-azure-cli()
 	type -p curl >/dev/null || sudo apt install curl -y
 	curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 	az cloud set --name AzureUSGovernment
+	az config set extension.use_dynamic_install=yes_without_prompt
 }
 
 install-terraform-cli()
