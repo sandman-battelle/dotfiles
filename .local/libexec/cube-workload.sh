@@ -1,19 +1,20 @@
 #!/usr/bin/env bash
 
 
-# shellcheck disable=SC2034
-VERSION=0.6.1-2-g38ae293-dirty
-
 # shellcheck disable=SC1083
 # @getoptions
 parser_definition() {
-	setup   REST help:usage -- "Usage: cube env [options]... [arguments]..." ''
+	setup   REST help:usage -- "Usage: cube workload [options]...[COMMAND]" ''
 	msg -- 'Options:'
 	disp    :usage  -h --help
-	disp    VERSION    --version
 
-	cmd create -- 'Create a new workload'
 	msg -- '' 'Commands:'
+	cmd create	-- 'Create a new workload'
+	cmd delete	-- 'Delete a new workload'
+	cmd list	-- 'List all workloads'
+	cmd module	-- 'Manage workload modules'
+	cmd status	-- 'Show status of a workload'
+
 }
 # @end
 
@@ -24,11 +25,20 @@ if [ $# -gt 0 ]; then
 	shift
 	case $cmd in
 		create)
-			/home/sandman/.local/libexec/cube-workload-create.sh "$@"
+			/home/sandman/.local/libexec/cube-workload-create.sh $@
+			;;
+		delete)
+			/home/sandman/.local/libexec/cube-workload-delete.sh $@
+			;;
+		list)
+			/home/sandman/.local/libexec/cube-workload-list.sh $@
+			;;
+		module)
+			/home/sandman/.local/libexec/cube-workload-module.sh $@
+			;;
+		status)
+			/home/sandman/.local/libexec/cube-workload-status.sh $@
 			;;
 		--) # no subcommand, arguments only
 	esac
 fi
-
-
-

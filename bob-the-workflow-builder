@@ -1,0 +1,13 @@
+#! /bin/bash
+
+REPO=$(git rev-parse --show-toplevel)
+
+while true; do
+	inotifywait -q --recursive --exclude='.*.swp' -e modify $REPO/.github |
+    while read dir op file
+    do
+		git commit -a -m'Debugging Actions Sucks'
+		git push
+		for i in $(seq 1 $(tput cols)); do echo -n '-'; done
+    done
+done

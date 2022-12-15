@@ -2032,3 +2032,777 @@ dotgitt status
 dotgit status
 #1668530570
 git add .
+#1668530576
+dotgit add .
+#1668530579
+dotgit status
+#1668530628
+dotgit commit -m'fix buffering bug in `hist` alias'
+#1668530639
+dotgit push
+#1668535003
+cd src/cube-env/
+#1668535004
+ls
+#1668535008
+git status
+#1668535018
+git diff
+#1668535063
+git restore src/functions.in
+#1668535065
+git log
+#1668535071
+ls
+#1668535252
+vi
+#1668650245
+tmux
+#1668650253
+cd src/cube-env/
+#1668650255
+git status
+#1668650260
+ls
+#1668653603
+ag .*.swp
+#1668653607
+ag .*.swo
+#1668653637
+find src/ -name '.*.swo'
+#1668653640
+find src/ -name '.*.swp'
+#1668653648
+vi
+#1668653669
+git status
+#1668653673
+git diff
+#1668653697
+vi
+#1668653739
+find src/ -name '.*.swp'
+#1668653748
+git status
+#1668653751
+git diff
+#1668697313
+cd src/cube-env/
+#1668697315
+git status
+#1668697318
+git log
+#1668697325
+git show
+#1668700055
+vi
+#1668738392
+git branch
+#1668738402
+git branch --all
+#1668738412
+git status
+#1668738417
+git checkout sqlite-poc 
+#1668738419
+git status
+#1668738421
+ls
+#1668738457
+git rebase origin/cube-workload-list 
+#1668738463
+git status
+#1668738468
+git log
+#1668738480
+git push -f
+#1668738485
+ls
+#1668738489
+-ls data/
+#1668738493
+ls data/
+#1668738500
+cd data/
+#1668738501
+ls
+#1668738504
+cat README.md 
+#1668738648
+cd ..
+#1668738650
+vi
+#1668786495
+cd src/cube-env/
+#1668786499
+vi
+#1668794778
+dch -e
+#1668794822
+git status
+#1668794907
+vi
+#1668794912
+dch -e
+#1668795125
+vi
+#1668801445
+git status
+#1669047928
+vi test 
+#1669060790
+vi
+#1669212552
+cd src/cube-env/
+#1669212556
+vi
+#1669649602
+git status
+#1669649626
+rm src/cube-workload-module
+#1669649630
+rm src/cube-workload-module-update.in 
+#1669662465
+git status
+#1669662473
+git add .
+#1669662486
+git commit -m'tweak bob-the-builder'
+#1669662489
+git pull
+#1669662492
+git push
+#1669662543
+git checkout cube-workload-module-update 
+#1669662547
+git status
+#1669736272
+git fetch
+#1669736286
+git checkout cube-workload-module-update 
+#1669736288
+git status
+#1669736290
+git log
+#1669736326
+git log --graph 
+#1669736368
+git rebase origin/main 
+#1669736372
+git log
+#1669736411
+cube workload module update
+#1669736416
+cube workload module update --help
+#1669913378
+cube workload module list
+#1669914391
+cat .cuberc 
+#1669915215
+cd ..
+#1669915258
+cube workload create -n totally-fake-workload
+#1669915267
+az login -t battelle.us
+#1669915280
+cube workload create -n totally-fake-workload
+#1669921165
+ls
+#1669921395
+gh repo clone battelle/totally-fake-workload
+#1669921403
+gh repo clone battellecube/totally-fake-workload
+#1669921407
+cd total
+#1669921409
+ls
+#1669921427
+rm -rf totalcae/
+#1669921429
+cd totally-fake-workload/
+#1669921432
+ls
+#1669921434
+git status
+#1669921458
+git workload module --releases
+#1669921472
+cube workload module --releases
+#1669921475
+ls
+#1669921477
+la
+#1669921490
+cube workload module --help
+#1669921516
+git submodule update
+#1669921524
+git submodule update --init --recursive 
+#1669921537
+cube workload module --releases
+#1669923223
+cd ..
+#1669923256
+cube workload delete -n totally-fake-workload
+#1669923273
+rm -rf totally-fake-workload/
+#1669923279
+cube workload create -n totally-fake-workload
+#1669923298
+gh repo clone battellecube/totally-fake-workload
+#1669923303
+cd totally-fake-workload/
+#1669923307
+git submodule update --init --recursive 
+#1669923319
+cube workload module list
+#1669923323
+cube workload module list -r
+#1669923332
+cube workload module list --recursive
+#1669923340
+cube workload module list --help
+#1669923474
+cube workload module list -r
+#1669923554
+~/.local/libexec/cube.sh workload module list -r
+#1669923578
+cube workload module list -r
+#1669923580
+~/.local/libexec/cube.sh workload module list -r
+#1669923623
+~/.local/libexec/cube.sh workload module list
+#1669925030
+~/.local/libexec/cube.sh workload module list --help
+#1669925249
+cube --version
+#1669925317
+~/.local/libexec/cube-workload-module-list.sh --help
+#1669925341
+~/.local/libexec/cube-workload-module-list.sh -R
+#1669925462
+~/.local/libexec/cube-workload-module --releases
+#1669925480
+cube workload module --releases
+#1669925490
+cube workload module foo
+#1669925493
+cube workload module
+#1669925629
+cube workload module foo
+#1669925811
+cube workload module list
+#1669925856
+cube workload module list -r
+#1669926028
+cube workload module
+#1669926031
+cube workload module -r
+#1669926038
+git status
+#1669926096
+cube workload module -r
+#1669926105
+cube workload module list
+#1669926169
+cube workload module -r
+#1669926338
+cube workload module -r | while read l; do m=($(awk -f= '{print $0}')); echo ${m[0]}; done
+#1669926347
+cube workload module -r | while read l; do m=($(awk -F= '{print $0}')); echo ${m[0]}; done
+#1669926379
+cube workload module -r | while read l; do m=$(awk -F= '{print $0}'); echo ${m[0]}; done
+#1669926391
+cube workload module -r | while read l; do m=$(awk -F= '{print $1, $2}'); echo ${m[0]}; done
+#1669926411
+cube workload module -r | while read l; do m=($(awk -F= '{print $1, $2}')); echo ${m[0]}; done
+#1669926416
+cube workload module -r | while read l; do m=($(awk -F= '{print $1, $2}')); echo ${m[1]}; done
+#1669926868
+cube workload module update
+#1669927037
+cd modules/terraform-cube-core/
+#1669927040
+git status
+#1669927205
+cube workload module update
+#1669927211
+cd -
+#1669927214
+cube workload module update
+#1669927285
+git status
+#1669927361
+git submodule update
+#1669927365
+git status
+#1669927370
+cd modules/terraform-cube-
+#1669927373
+cd modules/terraform-cube-vdi/
+#1669927374
+ls
+#1669927376
+git status
+#1669927379
+git log
+#1669927442
+git submodule update
+#1669927448
+cube workload module update
+#1669927453
+cd -
+#1669927455
+cube workload module update
+#1669927461
+git submodule update
+#1669927544
+git descrbe HEAD
+#1669927551
+git describe HEAD
+#1669927556
+git describe ref HEAD
+#1669927568
+git describe --help
+#1669927631
+git describe --tags
+#1669927636
+git describe --tag
+#1669927648
+git describe --tag HEAD
+#1669927689
+git describe --tags
+#1669927700
+cd modules/terraform-cube-vdi/
+#1669927702
+git describe --tags
+#1669927718
+git describe --dirty
+#1669927724
+git describe tags --dirty
+#1669927729
+git describe --tags --dirty
+#1669927782
+cube workload module update
+#1669927785
+cd -
+#1669927788
+cube workload module update
+#1669927849
+git submodule update
+#1669927852
+cube workload module update
+#1669927900
+cd -
+#1669927908
+cd --help
+#1669928006
+cd -
+#1669928182
+. ~/.local/etc/profile.d/cube-env-hook.sh 
+#1669928187
+cd -
+#1669928199
+hist
+#1669928204
+cube workload module update
+#1669928223
+ls modules/
+#1669928282
+cube workload module -r
+#1669928328
+cube workload module update
+#1669928365
+cube workload module -r
+#1669928415
+cube workload module update
+#1669928623
+git status
+#1669928704
+cube workload module update
+#1669928715
+git status
+#1669928785
+cube workload module update
+#1669928792
+git submodule update
+#1669928795
+git status
+#1669929358
+cube workload status --help
+#1669929365
+cube workload status --name ramp
+#1669929587
+cube workload status --name q-b-mccubeface
+#1669931447
+cat .cuberc 
+#1669988187
+cd src/cube-env/
+#1669988189
+git status
+#1669994860
+git log
+#1669994870
+git checkout main
+#1669994874
+git fetch
+#1669994878
+git pull
+#1669994884
+git merge
+#1669994894
+git merge cube-workload-module-update 
+#1669994917
+git push
+#1669995189
+git status
+#1669995211
+git checkout -b cube-workload-module-add
+#1669995218
+git checkout cube-workload-module-add
+#1669995227
+git rebase main
+#1669995230
+git log
+#1669995239
+dch -e
+#1669995422
+vi
+#1670006678
+git status
+#1670006693
+git clear
+#1670006703
+git log
+#1670006714
+./release
+#1670006731
+dch -r
+#1670006781
+git commit -m '0.8.0 release'
+#1670006791
+git add .
+#1670006793
+git commit -m '0.8.0 release'
+#1670006819
+gpg --list-key
+#1670006829
+gpg --list-key --keyid-format long
+#1670006966
+git tag -as -u 1A6A6C708B08F2CB
+#1670007002
+git tag -s -u 1A6A6C708B08F2CB
+#1670007027
+git tag -u 1A6A6C708B08F2CB
+#1670007045
+git tag -s -u 1A6A6C708B08F2CB v0.8.0
+#1670007116
+git push --tags
+#1670007125
+git push
+#1670007131
+git push --tags
+#1670007141
+./release 
+#1670007162
+cd deb_repo/
+#1670007164
+ls
+#1670007167
+git status
+#1670007177
+git add .
+#1670007197
+git commit
+#1670007244
+git push
+#1670008965
+vi
+#1670009026
+cd ..
+#1670009027
+vi
+#1670260045
+cd src/
+#1670260046
+ls
+#1670260313
+az login -t battelle.us
+#1670260396
+az ad app list --query "[].id" -o tsv | while read id; do echo -n "| $id | "; az ad app show --id $id --query "displayName" -o tsv 2>/dev/null |tr -d '\n'; echo -n " | "; az ad app owner list --id $id --query "[0].mail" -o tsv 2>/dev/null|tr -d '\n'; echo " |"; done > app-registrations.md
+#1670260451
+az ad app list --all --query "[].id" -o tsv | while read id; do echo -n "| $id | "; az ad app show --id $id --query "displayName" -o tsv 2>/dev/null |tr -d '\n'; echo -n " | "; az ad app owner list --id $id --query "[0].mail" -o tsv 2>/dev/null|tr -d '\n'; echo " |"; done > app-registrations.md
+#1670265817
+cd src/cube-env/
+#1670265821
+./wonder-twin-powers-activate.ps1 
+#1670266357
+vi wonder-twin-powers-activate.ps1 
+#1670266735
+./wonder-twin-powers-activate.ps1 
+#1670267492
+vi wonder-twin-powers-activate.ps1 
+#1670267506
+./wonder-twin-powers-activate.ps1 
+#1670267604
+vi wonder-twin-powers-activate.ps1 
+#1670268232
+vi
+#1670337303
+ls
+#1670337314
+cd cube-env/
+#1670337317
+vi
+#1670337334
+git status
+#1670337360
+git branch --no-merged origin/main
+#1670337386
+git checkout cube-workload-module-archive 
+#1670337389
+vi
+#1670337422
+git blame src/cube-workload-create.in
+#1670337451
+vi
+#1670348810
+dotgit status
+#1670352253
+vi
+#1670430878
+cd src/cube-env/
+#1670430879
+git status
+#1670430882
+git diff
+#1670430909
+git status
+#1670430916
+git add .
+#1670430937
+git commit -m'trying out command aliases'
+#1670430943
+git fetch
+#1670430950
+git push
+#1670430953
+git log
+#1670431006
+dch -e
+#1670431081
+dch -r
+#1670431090
+git status
+#1670431096
+git add .
+#1670431104
+git commit -m'touch up changelog'
+#1670431105
+git log
+#1670431119
+git clear
+#1670431127
+./release 
+#1670431147
+git commit --amend 
+#1670431199
+head NEWS 
+#1670431214
+git commit --amend 
+#1670431284
+gpg --list-key --keyid-format long
+#1670431374
+git tag -as -u 1A6A6C708B08F2CB
+#1670431381
+git tag -s -u 1A6A6C708B08F2CB
+#1670431398
+git tag -u 1A6A6C708B08F2CB
+#1670431427
+git tag -asu 1A6A6C708B08F2CB v0.8.1
+#1670431491
+git log
+#1670431501
+ls
+#1670431514
+./release 
+#1670431534
+ls
+#1670431538
+cd deb_repo/
+#1670431540
+git status
+#1670431546
+git add .
+#1670431565
+git commit 
+#1670431584
+git push
+#1670431587
+cd -
+#1670431592
+git push
+#1670431597
+git push --tags
+#1670431602
+git checkout main
+#1670431605
+git ftech
+#1670431608
+git fetch
+#1670431614
+git pull
+#1670431616
+git log
+#1670431625
+git merge pim-activation 
+#1670431629
+git push
+#1670432775
+git clear
+#1670432781
+./bootstrap 
+#1670432786
+cd build/
+#1670433433
+ls
+#1670442345
+cd src/zero-wing/
+#1670442352
+git checkout prep 
+#1670442357
+cube env destroy
+#1670443057
+ls
+#1670443061
+la
+#1670443069
+cat .environment 
+#1670443239
+git status
+#1670443676
+cube env --help
+#1670443693
+cd ..
+#1670443720
+gh repo clone battellecube/zero-wing zw
+#1670443724
+cd zw
+#1670443731
+git checkout prep
+#1670443739
+cube env set --help
+#1670443754
+cube env set --n prep -w zero-wing
+#1670443760
+cube env set -n prep -w zero-wing
+#1670443786
+cube env init
+#1670443841
+git submodule update --init --recursive 
+#1670443927
+cube env init
+#1670443950
+cube env destroy
+#1670444002
+cube env delete
+#1670444016
+ls
+#1670444017
+la
+#1670444022
+cat .environment 
+#1670444028
+hist
+#1670444059
+cube env delete --help
+#1670444088
+cube env delete -n prep -w zero-wing -d
+#1670444123
+cd ..
+#1670444134
+rm -r zw/ -f
+#1670444138
+cd zero-wing/
+#1670444149
+cube env grant --help
+#1670444164
+hist |grep trink
+#1670444175
+cube env grant -i trinkaj@battelle.us -um
+#1670860755
+cd src/cube-env/
+#1670860757
+git status
+#1670860762
+git fetch
+#1670860768
+git log
+#1670860782
+git branch --no-merged origin/main 
+#1670860802
+git branch -D cube-workload-module-archive 
+#1670860877
+git fetch
+#1670860884
+git merge origin/disable-readonly-branch 
+#1670860902
+git lgo
+#1670860905
+git log
+#1670860921
+git reset origin/main --hard
+#1670860924
+git status
+#1670860927
+git clear
+#1670860934
+git checkout disable-readonly-branch 
+#1670860942
+git status
+#1670860946
+git diff origin/main
+#1670860960
+git rebase origin/main 
+#1670860962
+git log
+#1670860968
+git diff origin/main 
+#1670860976
+git push
+#1670860980
+git status
+#1670860983
+git push -f
+#1670860996
+git checkout main
+#1670861000
+git merge disable-readonly-branch 
+#1670861002
+git push
+#1670861208
+git checkout -b bugs-bugs-bugs
+#1670861226
+vi
+#1670935884
+cd src/delete-me/
+#1670935885
+vi
+#1670961878
+git status
+#1670961920
+mv bob-the-builder ~/bob-the-workflow-builder
+#1670961922
+cd ..
+#1670961935
+rm -r delete-me/
+#1670961952
+cd ..exit
+#1670961959
+exit
+#1671122282
+cd src/cube-env/
+#1671122283
+git status
+#1671122287
+git diff

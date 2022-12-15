@@ -34,16 +34,6 @@ die() {
 #	source env-hook
 [[ "${BASH_SOURCE}" != "${0}" ]] || die 'This script should only be `source`d. Exiting'
 
-cube-env-az-account-set-platform()
-{
-	az account set -s "$(cube-env-platform-subscription-id)" || die
-}
-
-cube-env-az-account-set-workload()
-{
-	az account set -s "$(cube-env-workload-subscription-id)" || die
-}
-
 cube-env-deployment-id()
 {
 	echo "${workload}-${name}"
@@ -62,27 +52,16 @@ cube-env-app-id(){
 	az ad app list --all --filter "displayname eq '$(cube-env-deployment-id)'" --query "[].id" -o tsv || die
 }
 
-cube-env-delete-sp()
-{
-	az ad sp delete --id "$(cube-env-sp-id)" || die
-}
-
 cube-env-delete-app()
 {
-	az ad app delete --id "$(cube-env-app-id)" || die
+	[ $(cube-env-app-id) ] && (az ad app delete --id "$(cube-env-app-id)" || die)
+	
+	rm -f .sp-environment.json
 }
 
 cube-env-get-graph-token()
 {
 	az account get-access-token --resource https://graph.microsoft.us --query accessToken -o tsv || die
-}
-
-cube-env-gh-secret-create()
-{
-	local secret_name=$1
-	local secret_value=$2
-
-	gh secret set "${secret_name}" --env "${name}" -b "${secret_value}" || die
 }
 
 cube-env-gh-branch-exists()
@@ -110,7 +89,7 @@ cube-env-gh-branch-delete()
 	local delete_response=$(curl -s -w '\n%{http_code}'\
 		-X DELETE\
 		-H "Accept: application/vnd.github.v3+json"\
-		-H "Authorization: token $CUBE_PERSONAL_ACCESS_TOKEN"\
+		-H "Authorization: token $(gh auth token)"\
 		-H "Content-Type: application/json"\
 		https://api.github.com/repos/battellecube/${workload}/git/refs/heads/${name} | tee $delete_response_code_file | head -n -1)
 
@@ -136,7 +115,7 @@ cube-env-gh-branch-create()
 	local get_response=$(curl -s -w '\n%{http_code}'\
 		-X GET \
 		-H "Accept: application/vnd.github.v3+json" \
-		-H "Authorization: token $CUBE_PERSONAL_ACCESS_TOKEN" \
+		-H "Authorization: token $(gh auth token)" \
 		-H "Content-Type: application/json" \
 		https://api.github.com/repos/battellecube/$workload/git/refs/heads/main | tee $get_response_code_file | head -n -1)
 
@@ -157,7 +136,7 @@ cube-env-gh-branch-create()
 	local post_response=$(curl -s -w '\n%{http_code}'\
 		-X POST\
 		-H "Accept: application/vnd.github.v3+json"\
-		-H "Authorization: token $CUBE_PERSONAL_ACCESS_TOKEN"\
+		-H "Authorization: token $(gh auth token)"\
 		-H "Content-Type: application/json"\
 		--data '{"ref":"refs/heads/'${name}'","sha":"'${sha}'"}'\
 		https://api.github.com/repos/battellecube/${workload}/git/refs | tee $post_response_code_file | head -n -1)
@@ -177,38 +156,12 @@ cube-env-gh-environment-delete()
 	local status_code=$(curl -s -w '%{http_code}' \
 			-X DELETE \
 			-H "Accept: application/vnd.github.v3+json" \
-			-H "Authorization: token $CUBE_PERSONAL_ACCESS_TOKEN" \
+			-H "Authorization: token $(gh auth token)" \
 			-H "Content-Type: application/json" \
 			https://api.github.com/repos/battellecube/$workload/environments/$name)
 
 	# what to really do with the status code?
 	logger --priority local7.info "github delete environment http_code: ${status_code}"
-}
-
-cube-env-gh-environment-create()
-{
-	local azure_tenant_id=$(cube-env-current-tenant-id)
-	local azure_subscription_id=$(cube-env-workload-subscription-id)
-	local azure_client_secret=$(az ad app credential reset \
-			--id $(az ad app list --all --query "[?displayName=='$(cube-env-deployment-id)'].appId" -o tsv) \
-			--display-name $(cube-env-deployment-id) --only-show-errors --query "password" -o tsv)
-	local azure_client_id=$(cube-env-app-clientid)
-
-	local status_code=$(curl -s -w '%{http_code}' \
-		-X PUT \
-		-H "Accept: application/vnd.github.v3+json" \
-		-H "Authorization: token $CUBE_PERSONAL_ACCESS_TOKEN" \
-		-H "Content-Type: application/json" \
-		https://api.github.com/repos/battellecube/$workload/environments/$name)
-
-    #TODO: Need to test the env was actually created
-	logger --priority local7.info "github create environment http_code: ${status_code}"
-
-	cube-env-gh-secret-create AZURE_TENANT_ID "${azure_tenant_id}" || die
-	cube-env-gh-secret-create AZURE_SUBSCRIPTION_ID "${azure_subscription_id}" || die
-	cube-env-gh-secret-create AZURE_CLIENT_SECRET "${azure_client_secret}" || die
-	cube-env-gh-secret-create AZURE_CLIENT_ID "${azure_client_id}" || die
-
 }
 
 cube-env-get-graph-id()
@@ -222,7 +175,7 @@ cube-env-create-sp()
 	local azure_dir_api_graph_id='00000003-0000-0000-c000-000000000000'
 	local azure_dir_api_permission_id='19dbc75e-c2e2-444c-a770-ec69d8559fc7'
 
-  echo "...granting service principal 'Reader' role for Log Analytics"
+  	echo "...granting service principal 'Reader' role for Log Analytics"
 	az ad sp create-for-rbac  \
 			--output none \
 			--role "Reader"  \
@@ -250,7 +203,6 @@ cube-env-create-sp()
 	local app_role_id=$(az ad sp show  --id 00000003-0000-0000-c000-000000000000  --query "appRoles[?value=='Directory.ReadWrite.All'].id"  -o tsv)
 
 	echo "...granting service principal Directory.ReadWrite.All permission and granting admin consent"
-	#TODO need a test that this worked
 	az rest --method post \
 		--headers '{"Authorization": "Bearer '"$(cube-env-get-graph-token)"'"}' \
 		--url https://graph.microsoft.us/v1.0/servicePrincipals/$sp_id/appRoleAssignments \
@@ -261,6 +213,15 @@ cube-env-create-sp()
 cube-env-current-subscription-id()
 {
 	az account show --query id -o tsv || die
+}
+
+cube-env-current-environment()
+{
+	# az cloud show --query name -o tsv
+	# az cloud show returns "AzureUSGovernment" but terraform wants "usgovernment".
+	# When we refactor this to work with commercial we can fix this up to
+	# accommodate both values.  For now it is hard coded for gov cloud.
+	echo "usgovernment"
 }
 
 cube-env-current-tenant-id()
@@ -296,13 +257,43 @@ cube-workload-terraform-vars()
 		-var=address_space=${cidr} \
 		-var=environment=usgovernment \
 		-var=location=usgovvirginia \
-		-var=sha=$(git rev-parse HEAD)"
+		-var=sha=$(git rev-parse HEAD) \
+		-var=client_secret=$(cube-env-sp-client-secret) \
+		-var=client_id=$(cube-env-sp-client-id)"
+}
+
+cube-env-az-start-hostpool-vms()
+{
+	local resource_group=$(cube-env-deployment-id)
+	local endpoint="https://management.usgovcloudapi.net/"
+	local subscription_id=$(cube-env-workload-subscription-id)
+	local api_version="2021-09-03-preview"
+
+	environment_name=$(az account show --query environmentName -o tsv)
+
+	[ "$environment_name" == "AzureCloud" ] && {
+		endpoint="https://management.azure.com/"
+		api_version="2022-02-10-preview"
+	}
+
+	hostpool_vms=$(az rest --method get --url "$endpoint"subscriptions/$subscription_id/resourceGroups/$resource_group/providers/Microsoft.DesktopVirtualization/hostPools/$resource_group/sessionHosts?api-version=$api_version --query "value[].name" -o tsv)
+
+	for i in $hostpool_vms;
+	do
+		vm_name=$(echo "$i" | awk -F "/" '{ print $2 }')
+		echo "Starting $vm_name..."
+		az vm start --name $vm_name --resource-group $resource_group --subscription $subscription_id --no-wait
+	done
+
+	return 0
 }
 
 cube-workload-terraform-destroy()
 {
+	cube-env-az-start-hostpool-vms || die "starting VMs failed"
+
 	terraform destroy \
-		$(cube-workload-terraform-vars) || die
+		$(cube-workload-terraform-vars) || die "terraform destroy failed"
 }
 
 # TODO should not have named environments hard coded in our tools
@@ -318,20 +309,29 @@ cube-workload-terraform-apply()
 		$(cube-workload-terraform-vars) || die
 }
 
-cube-env-sp-variables()
+cube-env-get-app-id(){
+	az ad app list --all --query "[?displayName=='${deployment_id}'].appId" -o tsv || die "error getting ${deployment_id} appId"
+}
+
+cube-env-delete-client-secret()
 {
-	AZURE_TENANT_ID: $(cube-env-current-tenant-id)
-	AZURE_SUBSCRIPTION_ID: $(cube-env-workload-subscription-id)
-	AZURE_CLIENT_SECRET: $(cube-env-get-client-secret)
-	AZURE_CLIENT_ID: $(cube-env-get-client-id)
-	ARM_ENVIRONMENT: usgovernment
+	local deployment_id=$(cube-env-deployment-id)
+	local app_id=$(cube-env-get-app-id)
+	local key_id=$(az ad app list --all --query "[?displayName=='${deployment_id}'].passwordCredentials[]|[?displayName=='${deployment_id}-${USER}'].keyId" -o tsv)
+
+	[ $key_id ] && (az ad app credential delete --id $app_id --key-id $key_id || die "error deleting key_id: ${key_id}")
+
+	return 0
+	
 }
 
 cube-env-get-client-secret()
 {
+	cube-env-delete-client-secret 
+
 	local deployment_id=$(cube-env-deployment-id)
-	local app_id=$(az ad app list --all --query "[?displayName=='${deployment_id}'].appId" -o tsv)
-	az ad app credential reset --id $app_id --display-name $deployment_id-$USER --append --only-show-errors --query "password" -o tsv
+	local app_id=$(cube-env-get-app-id)
+	az ad app credential reset --id $app_id --display-name $deployment_id-$USER --append --only-show-errors --query "password" -o tsv || die "error reseting ${deployment_id}-${USER} app credential for appId: ${app_id}"
 }
 
 cube-env-get-client-id()
@@ -349,7 +349,10 @@ cube-platform-terraform-vars()
 		-var=environment=usgovernment \
 		-var=storage_endpoint=core.usgovcloudapi.net
 		-var=location=usgovvirginia \
-		-var=sha=$(git rev-parse HEAD)"
+		-var=sha=$(git rev-parse HEAD) \
+		-var=tenant_id=$(cube-env-current-tenant-id) \
+		-var=client_secret=$(cube-env-sp-client-secret) \
+		-var=client_id=$(cube-env-sp-client-id)"
 }
 
 cube-platform-terraform-destroy()
@@ -431,7 +434,6 @@ cube-env-workload-subscription-id()
 
 cube-env-platform-subscription-id()
 {
-	echo 'cube-env-platform-subscription-id' >&2
 	az account subscription list --query "[?displayName=='cube-platform'].subscriptionId" -o tsv 2>/dev/null || die
 }
 
@@ -510,9 +512,9 @@ cube-env-make-record()
 			-f workload -v $workload_name \
 			-f sub -v $sub \
 			-f account -v $account \
-			environments.rec || die
+			environments.rec || die "cube-env-make-record: recins command failed"
 
-	cube-env-upload $account || die
+	cube-env-upload $account || die "cube-env-make-record: cube-env-upload failed"
 }
 
 cube-env-upload()
@@ -530,16 +532,17 @@ cube-env-upload()
 
 cube-env-download()
 {
-	echo 'cube-env-download'
 	local account=$1
-
+	local sub=$(cube-env-platform-subscription-id)
+set -x
 	az storage azcopy blob download \
 			--account-name  $account \
 			--container environments \
 			--source environments.rec \
 			--destination environments.rec \
-			--subscription "$(cube-env-platform-subscription-id)" \
-			--only-show-errors 1>/dev/null  || die
+			--subscription "$sub" \
+			--only-show-errors 1>/dev/null  || die "cannot download recfile using $account and $sub"
+set +x
 }
 
 cube-env-set-local()
@@ -547,29 +550,50 @@ cube-env-set-local()
 	local env_name=$1
 	local workload_name=$2
 
-	[ -f ./environments.rec ] || die
+	[ -f ./environments.rec ] || die "cube-env-set-local: environments.rec file does not exits"
+	. .cuberc || die ".cuberc file does not exist"
 
 	matching_records=$(recsel -t environment -e "name = '$env_name' && workload = '$workload_name'" -p id environments.rec | wc -l)
 
 	if [[ $matching_records == 0 ]]
 	then
 		logger -s --priority local7.error "cube-env-set: ERROR: name '$env_name' for workload '$workload_name' does not exist in environment recfile"
-		die
+		die "cube-env-set-local: no matching records found"
 	fi
-
-	recsel -t environment -e "name = '$env_name' && workload = '$workload_name'" environments.rec > .environment || die
 	
-	cube-env-eval
+	recsel -t environment -e "name = '$env_name' && workload = '$workload_name'" environments.rec > .environment || die "cube-env-set-local: recsel failed"
+	
+	cube-env-eval || die "cube-env-set-local -> cube-env-eval failed"
+	
+	return 0
+}
 
-	cat <<- EOF >> .environment
-	AZURE_TENANT_ID: $(cube-env-current-tenant-id)
-	AZURE_SUBSCRIPTION_ID: $(cube-env-workload-subscription-id)
-	AZURE_CLIENT_SECRET: $(cube-env-get-client-secret)
-	AZURE_CLIENT_ID: $(cube-env-get-client-id)
-	ARM_ENVIRONMENT: usgovernment
+cube-env-eval()
+{
+	eval "$(awk -F ': ' '{print "export " $1"="$2}' < .environment)" || die "cube-env-eval failed"
+}
+
+cube-env-set-local-sp()
+{
+	cat <<- EOF > .sp-environment.json
+	{
+		"AZURE_TENANT_ID":"$(cube-env-current-tenant-id)",
+		"AZURE_SUBSCRIPTION_ID":"$(cube-env-workload-subscription-id)",
+		"AZURE_CLIENT_SECRET":"$(cube-env-get-client-secret)",
+		"AZURE_CLIENT_ID":"$(cube-env-get-client-id)",
+		"ARM_ENVIRONMENT":"usgovernment"
+	}
 	EOF
+}
 
-	cube-env-eval
+cube-env-sp-client-id()
+{
+	jq -r .AZURE_CLIENT_ID .sp-environment.json || die "cube-env-sp-client-id failed"
+}
+
+cube-env-sp-client-secret()
+{
+	jq -r .AZURE_CLIENT_SECRET .sp-environment.json || die "cube-env-sp-client-secret failed"
 }
 
 cube-env-validate()
@@ -598,15 +622,10 @@ cube-env-validate()
 	}
 }
 
-cube-env-eval()
-{
-	[ -f ./.environment ] || die
-	eval "$(sed 's/: /=/'<.environment)"
-}
-
 cube-env-unset-local()
 {
 	eval $(awk -F ':' '{print "unset " $1}' < .environment) || die
+	rm .environment
 }
 
 cube-env-config-module()
@@ -642,40 +661,42 @@ cube-env-version()
 	echo "${version_tag#v}"
 }
 
-cube-cli-latest-version-tag()
-{
-	git tag || die | sort -V | tail -n1
-}
-
-cube-cli-latest-version-number()
-{
-	local tag=cube-cli-latest-version-tag
-	echo ${tag#v}
-}
-
-cube-cli-gen-workload-config()
-{
-	cat <<-HERE
-	#!/usr/bin/env bash
-
-	# One of: WORKLOAD, MODULE
-	CUBE_REPO_TYPE=WORKLOAD
-
-	# The version at which to pin CUBE Core module.  Can be any valid git ref
-	# accepted by \`git checkout <ref>\` Assumes a workflow similar to
-	# https://www.git-scm.com/docs/gitsubmodules#_workflow_for_a_third_party_library
-	#
-	# to always use the latest release try
-	#CUBE_CORE_VERSION=\$(cube-cli-latest-version-tag)
-	CUBE_CORE_VERSION=$(cube-cli-latest-version-tag)
-
-	# This is completely fake. Stay tuned...
-	CUBE_FEATURES=(vdi,datalake_gen2,gh_ent)
-	HERE
-}
-
 cube-cli-subscription-deployment-id()
 {
 	echo "cube-cli-subscription-deployment-id"
 	az account subscription list --query "[?displayName=='$(cube-env-repo-name)'].subscriptionId" -o tsv 2>/dev/null || die "failed to get subscription id!"
+}
+
+cube-terraform-platform-state-import()
+{
+	local addr=$1
+	local id=$2
+
+	terraform import \
+		$(cube-platform-terraform-vars) \
+		${addr} \
+		${id} || die
+}
+
+cube-terraform-state-import()
+{
+	local addr=$1
+	local id=$2
+
+	terraform import \
+		$(cube-workload-terraform-dev-vars) \
+		${addr} \
+		${id} || die
+}
+
+cube-terraform-state-rm()
+{
+	local addr=$1
+
+	terraform state rm ${addr} || die
+}
+
+latest-release() {
+	gh release list --repo battellecube/$1	`# get all the module info` \
+		| awk '/Latest/{print $1}'			`# awk out the latest version`
 }

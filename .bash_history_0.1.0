@@ -1076,3 +1076,914 @@ dotgit status
 dot git fetch
 #1666732360
 dotgit fetch
+#1668535969
+cd ../..
+#1668535970
+ls
+#1668535976
+cd test-cube-1/
+#1668535979
+ls
+#1668535993
+git branch 
+#1668535997
+git branch -v
+#1668536094
+la
+#1668536114
+cd ../q-b-mccubeface/
+#1668536116
+ls
+#1668536145
+cube env list
+#1668536154
+cube env --help
+#1668536166
+cube env set foo
+#1668536403
+set -x; cube env set foo
+#1668536417
+set +x
+#1668536785
+cube env set foo
+#1668615995
+cd ../../storage-account/
+#1668615997
+git fetch
+#1668616005
+git checkout main
+#1668616007
+git pull
+#1668616027
+git merge origin/remove-file-storage-hack 
+#1668616030
+git push
+#1668616049
+cd ../terraform-cube-v
+#1668616052
+cd ../terraform-cube-vdi
+#1668616055
+git fetch
+#1668616063
+git checkout main
+#1668616066
+git pull
+#1668616075
+git merge origin/remove-file-storage-hack 
+#1668616077
+git push
+#1668616091
+cd ../terraform-cube-core/
+#1668616094
+git fetch
+#1668616103
+git checkout amin
+#1668616108
+git checkout main
+#1668616115
+git pull
+#1668616125
+git merge origin/remove-file-storage-hack 
+#1668616132
+git log
+#1668616142
+git push
+#1668783179
+cd ../../cube-program/
+#1668783180
+ls
+#1668783182
+ls bin/
+#1668783186
+vi
+#1669053915
+cd ../q-b-mccubeface/
+#1669053921
+git submodule status
+#1669054273
+az resource list
+#1669054306
+az resource list --subscription q-b-mccubeface
+#1669054334
+az resource list --subscription q-b-mccubeface --type "Microsoft.Network/virtualNetworks"
+#1669054354
+az resource list --subscription q-b-mccubeface --resource-type "Microsoft.Network/virtualNetworks"
+#1669054461
+az network vnet peering list -g q-b-mccubeface-v1.2.2 --vnet-name q-b-mccubeface-v1.2.2
+#1669054494
+az network vnet peering list --subscription f59139ec-932c-4419-ac4f-b01a05ed5459 -g q-b-mccubeface-v1.2.2 --vnet-name q-b-mccubeface-v1.2.2
+#1669054528
+az network vnet peering list --subscription f59139ec-932c-4419-ac4f-b01a05ed5459 -g q-b-mccubeface-v1.2.2 --vnet-name q-b-mccubeface-v1.2.2 --query [].remoteVirtualNetwork.resourceGroup
+#1669054536
+az network vnet peering list --subscription f59139ec-932c-4419-ac4f-b01a05ed5459 -g q-b-mccubeface-v1.2.2 --vnet-name q-b-mccubeface-v1.2.2 --query [].remoteVirtualNetwork.resourceGroup -o tsv
+#1669054591
+hist
+#1669054607
+az resource list --subscription q-b-mccubeface --resource-type "Microsoft.Network/virtualNetworks" -o tsv
+#1669054618
+az resource list --subscription q-b-mccubeface --resource-type "Microsoft.Network/virtualNetworks"
+#1669054654
+az network vnet peering list --subscription f59139ec-932c-4419-ac4f-b01a05ed5459 -g q-b-mccubeface-v1.2.2 --vnet-name q-b-mccubeface-v1.2.2 --query [].remoteVirtualNetwork.resourceGroup -o tsv --query [].name
+#1669054678
+az resource list --subscription q-b-mccubeface --resource-type "Microsoft.Network/virtualNetworks" --query "[].name"
+#1669054682
+az resource list --subscription q-b-mccubeface --resource-type "Microsoft.Network/virtualNetworks" --query "[].name" -o tsv
+#1669054738
+az resource list --subscription q-b-mccubeface --resource-type "Microsoft.Network/virtualNetworks" --query "[].name" -o tsv | while read vnet; do az network vnet peering list --subscription f59139ec-932c-4419-ac4f-b01a05ed5459 -g q-b-mccubeface-v1.2.2 --vnet-name $vnet --query [].remoteVirtualNetwork.resourceGroup -o tsv
+#1669054744
+az resource list --subscription q-b-mccubeface --resource-type "Microsoft.Network/virtualNetworks" --query "[].name" -o tsv | while read vnet; do az network vnet peering list --subscription f59139ec-932c-4419-ac4f-b01a05ed5459 -g q-b-mccubeface-v1.2.2 --vnet-name $vnet --query [].remoteVirtualNetwork.resourceGroup -o tsv; done
+#1669054800
+az resource list --subscription q-b-mccubeface --resource-type "Microsoft.Network/virtualNetworks" --query  -o tsv
+#1669054806
+az resource list --subscription q-b-mccubeface --resource-type "Microsoft.Network/virtualNetworks" -o tsv
+#1669054811
+az resource list --subscription q-b-mccubeface --resource-type "Microsoft.Network/virtualNetworks"
+#1669054837
+az resource list --subscription q-b-mccubeface --resource-type "Microsoft.Network/virtualNetworks" --query "[].[resourceGroup,name]
+"
+#1669054866
+az resource list --subscription q-b-mccubeface --resource-type "Microsoft.Network/virtualNetworks" --query "[].name" -o tsv | while read vnet; do az network vnet peering list --subscription f59139ec-932c-4419-ac4f-b01a05ed5459 -g $vnet --vnet-name $vnet --query [].remoteVirtualNetwork.resourceGroup -o tsv; done
+#1669054886
+az resource list --subscription q-b-mccubeface --resource-type "Microsoft.Network/virtualNetworks" --query "[].name" -o tsv | while read vnet; do az network vnet peering list --subscription f59139ec-932c-4419-ac4f-b01a05ed5459 -g $vnet --vnet-name $vnet --query [].remoteVirtualNetwork.resourceGroup -o tsv; done|sort -u
+#1669061733
+cube workload module list
+#1669061741
+touch .cuberc
+#1669061743
+cube workload module list
+#1669061795
+cube workload module list >.cuberc 
+#1669061799
+vi .cuberc 
+#1669061838
+cube workload module list
+#1669061898
+git submodule status --recursive 
+#1669061905
+ls modules/
+#1669061912
+ls modules/terraform-cube-vdi/
+#1669061957
+git submodule update --init --recursive 
+#1669061972
+cube workload module list
+#1669061985
+git submodule status --recursive 
+#1669062130
+tree
+#1669062136
+sudo apt install tree
+#1669062149
+tree
+#1669062170
+tree modules/
+#1669062195
+tree modules/ -d
+#1669062396
+tree modules/ -d -i modules
+#1669062417
+tree -l modules modules/
+#1669062425
+tree -l modules -d modules/
+#1669062491
+tree -I modules -d modules/
+#1669062520
+tree -I 'modules|docs|disable -d modules/
+#1669062527
+tree -I 'modules|docs|disable' -d modules/
+#1669062533
+tree -I 'modules|docs|disabled' -d modules/
+#1669062555
+tree -I 'docs|disabled' -d modules/
+#1669062597
+git submodule update --init --recursive 
+#1669062634
+git submodule --quiet  update --init --recursive
+#1669062642
+git submodule --help
+#1669062988
+tree -I 'docs|disabled' -d modules/
+#1669063019
+cube workload module list
+#1669063218
+cube workload module list +r
+#1669063224
+cube workload module list -r
+#1669063245
+cube workload module list --recursive
+#1669063283
+cube workload module list
+#1669063286
+cube workload module list -r
+#1669068693
+git status
+#1669068696
+git fetch
+#1669068704
+git status
+#1669068710
+ls modules/
+#1669068732
+ls
+#1669068737
+ll
+#1669068752
+cat scaling.tf 
+#1669068774
+ls modules/hostpool-scaling/
+#1669130032
+cd ../cube-env/
+#1669130033
+ls
+#1669130126
+git checkout cube-workload-list 
+#1669130129
+git status
+#1669130134
+git rebase origin/main
+#1669130139
+git checkout main
+#1669130147
+git merge cube-workload-list 
+#1669130152
+git fetch
+#1669130161
+git status
+#1669130195
+git checkout cube-workload-module-list 
+#1669130203
+git rebase origin/main 
+#1669130209
+git checkout main
+#1669130217
+git merge cube-workload-module-list 
+#1669130220
+git push
+#1669130240
+git checkout cube-workload-status 
+#1669130250
+git rebase origin/main 
+#1669130264
+vi src/Makefile.am 
+#1669130300
+git status
+#1669130313
+git add .
+#1669130320
+git rebase --continue 
+#1669130328
+git log
+#1669130339
+git push -f
+#1669130358
+git status
+#1669130383
+vi src/cube-workload.in 
+#1669130500
+git rebase --abort 
+#1669130502
+git status
+#1669130504
+git olg
+#1669130508
+git log
+#1669146753
+git status
+#1669146756
+git log
+#1669146781
+cat src/cube-workload-status.in 
+#1669146802
+git branch --all --no-merged origin/main
+#1669146823
+cd build/
+#1669146829
+make install
+#1669146839
+cube workload --help
+#1669146852
+cube workload status --help
+#1669146870
+cube workload status --name q-b-mccubeface
+#1669146884
+az login -t battelle.us
+#1669146897
+cube workload status --name q-b-mccubeface
+#1669741759
+thethunotehutet
+#1669744618
+cd ../q-b-mccubeface/
+#1669744623
+la
+#1669744632
+awk -F ': ' '{print "export " $1"="$2}' < .environment
+#1669744645
+cat .environment 
+#1669744651
+rm .environment 
+#1669744654
+awk -F ': ' '{print "export " $1"="$2}' < .environment
+#1669744819
+jq -r .AZURE_CLIENT_ID .sp-environment.json
+#1669746307
+la
+#1669746324
+cat .cuberc 
+#1669746616
+git submodule foreach gh release list | awk '/Latest/{print $1}'
+#1669746630
+git submodule foreach gh release list #| awk '/Latest/{print $1}'
+#1669747019
+git submodule foreach pwd;gh release list | awk '/Latest/{print $1}'
+#1669747034
+git submodule foreach (pwd;gh release list | awk '/Latest/{print $1}')
+#1669747047
+git submodule foreach $(pwd;gh release list | awk '/Latest/{print $1}')
+#1669747075
+git submodule foreach echo $(pwd;gh release list | awk '/Latest/{print $1}')
+#1669747117
+git submodule foreach echo "$PWD $(gh release list | awk '/Latest/{print $1}')"
+#1669747136
+git submodule foreach echo "$(gh release list | awk '/Latest/{print $1}')"
+#1669747158
+git submodule foreach gh release list | awk '/Latest/{print $1}'
+#1669747215
+gh release list
+#1669747228
+cd modules/hostpool-scaling/
+#1669747229
+gh release list
+#1669747248
+git submodule foreach gh release list #| awk '/Latest/{print $1}'
+#1669747255
+cd -
+#1669747258
+git submodule foreach gh release list #| awk '/Latest/{print $1}'
+#1669747285
+git submodule foreach gh release list #| awk '/Latest|Entering/{print $1}'
+#1669747291
+git submodule foreach gh release list | awk '/Latest|Entering/{print $1}'
+#1669747352
+git submodule foreach gh release list | awk '/Latest/{print $1}; /Entering/{print $2}'
+#1669747378
+awk --help
+#1669747441
+git submodule foreach gh release list | awk '{BEGIN ORS=" "} /Latest/{print $1}; /Entering/{print $2}'
+#1669747446
+git submodule foreach gh release list | awk '{BEGIN ORS=" "}; /Latest/{print $1}; /Entering/{print $2}'
+#1669747460
+git submodule foreach gh release list | awk 'BEGIN {ORS=" "}; /Latest/{print $1}; /Entering/{print $2}'
+#1669747478
+git submodule foreach gh release list | awk 'BEGIN {ORS=" "}; /Latest/{print $1}; /Entering/{print $2 "\n"}'
+#1669747643
+git submodule foreach gh release list | awk 'BEGIN {ORS=" "}; /Latest/{print $1 "\n"}; /Entering/{print $2}'
+#1669747741
+git submodule foreach gh release list | awk 'BEGIN {ORS=" "}; /Latest/{print $1 "\n"}; /Entering/{print $2}'| tr ' ' =
+#1669747752
+man tr
+#1669747793
+man cut
+#1669747809
+git submodule foreach gh release list | awk 'BEGIN {ORS=" "}; /Latest/{print $1 "\n"}; /Entering/{print $2}'| tr ' ' =
+#1669747841
+git submodule foreach gh release list | awk 'BEGIN {ORS=''}; /Latest/{print $1 "\n"}; /Entering/{print $2}'| tr ' ' =
+#1669747847
+git submodule foreach gh release list | awk 'BEGIN {ORS=""}; /Latest/{print $1 "\n"}; /Entering/{print $2}'| tr ' ' =
+#1669747886
+git submodule foreach gh release list | awk 'BEGIN {ORS="\t"}; /Latest/{print $1 "\n"}; /Entering/{print $2}'| tr ' ' =
+#1669747912
+git submodule foreach gh release list | awk 'BEGIN {ORS=""}; /Latest/{print $1 "\n"}; /Entering/{print $2 "\t"}'| tr ' ' =
+#1669747927
+git submodule foreach gh release list | awk 'BEGIN {ORS=""}; /Latest/{print $1 "\n"}; /Entering/{print $2 "\t"}'| tr '\t' =
+#1669747942
+git submodule foreach gh release list | awk 'BEGIN {ORS=""}; /Latest/{print $1 "\n"}; /Entering/{print $2 "\t"}'| tr '\t' =|tr -d "'"
+#1669747970
+git submodule foreach gh release list | awk 'BEGIN {ORS=""}; /Latest/{print $1 "\n"}; /Entering/{print $2 "\t"}'| tr '\t' =|tr -d "'"|awk -F/ '{print $2}'
+#1669747998
+cat .cuberc 
+#1669748163
+cube workload module update
+#1669748638
+man awk
+#1669748914
+cube workload module update
+#1669751268
+cat .cuberc 
+#1669751821
+cube workload module update
+#1669751923
+cube-workload-module-versions() {
+git submodule foreach gh release list   `# get all the module info`     | awk -f <(cat - <<-'END'
+        BEGIN { ORS="" }
+        /Latest/{print $1 "\n"}
+        /Entering/{print $2 "\t"}
+        END
+    )                                   `# awk-out the module paths and versions as TSVs`\
+    | tr '\t' '='                       `# get us to path=version` \
+    | tr -d "'"                         `# strip any quoting` \
+    | awk -F/ '{print $2}'              `# get "basename" of path`
+}
+
+'
+"
+}
+#1669752655
+cube workload module --help
+#1669752664
+cube workload --help
+#1669752677
+cube workload --show-releases
+#1669752741
+cube workload --show-releases a
+#1669752813
+cube workload --show-releases
+#1669753001
+cube workload --help
+#1669753006
+cube workload module --help
+#1669753353
+cube workload module --releseas
+#1669753362
+cube workload module --releases
+#1669905606
+cd ../cube-env/
+#1669912916
+vi
+#1669924986
+git status
+#1669924991
+git diff
+#1669925006
+vi
+#1669996115
+cd ../totally-fake-workload/
+#1669996128
+cube workload module add --help
+#1669999124
+cube workload module update
+#1669999131
+ls
+#1669999170
+cube workload module update
+#1669999337
+cube workload module add
+#1669999342
+git branch
+#1669999346
+git checkout test
+#1669999353
+git checkout -b test
+#1669999356
+cube workload module add
+#1670001110
+cube workload module add --help
+#1670001114
+cube workload module add
+#1670001304
+cube workload module add -n foo
+#1670001424
+cube workload module add
+#1670001432
+cube workload module add -n
+#1670001480
+cube workload module add
+#1670001485
+cube workload module add -n foo
+#1670001575
+cube workload module add
+#1670001580
+cube workload module add foo
+#1670001586
+cube workload module add foo bar
+#1670001722
+cube workload module add
+#1670001761
+cube workload module add -n
+#1670001763
+cube workload module add -n foo
+#1670001913
+git branch
+#1670002098
+cube workload module add -n foo
+#1670002212
+cube workload module add -n foo -b foo
+#1670002325
+cube workload module add -n foo
+#1670002642
+cube workload module add
+#1670002717
+cube workload module add -name foo
+#1670003368
+cube workload module add -name foo -b
+#1670003371
+cube workload module add -name foo -b bar
+#1670003382
+cube workload module add -n name foo -b bar
+#1670003397
+cube workload module add -b bar
+#1670003821
+cube workload module add -n name foo
+#1670003905
+cube workload module add -n name storage-account
+#1670003918
+cube workload module add -n storage-account
+#1670003923
+ls
+#1670003936
+git status
+#1670004331
+git clear
+#1670004335
+git status
+#1670004344
+cube workload module add -n storage-account
+#1670004380
+git status
+#1670004413
+grep -r 'storage-accounts' .
+#1670004420
+grep -r 'storage-account' .
+#1670004462
+git submodule deinit modules/storage-account
+#1670004483
+ls modules/
+#1670004513
+cd ..
+#1670004519
+rm -rf totally-fake-workload/
+#1670004573
+gh repo clone battellecube/totally-fake-workload
+#1670004576
+cd totally-fake-workload/
+#1670004584
+cube workload module add -n storage-account
+#1670004599
+cube workload module add -n storage-account -b test-add
+#1670004603
+git status
+#1670004632
+git rm modules/storage-account/
+#1670004642
+git rm modules/storage-account/ -f
+#1670004644
+git status
+#1670004650
+cube workload module add -n storage-account -b test-add
+#1670004801
+git checkout main
+#1670004803
+cube workload module add -n storage-account -b test-add
+#1670004897
+git branch
+#1670005304
+cube workload module add -n storage-account -b test-add
+#1670005321
+cube workload module add -n storage-account -b test-add2
+#1670005349
+ls modules/
+#1670005361
+cd ..
+#1670005368
+rm -rf totally-fake-workload/
+#1670005372
+gh repo clone battellecube/totally-fake-workload
+#1670005376
+cd totally-fake-workload/
+#1670005386
+cube workload module add -n storage-account -b test-add2
+#1670005393
+git status
+#1670005404
+cd ..
+#1670005407
+rm -rf totally-fake-workload/
+#1670005410
+gh repo clone battellecube/totally-fake-workload
+#1670005413
+cd totally-fake-workload/
+#1670005422
+cube workload module add -n storage-account
+#1670006017
+git status
+#1670006022
+git checkout -b foo
+#1670006025
+cube workload module add -n storage-account
+#1670006132
+git status
+#1670006162
+cube workload module add -n storage-account
+#1670006167
+:w
+#1670006219
+cube workload module add -n storage-account
+#1670006323
+git status
+#1670006329
+git checkout main
+#1670006332
+cube workload module add -n storage-account
+#1670006340
+cube workload module add -h
+#1670008696
+cube workload module list -r
+#1670008736
+cat core.tf 
+#1670008765
+cube env create --help
+#1670008775
+az login -t battelle.us
+#1670009839
+cube env create
+#1670009881
+command -V cube
+#1670009960
+cube env create
+#1670010788
+cube workload status -n ravenstar
+#1670010838
+cube workload status -n q-b-mccubeface
+#1670011283
+az resource list --subscription ravenstar --resource-type "Microsoft.Network/virtualNetworks" --query "[].name" -o tsv | while read vnet; do az network vnet peering list --subscription f59139ec-932c-4419-ac4f-b01a05ed5459 -g $vnet --vnet-name $vnet --query [].remoteVirtualNetwork.resourceGroup -o tsv; done|sort -u
+#1670011311
+az resource list --subscription ravenstar --resource-type "Microsoft.Network/virtualNetworks" --query "[].name" -o tsv #| while read vnet; do az network vnet peering list --subscription f59139ec-932c-4419-ac4f-b01a05ed5459 -g $vnet --vnet-name $vnet --query [].remoteVirtualNetwork.resourceGroup -o tsv; done|sort -u
+#1670011404
+az resource list --subscription ravenstar --resource-type "Microsoft.Network/virtualNetworks" --query "[].name" -o tsv | while read vnet; do az network vnet peering list --subscription ravenstar -g $vnet --vnet-name $vnet --query [].remoteVirtualNetwork.resourceGroup -o tsv; done|sort -u
+#1670011472
+cube workload status -n ravenstar
+#1670260460
+cd cube-env/
+#1670260674
+git status
+#1670260676
+vi
+#1670263831
+git status
+#1670263841
+git restore src/cube-env-create.in
+#1670263843
+git status
+#1670263926
+cat >wonder-twin-powers-activate.ps1
+#1670263952
+powershell.exe wonder-twin-powers-activate.ps1 
+#1670263971
+powershell.exe --help
+#1670264017
+powershell.exe -File wonder-twin-powers-activate.ps1 
+#1670264089
+vi wonder-twin-powers-activate.ps1 
+#1670264132
+chmod +x wonder-twin-powers-activate.ps1 
+#1670264134
+./wonder-twin-powers-activate.ps1 
+#1670264204
+powershell.exe Install-Module AzureAD
+#1670264290
+./wonder-twin-powers-activate.ps1 
+#1670264863
+vi wonder-twin-powers-activate.ps1 
+#1670271931
+cd
+#1670271937
+cd .local/libexec/
+#1670271939
+ls
+#1670271955
+mv wonder-twins-power-activate.sh wonder-twins-power-activate.ps1
+#1670271963
+vi wonder-twins-power-activate.ps1 
+#1670271988
+vi cube-env-create.sh 
+#1670272007
+cube env create
+#1670337639
+cd src/
+#1670337663
+gh repo clone battellecube/totally-fake-workload
+#1670337667
+cd totally-fake-workload/
+#1670337669
+ls
+#1670337678
+cube env create --help
+#1670338042
+cube env create -n sandman -p cube-platform-v0.6.0 -c 10.237.3.0/24 -w totally-fake-workload -s q-b-mccubeface
+#1670338203
+git status
+#1670338256
+git ignore .sp-environment.json
+#1670338259
+git status
+#1670338263
+ls
+#1670338536
+cube env init --help
+#1670338543
+cube env init
+#1670338562
+git branch
+#1670338564
+git fetch
+#1670338635
+git checkout sandman 
+#1670338638
+cube env init
+#1670338653
+ls
+#1670338656
+ll
+#1670338859
+rm terraform-cube-core.tf 
+#1670338889
+git submodule update --init --recursive 
+#1670338925
+ln -s modules/terraform-cube-core/core.template terraform-cube-core.tf
+#1670338930
+cube env init
+#1670338951
+cube env apply
+#1670339380
+cube env create -n sandman -p cube-platform-v0.6.0 -c 10.237.2.0/24 -w totally-fake-workload -s q-b-mccubeface
+#1670339478
+cube env apply
+#1670339603
+cube env destroy --help
+#1670339709
+cube env destroy
+#1670339957
+cube env create -n sandman -p cube-platform-v0.6.0 -c 10.237.2.0/24 -w totally-fake-workload -s q-b-mccubeface
+#1670340007
+cube env apply
+#1670341401
+cube env --help
+#1670341414
+cube env grant --help
+#1670341445
+cube env grant -u sandman@battelle.us
+#1670341566
+cube env grant -i sandman@battelle.us -uma
+#1670341880
+cube env destroy
+#1670342565
+cube workload destroy -n totally-fake-workload
+#1670342577
+cube workload delete -n totally-fake-workload
+#1670342604
+cube workload status -n totally-fake-workload
+#1670342632
+cube env --help
+#1670342642
+cube env delete --help
+#1670342671
+cube env delete -n sandman -w totally-fake-workload
+#1670342767
+cube workload status -n totally-fake-workload
+#1670432545
+cd ..
+#1670432553
+sudo apt update
+#1670432588
+sudo apt dist-upgrade 
+#1670432755
+cube --version
+#1670432903
+cube create --help
+#1670432915
+hash -d cube
+#1670432917
+cube create --help
+#1670433021
+az login -t battelle.us
+#1670433038
+cube create -n zero-wing
+#1670433084
+gh repo clone battellecube/zero-wing
+#1670433087
+cd zero-wing/
+#1670433089
+git status
+#1670433092
+ls
+#1670433097
+ll
+#1670433157
+git submodule update --init --recursive
+#1670433166
+ll
+#1670433188
+ln -sf modules/terraform-cube-core/core.template terraform-cube-core.tf 
+#1670433189
+ll
+#1670433352
+git checkout -b initial-release
+#1670433369
+git branch -D initial-release 
+#1670433373
+git status
+#1670434149
+cube env create -n prep -p cube-platform-v0.6.0 -c 10.237.42.0/24 -w zero-wing -s q-b-mccubeface
+#1670434335
+cube init
+#1670434343
+cube env init
+#1670434354
+git checkout prep
+#1670434356
+git fetch
+#1670434364
+git checkout prep
+#1670434371
+git add .
+#1670434383
+git commit -m'touch up symlink for core'
+#1670434388
+cube env init
+#1670434408
+cube env apply
+#1670441824
+git log
+#1670441862
+git tag -as v0.0.0
+#1670441893
+git push --tags
+#1670441908
+git push
+#1670442305
+cube env destroy
+#1670442315
+git
+#1670442562
+cd ../cube-
+#1670442564
+cd ../cube-env/
+#1670442566
+vi
+#1670879537
+cd ..
+#1670879550
+gh repo clone battellecube/delete-me
+#1670879553
+cd delete-me/
+#1670879562
+vi .github/workflows/deploy-environment.yml 
+#1670882730
+git status
+#1670882735
+git pull
+#1670882744
+git fetch
+#1670882746
+git status
+#1670882753
+git fetch -f
+#1670882758
+git status
+#1670882763
+cd ..
+#1670882769
+rm -rf delete-me/
+#1670882774
+gh repo clone battellecube/delete-me
+#1670882777
+cd delete-me/
+#1670882780
+vi
+#1670940704
+cd ../cube-env/
+#1670940706
+vi
+#1671122973
+cd ../delete-me/
+#1671122976
+git status
+#1671122979
+ls
+#1671122988
+la
+#1671122991
+git status
+#1671123000
+ls .git
+#1671123037
+hist|grep delete
+#1671123108
+cube_ env delete --help
+#1671123135
+cube_ env delete -n main -w delete-me
+#1671123149
+az login -t battelle.us
+#1671123159
+cube_ env delete -n main -w delete-me
+#1671123188
+cd ..
+#1671123190
+rm -rf delete-me/
+#1671123235
+cube_ workload create -n delete-me
+#1671123435
+ls
+#1671123463
+recsel -t environment environments.rec 
+#1671123485
+cube_ workload create -n delete-me

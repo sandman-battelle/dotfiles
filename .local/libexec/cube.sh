@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # shellcheck disable=SC2034
-VERSION=0.6.1-2-g38ae293-dirty
+VERSION=0.8.1-5-g0ec94d4-dirty
 
 # shellcheck disable=SC1083
 # @getoptions
@@ -17,6 +17,7 @@ parser_definition() {
 	cmd status -- "WIP: Shows environment status information"
 	cmd repo -- "Manages CUBE repositories"
 	cmd workload -- "Manages CUBE workloads"
+	cmd create -- "Alias to workload create"
 }
 # @end
 
@@ -41,6 +42,9 @@ if [ $# -gt 0 ]; then
 			;;
 		workload)
 			/home/sandman/.local/libexec/cube-workload.sh "$@"
+			;;
+		create)
+			/home/sandman/.local/libexec/cube-workload-create.sh "$@"
 			;;
 		--) # no subcommand, arguments only
 	esac

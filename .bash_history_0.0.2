@@ -614,3 +614,1396 @@ git branch -D environment-store
 git fetch
 #1666100476
 git branch
+#1668538805
+echo $CUBE_TRACE
+#1668538833
+declare
+#1668538845
+declare |less
+#1668539015
+user-installed-pkgs 
+#1668539166
+declare  -t CUBE_TRACE=1
+#1668539187
+echo $CUBE_TRACE
+#1668539202
+trap "echo VARIABLE is being used here." DEBUG
+#1668539210
+echo $CUBE_TRACE
+#1668539239
+trap --help
+#1668539394
+trap -l
+#1668539415
+trap DEBUG
+#1668539420
+trap -l
+#1668539428
+echo $CUBE_TRACE
+#1668539438
+declare  -t CUBE_TRACE=1
+#1668539441
+echo $CUBE_TRACE
+#1668539457
+trap "echo CUBE_TRACE is being used here." DEBUG
+#1668539472
+echo $CUBE_TRACE
+#1668539493
+trap DEBUG
+#1668539510
+hist
+#1668539546
+declare -t foo() {echo "foo called"; }
+#1668539554
+declare -t foo() { echo "foo called"; }
+#1668539569
+declare --help
+#1668539593
+trap --help
+#1668539657
+trace_func() {echo $1 was called; }
+#1668539664
+trace_func() { echo $1 was called; }
+#1668539673
+trace_func foo
+#1668539730
+trap trace_func RETURN
+#1668539736
+foo
+#1668539742
+trace_func 
+#1668539777
+trap trace_func '$FUNCNAME' RETURN
+#1668539794
+trap 'trace_func $FUNCNAME' RETURN
+#1668539797
+trace_func 
+#1668539815
+trap 'trace_func $HOME' RETURN
+#1668539817
+trace_func 
+#1668540022
+trap 'echo $BASH_COMMAND' RETURN
+#1668540027
+trace_func 
+#1668540063
+trap 'echo $BASH_COMMAND' DEBUG
+#1668540078
+trace_func 
+#1668540282
+c="cube-env-create"
+#1668540288
+trap DEBUG
+#1668540293
+echo $c
+#1668540312
+echo ${c:-cube}
+#1668540318
+echo ${c:-cubex}
+#1668540566
+echo ${c#cube}
+#1668540585
+echo ${c##cube}
+#1668540744
+echo [[ ${c#cube} = $c ]]
+#1668540766
+[[ ${c#cube} = $c ]] && echo "cube"
+#1668540784
+[[ ${c#cube} = $c ]] || echo "cube"
+#1668540801
+c=notcube-env-create
+#1668540802
+[[ ${c#cube} = $c ]] || echo "cube"
+#1668540808
+c="cube-env-create"
+#1668540810
+[[ ${c#cube} = $c ]] || echo "cube"
+#1668540884
+trace-cube-funcs() { [[ ${c#cube} = $c ]] || echo $c; ]
+#1668540900
+trace-cube-funcs() { [[ ${c#cube} = $c ]] || echo $c ] }
+#1668540907
+trace-cube-funcs() { [[ ${c#cube} = $c ]] || echo $c ]] }
+#1668540921
+trace-cube-funcs() { [[ ${c#cube} = $c ]] || echo $c }
+#1668540931
+trace-cube-funcs() { [[ ${c#cube} == $c ]] || echo $c }
+#1668540937
+trace-cube-funcs() { [[ ${c#cube} == $c ]] || echo $c; }
+#1668540943
+echo $c
+#1668540952
+trace-cube-funcs 
+#1668540971
+trace-cube-funcs() { [[ ${1#cube} == $1 ]] || echo $1; }
+#1668540981
+trace-cube-funcs cube-env-create
+#1668540989
+trace-cube-funcs env-create
+#1668541026
+trap 'trace-cube-funcs $BASH_COMMAND' DEBUG
+#1668541031
+echo
+#1668541042
+cube --help
+#1668541059
+cube-log 
+#1668541073
+cube-env-config 
+#1668541175
+hist
+#1668541211
+cd
+#1668541217
+cube env create foo
+#1668637644
+cd ..
+#1668637650
+git status
+#1668637657
+git add .
+#1668638219
+git status
+#1668638221
+git add .
+#1668638237
+git commit -m'add workload to recfile'
+#1668638239
+git push
+#1668638365
+git status
+#1668638367
+git add .
+#1668638376
+git commit --amend
+#1668638380
+git push -f
+#1668643514
+gh repo create --help
+#1668643782
+gh --help
+#1668716235
+git log
+#1668783659
+cd ..
+#1668783661
+git status
+#1668783664
+git add .
+#1668783681
+git commit -m'add auto build script'
+#1668783687
+git push
+#1668783820
+apt show inotify-tools 
+#1668784559
+git status
+#1668784565
+git add .
+#1668784587
+git commit -m'add inotify tools to build deps'
+#1668784589
+git push
+#1668786289
+git status
+#1668786295
+git diff
+#1668786306
+git fetch
+#1668786314
+git rebase origin/main 
+#1668786320
+git add .
+#1668786322
+git rebase origin/main 
+#1668786339
+git commit -m'formatting'
+#1668786343
+git rebase origin/main 
+#1668786384
+cube env list
+#1668786399
+az auth login
+#1668786434
+az login -t battelle.us
+#1668786519
+cd ..
+#1668786524
+cube env list
+#1668786716
+git status
+#1668786723
+git push
+#1668786844
+cp src/cube-workload-list.in src/cube-workload-status.in
+#1668787182
+gh repo view battallecube/cube-env
+#1668787192
+gh repo view battellecube/cube-env
+#1668787203
+gh repo view battellecube/cube-env|lest
+#1668787207
+gh repo view battellecube/cube-env|less
+#1668787220
+gh repo --help
+#1668792533
+head NEWS 
+#1668792538
+git status
+#1668792765
+cat ~/.bashrc 
+#1668793718
+git status
+#1668793725
+git add .
+#1668793727
+git log
+#1668793736
+git status
+#1668793756
+git restore --staged 
+#1668793758
+git status
+#1668793762
+git restore --staged .
+#1668793764
+git status
+#1668793772
+git checkout main
+#1668793786
+git status
+#1668793800
+git stash
+#1668793803
+git checkout amin
+#1668793808
+git checkout main
+#1668793810
+git status
+#1668793815
+git fetch
+#1668793819
+git pull
+#1668793824
+git status
+#1668793836
+git checkout cube-workload-status
+#1668793843
+git checkout -b cube-workload-status
+#1668793848
+git stash pop
+#1668793852
+gi status
+#1668793856
+git status
+#1668793900
+git add .
+#1668793904
+git status
+#1668793922
+git commit -m'add cube workload status stub'
+#1668793941
+git branch --all
+#1668793950
+git checkout gh-auth-token-update 
+#1668793954
+git log
+#1668793963
+git rebase origin/main
+#1668793967
+git log
+#1668793975
+dch -e
+#1668793998
+git status
+#1668794001
+git add .
+#1668794010
+git commit -m'touch up changelog'
+#1668794012
+git status
+#1668794014
+git log
+#1668794019
+git push
+#1668794029
+git log
+#1668794047
+git checkout main
+#1668794049
+git log
+#1668794059
+git checkout gh-auth-token-update 
+#1668794065
+git reset origin/main
+#1668794068
+git status
+#1668794082
+git diff
+#1668794107
+git add changelog
+#1668794114
+git add debian/changelog 
+#1668794124
+git restore debian/control
+#1668794126
+git status
+#1668794161
+rm bob-the-builder src/cube-env-list.in 
+#1668794172
+rm src/cube-workload-list.in 
+#1668794184
+git diff src/Makefile.am
+#1668794196
+git restore src/Makefile.am
+#1668794198
+git status
+#1668794201
+git diff
+#1668794230
+git add src/cube-env-create.in 
+#1668794232
+git status
+#1668794254
+git restore src/cube-workload.in
+#1668794258
+git diff
+#1668794313
+git restore src/cube-env.in
+#1668794314
+git status
+#1668794327
+git add . src/functions.in 
+#1668794368
+git status
+#1668794372
+git log
+#1668794402
+git commit -m'remove CUBE_PERSONAL_AUTH_TOKEN'
+#1668794410
+git status
+#1668794416
+git push -f
+#1668794582
+git checkout main 
+#1668794621
+git merge gh-auth-token-update 
+#1668794626
+git push
+#1668794672
+git checkout cube-workload-status 
+#1668794680
+git rebase origin/main
+#1668794683
+git log
+#1668794737
+git checkout main
+#1668794754
+git merge cube-workload-list 
+#1668794830
+git status
+#1668794880
+git reset --hard origin/main
+#1668794882
+git status
+#1668794885
+git log
+#1668794895
+git checkout cube-workload-list 
+#1668794898
+git rebase main
+#1668794957
+git status
+#1668794961
+git add .
+#1668794963
+git status
+#1668794982
+git rebase --continue 
+#1668794994
+git status
+#1668794996
+git log
+#1668795011
+dch -e
+#1668795037
+git status
+#1668795046
+git add .
+#1668795054
+git commit -m'touch up changelog
+'
+#1668795058
+git log
+#1668795063
+git push -f
+#1668795071
+git checkout main
+#1668795080
+git merge cube-workload-list 
+#1668795096
+git push
+#1668795114
+git checkout cube-workload-status 
+#1668795118
+git rebase main
+#1668795165
+git status
+#1668795185
+git add .
+#1668795194
+git rebase --continue 
+#1668795208
+git log
+#1668795218
+git status
+#1668795223
+git push
+#1668795231
+git push -u origin main
+#1668795255
+git push -u origin cube-workload-status 
+#1668795265
+git remote -v
+#1668795274
+git log
+#1668796013
+recsel -C -t workload -e "name = '$WORKLOAD_NAME'" build/environments.rec
+#1668796017
+ls
+#1668796025
+cd build/
+#1668796034
+cube workload list
+#1668796047
+recsel -C -t workload -e "name = '$WORKLOAD_NAME'" environments.rec
+#1668796071
+recsel -C -t workload -e "name = 'foo'" environments.rec
+#1668796084
+recsel -t workload
+#1668796090
+recsel -t workload environments.rec 
+#1668796104
+recsel -C -t workload -e "name = 'test'" environments.rec
+#1668796116
+recsel --help
+#1668796139
+recsel -t workload -e "name = 'test'" environments.rec |wc -l
+#1668796363
+gh repo view battelle/test
+#1668796377
+gh repo view battelle/test; echo $?
+#1668796384
+gh repo view battelle/ramp; echo $?
+#1668796393
+gh repo view battellecube/ramp; echo $?
+#1668796455
+gh repo view battellecube/ramp>/dev/nul; echo $?
+#1668796467
+gh repo view battellecube/ramp>/dev/null; echo $?
+#1668796478
+gh repo view battellecube/rampp>/dev/null; echo $?
+#1668796495
+gh repo view battellecube/rampp 2>&1 >/dev/null; echo $?
+#1668796517
+gh repo view battellecube/rampp 2>/dev/null >/dev/null; echo $?
+#1668796733
+cube workload status -n test
+#1668796990
+cube workload status -n test2
+#1668797082
+git branch -l
+#1668797111
+git branch --no-merged 
+#1668797145
+git branch --merged 
+#1668797176
+git branch --merged origin/main
+#1668797187
+git branch --no-merged origin/main
+#1668797628
+cube workload status -n test2
+#1668797662
+cube workload status -n test
+#1668797703
+ls
+#1668797729
+cube workload status -n test
+#1668797748
+cube workload status -n cube-env
+#1668797766
+ls /tmp/
+#1668797776
+rm /tmp/tmp.* -rf
+#1668797779
+cube workload status -n cube-env
+#1668797797
+cd /tmp/tmp.yBirZLR1ao/
+#1668797799
+git status
+#1668797803
+ls
+#1668797806
+cd cube-env/
+#1668797808
+git status
+#1668797820
+git branch --no-merged origin/main
+#1668797837
+git branch --merged origin/main
+#1668797846
+git branch --all --merged origin/main
+#1668797856
+git branch --all --no-merged origin/main
+#1668797912
+cd 
+#1668797915
+cd src/cube-env/
+#1668797918
+git branch --all --no-merged origin/main
+#1668798018
+git branch --all --no-merged origin/main|sed ',remotes/origin/,d'
+#1668798033
+git branch --all --no-merged origin/main|sed 'd,remotes/origin/'
+#1668798093
+git branch --all --no-merged origin/main|sed 's,remotes/origin/,,'
+#1668798186
+cube workload status -n cube-env
+#1668798212
+gh repo clone --help
+#1668798232
+gh repo --help
+#1668798240
+gh --help
+#1668798270
+cube workload status -n cube-env
+#1668798309
+gh pr list batellecube/cube-env
+#1668798324
+gh pr list 
+#1668798341
+cd ..
+#1668798343
+gh pr list 
+#1668798370
+gh pr --help
+#1668798419
+gh pr list --repo battellecube/cube-env
+#1668798429
+gh pr list --repo battellecube/metallic
+#1668798478
+cube workload status
+#1668798494
+cube workload status --name cube-env
+#1668798521
+git status
+#1668798523
+cd -
+#1668798525
+git status
+#1668798533
+git add .
+#1668798566
+git commit -m'add repo status'
+#1668798568
+git push
+#1668798664
+cube workload status --name test
+#1668798678
+ls
+#1668798714
+recsel -C -t enironments -e "name = '$WORKLOAD_NAME'" environments.rec
+#1668798744
+recsel -C -t environments -e "name = '$WORKLOAD_NAME'" environments.rec
+#1668798753
+recsel -C -t environments -e "name = 'test'" environments.rec
+#1668798757
+view environments.rec 
+#1668798808
+recsel -C -t environments -e "workload = 'greenhornet'" environments.rec
+#1668798825
+recsel -C -t environments  environments.rec
+#1668798831
+view environments.rec 
+#1668798843
+recsel -C -t environment -e "workload = 'greenhornet'" environments.rec
+#1668798866
+recsel -t environment -e "workload = 'greenhornet'" environments.rec
+#1668798916
+cube workload status --name greenhornet
+#1668799195
+recsel -C -t environment -e "workload = 'greenhornet'" environments.rec
+#1668799215
+cube workload status --name greenhornet
+#1668799448
+env |grep COL
+#1668799462
+env |grep ROW
+#1668799469
+env |grep COL
+#1668799484
+printenv |less
+#1668799565
+echo $COLUMNS
+#1668799690
+cube workload status --name greenhornet
+#1668799725
+for i in {1..$COLUMNS}; do echo -n '-'; done
+#1668799752
+for i in $(seq 1 $COLUMNS;); do echo -n '-'; done
+#1668799785
+cube workload status --name greenhornet
+#1668799800
+git status
+#1668799804
+git add .
+#1668799827
+git commit m'implement initial workload status'
+#1668799833
+git commit -m'implement initial workload status'
+#1668799837
+git log
+#1668799842
+git push
+#1668799851
+cube workload status --name greenhornet
+#1669052093
+ls
+#1669052097
+./bob-the-builder 
+#1669052110
+cd build/
+#1669052118
+../bob-the-builder 
+#1669212334
+cd build/
+#1669212343
+../bob-the-builder 
+#1669212661
+git status
+#1669212674
+cube workload status --name greenhornet
+#1669212697
+cube workload list --name greenhornet
+#1669212704
+cube workload list 
+#1669212718
+git push -f
+#1669212724
+git checkout main
+#1669212733
+git merge cube-workload-status 
+#1669212737
+git push
+#1669227006
+git status
+#1669227098
+git submodule foreach git status
+#1669227148
+git submodule foreach 
+#1669228262
+git status
+#1669228287
+head NEWS 
+#1669228312
+git add debian/control bob-the-builder 
+#1669228321
+git commit -m'add tree dep'
+#1669228325
+git push
+#1669238034
+hist
+#1669646158
+cd build/
+#1669646160
+cd ..
+#1669646164
+./bob-the-builder 
+#1669648886
+for i in $(seq 1 $COLUMNS); do echo -n '-'; done
+#1669648891
+./bob-the-builder 
+#1669649398
+echo $COLUMNS 
+#1669649547
+./bob-the-builder 
+#1669737238
+ls
+#1669737283
+$TMUX
+#1669737286
+echo $TMUX
+#1669737296
+echo $TMUX_PANE 
+#1669737311
+tmux-window-id 
+#1669741511
+vi ~/.bashrc 
+#1669741587
+vi /usr/share/powerline/bindings/bash/powerline.sh
+#1669741702
+sudo vi /usr/share/powerline/bindings/bash/powerline.sh
+#1669741814
+. ~/.bashrc 
+#1669744485
+source --help
+#1669746457
+grep -r 'gh release' src/
+#1669746464
+grep -r 'gh' src/
+#1669746474
+grep -r 'gh ' src/
+#1669746523
+hist| grep 'gh '
+#1669748150
+cube workload module update
+#1669749434
+git status
+#1669749437
+git add .
+#1669749482
+git commit -m'get module versions as name/value pairs'
+#1669749486
+git push
+#1669749493
+git status
+#1669749498
+git push -f
+#1669749834
+git status
+#1669749839
+git add .
+#1669749860
+git commit -m'clean-up comment formatting'
+#1669749863
+git push
+#1669749981
+git commit --amend 
+#1669749987
+git push -f
+#1669750154
+git commit --amend 
+#1669750157
+git push -f
+#1669751308
+git fetch
+#1669751326
+git status
+#1669751334
+git diff
+#1669751358
+git add .
+#1669751365
+git commit --amend 
+#1669751374
+git push -f
+#1669751378
+git status
+#1669751384
+git checkout dbucket 
+#1669751387
+git log
+#1669751414
+git checkout cube-workload-module-update 
+#1669751426
+git rebase origin/main
+#1669751428
+git log
+#1669751504
+. ~/.local/libexec/functions.sh 
+#1669751512
+cube-cli-gen-resource-config 
+#1669753381
+git status
+#1669753383
+git diff
+#1669753399
+git add .
+#1669753425
+git commit -m'move releases function to modules subcmd'
+#1669753427
+git push
+#1669753877
+git status
+#1669753887
+git log
+#1669753895
+git fetch
+#1669753903
+git diff origin/main
+#1669995532
+touch src/cube-workload-module-add.in
+#1669995554
+cube env --help
+#1669995560
+cube env set --help
+#1669996166
+git status
+#1669996170
+git add .
+#1669996175
+git diff HEAD 
+#1669996225
+git commit -m'create `cube workload module add` stub'
+#1669996227
+git push
+#1669996235
+git status
+#1669996241
+git log
+#1669996248
+git push -f
+#1669998385
+git branch --help
+#1669998440
+git branch --show-current 
+#1669998965
+declare --help
+#1670000332
+git status
+#1670000340
+git stash
+#1670000349
+git rebase origin/main 
+#1670000351
+git log
+#1670000377
+git fetch
+#1670000381
+git rebase origin/main 
+#1670000384
+git log
+#1670000396
+git stash pop
+#1670002990
+[ $blah ]
+#1670002994
+echo $?
+#1670003003
+[ $HOME ]
+#1670003006
+echo $?
+#1670004243
+git status
+#1670006365
+git diff
+#1670006423
+git add .
+#1670006435
+git commit -m'implement module add'
+#1670006438
+git push
+#1670006440
+git log
+#1670006446
+git push -f
+#1670006523
+git checkout main
+#1670006528
+git fetch
+#1670006530
+git pull
+#1670006540
+git merge cube-workload-module-add
+#1670006545
+git push
+#1670011496
+git status
+#1670011498
+git diff
+#1670011519
+git add src/cube-workload-status.in
+#1670011551
+git commit -m'bug fix for workload status'
+#1670011562
+git push
+#1670013134
+git status
+#1670013165
+git add src/cube-workload.in src/cube-workload-module-add.in 
+#1670013182
+git commit -m'fix help doc typos'
+#1670013184
+git status
+#1670013194
+git push
+#1670270446
+./bob-the-builder 
+#1670271474
+cd build/
+#1670271479
+make uninstall
+#1670271484
+make clean
+#1670271488
+make distclean
+#1670271491
+cd ..
+#1670271495
+rm -rf build/
+#1670271506
+rm ~/.local/libexec/
+#1670271511
+rm ~/.local/libexec/ -r
+#1670271524
+rm ~/.local/bin/wonder-twins-power-activate 
+#1670271536
+rm ~/.local//etc/
+#1670271540
+rm -r ~/.local//etc/
+#1670271570
+./bootstrap 
+#1670271583
+./bob-the-builder 
+#1670272046
+make uninstall
+#1670272055
+make clean
+#1670272058
+cd build/
+#1670272061
+make uninstall
+#1670272063
+make clean
+#1670272067
+cd -
+#1670272071
+./bob-the-builder 
+#1670862839
+./bootstrap 
+#1670862852
+cube --version
+#1670862860
+cube_ --version
+#1670862870
+cube_ workload status -n ramp
+#1670862899
+git status
+#1670862901
+git diff
+#1670862905
+git add .
+#1670863195
+git commit -m'fixes linked platforms error'
+#1670863200
+git push -u origin bugs-bugs-bugs 
+#1670863275
+dch -iU
+#1670863509
+git commit --amend
+#1670863514
+git push
+#1670863521
+git push -f
+#1670863689
+git log
+#1670864525
+ls
+#1670864536
+cube workload create --help
+#1670864546
+cube_ workload create --help
+#1670865584
+cube_ workload create -n delete-me
+#1670865902
+cube_ workload delete -n delete-me
+#1670865979
+git init --help
+#1670866002
+git submoddule add --help
+#1670866009
+git submodule add --help
+#1670866136
+cd - >/dev/null
+#1670866141
+cd .
+#1670866143
+cd - >/dev/null
+#1670866149
+cd - 
+#1670866173
+git ignore --help
+#1670866430
+git add --help
+#1670866473
+git commit --help
+#1670866521
+git add -q . 
+#1670866532
+git status
+#1670866550
+git add . >/dev/null
+#1670866561
+git restore --staged .
+#1670866566
+git add .
+#1670866570
+git status
+#1670866608
+cube_ workload create -n delete-me
+#1670866849
+cube_ workload delete -n delete-me
+#1670866860
+cube_ workload create -n delete-me
+#1670866984
+cube_ workload delete -n delete-me
+#1670866994
+cube_ workload create -n delete-me
+#1670867070
+grep -r release src/
+#1670867705
+gh release view --help
+#1670867715
+gh release list
+#1670867719
+gh release list -help
+#1670867722
+gh release list --help
+#1670867741
+gh release list battellecube/terraform-cube-core
+#1670867763
+gh release list 
+#1670867777
+gh release list --repo battellecube/terraform-cube-core
+#1670868147
+gh release list --repo battellecube/terraform-cube-core | awk '/Latest/{print $1}'
+#1670868294
+cube_ workload delete -n delete-me
+#1670868435
+cube_ workload create -n delete-me
+#1670868477
+cube_ workload delete -n delete-me
+#1670868488
+cube_ workload create -n delete-me
+#1670868522
+cube_ workload delete -n delete-me
+#1670868532
+cube_ workload create -n delete-me
+#1670870940
+cube_ workload delete -n delete-me
+#1670870991
+git checkout --help
+#1670871019
+cube_ workload create -n delete-me
+#1670871074
+git push --help
+#1670871095
+cube_ workload delete -n delete-me
+#1670871108
+cube_ workload create -n delete-me
+#1670871181
+gh repo create --help
+#1670871192
+gh repo --help
+#1670871199
+gh repo create --help
+#1670871221
+gh --help
+#1670871367
+cube_ workload delete -n delete-me
+#1670871382
+cube_ workload create -n delete-me
+#1670871445
+cube_ workload delete -n delete-me
+#1670871456
+cube_ workload create -n delete-me
+#1670871767
+hist |grep 'env create'
+#1670871842
+cube env create --help
+#1670871901
+gh release list --repo battellecube/cube-platform
+#1670872291
+hist
+#1670872302
+cube_ workload delete -n delete-me
+#1670872326
+cube_ workload create -n delete-me
+#1670872409
+gh release list --repo battellecube/cube-platform
+#1670872432
+cube_ workload delete -n delete-me
+#1670872508
+cube_ workload create -n delete-me
+#1670872580
+git status
+#1670872588
+git log
+#1670872593
+git diff origin/HEAD 
+#1670872729
+cube_ workload delete -n delete-me
+#1670872749
+cube_ workload create -h -n delete-me
+#1670872780
+cube_ workload create -c core -n delete-me
+#1670872887
+cube_ workload delete -n delete-me
+#1670872898
+cube_ workload create -c core -n delete-me
+#1670873293
+cube_ workload delete -n delete-me
+#1670873306
+dch -e
+#1670873327
+git add .
+#1670873335
+git commit -m'add default/named template linking to workload create'
+#1670873358
+git push
+#1670875019
+git status
+#1670875023
+git fetch
+#1670876999
+ls
+#1670877825
+cube_ workload create -c core -n delete-me
+#1670877947
+cube_ workload delete -n delete-me
+#1670877959
+cube_ workload create -c core -n delete-me
+#1670879432
+cube_ workload delete -n delete-me
+#1670879449
+cube_ workload create -c core -n delete-me
+#1670879602
+cube_ workload delete -n delete-me
+#1670879613
+cube_ workload create -c core -n delete-me
+#1670879712
+cube_ workload delete -n delete-me
+#1670879728
+cube_ workload create -c core -n delete-me
+#1670879865
+cube_ workload delete -n delete-me
+#1670879875
+cube_ workload create -c core -n delete-me
+#1670879941
+cube_ workload delete -n delete-me
+#1670879952
+cube_ workload create -c core -n delete-me
+#1670880672
+cube_ workload delete -n delete-me
+#1670880685
+cube_ workload create -c core -n delete-me
+#1670880768
+cube_ workload delete -n delete-me
+#1670880778
+cube_ workload create -c core -n delete-me
+#1670881209
+cube_ workload delete -n delete-me
+#1670881220
+cube_ workload create -c core -n delete-me
+#1670881307
+cube_ workload delete -n delete-me
+#1670881318
+cube_ workload create -c core -n delete-me
+#1670881583
+gh auth token
+#1670881703
+cube_ workload delete -n delete-me
+#1670881716
+cube_ workload create -c core -n delete-me
+#1670881810
+cube_ workload delete -n delete-me
+#1670881820
+cube_ workload create -c core -n delete-me
+#1670882024
+cube_ workload delete -n delete-me
+#1670882040
+cube_ workload create -c core -n delete-me
+#1670937511
+git status
+#1670937562
+cat ../cube-env/bob-the-builder 
+#1670938148
+apt show yq
+#1670938176
+hist |grep ppa
+#1670938192
+hist |grep rmescandon
+#1670938204
+hist |grep add-
+#1670938302
+add-apt-repository --help
+#1670938601
+apt show terraform
+#1670938713
+add-apt-repository --help
+#1670938828
+sudo add-apt-repository --uri https://apt.releases.hashicorp.com
+#1670938872
+ls /etc/apt/sources.list.d/
+#1670938893
+cat /etc/apt/sources.list.d/archive_uri-https_apt_releases_hashicorp_com-jammy.list 
+#1670938904
+cat /etc/apt/sources.list.d/terraform-cli.list 
+#1670938965
+sudo mv /etc/apt/sources.list.d/terraform-cli.{list,list.disabled} 
+#1670938971
+sudo apt update
+#1670939005
+sudo mv /etc/apt/sources.list.d/terraform-cli.{list.disabled,list} 
+#1670939022
+sudo rm /etc/apt/sources.list.d/archive_uri-https_apt_releases_hashicorp_com-jammy.list 
+#1670939027
+sudo apt update
+#1670940246
+cube env create --help
+#1670940353
+cube env create -n action -p cube-platform-0.6.0 -c 10.237.22.0/24 -w delete-me -s q-b-mccubeface
+#1670940449
+az login -t battelle.us
+#1670940477
+cube env create -n action -p cube-platform-0.6.0 -c 10.237.22.0/24 -w delete-me -s q-b-mccubeface
+#1670940552
+git status
+#1670940894
+cube env set --help
+#1670941338
+a
+#1670941339
+la
+#1670941344
+cat .environment 
+#1670941361
+cat .sp-environment.json 
+#1670942645
+la
+#1670942648
+cat .environment 
+#1670942680
+cat .sp-environment.json 
+#1670943676
+cat .environment 
+#1670950585
+hist
+#1670950594
+cube env delete - action -w delete-me -d
+#1670950606
+cube env delete -n action -w delete-me -d
+#1670950645
+cube_ workload delete -n delete-me
+#1670950787
+cube_ workload create -c core -n delete-me
+#1670951131
+cd ..
+#1670951910
+hist |grep 'env create'
+#1670952521
+hist |grep delete
+#1670952546
+cube env delete -n main -w delete-me
+#1670952573
+cd /tmp/
+#1670952577
+touch .cuberc
+#1670952587
+cube env delete -n main -w delete-me
+#1670952631
+cd -
+#1670952644
+history 
+#1670955534
+hist
+#1670955554
+hist|grep 'env create'
+#1670955568
+cube_ env create -n action -p cube-platform-0.6.0 -c 10.237.22.0/24 -w delete-me -s q-b-mccubeface
+#1670955774
+cube_ env create -n action -p cube -c 10.237.22.0/24 -w delete-me -s q-b-mccubeface
+#1670955790
+cube_ env create -n action -p  -c 10.237.22.0/24 -w delete-me -s q-b-mccubeface
+#1670955801
+cube_ env create -n action   -c 10.237.22.0/24 -w delete-me -s q-b-mccubeface
+#1670955967
+cube_ env create -n action -p cube -c 10.237.22.0/24 -w delete-me -s q-b-mccubeface
+#1670955970
+cube_ env create -n action   -c 10.237.22.0/24 -w delete-me -s q-b-mccubeface
+#1670956883
+cube_ env create -n action   -c 10.237.22.0/24 -w delete-me -s q-b-mccubeface -p foo
+#1670957319
+cd delete-me/
+#1670957331
+cube_ env create -n action   -c 10.237.22.0/24 -w delete-me -s q-b-mccubeface -p foo
+#1670957352
+cube_ env create -n action   -c 10.237.22.0/24  -s q-b-mccubeface -p foo
+#1670957408
+cube_ env create -n action   -c 10.237.22.0/24  -s q-b-mccubeface
+#1670957426
+az account  set -s q-b-mccubeface 
+#1670957600
+cube_ env create -n action   -c 10.237.22.0/24  -s q-b-mccubeface
+#1670957605
+cube_ env create -n action   -c 10.237.22.0/24  
+#1670957695
+ls
+#1670957723
+recsel -t environment -p cidr
+#1670957727
+recsel -t environment -p cidr environments.rec 
+#1670957836
+for cidr in 10.237.{0..255}.0/24; do echo $cidr; recsel -t environment -e "cidr = '$cidr'" environments.rec; done
+#1670957878
+for cidr in 10.237.{0..255}.0/24; do echo $cidr; recsel -t environment -e "cidr = '$cidr'" environments.rec | wc -l; done
+#1670957952
+for cidr in 10.237.{0..255}.0/24; do echo $cidr; [[ $(recsel -t environment -e "cidr = '$cidr'" environments.rec | wc -l) != 0 ]] && exit; done
+#1670957984
+for cidr in 10.237.{0..255}.0/24; do echo $cidr; [[ $(recsel -t environment -e "cidr = '$cidr'" environments.rec | wc -l) != 0 ]] && break; done
+#1670957999
+view environments.rec 
+#1670958029
+recsel -t environment -p cidr
+#1670958033
+recsel -t environment -p cidr environments.rec 
+#1670958043
+for cidr in 10.237.{0..255}.0/24; do echo $cidr; [[ $(recsel -t environment -e "cidr = '$cidr'" environments.rec | wc -l) != 0 ]] && break; done
+#1670958077
+for cidr in 10.237.{0..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" environments.rec | wc -l) != 0 ]] && break; exit; done
+#1670958093
+for cidr in 10.237.{0..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" environments.rec | wc -l) != 0 ]] && break; echo $cidr; done
+#1670958109
+for cidr in 10.237.{1..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" environments.rec | wc -l) != 0 ]] && break; echo $cidr; done
+#1670958170
+for cidr in 10.237.{1..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" environments.rec | wc -l) == 0 ]] && break; echo $cidr; done
+#1670958228
+for cidr in 10.237.{1..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" environments.rec | wc -l) == 0 ]]; echo $cidr; done
+#1670958286
+for cidr in 10.237.{1..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" environments.rec | wc -l) == 0 ]] && echo $cidr; done
+#1670958309
+for cidr in 10.237.{1..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" environments.rec | wc -l) == 0 ]] && (echo $cidr; break); done
+#1670958320
+for cidr in 10.237.{1..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" environments.rec | wc -l) == 0 ]] && (echo $cidr; return); done
+#1670958355
+for cidr in 10.237.{1..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" environments.rec | wc -l) == 0 ]] && echo $cidr && return; done
+#1670958373
+for cidr in 10.237.{1..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" environments.rec | wc -l) == 0 ]] && echo $cidr ; done |less
+#1670958396
+recsel -t environment -p cidr environments.rec 
+#1670958412
+for cidr in 10.237.{1..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" environments.rec | wc -l) == 0 ]] && echo $cidr ; done |less
+#1670958429
+recsel -t environment -p cidr environments.rec 
+#1670958499
+for cidr in 10.237.{1..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" -p cidr environments.rec ]] && break ; done |less
+#1670958509
+for cidr in 10.237.{1..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" -p cidr environments.rec) ]] && break ; done |less
+#1670958559
+for cidr in 10.237.{1..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" -p cidr environments.rec tee wc -l) == 0 ]] && echo $cidr ; done |less
+#1670958575
+for cidr in 10.237.{1..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" -p cidr environments.rec | tee | wc -l) == 0 ]] && echo $cidr ; done |less
+#1670958587
+for cidr in 10.237.{1..255}.0/24; do [[ $(recsel -t environment -e "cidr = '$cidr'" -p cidr environments.rec | tee | wc -l) == 0 ]] && echo $cidr ; done | head -n1
+#1670958733
+cube_ env create -n action   -c 10.237.22.0/24  
+#1670958838
+cube_ env create -n action
+#1670958984
+cube_ env create -h
+#1670961717
+cube_ env create -n action
+#1671123255
+git status
+#1671123257
+git log

@@ -2096,3 +2096,465 @@ tmux
 ll -h .bash_history
 #1668529624
 ll -h .bash_history*
+#1668529674
+tmux
+#1668612679
+foo=bar
+#1668612683
+echo $foo
+#1668612708
+(echo $foo)
+#1668612724
+sh -c echo $foo
+#1668612733
+export foo=bar
+#1668612735
+sh -c echo $foo
+#1668612899
+(echo \$foo)
+#1668612937
+foo=bar
+#1668612940
+unset foo
+#1668612942
+foo=bar
+#1668612968
+(echo $SHLVL)
+#1668612984
+echo $SHLVL
+#1668612996
+( echo $SHLVL; )
+#1668613073
+cat 'echo $fool' > script.sh
+#1668613083
+echo  'echo $fool' > script.sh
+#1668613089
+chmod +x script.sh 
+#1668613092
+./script.sh 
+#1668613096
+export foo=bar
+#1668613099
+./script.sh 
+#1668613105
+vi script.sh 
+#1668613126
+./script.sh 
+#1668613132
+unset foo
+#1668613134
+./script.sh 
+#1668613140
+foo=bar
+#1668613142
+./script.sh 
+#1668613158
+export foo=bar
+#1668613160
+./script.sh 
+#1668613163
+vi script.sh 
+#1668613180
+./script.sh 
+#1668613185
+vi
+#1668613197
+./script.sh 
+#1668614540
+ls
+#1668614545
+rm script.sh 
+#1668614550
+cd src/cube-env/
+#1668614551
+git status
+#1668614554
+tmux
+#1668646477
+cd src/cube-env/
+#1668646478
+vi
+#1668646496
+tmux
+#1668653589
+cd src/cube-env/
+#1668653591
+tmux
+#1668695223
+git clone https://github.com/chrisbra/Recover.vim.git .vim/pack/auto/start/Recover.vim
+#1668695226
+vi
+#1668695477
+ls .vim/pack/auto/start/
+#1668695482
+ls .vim/pack/auto/start/Recover.vim/
+#1668695489
+ls .vim/pack/auto/start/ctrlpvim_ctrlp.vim/
+#1668696012
+gpg --list-secret-keys --keyid-format long
+#1668696043
+gpg --export-secret-keys 1A6A6C708B08F2CB
+#1668696057
+gpg --export-secret-keys --armor 1A6A6C708B08F2CB
+#1668696114
+gpg --export-secret-keys --armor 1A6A6C708B08F2CB >cube-maintainer-secret-key.gpg.txt
+#1668696585
+hist|grep gpg
+#1668696958
+cat .bashrc 
+#1668697309
+tmux
+#1668738385
+cd src/cube-env/
+#1668738387
+tmux
+#1669040310
+sudo apt update
+#1669040339
+sudo apt dist-upgrade 
+#1669040393
+cube --version
+#1669040416
+/usr/bin/cube --version
+#1669041453
+cd src/cube-env/
+#1669041457
+git status
+#1669041508
+cube workload status
+#1669041532
+az login -t battelle.us
+#1669041566
+cube workload status
+#1669041604
+cube workload status --help
+#1669041611
+cube workload status --name greenhornet
+#1669044601
+az group list
+#1669044654
+az group list --query '[name="ramp-prod"]'
+#1669044671
+az group list --query "[name='ramp-prod']"
+#1669044679
+az group list --query "[name=='ramp-prod']"
+#1669044688
+az group list --query '[name=="ramp-prod"]'
+#1669044699
+az group list --query '[name=="ramp-prod"].name'
+#1669044899
+az group list --query '[?name=="ramp-prod"].name'
+#1669044908
+az group list --query '[?name=="ramp-prod"]'
+#1669044927
+az group list --query "[?name=='ramp-prod']"
+#1669044933
+az group list --query "[?name=='ramp-prod'].name"
+#1669045049
+az group list --query "[?starts_with(name,'ramp-prod')]"
+#1669045057
+az group list --query "[?starts_with(name,'ramp')]"
+#1669045062
+az group list --query "[?starts_with(name,'q')]"
+#1669045079
+az group list --query "[].name"
+#1669046670
+az group list --help
+#1669046687
+az account list 
+#1669046699
+az account list --query id
+#1669046705
+az account list --query .id
+#1669046710
+az account list --query [].id
+#1669046723
+az account list --query [].id -o tsv
+#1669046754
+az account list --query [].id -o tsv|while read s; do az group list --subscription $s
+#1669046759
+az account list --query [].id -o tsv|while read s; do az group list --subscription $s; done
+#1669046827
+az account list --query [].id -o tsv|while read s; do az group list --query "[?starts_with(name,'q')]" --subscription $s &; done
+#1669046835
+az account list --query [].id -o tsv|while read s; do az group list --query "[?starts_with(name,'q')]" --subscription $s & ; done
+#1669046854
+az account list --query [].id -o tsv|while read s; do (az group list --query "[?starts_with(name,'q')]" --subscription $s) & ; done
+#1669046861
+az account list --query [].id -o tsv|while read s; do (az group list --query "[?starts_with(name,'q')]" --subscription $s &); done
+#1669046879
+az account list --query [].id -o tsv|while read s; do (az group list --query "[?starts_with(name,'q')].name" --subscription $s &); done
+#1669046900
+az account list --query [].id -o tsv|while read s; do (az group list --query "[?starts_with(name,'q')].name" --subscription $s -o tsv &); done
+#1669046982
+az account list --query [].id -o tsv|while read s; do (az group list --query "[?starts_with(name,'q')].name" --subscription $s -o tsv &); done; wait
+#1669047027
+az account list --query [].id -o tsv|while read s; do (az group list --query "[?starts_with(name,'q')].name" --subscription $s -o tsv &); wait; done
+#1669047172
+az account list --query [].id -o tsv|while read s; do az group list --query "[?starts_with(name,'q')].name" --subscription $s -o tsv & done
+#1669047191
+az account list --query [].id -o tsv|while read s; do az group list --query "[?starts_with(name,'q')].name" --subscription $s -o tsv & done; wait
+#1669047223
+echo &
+#1669047295
+wait --help
+#1669047309
+foo=x
+#1669047318
+foo+=x
+#1669047322
+echo $foo
+#1669047345
+declare -a foo
+#1669047356
+foo=x
+#1669047359
+echo $foo
+#1669047363
+foo+=x
+#1669047365
+echo $foo
+#1669047378
+echo ${foo[#}
+#1669047381
+echo ${foo[#]}
+#1669047385
+echo ${foo[2]}
+#1669047391
+echo ${foo[@]}
+#1669047398
+echo ${foo[0]}
+#1669047403
+echo ${foo[1]}
+#1669047409
+hist
+#1669047571
+az account list --query [].id -o tsv|while read s; do az group list --query "[?starts_with(name,'q')].name" --subscription $s -o tsv & pids+="$! "; done; wait $pids
+#1669047587
+echo $pids
+#1669047603
+az account list --query [].id -o tsv|while read s; do az group list --query "[?starts_with(name,'q')].name" --subscription $s -o tsv &; pids+="$! "; done; wait $pids
+#1669047628
+az account list --query [].id -o tsv|while read s; do (az group list --query "[?starts_with(name,'q')].name" --subscription $s -o tsv &) pids+="$! "; done; wait $pids
+#1669047639
+az account list --query [].id -o tsv|while read s; do (az group list --query "[?starts_with(name,'q')].name" --subscription $s -o tsv &); pids+="$! "; done; wait $pids
+#1669047645
+echo $pids
+#1669047680
+for i in 1 2 3; do echo $i & done
+#1669047745
+for i in 1 2 3; do echo $i &; ${pid[i]}=$!; done
+#1669047753
+for i in 1 2 3; do echo $i & ${pid[i]}=$!; done
+#1669047809
+cat > test
+#1669047814
+vi test
+#1669047844
+vi test 
+#1669047925
+tmux
+#1669053620
+fg
+#1669129447
+cd src/q-b-mccubeface/
+#1669129448
+ls
+#1669129454
+ls modules/
+#1669129483
+cube workload module list -r
+#1669129823
+ls
+#1669129831
+cat onprem.tf 
+#1669130022
+tmux
+#1669211634
+cd src/
+#1669211649
+cd cube-env/
+#1669211651
+ls
+#1669211889
+git status
+#1669211893
+hist
+#1669211910
+git branch --all --no-merged origin/main
+#1669211933
+vi
+#1669211967
+tmux
+#1669643673
+sudo apt update
+#1669643685
+sudo apt dist-upgrade 
+#1669643737
+apt show libjbig0
+#1669643774
+apt show libexpat1
+#1669644005
+cd src/cube-env/
+#1669644011
+cat debian/control 
+#1669644038
+grep -r pcregrep src/
+#1669644043
+git status
+#1669644047
+git branch
+#1669644091
+grep -r grep src/
+#1669644106
+hist
+#1669644506
+git branch -b cube-workload-module-update
+#1669644521
+git checkout -b cube-workload-module-update
+#1669644533
+git tag
+#1669644538
+cat NEWS 
+#1669644544
+head NEWS 
+#1669644573
+hist |grep merge
+#1669644586
+git branch --all --no-merged origin/main
+#1669644591
+git branch
+#1669644610
+dch -e
+#1669645943
+git status
+#1669645954
+git add .
+#1669645965
+git commit -m'touch up changelog'
+#1669645982
+git push -u origin cube-workload-module-update 
+#1669646094
+cd build/
+#1669646100
+cd ..
+#1669646102
+tmux
+#1669730712
+cd src/cube-env/
+#1669730713
+tmux
+#1669903581
+cd src/tenant-config/
+#1669903583
+git fetch
+#1669903587
+git pull
+#1669903595
+git checkout exclude-non-azuread 
+#1669903601
+git checkout main
+#1669903606
+git merge exclude-non-azuread 
+#1669903609
+git push
+#1669903649
+cd ../cube-program/
+#1669903650
+git fetch
+#1669903657
+git pull
+#1669903661
+git status
+#1669903688
+git branch
+#1669903695
+git branch --all
+#1669903727
+git merge add-seceng-cidrs
+#1669903740
+git merge origin/add-seceng-cidrs 
+#1669903808
+git merge origin/bump-modules
+#1669903824
+git push
+#1669903845
+git branch --all |grep bump
+#1669903897
+cd ../seceng/
+#1669903899
+git fetch
+#1669903905
+git pull
+#1669903911
+git status
+#1669903928
+git merge origin/bump-modules 
+#1669903930
+git push
+#1669905405
+hist
+#1669905441
+cube workload module --releases
+#1669905452
+cd ../q-b-mccubeface/
+#1669905455
+cube workload module --releases
+#1669905467
+ls
+#1669905467
+la
+#1669905476
+cat .cuberc 
+#1669905584
+grep -r CUBE_CORE_VERSION src
+#1669905591
+tmux
+#1670336747
+cd src/
+#1670336823
+cube workload status -n totally-fake-workload
+#1670336890
+az login -t battelle.us
+#1670336903
+cube workload status -n totally-fake-workload
+#1670337020
+view environments.rec 
+#1670337088
+cube workload delete -n totally-fake-workload
+#1670337132
+ls
+#1670337140
+rm -rf totally-fake-workload/
+#1670337171
+cube workload create -n totally-fake-workload
+#1670337294
+tmux
+#1670445161
+cd src/zero-wing/
+#1670445168
+rm .environment 
+#1670445171
+la
+#1670445177
+rm .sp-environment.json 
+#1670445184
+git clear
+#1670445192
+la
+#1670445196
+ls
+#1670445217
+rm .sp-environment.json 
+#1670445220
+git status
+#1670860750
+tmux
+#1671054665
+foo=bar.1
+#1671054677
+echo ${foo#.}
+#1671054683
+echo ${foo/.}
+#1671054697
+echo ${foo%.}

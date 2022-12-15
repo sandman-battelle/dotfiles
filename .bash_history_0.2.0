@@ -566,3 +566,101 @@ dotgit commit
 dotgit push
 #1664461437
 alias
+#1668536724
+cd
+#1668536729
+dotgit status
+#1668536749
+dotgit add .local/bin/bootstrap-cube-env 
+#1668536766
+dotgit commit -m'auto install az extensions'
+#1668536773
+dotgit push
+#1669214875
+cd ../q-b-mccubeface/
+#1669214880
+git status
+#1669214891
+cat .cuberc 
+#1669214905
+vi
+#1670348819
+cd
+#1670348823
+dotgit status
+#1670348847
+rm cube-maintainer-secret-key.gpg.txt 
+#1670348882
+dotgit add .
+#1670348885
+dotgit status
+#1670348903
+dotgit status --ignored
+#1670348937
+la
+#1670348956
+ls .dotfiles/
+#1670348961
+la .dotfiles/
+#1670348970
+la
+#1670348992
+vi .gitignore 
+#1670349039
+cat .ssh/id_rsa.pub 
+#1670349971
+ssh-keygen
+#1670350015
+ls
+#1670350023
+ll
+#1670350035
+mv n8behavior* .ssh/
+#1670350040
+cat .ssh/n8behavior.pub 
+#1670350135
+vi .ssh/config 
+#1670350303
+git clone n8github:n8behavior/ubuntu-setup
+#1670350304
+ls
+#1670351043
+hist
+#1670351066
+hist |tail -n100
+#1670352202
+alias cube-create='cube workload create'
+#1670352207
+cube-create --help
+#1670432810
+cd .
+#1670432811
+cd
+#1670432821
+cd .local/bin/
+#1670432822
+ll
+#1670432877
+mv cube{,_} 
+#1670432879
+ll
+#1670432887
+cube_ --version
+#1670432891
+cube --version
+#1671123519
+cd
+#1671123524
+vi .vimrc 
+#1671123535
+dotgit status
+#1671123559
+dotgit diff .ssh/config
+#1671123583
+dotgit diff .vimrc
+#1671123590
+dotgit add .
+#1671123597
+ls
+#1671123607
+rm -rf ubuntu-setup/

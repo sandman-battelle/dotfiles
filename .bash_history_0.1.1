@@ -1394,3 +1394,438 @@ git log --oneline
 head NEWS 
 #1666207190
 head -n1 debian/changelog 
+#1669227168
+cd ../q-b-mccubeface/
+#1669227174
+git submodule foreach 
+#1669227182
+git submodule foreach status
+#1669227192
+git submodule foreach git status
+#1669227203
+git submodule foreach echo $PWD
+#1669227215
+git submodule foreach 'echo $PWD'
+#1669227258
+git submodule foreach git describe --tags
+#1669227311
+gh 
+#1669227360
+gh release list
+#1669227384
+gh release list --help
+#1669227397
+gh release list --repo battellecube/cube-cli
+#1669227469
+gh release list --repo battellecube/cube-cli | awk '{print $2}'
+#1669227483
+gh release list --repo battellecube/cube-cli | awk '\Latest\{print $2}'
+#1669227503
+gh release list --repo battellecube/cube-cli | awk '/Latest/{print $2}'
+#1669227719
+cube workload module list
+#1669227847
+git submodule foreach (gh release list --repo battellecube/cube-cli | awk '/Latest/{print $2}')
+#1669227860
+git submodule foreach gh release list --repo battellecube/cube-cli | awk '/Latest/{print $2}'
+#1669227876
+git submodule foreach gh release list | awk '/Latest/{print $2}'
+#1669227891
+git submodule foreach gh release list | awk '/Latest/{print $1}'
+#1669227955
+comm <(cube workload module list) <(git submodule foreach gh release list | awk '/Latest/{print $1}')
+#1669228009
+cube workload module list |grep \(.*\)
+#1669228027
+cube workload module list |grep \((?.*\))
+#1669228037
+cube workload module list |grep \((.*\))
+#1669228047
+cube workload module list |egrep \((.*\))
+#1669228175
+pcregrep
+#1669228208
+hist |grep 'apt install'
+#1669737323
+tmux-window-id 
+#1669737441
+tmux join-pane --help
+#1669737599
+tmux-window-id 
+#1669912954
+git status
+#1669912969
+git checkout main
+#1669912977
+git add .
+#1669912994
+git commit -m'add VDI module on workload create'
+#1669912996
+git push
+#1669913020
+git status
+#1669913037
+git pull
+#1669913049
+git log
+#1669913053
+git push
+#1669913060
+git tfetch
+#1669913064
+git fetch
+#1669913068
+git pull
+#1669913090
+git reset origin/main
+#1669913095
+git status
+#1669913108
+git diff
+#1669913123
+git status
+#1669913142
+git checkout origin/main 
+#1669913152
+git checkout main
+#1669913162
+git clear
+#1669913166
+git status
+#1669913170
+git fetch
+#1669913172
+git pull
+#1669913176
+git log
+#1669913226
+git status
+#1669913228
+git diff
+#1669913240
+git clear
+#1669913266
+git diff
+#1669913270
+git add .
+#1669913275
+git commit -m'add VDI module on workload create'
+#1669913277
+git push
+#1669913367
+cube workload module list
+#1669913423
+git checkout -
+#1669913432
+git checkout cube-workload-module-update 
+#1669913434
+git status
+#1669913436
+git log
+#1669913458
+git rebase origin/main 
+#1669913532
+git status
+#1669913549
+git add .
+#1669913555
+git rebase --continue 
+#1669913563
+git log
+#1669913579
+git push
+#1669913586
+git push -f
+#1669914358
+touch foo
+#1669914364
+git status
+#1669914367
+rm foo
+#1669914853
+grep -r hook src/
+#1669914999
+grep -r cube-cli-latest-version src/
+#1669921173
+ls
+#1669923182
+./bootstrap 
+#1669923191
+make install
+#1669923194
+cd build/
+#1669923197
+make install
+#1669925054
+make uninstall
+#1669925058
+make clean
+#1669925062
+make distclean
+#1669925073
+cd ..
+#1669925078
+rm -rf build/
+#1669925104
+rm -rf ~/.local/libexec/
+#1669925112
+ll ~/.local/bin/
+#1669925120
+./bootstrap 
+#1669925131
+cd build/
+#1669925133
+make install
+#1669925259
+git log
+#1669926042
+git status
+#1669926045
+git diff
+#1669926071
+git add .
+#1669926077
+cd ..
+#1669926080
+git add .
+#1669927669
+grep -r describe 
+#1669928809
+git status
+#1669928811
+git diff
+#1669928822
+git status
+#1669928828
+git add .
+#1669928853
+git commit -m'implement module update'
+#1669928855
+git push
+#1669929075
+git diff
+#1669929078
+git add .
+#1669929096
+git commit -m'set PR approval count to 1'
+#1669929099
+git push
+#1670260728
+REQUEST_BODY='{
+    "action": "selfActivate",
+    "justification": "Create new CUBE environment",
+    "roleDefinitionId": "62e90394-69f5-4237-9190-012177145e10",
+    "directoryScopeId": "/",
+    "principalId": "principalId",
+    "scheduleInfo": {
+        "startDateTime": "2022-04-10T00:00:00Z",
+        "expiration": {
+            "type": "afterDateTime",
+            "endDateTime": "2024-04-10T00:00:00Z"
+        }
+    }
+}'
+#1670260736
+echo $REQUEST_BODY 
+#1670260828
+az rest --body="$REQUEST_BODY" --method PUT
+#1670260873
+az rest --body="$REQUEST_BODY" --method PUT --url 'https://management.azure.com/providers/Microsoft.Subscription/subscriptions/dfa2a084-766f-4003-8ae1-c4aeb893a99f/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/{roleAssignmentScheduleRequestName}?api-version=2020-10-01'
+#1670260895
+az cloud
+#1670260900
+az cloud show
+#1670260939
+az rest --body="$REQUEST_BODY" --method PUT --url 'https://management.core.usgovcloudapi.net//providers/Microsoft.Subscription/subscriptions/dfa2a084-766f-4003-8ae1-c4aeb893a99f/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/{roleAssignmentScheduleRequestName}?api-version=2020-10-01'
+#1670260966
+az account show
+#1670260991
+az account set -s q-b-mccubeface 
+#1670260994
+az account show
+#1670261011
+echo $REQUEST_BODY 
+#1670261041
+SUBSCRIPTION='f59139ec-932c-4419-ac4f-b01a05ed5459'
+#1670261069
+az rest --body="$REQUEST_BODY" --method PUT --url 'https://management.core.usgovcloudapi.net//providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/{roleAssignmentScheduleRequestName}?api-version=2020-10-01'
+#1670261180
+az rest --body="$REQUEST_BODY" --method PUT --url 'https://management.core.usgovcloudapi.net//providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request?api-version=2020-10-01'
+#1670261196
+az rest --body="$REQUEST_BODY" --method PUT --url 'https://management.core.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request?api-version=2020-10-01'
+#1670261561
+az cloud set -n AzureCloud 
+#1670261571
+az cloud show
+#1670261603
+az cloud set -n AzureUSGovernment 
+#1670261607
+az cloud show
+#1670261631
+az rest --body="$REQUEST_BODY" --method PUT --url 'https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request?api-version=2020-10-01'
+#1670261642
+echo az rest --body="$REQUEST_BODY" --method PUT --url 'https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request?api-version=2020-10-01'
+#1670261661
+echo az rest --body="$REQUEST_BODY" --method PUT --url 'https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request
+#1670261669
+echo az rest --body="$REQUEST_BODY" --method PUT --url 'https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request'
+#1670261674
+az rest --body="$REQUEST_BODY" --method PUT --url 'https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request'
+#1670261832
+az cloud show
+#1670261837
+az cloud show --help
+#1670262357
+az rest --body="$REQUEST_BODY" --method PUT --url 'https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request'?api-version=2020-10-01
+#1670262365
+az rest --body="$REQUEST_BODY" --method PUT --url 'https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request'?api-version=2020-10-01 -v
+#1670262371
+az rest --body="$REQUEST_BODY" --method PUT --url 'https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request'?api-version=2020-10-01 --verbose
+#1670262398
+az rest --body="$REQUEST_BODY" --method PUT --url "https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request'?api-version=2020-10-01 --verbose
+az rest --body="$REQUEST_BODY" --method PUT --url "https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request?api-version=2020-10-01 --verbose"
+#1670262419
+az rest --body="$REQUEST_BODY" --method PUT --url "https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request'?api-version=2020-10-01 --verbose
+az rest --body="$REQUEST_BODY" --method PUT --url "https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request?api-version=2020-10-01" --verbose
+
+#1670262446
+az rest --body="$REQUEST_BODY" --method PUT --url "https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request?api-version=2020-10-01" --verbose
+#1670262503
+az rest --body="$REQUEST_BODY" --method PUT --url "https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request?api-version=2020-10-02" --verbose
+#1670262545
+az rest --body="$REQUEST_BODY" --method PUT --url "https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/my-role-assignment-schedule-request?api-version=2022-04-01-preview" --verbose
+#1670262570
+az rest --body="$REQUEST_BODY" --method PUT --url "https://management.usgovcloudapi.net/providers/Microsoft.Subscription/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleAssignmentScheduleRequests/myRole?api-version=2022-04-01-preview" --verbose
+#1670262776
+az rest --body="$REQUEST_BODY" --method PUT --url "https://management.usgovcloudapi.net/subscriptions/$SUBSCRIPTION/providers/Microsoft.Authorization/roleRoleDefinitions/myRole?api-version=2022-04-01-preview" --verbose
+#1670262855
+REQUEST_BODY='{
+   "Properties": {
+     "RoleDefinitionId": "/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/roleDefinitions/{roleDefinitionId}",
+     "PrincipalId": "{principalId}",
+     "RequestType": "SelfActivate",
+     "ScheduleInfo": {
+       "StartDateTime": "2020-09-09T21:31:27.91Z",
+       "Expiration": {
+         "Type": "AfterDuration", // Values: AfterDuration, AfterDateTime, NoExpiration
+         "EndDateTime": null,
+         "Duration": "PT8H" // Use ISO 8601 format
+       }
+     },
+     "LinkedRoleEligibilityScheduleId": "/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/roleAssignmentSchedules/{roleAssignmentScheduleId}" //Optional
+   }
+ }'
+#1670263087
+REQUEST_BODY='
+ {
+   "Properties": {
+     "RoleDefinitionId": "/subscriptions/${SUBSCRIPTION_ID}/providers/Microsoft.Authorization/roleDefinitions/{roleDefinitionId}",
+     "PrincipalId": "{principalId}",
+     "RequestType": "SelfActivate",
+     "ScheduleInfo": {
+       "StartDateTime": "2020-09-09T21:31:27.91Z",
+       "Expiration": {
+         "Type": "AfterDuration", // Values: AfterDuration, AfterDateTime, NoExpiration
+         "EndDateTime": null,
+         "Duration": "PT8H" // Use ISO 8601 format
+       }
+     },
+     "LinkedRoleEligibilityScheduleId": "/subscriptions/{subscriptionId}/providers/Microsoft.Authorization/roleAssignmentSchedules/{roleAssignmentScheduleId}" //Optional
+   }
+ }'
+#1670263096
+echo $REQUEST_BODY 
+#1670263127
+az account sh
+#1670263133
+az account show
+#1670263154
+SCRIPTION_ID=f59139ec-932c-4419-ac4f-b01a05ed5459
+#1670263157
+echo $REQUEST_BODY 
+#1670263180
+eval 'echo $REQUEST_BODY '
+#1670263188
+eval "echo $REQUEST_BODY"
+#1670263215
+echo $(eval $REQUEST_BODY)
+#1670263821
+gi status
+#1670265269
+./wonder-twin-powers-activate.ps1 
+#1670337756
+cube workload status
+#1670337768
+view environments.rec 
+#1670433428
+ls
+#1670434811
+git status
+#1670434853
+git ignore '.terraform/*'
+#1670434856
+git add .
+#1670434858
+git status
+#1670434877
+git commit -m'git ignores and lock file'
+#1670434889
+git push
+#1670434899
+git checkout main
+#1670434908
+git merge prep 
+#1670435310
+cube env grant -i trinkaj@battelle.us -um
+#1670435364
+cube env grant -i sandman@battelle.us -u
+#1670435368
+hist
+#1670882811
+git status
+#1670882814
+git add .
+#1670882826
+git commit -m'use ssh-key in workflow'
+#1670882828
+git push
+#1670946289
+git status
+#1670946292
+git diff
+#1670946307
+git add .
+#1670946322
+git commit -m'fixed up workflow'
+#1670946324
+git push
+#1670946327
+git status
+#1670950512
+cube env delete --help
+#1670950546
+cube env delete - action -w delete-me -d
+#1670951158
+hist| delete
+#1670951162
+git push
+#1670951208
+./bob-the-builder 
+#1670953218
+cd build/
+#1670953223
+make unistall
+#1670953226
+ls
+#1670953230
+cd ..
+#1670953231
+ls
+#1670953236
+make uninstall
+#1670953243
+ls
+#1670953245
+git status
+#1670953369
+./bob-the-builder 

@@ -18,8 +18,9 @@ eval "$(/home/sandman/.local/bin/getoptions parser_definition - "$0") exit 1"
 
 source /home/sandman/.local/libexec/functions.sh
 
-cube-env-download $ACCOUNT || exit 1
-cube-env-set-local $NAME $WORKLOAD || exit 1
+cube-env-download $ACCOUNT || die "cube-env-download failed"
+cube-env-set-local $NAME $WORKLOAD || die "cube-env-set-local failed"
+cube-env-set-local-sp || die "cube-env-set-local-sp failed"
 
 
 

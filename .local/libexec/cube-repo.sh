@@ -2,7 +2,7 @@
 
 
 # shellcheck disable=SC2034
-VERSION=0.6.1-2-g38ae293-dirty
+VERSION=0.8.1-5-g0ec94d4-dirty
 
 # shellcheck disable=SC1083
 # @getoptions

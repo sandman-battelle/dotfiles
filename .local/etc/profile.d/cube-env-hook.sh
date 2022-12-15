@@ -47,10 +47,10 @@ cube-env-config()
 
 		case $CUBE_REPO_TYPE in
 			WORKLOAD)
-				/home/sandman/.local/bin/cube-env-cli.sh workload
+				echo "Configuring workload"
 				;;
 			MODULE)
-				/home/sandman/.local/bin/cube-env-cli.sh module
+				echo "Configuring module"
 				;;
 			*)
 				echo "What?"

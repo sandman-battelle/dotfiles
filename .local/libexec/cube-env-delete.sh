@@ -33,7 +33,10 @@ cube-env-gh-environment-delete || exit 1
 	cube-env-gh-branch-delete || exit 1
 }
 
+echo "...running delete hook"
+cube-env-delete-hook
+
 echo "...deleting environment record"
 cube-env-delete-record $NAME $WORKLOAD $ACCOUNT || exit 1
 
-echo "...succfully deleted ${WORKLOAD}-${NAME} environment"
+echo "...successfully deleted ${WORKLOAD}-${NAME} environment"

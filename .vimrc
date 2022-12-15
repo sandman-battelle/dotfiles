@@ -1,6 +1,6 @@
 syntax on
 filetype plugin indent on
-"set number
+set number
 
 set softtabstop=4 shiftwidth=4 expandtab
 autocmd FileType make set noexpandtab

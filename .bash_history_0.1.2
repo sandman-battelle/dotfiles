@@ -6,3 +6,241 @@ echo $?
 man test
 #1661797490
 cat help.out 
+#1669921576
+./bob-the-builder 
+#1670951230
+hist |grep delete
+#1670951242
+cube_ workload delete -n delete-me
+#1670951253
+cube_ workload create -c core -n delete-me
+#1670951299
+cube_ workload delete -n delete-me
+#1670951317
+cube_ workload create -c core -n delete-me
+#1670951506
+cube_ workload delete -n delete-me
+#1670951518
+cube_ workload create -c core -n delete-me
+#1670951800
+cube_ workload delete -n delete-me
+#1670951813
+cube_ workload create -c core -n delete-me
+#1670952015
+cube_ workload delete -n delete-me
+#1670952030
+cube_ workload create -c core -n delete-me
+#1670952351
+cube_ workload delete -n delete-me
+#1670952371
+git status
+#1670952455
+cube_ workload create -c core -n delete-me
+#1670952705
+cube_ workload delete -n delete-me
+#1670952774
+cube_ workload create -c core -n delete-me
+#1670952904
+cube_ workload delete -n delete-me
+#1670952944
+cube_ workload create -c core -n delete-me
+#1670953143
+git status
+#1670953146
+git log
+#1670953156
+cube_ --version
+#1670953169
+git log
+#1670953177
+cube_ --version
+#1670953189
+git show eba2dd2
+#1670953266
+git log
+#1670953276
+git add .
+#1670953295
+git commit -m'add env create to workload create'
+#1670953299
+git status
+#1670953310
+git clear
+#1670953318
+cat bob-the-builder 
+#1670953389
+cube --version
+#1670953395
+cube_ --version
+#1670953398
+git status
+#1670953407
+git log
+#1670953417
+cube_ workload delete -n delete-me
+#1670953440
+cube_ workload create -c core -n delete-me
+#1670953587
+cube_ workload delete -n delete-me
+#1670953600
+cube_ workload create -c core -n delete-me
+#1670953654
+cube_ workload delete -n delete-me
+#1670953668
+cube_ workload create -c core -n delete-me
+#1670954290
+cube_ workload delete -n delete-me
+#1670954302
+cube_ workload create -c core -n delete-me
+#1670954482
+cube_ workload delete -n delete-me
+#1670954494
+cube_ workload create -c core -n delete-me
+#1670954839
+grep -r cube-env-gh-environment-create src
+#1670954945
+grep -r cube-env-gh-secret-create src
+#1670956052
+grep  -r '-z' src
+#1670956066
+grep  -r '[ -z' src
+#1670956078
+grep  -r '\[ -z' src
+#1670956084
+grep  -r '\[ -n' src
+#1670956093
+grep  -r ' -n' src
+#1670956117
+grep  -r '+is_set' src
+#1670956206
+test --help
+#1670956211
+main test
+#1670956216
+man test
+#1670956575
+grep -r latest src
+#1670956753
+gh release list --repo battellecube/cube-platform
+#1670956962
+gh --help
+#1670956979
+gh release --help
+#1670956992
+gh release list --help
+#1670957506
+az account show
+#1670959245
+git status
+#1670959247
+git diff
+#1670959312
+git status
+#1670959315
+git add .
+#1670959353
+git commit -m'add default value to env create'
+#1670959357
+git fetch
+#1670959363
+git push
+#1670961535
+cube_ workload delete -n delete-me
+#1670961567
+cube_ workload create -c core -n delete-me
+#1670962160
+ls /var/tmp/
+#1670962726
+cube_ env create -n foo
+#1670962904
+az account show -s ramp
+#1670962917
+az account show -s 687c38d4-04c5-447e-a3b1-00603b6ba1dc
+#1670962928
+az account show -s 687c38d4-04c5-447e-a3b1-00603b6ba1dc --query name
+#1670962933
+az account show -s 687c38d4-04c5-447e-a3b1-00603b6ba1dc --query name -o tsv
+#1670962985
+cube_ env create -n foo
+#1670963062
+az account show -s 687c38d4-04c5-447e-a3b1-00603b6ba1dc --query 'name,id' -o tsv
+#1670963070
+az account show -s 687c38d4-04c5-447e-a3b1-00603b6ba1dc --query '[name,id]' -o tsv
+#1670963076
+az account show -s 687c38d4-04c5-447e-a3b1-00603b6ba1dc --query '[name,id]'
+#1670963081
+az account show -s 687c38d4-04c5-447e-a3b1-00603b6ba1dc --query '[name,id]' -o table
+#1670963162
+az account show -s 687c38d4-04c5-447e-a3b1-00603b6ba1dc --query '[name,id]' -o none
+#1670963169
+az account show -s 687c38d4-04c5-447e-a3b1-00603b6ba1dc --query '[name,id]' -o json
+#1670963172
+az account show -s 687c38d4-04c5-447e-a3b1-00603b6ba1dc --query '[name,id]' -o jsonc
+#1670963471
+az account show -s 687c38d4-04c5-447e-a3b1-00603b6ba1dc --query '[name,id]' -o tsv
+#1670963515
+az account show -s 687c38d4-04c5-447e-a3b1-00603b6ba1dc --query '[name,id]' -o tsv |tr -d '\n'
+#1670963526
+az account show -s 687c38d4-04c5-447e-a3b1-00603b6ba1dc --query '[name,id]' -o tsv |tr '\n' ' '
+#1670963558
+cube_ env create -n foo
+#1670963706
+az group show
+#1670963711
+az group show --help
+#1670963773
+az group show -n cube-platform-v0.6.0 --subscription cube-platform
+#1670963840
+az group show -n cube-platform-v0.6.0 --subscription cube-platform -q id |awk -F/ '{print $3}'
+#1670963850
+az group show -n cube-platform-v0.6.0 --subscription cube-platform --query id |awk -F/ '{print $3}'
+#1670963909
+cube_ env create -n foo
+#1670963955
+cube_ workload create -c core -n delete-me
+#1670964066
+ls
+#1670964070
+view environments.rec 
+#1670964140
+cube_ workload create -c core -n delete-me
+#1670964303
+ls
+#1670964321
+cube_ workload delete -n delete-me
+#1670964341
+cube_ workload create -c core -n delete-me
+#1670964386
+cube_ workload delete -n delete-me
+#1670964550
+git status
+#1670964553
+rm environments.rec 
+#1670964561
+cube_ workload delete -n delete-me
+#1670964586
+cube_ workload create -c core -n delete-me
+#1670964642
+cube_ workload delete -n delete-me
+#1670964758
+git status
+#1670964760
+git diff
+#1670964836
+cube_ workload create -c core -n delete-me
+#1670964920
+cube_ workload delete -n delete-me
+#1670965144
+cube_ workload create -c core -n delete-me
+#1670965292
+cube_ workload delete -n delete-me
+#1670965304
+cube_ workload create -c core -n delete-me
+#1670965553
+cube_ workload delete -n delete-me
+#1670965626
+cube_ workload create -c core -n delete-me
+#1670965766
+cube_ workload delete -n delete-me
+#1670965791
+cube_ workload create -c core -n delete-me

@@ -2,7 +2,7 @@
 
 
 # shellcheck disable=SC2034
-VERSION=0.6.1-2-g38ae293-dirty
+VERSION=0.8.1-5-g0ec94d4-dirty
 
 # shellcheck disable=SC1083
 # @getoptions
@@ -16,12 +16,15 @@ parser_definition() {
 	cmd storage -- "Manages CUBE environment storage"
 	cmd create -- "Creates a CUBE environment"
 	cmd delete -- "Deletes a CUBE environment"
+	cmd list -- "List a CUBE environment"
 	cmd set -- "Sets a CUBE environment"
-	cmd apply -- "Terraform apply environment"
-	cmd destroy -- "Terraform destory environment"
-	cmd init -- "Terraform init environment"
-	cmd grant -- "Grant users access to a environment"
-	cmd ungrant -- "Remove users access to a environment"
+	cmd apply -- "Terraform apply workload"
+	cmd destroy -- "Terraform destory workload"
+	cmd init -- "Terraform init workload"
+	cmd grant -- "Grant users access to a workload"
+	cmd ungrant -- "Remove users access to a workload"
+	cmd state-import -- "Import resource into terraform state"
+	cmd state-rm -- "Remove instance from terraform state "
 }
 # @end
 
@@ -40,23 +43,32 @@ if [ $# -gt 0 ]; then
 		delete)
 			/home/sandman/.local/libexec/cube-env-delete.sh "$@"
 			;;
+		list)
+			/home/sandman/.local/libexec/cube-env-list.sh "$@"
+			;;
 		set)
 			/home/sandman/.local/libexec/cube-env-set.sh "$@"
 			;;
 		apply)
-			/home/sandman/.local/libexec/cube-env-apply.sh "$@"
+			/home/sandman/.local/libexec/cube-workload-apply.sh "$@"
 			;;
 		destroy)
-			/home/sandman/.local/libexec/cube-env-destroy.sh "$@"
+			/home/sandman/.local/libexec/cube-workload-destroy.sh "$@"
 			;;
 		init)
-			/home/sandman/.local/libexec/cube-env-init.sh "$@"
+			/home/sandman/.local/libexec/cube-workload-init.sh "$@"
 			;;
 		grant)
-			/home/sandman/.local/libexec/cube-env-grant.sh "$@"
+			/home/sandman/.local/libexec/cube-workload-grant.sh "$@"
 			;;
 		ungrant)
-			/home/sandman/.local/libexec/cube-env-ungrant.sh "$@"
+			/home/sandman/.local/libexec/cube-workload-ungrant.sh "$@"
+			;;
+		state-import)
+			/home/sandman/.local/libexec/cube-terraform-state-import.sh "$@"
+			;;
+		state-rm)
+			/home/sandman/.local/libexec/cube-terraform-state-rm.sh "$@"
 			;;
 		--) # no subcommand, arguments only
 	esac
